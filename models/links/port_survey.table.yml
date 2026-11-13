@@ -1,0 +1,269 @@
+schema: links
+name: port_survey
+title: 港湾調査
+description: |-
+  港湾別の効率性や稼動性を判定するための、総トン数別の隻数や合計総トン数の集計データ、船舶の長さ別の移出入量に関する集計データ(1622レコード)
+
+  元の資料: 港湾調査(様式NO.1 入港船舶集計表)、港湾調査(様式NO.3-3 海上貨物集計表(移出))、港湾調査(様式NO.3-4 海上貨物集計表(移入))、港湾調査(様式NO4-3 コンテナ個数・シャーシ台数集計表(移出))、港湾調査(様式NO4-4 コンテナ個数・シャーシ台数集計表(移入))
+
+  G空間情報センターのデータセット links-naikoukaiungyou-2024 の 03_kouwanchousa.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-naikoukaiungyou-2024
+fields:
+- name: port_name
+  title: 港湾名
+  description: '秘匿化: 原票をもとに集計化'
+- name: port_rank_codei_koshu
+  title: 港格別コード
+  description: '秘匿化: 原票をもとに集計化'
+- name: year
+  title: 調査年(西暦)
+  description: '単位: 年。秘匿化: 原票をもとに集計化'
+- name: prefecture_name
+  title: 都道府県名
+  description: '秘匿化: 原票をもとに集計化'
+- name: number_of_berths
+- name: mooring_status_ship_count
+- name: mooring_status_gross_tonnage
+- name: mooring_status_total_time
+- name: cargo_ship_count
+- name: cargo_ship_gross_tonnage
+- name: cargo_weight_loading
+- name: cargo_weight_unloading
+- name: cargo_weight_total
+- name: mooring_status_ship_count_per_berth
+- name: mooring_status_gross_tonnage_per_berth
+- name: mooring_status_total_time_per_berth
+- name: cargo_ship_count_per_berth
+- name: cargo_ship_gross_tonnage_per_berth
+- name: cargo_weight_loading_per_berth
+- name: cargo_weight_unloading_per_berth
+- name: cargo_weight_total_per_berth
+- name: all_ship_gt_total
+  title: 入港船_総トン数_計
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: all_ship_count_total
+  title: 入港船_隻数計
+  description: '単位: 隻。秘匿化: 原票をもとに集計化'
+- name: type_domestic_merchant_gt
+  title: 種別_内航商船_総トン数
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: type_domestic_private_count
+  title: 種別_内航商船_隻数計
+  description: '単位: 隻。秘匿化: 原票をもとに集計化'
+- name: type_domestic_private_gt
+  title: 種別_内航自船_総トン数
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: type_domestic_private_count_1
+- name: over_30000gt_count_all
+- name: over_30000gt_gt_all
+  title: 30000総トン数以上_総トン数_計
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: over_30000gt_count_domestic_merchant
+  title: 30000総トン数以上_隻数_内航商船
+  description: '単位: 隻。秘匿化: 原票をもとに集計化'
+- name: over_30000gt_gt_domestic_merchant
+  title: 30000総トン数以上_総トン数_内航商船
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: over_30000gt_count_domestic_private
+  title: 30000総トン数以上_隻数_内航自船
+  description: '単位: 隻。秘匿化: 原票をもとに集計化'
+- name: over_30000gt_gt_domestic_private
+  title: 30000総トン数以上_総トン数_内航自船
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: over_10000gt_under_30000gt_count_all
+  title: 10000総トン以上30000総トン未満_隻数_計
+  description: '単位: 隻。秘匿化: 原票をもとに集計化'
+- name: over_10000gt_under_30000gt_gt_all
+  title: 10000総トン以上30000総トン未満_総トン数_計
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: over_10000gt_under_30000gt_count_domestic_merchant
+  title: 10000総トン以上30000総トン未満_隻数_内航商船
+  description: '単位: 隻。秘匿化: 原票をもとに集計化'
+- name: over_10000gt_under_30000gt_gt_domestic_merchant
+  title: 10000総トン以上30000総トン未満_総トン数_内航商船
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: over_10000gt_under_30000gt_count_domestic_private
+  title: 10000総トン以上30000総トン未満_隻数_内航自船
+  description: '単位: 隻。秘匿化: 原票をもとに集計化'
+- name: over_10000gt_under_30000gt_gt_domestic_private
+  title: 10000総トン以上30000総トン未満_総トン数_内航自船
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: over_6000gt_under_10000gt_count_all
+  title: 6000総トン以上10000総トン未満_隻数_計
+  description: '単位: 隻。秘匿化: 原票をもとに集計化'
+- name: over_6000gt_under_10000gt_gt_all
+  title: 6000総トン以上10000総トン未満_総トン数_計
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: over_6000gt_under_10000gt_count_domestic_merchant
+  title: 6000総トン以上10000総トン未満_隻数_内航商船
+  description: '単位: 隻。秘匿化: 原票をもとに集計化'
+- name: over_6000gt_under_10000gt_gt_domestic_merchant
+  title: 6000総トン以上10000総トン未満_総トン数_内航商船
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: over_6000gt_under_30000gt_count_domestic_private
+  title: 6000総トン以上10000総トン未満_隻数_内航自船
+  description: '単位: 隻。秘匿化: 原票をもとに集計化'
+- name: over_10000gt_under_30000gt_gt_domestic_private_1
+- name: over_3000gt_under_6000gt_count_all
+  title: 3000総トン以上6000総トン未満_隻数_計
+  description: '単位: 隻。秘匿化: 原票をもとに集計化'
+- name: over_3000gt_under_6000gt_gt_all
+  title: 3000総トン以上6000総トン未満_総トン数_計
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: over_3000gt_under_6000gt_count_domestic_merchant
+  title: 3000総トン以上6000総トン未満_隻数_内航商船
+  description: '単位: 隻。秘匿化: 原票をもとに集計化'
+- name: over_3000gt_under_6000gt_gt_domestic_merchant
+  title: 3000総トン以上6000総トン未満_総トン数_内航商船
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: over_3000gt_under_30000gt_count_domestic_private
+  title: 3000総トン以上6000総トン未満_隻数_内航自船
+  description: '単位: 隻。秘匿化: 原票をもとに集計化'
+- name: over_3000gt_under_6000gt_gt_domestic_private
+  title: 3000総トン以上6000総トン未満_総トン数_内航自船
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: over_1000gt_under_3000gt_count_all
+  title: 1000総トン以上3000総トン未満_隻数_計
+  description: '単位: 隻。秘匿化: 原票をもとに集計化'
+- name: over_1000gt_under_3000gt_gt_all
+  title: 1000総トン以上3000総トン未満_総トン数_計
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: over_1000gt_under_3000gt_count_domestic_merchant
+  title: 1000総トン以上3000総トン未満_隻数_内航商船
+  description: '単位: 隻。秘匿化: 原票をもとに集計化'
+- name: over_1000gt_under_3000gt_gt_domestic_merchant
+  title: 1000総トン以上3000総トン未満_総トン数_内航商船
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: over_1000gt_under_10000gt_count_domestic_private
+  title: 1000総トン以上3000総トン未満_隻数_内航自船
+  description: '単位: 隻。秘匿化: 原票をもとに集計化'
+- name: over_1000gt_under_3000gt_gt_domestic_private
+  title: 1000総トン以上3000総トン未満_総トン数_内航自船
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: under_1000gt_count_all
+  title: 1000総トン未満_隻数_計
+  description: '単位: 隻。秘匿化: 原票をもとに集計化'
+- name: under_1000gt_gt_all
+  title: 1000総トン未満_総トン数_計
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: under_1000gt_count_domestic_merchant
+  title: 1000総トン未満_隻数_内航商船
+  description: '単位: 隻。秘匿化: 原票をもとに集計化'
+- name: under_1000gt_gt_domestic_merchant
+  title: 1000総トン未満_総トン数_内航商船
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: under_1000gt_count_domestic_private
+  title: 1000総トン未満_隻数_内航自船
+  description: '単位: 隻。秘匿化: 原票をもとに集計化'
+- name: under_1000gt_gt_domestic_private
+  title: 1000総トン未満_総トン数_内航自船
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: export_all_ton_count
+  title: 移出_合計(トン又は台)
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: export_container_cargo_ton
+  title: 移出_コンテナ貨物(トン)
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: export_chassis_cargo_ton
+  title: 移出_シャーシ貨物(トン)
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: export_chassis_container_ton
+  title: 移出_うちシャーシコンテナ(トン)
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: export_others_cargo_ton
+  title: 移出_その他の貨物(トン)
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: import_all_ton_count
+  title: 移入_合計(トン又は台)
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: import_container_cargo_ton
+  title: 移入_コンテナ貨物(トン)
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: import_chassis_cargo_ton
+  title: 移入_シャーシ貨物(トン)
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: import_chassis_container_ton
+  title: 移入_うちシャーシコンテナ(トン)
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: import_others_cargo_ton
+  title: 移入_その他の貨物(トン)
+  description: '単位: トン。秘匿化: 原票をもとに集計化'
+- name: export_length_8ft
+  title: 移出_長さ別(個数・台数)_8ft
+  description: '単位: 台。秘匿化: 原票をもとに集計化'
+- name: export_length_10ft
+  title: 移出_長さ別(個数・台数)_10ft
+  description: '単位: 台。秘匿化: 原票をもとに集計化'
+- name: export_length_12ft
+  title: 移出_長さ別(個数・台数)_12ft
+  description: '単位: 台。秘匿化: 原票をもとに集計化'
+- name: export_length_20ft
+  title: 移出_長さ別(個数・台数)_20ft
+  description: '単位: 台。秘匿化: 原票をもとに集計化'
+- name: export_length_24ft
+  title: 移出_長さ別(個数・台数)_24ft
+  description: '単位: 台。秘匿化: 原票をもとに集計化'
+- name: export_length_35ft
+  title: 移出_長さ別(個数・台数)_35ft
+  description: '単位: 台。秘匿化: 原票をもとに集計化'
+- name: export_length_40ft
+  title: 移出_長さ別(個数・台数)_40ft
+  description: '単位: 台。秘匿化: 原票をもとに集計化'
+- name: export_length_45ft
+  title: 移出_長さ別(個数・台数)_45ft
+  description: '単位: 台。秘匿化: 原票をもとに集計化'
+- name: export_length_chassis
+  title: 移出_長さ別(個数・台数)_シャーシ
+  description: '単位: 台。秘匿化: 原票をもとに集計化'
+- name: export_empty_container_chassis_count
+  title: 移出_コンテナ個数又はシャーシ台数
+  description: '単位: 台。秘匿化: 原票をもとに集計化'
+- name: export_empty_container_chassis_count_1
+- name: export_portion_empty_countainer
+  title: 移出_空コンテナ又は空シャーシの割合(%)
+  description: '単位: %。秘匿化: 原票をもとに集計化'
+- name: import_length_8ft
+  title: 移入_長さ別(個数・台数)_8ft
+  description: '単位: 台。秘匿化: 原票をもとに集計化'
+- name: import_length_10ft
+  title: 移入_長さ別(個数・台数)_10ft
+  description: '単位: 台。秘匿化: 原票をもとに集計化'
+- name: import_length_12ft
+  title: 移入_長さ別(個数・台数)_12ft
+  description: '単位: 台。秘匿化: 原票をもとに集計化'
+- name: import_length_20ft
+  title: 移入_長さ別(個数・台数)_20ft
+  description: '単位: 台。秘匿化: 原票をもとに集計化'
+- name: import_length_24ft
+  title: 移入_長さ別(個数・台数)_24ft
+  description: '単位: 台。秘匿化: 原票をもとに集計化'
+- name: import_length_35ft
+  title: 移入_長さ別(個数・台数)_35ft
+  description: '単位: 台。秘匿化: 原票をもとに集計化'
+- name: import_length_40ft
+  title: 移入_長さ別(個数・台数)_40ft
+  description: '単位: 台。秘匿化: 原票をもとに集計化'
+- name: import_length_45ft
+  title: 移入_長さ別(個数・台数)_45ft
+  description: '単位: 台。秘匿化: 原票をもとに集計化'
+- name: import_length_chassis
+  title: 移入_長さ別(個数・台数)_シャーシ
+  description: '単位: 台。秘匿化: 原票をもとに集計化'
+- name: import_empty_container_chassis_count
+  title: 移入_コンテナ個数又はシャーシ台数
+  description: '単位: 台。秘匿化: 原票をもとに集計化'
+- name: import_empty_container_chassis_count_1
+- name: import_portion_empty_countainer
+  title: 移入_空コンテナ又は空シャーシの割合(%)
+  description: '単位: %。秘匿化: 原票をもとに集計化'
+- name: lon
+- name: lat
+- name: prefecture_code
+  title: 都道府県コード
+  annotations:
+    queria:
+      semantic:
+        role: entity
+        name: prefecture
+  description: prefecture_name の先頭の都道府県名から付けたコード。都道府県名で始まらない行は NULL

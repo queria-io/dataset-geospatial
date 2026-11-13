@@ -1,0 +1,99 @@
+schema: links
+name: passenger_ferry_ships
+title: 一般旅客定期航路事業許可申請書（船舶）
+description: |-
+  船舶の種類、総トン数、用途、定員、全長、幅、最高速力、運動性能、操船上の特殊設備、進水年(20年括)等の船舶スペックや航路の起終点(地方単位で秘匿化)、事故履歴の有無に関する許可申請情報を有するデータ
+
+  元の資料: 一般旅客定期航路事業許可申請書
+
+  G空間情報センターのデータセット links-ippanryokyakuteikikourojigyou-2024 の 01_ippanryokyakuteikikourojigyoukyokashinseisyo.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-ippanryokyakuteikikourojigyou-2024
+fields:
+- name: name_id
+  title: 氏名(企業名)ID
+  description: '秘匿化: 氏名(企業名)ではなく、独立した新規IDを採番して対応'
+- name: location
+  title: 本社住所
+  description: '秘匿化: 都道府県単位で整理'
+- name: ship_id
+  title: 船舶ID
+  description: '秘匿化: 船名から企業が特定できないよう新たなIDを附番して秘匿化'
+- name: ship_kind
+  title: 船舶の種類
+- name: ship_quality
+  title: 船質
+- name: navigation_area
+  title: 航行区域
+- name: ship_owner_id
+  title: 船舶保有者ID
+  description: '秘匿化: 船舶保有者から個人や企業が特定できないよう新たなIDを附番して秘匿化'
+- name: purpose
+  title: 用途
+- name: ship_weight
+  title: 総トン数
+  description: '単位: トン'
+- name: capacity_passengers
+  title: 定員(旅客)
+  description: '単位: 人'
+- name: capacity_crew
+  title: 定員(船員)
+  description: '単位: 人'
+- name: capacity_other_boarders
+  title: 定員(その他の乗船者)
+  description: '単位: 人'
+- name: main_engine_type
+  title: 主機の種類
+- name: continuous_maximum_output
+  title: 連続最大出力
+- name: maximum_speed
+  title: 最高速力
+  description: '単位: ノット'
+- name: cruising_speed
+  title: 航海速力
+  description: '単位: ノット'
+- name: overall_length
+  title: 全長
+  description: '単位: m'
+- name: width
+  title: 幅
+  description: '単位: m'
+- name: maximum_height
+  title: 最大高
+  description: '単位: m'
+- name: maximum_full_load_draft
+  title: 最大(満載)喫水
+  description: '単位: m'
+- name: shipyard_id
+  title: 造船所ID
+  description: '秘匿化: 造船所から企業が特定できないよう新たなIDを附番して秘匿化'
+- name: radio_equipment
+  title: 無線設備
+- name: maneuverability_turning_radius
+  title: 運動性能(旋回径)
+- name: maneuverability_drift_distance
+  title: 運動性能(惰力)
+- name: special_maneuvering_equipment
+  title: 操船上の特殊設備
+- name: barrier_free_support_status
+  title: バリフリ対応状況
+- name: starting_point_area
+  title: 航路の起点
+  description: '秘匿化: 起点終点から企業が特定できないよう地方単位でまとめて秘匿化'
+- name: end_point_area
+  title: 航路の終点
+  description: '秘匿化: 起点終点から企業が特定できないよう地方単位でまとめて秘匿化'
+- name: launch_year_rounded_to_20_years
+  title: 進水年(20年括)
+  description: '単位: 年。秘匿化: ランク(階層化)による秘匿化 2020:2020年~ 2000:2000年~2019年 1980:1980年~1999年 1960:1960年~1979年 1940:~1959年。値: 2020 = 2020年~、2000 = 2000年~2019年、1980 = 1980年~1999年、1960 = 1960年~1979年、1940 = ~1959年'
+- name: accident_flag
+  title: 事故等フラグ
+  description: '値: 0 = 事故履歴のない船、1 = 事故履歴のある船'
+- name: prefecture_code
+  title: 都道府県コード
+  annotations:
+    queria:
+      semantic:
+        role: entity
+        name: prefecture
+  description: location の先頭の都道府県名から付けたコード。都道府県名で始まらない行は NULL

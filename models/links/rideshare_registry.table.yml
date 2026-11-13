@@ -1,0 +1,79 @@
+schema: links
+name: rideshare_registry
+title: 自家用有償旅客運送者登録簿
+description: |-
+  道路運送法に基づき、自家用車を使って有償で旅客を運送するサービスを行う事業者が、運輸局に登録した内容を記録したもので、登録年月日、運送の種別、路線又は運送の区域、運送する旅客の範囲、自動車の数等に関する情報をテータ化したものです。(35レコード)
+
+  元の資料: 自家用有償旅客運送者登録簿
+
+  G空間情報センターのデータセット links-rideshare-2025 の 02_jikayouyuushouryokyakuunsou_tourokubo.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-rideshare-2025
+fields:
+- name: id
+  title: ID
+  description: '秘匿化: 秘匿化あり'
+- name: registration_date
+  title: 登録年月日
+- name: updated_registration_date
+  title: 更新登録年月日
+- name: address
+  title: 住所
+  description: '秘匿化: 秘匿化あり'
+- name: transport_type
+  title: 運送の種別
+- name: route_or_transport_area
+  title: 路線又は運送の区域
+  description: '単位: km。秘匿化: 秘匿化あり。路線距離の合計のみ記載'
+- name: notes
+  title: 備考欄
+- name: office_name_1_private_paid_passenger_vehicle_count_sleeper_light
+  title: 事業所の名称_1_自家用有償旅客運送自動車の数_寝台車(軽自動車)
+- name: office_name_1_private_paid_passenger_vehicle_count_wheelchair_light
+  title: 事業所の名称_1_自家用有償旅客運送自動車の数_車いす車(軽自動車)
+- name: office_name_1_private_paid_passenger_vehicle_count_multi_purpose_light
+  title: 事業所の名称_1_自家用有償旅客運送自動車の数_兼用車(軽自動車)
+- name: office_name_1_private_paid_passenger_vehicle_count_sedan_light
+  title: 事業所の名称_1_自家用有償旅客運送自動車の数_セダン等(軽自動車)
+- name: office_name_1_private_paid_passenger_vehicle_count_bus
+  title: 事業所の名称_1_自家用有償旅客運送自動車の数_バス
+- name: office_name_1_private_paid_passenger_vehicle_count_total_light
+  title: 事業所の名称_1_自家用有償旅客運送自動車の数_合計(軽自動車)
+- name: office_name_2_private_paid_passenger_vehicle_count_sleeper_light
+  title: 事業所の名称_2_自家用有償旅客運送自動車の数_寝台車(軽自動車)
+- name: office_name_2_private_paid_passenger_vehicle_count_wheelchair_light
+  title: 事業所の名称_2_自家用有償旅客運送自動車の数_車いす車(軽自動車)
+- name: office_name_2_private_paid_passenger_vehicle_count_multi_purpose_light
+  title: 事業所の名称_2_自家用有償旅客運送自動車の数_兼用車(軽自動車)
+- name: office_name_2_private_paid_passenger_vehicle_count_sedan_light
+  title: 事業所の名称_2_自家用有償旅客運送自動車の数_セダン等(軽自動車)
+- name: office_name_2_private_paid_passenger_vehicle_count_bus
+  title: 事業所の名称_2_自家用有償旅客運送自動車の数_バス
+- name: office_name_2_private_paid_passenger_vehicle_count_total_light
+  title: 事業所の名称_2_自家用有償旅客運送自動車の数_合計(軽自動車)
+- name: office_name_3_private_paid_passenger_vehicle_count_sleeper_light
+  title: 事業所の名称_3_自家用有償旅客運送自動車の数_寝台車(軽自動車)
+- name: office_name_3_private_paid_passenger_vehicle_count_multi_purpose_light
+  title: 事業所の名称_3_自家用有償旅客運送自動車の数_兼用車(軽自動車)
+- name: office_name_3_private_paid_passenger_vehicle_count_sedan_light
+  title: 事業所の名称_3_自家用有償旅客運送自動車の数_セダン等(軽自動車)
+- name: office_name_3_private_paid_passenger_vehicle_count_bus
+  title: 事業所の名称_3_自家用有償旅客運送自動車の数_バス
+- name: office_name_3_private_paid_passenger_vehicle_count_total_light
+  title: 事業所の名称_3_自家用有償旅客運送自動車の数_合計(軽自動車)
+- name: office_name_4_private_paid_passenger_vehicle_count_sleeper_light
+  title: 事業所の名称_4_自家用有償旅客運送自動車の数_寝台車(軽自動車)
+- name: office_name_4_private_paid_passenger_vehicle_count_multi_purpose_light
+  title: 事業所の名称_4_自家用有償旅客運送自動車の数_兼用車(軽自動車)
+- name: office_name_4_private_paid_passenger_vehicle_count_bus
+  title: 事業所の名称_4_自家用有償旅客運送自動車の数_バス
+- name: office_name_4_private_paid_passenger_vehicle_count_total_light
+  title: 事業所の名称_4_自家用有償旅客運送自動車の数_合計(軽自動車)
+- name: prefecture_code
+  title: 都道府県コード
+  annotations:
+    queria:
+      semantic:
+        role: entity
+        name: prefecture
+  description: address の先頭の都道府県名から付けたコード。都道府県名で始まらない行は NULL

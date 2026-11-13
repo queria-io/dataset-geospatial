@@ -1,0 +1,970 @@
+schema: links
+name: trucking_business_results_financials
+title: 貨物自動車運送事業の事業実績と財務情報（全国のサンプル）
+description: |-
+  ファイル1の事業実績に関する情報と、営業費用、経常損益、流動・固定資産、負債・純資産等の財務情報を結合したデータ
+
+  G空間情報センターのデータセット links-kamotsujidousyaunsojigyo-2024 の 02_jigyoujissekihoukokusyo_zaimujyouho.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-kamotsujidousyaunsojigyo-2024
+fields:
+- name: business_operator_id_2
+- name: industry_category
+  title: 業種区分
+- name: business_content_1
+  title: 事業内容1
+- name: business_content_2
+  title: 事業内容2
+- name: business_content_3
+  title: 事業内容3
+- name: commercial_vehicle_count_rank
+  title: 事業用自動車(両)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: commercial_vehicle_count_deviation_score
+  title: 事業用自動車(両)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: employee_count_rank
+  title: 従業員数(人)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: employee_count_deviation_score
+  title: 従業員数(人)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: driver_count_rank
+  title: 運転者数(人)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: driver_count_deviation_score
+  title: 運転者数(人)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: hokkaido_cumulative_existing_vehicle_count_rank
+  title: 北海道_延実在車両数(日車)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: hokkaido_cumulative_existing_vehicle_count_deviation_score
+  title: 北海道_延実在車両数(日車)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: hokkaido_cumulative_operating_vehicle_count_rank
+  title: 北海道_延実働車両数(日車)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: hokkaido_cumulative_operating_vehicle_count_deviation_score
+  title: 北海道_延実働車両数(日車)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: hokkaido_traveled_kilometers_rank
+  title: 北海道_走行キロ(キロメートル)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: hokkaido_traveled_kilometers_deviation_score
+  title: 北海道_走行キロ(キロメートル)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: hokkaido_loaded_kilometers_rank
+  title: 北海道_実車キロ(キロメートル)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: hokkaido_loaded_kilometers_deviation_score
+  title: 北海道_実車キロ(キロメートル)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: hokkaido_actual_transport_tons_rank
+  title: 北海道_実運送(トン)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: hokkaido_actual_transport_tons_deviation_score
+  title: 北海道_実運送(トン)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: hokkaido_utilized_transport_tons_rank
+  title: 北海道_利用運送(トン)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: hokkaido_utilized_transport_tons_deviation_score
+  title: 北海道_利用運送(トン)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: hokkaido_operating_revenue_rank
+  title: 北海道_営業収入(千円)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: hokkaido_operating_revenue_deviation_score
+  title: 北海道_営業収入(千円)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: tohoku_cumulative_existing_vehicle_count_rank
+  title: 東北_延実在車両数(日車)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: tohoku_cumulative_existing_vehicle_count_deviation_score
+  title: 東北_延実在車両数(日車)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: tohoku_cumulative_operating_vehicle_count_rank
+  title: 東北_延実働車両数(日車)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: tohoku_cumulative_operating_vehicle_count_deviation_score
+  title: 東北_延実働車両数(日車)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: tohoku_traveled_kilometers_rank
+  title: 東北_走行キロ(キロメートル)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: tohoku_traveled_kilometers_deviation_score
+  title: 東北_走行キロ(キロメートル)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: tohoku_loaded_kilometers_rank
+  title: 東北_実車キロ(キロメートル)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: tohoku_loaded_kilometers_deviation_score
+  title: 東北_実車キロ(キロメートル)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: tohoku_actual_transport_tons_rank
+  title: 東北_実運送(トン)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: tohoku_actual_transport_tons_deviation_score
+  title: 東北_実運送(トン)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: tohoku_utilized_transport_tons_rank
+  title: 東北_利用運送(トン)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: tohoku_utilized_transport_tons_deviation_score
+  title: 東北_利用運送(トン)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: tohoku_operating_revenue_rank
+  title: 東北_営業収入(千円)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: tohoku_operating_revenue_deviation_score
+  title: 東北_営業収入(千円)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: hokuriku_shinetsu_cumulative_existing_vehicle_count_rank
+  title: 北陸信越_延実在車両数(日車)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: hokuriku_shinetsu_cumulative_existing_vehicle_count_deviation_score
+  title: 北陸信越_延実在車両数(日車)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: hokuriku_shinetsu_cumulative_operating_vehicle_count_rank
+  title: 北陸信越_延実働車両数_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: hokuriku_shinetsu_cumulative_operating_vehicle_count_deviation_score
+  title: 北陸信越_延実働車両数_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: hokuriku_shinetsu_traveled_kilometers_rank
+  title: 北陸信越_走行キロ(キロメートル)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: hokuriku_shinetsu_traveled_kilometers_deviation_score
+  title: 北陸信越_走行キロ(キロメートル)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: hokuriku_shinetsu_loaded_kilometers_rank
+  title: 北陸信越_実車キロ_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: hokuriku_shinetsu_loaded_kilometers_deviation_score
+  title: 北陸信越_実車キロ_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: hokuriku_shinetsu_actual_transport_tons_rank
+  title: 北陸信越_実運送(トン)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: hokuriku_shinetsu_actual_transport_tons_deviation_score
+  title: 北陸信越_実運送(トン)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: hokuriku_shinetsu_utilized_transport_tons_rank
+  title: 北陸信越_利用運送(トン)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: hokuriku_shinetsu_utilized_transport_tons_deviation_score
+  title: 北陸信越_利用運送(トン)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: hokuriku_shinetsu_operating_revenue_rank
+  title: 北陸信越_営業収入(千円)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: hokuriku_shinetsu_operating_revenue_deviation_score
+  title: 北陸信越_営業収入(千円)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: kanto_cumulative_existing_vehicle_count_rank
+  title: 関東_延実在車両数(日車)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: kanto_cumulative_existing_vehicle_count_deviation_score
+  title: 関東_延実在車両数(日車)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: kanto_cumulative_operating_vehicle_count_rank
+  title: 関東_延実働車両数(日車)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: kanto_cumulative_operating_vehicle_count_deviation_score
+  title: 関東_延実働車両数(日車)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: kanto_traveled_kilometers_rank
+  title: 関東_走行キロ(キロメートル)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: kanto_traveled_kilometers_deviation_score
+  title: 関東_走行キロ(キロメートル)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: kanto_loaded_kilometers_rank
+  title: 関東_実車キロ(キロメートル)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: kanto_loaded_kilometers_deviation_score
+  title: 関東_実車キロ(キロメートル)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: kanto_actual_transport_tons_rank
+  title: 関東_実運送(トン)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: kanto_actual_transport_tons_deviation_score
+  title: 関東_実運送(トン)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: kanto_utilized_transport_tons_rank
+  title: 関東_利用運送(トン)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: kanto_utilized_transport_tons_deviation_score
+  title: 関東_利用運送(トン)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: kanto_operating_revenue_rank
+  title: 関東_営業収入(千円)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: kanto_operating_revenue_deviation_score
+  title: 関東_営業収入(千円)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: chubu_cumulative_existing_vehicle_count_rank
+  title: 中部_延実在車両数(日車)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: chubu_cumulative_existing_vehicle_count_deviation_score
+  title: 中部_延実在車両数(日車)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: chubu_cumulative_operating_vehicle_count_rank
+  title: 中部_延実働車両数(日車)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: chubu_cumulative_operating_vehicle_count_deviation_score
+  title: 中部_延実働車両数(日車)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: chubu_traveled_kilometers_rank
+  title: 中部_走行キロ(キロメートル)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: chubu_traveled_kilometers_deviation_score
+  title: 中部_走行キロ(キロメートル)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: chubu_loaded_kilometers_rank
+  title: 中部_実車キロ(キロメートル)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: chubu_loaded_kilometers_deviation_score
+  title: 中部_実車キロ(キロメートル)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: chubu_actual_transport_tons_rank
+  title: 中部_実運送(トン)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: chubu_actual_transport_tons_deviation_score
+  title: 中部_実運送(トン)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: chubu_utilized_transport_tons_rank
+  title: 中部_利用運送(トン)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: chubu_utilized_transport_tons_deviation_score
+  title: 中部_利用運送(トン)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: chubu_operating_revenue_rank
+  title: 中部_営業収入(千円)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: chubu_operating_revenue_deviation_score
+  title: 中部_営業収入(千円)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: kinki_cumulative_existing_vehicle_count_rank
+  title: 近畿_延実在車両数(日車)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: kinki_cumulative_existing_vehicle_count_deviation_score
+  title: 近畿_延実在車両数(日車)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: kinki_cumulative_operating_vehicle_count_rank
+  title: 近畿_延実働車両数_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: kinki_cumulative_operating_vehicle_count_deviation_score
+  title: 近畿_延実働車両数_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: kinki_traveled_kilometers_rank
+  title: 近畿_走行キロ(キロメートル)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: kinki_traveled_kilometers_deviation_score
+  title: 近畿_走行キロ(キロメートル)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: kinki_loaded_kilometers_rank
+  title: 近畿_実車キロ_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: kinki_loaded_kilometers_deviation_score
+  title: 近畿_実車キロ_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: kinki_actual_transport_tons_rank
+  title: 近畿_実運送(トン)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: kinki_actual_transport_tons_deviation_score
+  title: 近畿_実運送(トン)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: kinki_utilized_transport_tons_rank
+  title: 近畿_利用運送(トン)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: kinki_utilized_transport_tons_deviation_score
+  title: 近畿_利用運送(トン)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: kinki_operating_revenue_rank
+  title: 近畿_営業収入(千円)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: kinki_operating_revenue_deviation_score
+  title: 近畿_営業収入(千円)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: chugoku_cumulative_existing_vehicle_count_rank
+  title: 中国_延実在車両数(日車)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: chugoku_cumulative_existing_vehicle_count_deviation_score
+  title: 中国_延実在車両数(日車)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: chugoku_cumulative_operating_vehicle_count_rank
+  title: 中国_延実働車両数_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: chugoku_cumulative_operating_vehicle_count_deviation_score
+  title: 中国_延実働車両数_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: chugoku_traveled_kilometers_rank
+  title: 中国_走行キロ(キロメートル)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: chugoku_traveled_kilometers_deviation_score
+  title: 中国_走行キロ(キロメートル)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: chugoku_loaded_kilometers_rank
+  title: 中国_実車キロ_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: chugoku_loaded_kilometers_deviation_score
+  title: 中国_実車キロ_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: chugoku_actual_transport_tons_rank
+  title: 中国_実運送(トン)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: chugoku_actual_transport_tons_deviation_score
+  title: 中国_実運送(トン)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: chugoku_utilized_transport_tons_rank
+  title: 中国_利用運送(トン)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: chugoku_utilized_transport_tons_deviation_score
+  title: 中国_利用運送(トン)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: chugoku_operating_revenue_rank
+  title: 中国_営業収入(千円)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: chugoku_operating_revenue_deviation_score
+  title: 中国_営業収入(千円)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: shikoku_cumulative_existing_vehicle_count_rank
+  title: 四国_延実在車両数(日車)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: shikoku_cumulative_existing_vehicle_count_deviation_score
+  title: 四国_延実在車両数(日車)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: shikoku_cumulative_operating_vehicle_count_rank
+  title: 四国_延実働車両数(日車)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: shikoku_cumulative_operating_vehicle_count_deviation_score
+  title: 四国_延実働車両数(日車)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: shikoku_traveled_kilometers_rank
+  title: 四国_走行キロ(キロメートル)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: shikoku_traveled_kilometers_deviation_score
+  title: 四国_走行キロ(キロメートル)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: shikoku_loaded_kilometers_rank
+  title: 四国_実車キロ(キロメートル)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: shikoku_loaded_kilometers_deviation_score
+  title: 四国_実車キロ(キロメートル)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: shikoku_actual_transport_tons_rank
+  title: 四国_実運送(トン)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: shikoku_actual_transport_tons_deviation_score
+  title: 四国_実運送(トン)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: shikoku_utilized_transport_tons_rank
+  title: 四国_利用運送(トン)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: shikoku_utilized_transport_tons_deviation_score
+  title: 四国_利用運送(トン)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: shikoku_operating_revenue_rank
+  title: 四国_営業収入(千円)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: shikoku_operating_revenue_deviation_score
+  title: 四国_営業収入(千円)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: kyushu_cumulative_existing_vehicle_count_rank
+  title: 九州_延実在車両数(日車)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: kyushu_cumulative_existing_vehicle_count_deviation_score
+  title: 九州_延実在車両数(日車)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: kyushu_cumulative_operating_vehicle_count_rank
+  title: 九州_延実働車両数(日車)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: kyushu_cumulative_operating_vehicle_count_deviation_score
+  title: 九州_延実働車両数(日車)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: kyushu_traveled_kilometers_rank
+  title: 九州_走行キロ(キロメートル)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: kyushu_traveled_kilometers_deviation_score
+  title: 九州_走行キロ(キロメートル)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: kyushu_loaded_kilometers_rank
+  title: 九州_実車キロ(キロメートル)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: kyushu_loaded_kilometers_deviation_score
+  title: 九州_実車キロ(キロメートル)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: kyushu_actual_transport_tons_rank
+  title: 九州_実運送(トン)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: kyushu_actual_transport_tons_deviation_score
+  title: 九州_実運送(トン)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: kyushu_utilized_transport_tons_rank
+  title: 九州_利用運送(トン)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: kyushu_utilized_transport_tons_deviation_score
+  title: 九州_利用運送(トン)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: kyushu_operating_revenue_rank
+  title: 九州_営業収入(千円)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: kyushu_operating_revenue_deviation_score
+  title: 九州_営業収入(千円)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: okinawa_cumulative_existing_vehicle_count_rank
+  title: 沖縄_延実在車両数(日車)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: okinawa_cumulative_existing_vehicle_count_deviation_score
+  title: 沖縄_延実在車両数(日車)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: okinawa_cumulative_operating_vehicle_count_rank
+  title: 沖縄_延実働車両数(日車)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: okinawa_cumulative_operating_vehicle_count_deviation_score
+  title: 沖縄_延実働車両数(日車)偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: okinawa_traveled_kilometers_rank
+  title: 沖縄_走行キロ(キロメートル)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: okinawa_traveled_kilometers_deviation_score
+  title: 沖縄_走行キロ(キロメートル)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: okinawa_loaded_kilometers_rank
+  title: 沖縄_実車キロ(キロメートル)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: okinawa_loaded_kilometers_deviation_score
+  title: 沖縄_実車キロ(キロメートル)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: okinawa_actual_transport_tons_rank
+  title: 沖縄_実運送(トン)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: okinawa_actual_transport_tons_deviation_score
+  title: 沖縄_実運送(トン)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: okinawa_utilized_transport_tons_rank
+  title: 沖縄_利用運送(トン)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: okinawa_utilized_transport_tons_deviation_score
+  title: 沖縄_利用運送(トン)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: okinawa_operating_revenue_rank
+  title: 沖縄_営業収入(千円)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: okinawa_operating_revenue_deviation_score
+  title: 沖縄_営業収入(千円)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: national_cumulative_existing_vehicle_count_rank
+  title: 全国_延実在車両数(日車)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: national_cumulative_existing_vehicle_count_deviation_score
+  title: 全国_延実在車両数(日車)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: national_cumulative_operating_vehicle_count_rank
+  title: 全国_延実働車両数(日車)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: national_cumulative_operating_vehicle_count_deviation_score
+  title: 全国_延実働車両数(日車)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: national_traveled_kilometers_rank
+  title: 全国_走行キロ(キロメートル)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: national_traveled_kilometers_deviation_score
+  title: 全国_走行キロ(キロメートル)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: national_loaded_kilometers_rank
+  title: 全国_実車キロ(キロメートル)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: national_loaded_kilometers_deviation_score
+  title: 全国_実車キロ(キロメートル)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: national_actual_transport_tons_rank
+  title: 全国_実運送(トン)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: national_actual_transport_tons_deviation_score
+  title: 全国_実運送(トン)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: national_utilized_transport_tons_rank
+  title: 全国_利用運送(トン)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: national_utilized_transport_tons_deviation_score
+  title: 全国_利用運送(トン)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: national_operating_revenue_rank
+  title: 全国_営業収入(千円)_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: national_operating_revenue_deviation_score
+  title: 全国_営業収入(千円)_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: accident_count_traffic_accidents_rank
+  title: 事故件数_交通事故件数_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accident_count_traffic_accidents_deviation_score
+  title: 事故件数_交通事故件数_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: accident_count_major_accidents_rank
+  title: 事故件数_重大事故件数_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accident_count_major_accidents_deviation_score
+  title: 事故件数_重大事故件数_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: accident_count_fatalities_rank
+  title: 事故件数_死者数_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accident_count_fatalities_deviation_score
+  title: 事故件数_死者数_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: accident_count_injuries_rank
+  title: 事故件数_負傷者数_ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accident_count_injuries_deviation_score
+  title: 事故件数_負傷者数_偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: business_overview_commercial_vehicle_count_rank
+  title: 事業概況_事業用自動車(両)ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: business_overview_commercial_vehicle_count_deviation_score
+  title: 事業概況_事業用自動車(両)偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: business_overview_employee_count_rank
+  title: 事業概況_従業員数(人)ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: business_overview_employee_count_deviation_score
+  title: 事業概況_従業員数(人)偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: loaded_kilometers_rank
+  title: 実車キロ(キロ)ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: loaded_kilometers_deviation_score
+  title: 実車キロ(キロ)偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: empty_kilometers_rank
+  title: 空車キロ(キロ)ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: empty_kilometers_deviation_score
+  title: 空車キロ(キロ)偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: total_traveled_kilometers_rank
+  title: 走行キロ計ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: total_traveled_kilometers_deviation_score
+  title: 走行キロ計偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: end_period_existing_vehicle_count_rank
+  title: 期末実在車両数(両)ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: end_period_existing_vehicle_count_deviation_score
+  title: 期末実在車両数(両)偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: national_cumulative_existing_vehicle_count_rank_1
+- name: national_cumulative_existing_vehicle_count_deviation_score_1
+- name: national_cumulative_operating_vehicle_count_rank_1
+- name: national_cumulative_operating_vehicle_count_deviation_score_1
+- name: during_period_average_employee_count_rank
+  title: 期中平均従業員数(人)ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: during_period_average_employee_count_deviation_score
+  title: 期中平均従業員数(人)偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: specific_business_operating_revenue_rank
+  title: 当該事業営業収益ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: specific_business_operating_revenue_deviation_score
+  title: 当該事業営業収益偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: specific_business_operating_expenses_rank
+  title: 当該事業営業費用ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: specific_business_operating_expenses_deviation_score
+  title: 当該事業営業費用偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: specific_business_operating_profit_loss_rank
+  title: 当該事業営業損益ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: specific_business_operating_profit_loss_deviation_score
+  title: 当該事業営業損益偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: ancillary_business_operating_revenue_rank
+  title: 兼業事業営業収益ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: ancillary_business_operating_revenue_deviation_score
+  title: 兼業事業営業収益偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: ancillary_business_operating_expenses_rank
+  title: 兼業事業営業費ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: ancillary_business_operating_expenses_deviation_score
+  title: 兼業事業営業費偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: ancillary_business_operating_profit_rank
+  title: 兼業事業営業利益ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: ancillary_business_operating_profit_deviation_score
+  title: 兼業事業営業利益偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: total_business_operating_revenue_rank
+  title: 全事業営業収益ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: total_business_operating_revenue_deviation_score
+  title: 全事業営業収益偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: total_business_operating_expenses_rank
+  title: 全事業営業費ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: total_business_operating_expenses_deviation_score
+  title: 全事業営業費偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: total_business_operating_profit_rank
+  title: 全事業営業利益ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: total_business_operating_profit_deviation_score
+  title: 全事業営業利益偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: non_operating_revenue_rank
+  title: 営業外収益ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: non_operating_revenue_deviation_score
+  title: 営業外収益偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: non_operating_expenses_rank
+  title: 営業外費用ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: non_operating_expenses_deviation_score
+  title: 営業外費用偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: financial_expenses_rank
+  title: 金融費用ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: financial_expenses_deviation_score
+  title: 金融費用偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: ordinary_revenue_rank
+  title: 経常収益ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: ordinary_revenue_deviation_score
+  title: 経常収益偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: ordinary_expenses_rank
+  title: 経常費用ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: ordinary_expenses_deviation_score
+  title: 経常費用偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: ordinary_profit_rank
+  title: 経常利益ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: ordinary_profit_deviation_score
+  title: 経常利益偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: extraordinary_profit_rank
+  title: 特別利益ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: extraordinary_profit_deviation_score
+  title: 特別利益偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: extraordinary_loss_rank
+  title: 特別損失ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: extraordinary_loss_deviation_score
+  title: 特別損失偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: profit_before_taxes_rank
+  title: 税引前利益ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: profit_before_taxes_deviation_score
+  title: 税引前利益偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: corporate_taxes_etc_rank
+  title: 法人税等ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: corporate_taxes_etc_deviation_score
+  title: 法人税等偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: corporate_taxes_etc_adjustment_rank
+  title: 法人税等調整額ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: corporate_taxes_etc_adjustment_deviation_score
+  title: 法人税等調整額偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: current_period_profit_rank
+  title: 当期利益ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: current_period_profit_deviation_score
+  title: 当期利益偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: specific_business_non_operating_income_rank
+  title: 当該事業営業外収益ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: specific_business_non_operating_income_deviation_score
+  title: 当該事業営業外収益偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: specific_business_ordinary_income_rank
+  title: 当該事業経常収益ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: specific_business_ordinary_income_deviation_score
+  title: 当該事業経常収益偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: specific_business_ordinary_expenses_rank
+  title: 当該事業経常費用ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: specific_business_ordinary_expenses_deviation_score
+  title: 当該事業経常費用偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: specific_business_ordinary_profit_rank
+  title: 当該事業経常利益ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: specific_business_ordinary_profit_deviation_score
+  title: 当該事業経常利益偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: motor_vehicle_transport_operating_revenue_rank
+  title: 自動車運送事業営業収益ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: motor_vehicle_transport_operating_revenue_deviation_score
+  title: 自動車運送事業営業収益偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: current_assets_rank
+  title: 流動資産ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: current_assets_deviation_score
+  title: 流動資産偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: quick_assets_rank
+  title: 当座資産ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: quick_assets_deviation_score
+  title: 当座資産偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: fare_receivables_rank
+  title: 未収運賃ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: fare_receivables_deviation_score
+  title: 未収運賃偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: other_receivables_rank
+  title: その他未収金ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: other_receivables_deviation_score
+  title: その他未収金偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: total_receivables_rank
+  title: 未収金合計ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: total_receivables_deviation_score
+  title: 未収金合計偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: fixed_assets_rank
+  title: 固定資産ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: fixed_assets_deviation_score
+  title: 固定資産偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: tangible_fixed_assets_rank
+  title: 有形固定資産ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: tangible_fixed_assets_deviation_score
+  title: 有形固定資産偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: construction_in_progress_rank
+  title: 建設仮勘定ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: construction_in_progress_deviation_score
+  title: 建設仮勘定偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: intangible_fixed_assets_rank
+  title: 無形固定資産ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: intangible_fixed_assets_deviation_score
+  title: 無形固定資産偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: investments_and_other_assets_rank
+  title: 投資等ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: investments_and_other_assets_deviation_score
+  title: 投資等偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: deferred_assets_rank
+  title: 繰延資産ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: deferred_assets_deviation_score
+  title: 繰延資産偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: total_assets_rank
+  title: 資産の部合計ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: total_assets_deviation_score
+  title: 資産の部合計偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: current_liabilities_rank
+  title: 流動負債ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: current_liabilities_deviation_score
+  title: 流動負債偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: non_current_liabilities_rank
+  title: 固定負債ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: non_current_liabilities_deviation_score
+  title: 固定負債偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: total_liabilities_rank
+  title: 負債の部合計ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: total_liabilities_deviation_score
+  title: 負債の部合計偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: capital_stock_1_rank
+  title: 資本金.1ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: capital_stock_1_deviation_score
+  title: 資本金.1偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: total_equity_rank
+  title: 資本の部合計ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: total_equity_deviation_score
+  title: 資本の部合計偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: operating_expenses_transport_costs_personnel_rank
+  title: 営業費用_運送費_人件費ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_transport_costs_personnel_deviation_score
+  title: 営業費用_運送費_人件費偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: operating_expenses_transport_costs_fuel_rank
+  title: 営業費用_運送費_燃料費ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_transport_costs_fuel_deviation_score
+  title: 営業費用_運送費_燃料費偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: operating_expenses_transport_costs_gasoline_rank
+  title: 営業費用_運送費_ガソリン費ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_transport_costs_gasoline_deviation_score
+  title: 営業費用_運送費_ガソリン費偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: operating_expenses_transport_costs_diesel_rank
+  title: 営業費用_運送費_軽油費ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_transport_costs_diesel_deviation_score
+  title: 営業費用_運送費_軽油費偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: operating_expenses_transport_costs_other_fuel_rank
+  title: 営業費用_運送費_その他燃料費ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_transport_costs_other_fuel_deviation_score
+  title: 営業費用_運送費_その他燃料費偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: operating_expenses_transport_costs_repairs_rank
+  title: 営業費用_運送費_修繕費ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_transport_costs_repairs_deviation_score
+  title: 営業費用_運送費_修繕費偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: operating_expenses_transport_costs_vehicles_rank
+  title: 営業費用_運送費_車両ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_transport_costs_vehicles_deviation_score
+  title: 営業費用_運送費_車両偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: operating_expenses_transport_costs_other_rank
+  title: 営業費用_運送費_その他ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_transport_costs_other_deviation_score
+  title: 営業費用_運送費_その他偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: operating_expenses_transport_costs_fixed_assets_depreciation_rank
+  title: 営業費用_運送費_固定資産償却費ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_transport_costs_fixed_assets_depreciation_deviation_score
+  title: 営業費用_運送費_固定資産償却費偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: operating_expenses_transport_costs_vehicles_1_rank
+  title: 営業費用_運送費_車両.1ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_transport_costs_vehicles_1_deviation_score
+  title: 営業費用_運送費_車両.1偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: operating_expenses_transport_costs_other_1_rank
+  title: 営業費用_運送費_その他.1ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_transport_costs_other_1_deviation_score
+  title: 営業費用_運送費_その他.1偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: operating_expenses_transport_costs_insurance_rank
+  title: 営業費用_運送費_保険料ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_transport_costs_insurance_deviation_score
+  title: 営業費用_運送費_保険料偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: operating_expenses_transport_costs_facility_usage_fees_rank
+  title: 営業費用_運送費_施設使用料ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_transport_costs_facility_usage_fees_deviation_score
+  title: 営業費用_運送費_施設使用料偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: operating_expenses_transport_costs_vehicle_lease_fees_rank
+  title: 営業費用_運送費_自動車リース料ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_transport_costs_vehicle_lease_fees_deviation_score
+  title: 営業費用_運送費_自動車リース料偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: operating_expenses_transport_costs_facility_taxes_rank
+  title: 営業費用_運送費_施設賦課税ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_transport_costs_facility_taxes_deviation_score
+  title: 営業費用_運送費_施設賦課税偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: operating_expenses_transport_costs_accident_compensation_rank
+  title: 営業費用_運送費_事故賠償費ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_transport_costs_accident_compensation_deviation_score
+  title: 営業費用_運送費_事故賠償費偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: operating_expenses_transport_costs_road_usage_fees_rank
+  title: 営業費用_運送費_道路使用料ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_transport_costs_road_usage_fees_deviation_score
+  title: 営業費用_運送費_道路使用料偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: operating_expenses_transport_costs_ferry_boat_usage_fees_rank
+  title: 営業費用_運送費_フェリーボート使用料ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_transport_costs_ferry_boat_usage_fees_deviation_score
+  title: 営業費用_運送費_フェリーボート使用料偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: other_transport_costs_rank
+  title: その他運送費ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: other_transport_costs_deviation_score
+  title: その他運送費偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: operating_expenses_general_administrative_rank
+  title: 営業費用_一般管理費ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_general_administrative_deviation_score
+  title: 営業費用_一般管理費偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: operating_expenses_general_administrative_personnel_rank
+  title: 営業費用_一般管理費_人件費ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_general_administrative_personnel_deviation_score
+  title: 営業費用_一般管理費_人件費偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: total_operating_expenses_rank
+  title: 営業費合計ランク
+  description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: total_operating_expenses_deviation_score
+  title: 営業費合計偏差値
+  description: '秘匿化: ※偏差値100までは実数、100超は「999」で秘匿化'
+- name: net_labor_hours_total_road_logistics
+  title: 実労働時間数_総数(道路貨物運送業)
+  description: '単位: 時間'
+- name: net_labor_hours_expected_road_logistics
+  title: 実労働時間数_所定内(道路貨物運送業)
+  description: '単位: 時間'
+- name: net_labor_hours_non_expected_road_logistics
+  title: 実労働時間数_所定外(道路貨物運送業)
+  description: '単位: 時間'
+- name: year
+  title: 年度

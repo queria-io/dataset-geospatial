@@ -1,0 +1,14 @@
+schema: links
+name: drone_airspace_yellow_zone
+title: 小型無人機等飛行禁止法のイエローゾーン
+description: |-
+  各種空域情報のうちイエローゾーンの情報を有するジオメトリデータ(主要8空港:8レコード)
+
+  G空間情報センターのデータセット links-mujinkoukuukihikoukeikaku-2024 の 04_kakusyukuuikijyouhou_yellowzone.geojson を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-mujinkoukuukihikoukeikaku-2024
+fields:
+- name: name
+  title: 空域名称
+  description: '秘匿化: 秘匿化有(一部のみ公開)。以下の8空港のみジオメトリデータを公開 新千歳空港、成田国際空港、東京国際空港、中部国際空港、大阪国際空港、関西国際空港、福岡空港、那覇空港'
+- name: geometry

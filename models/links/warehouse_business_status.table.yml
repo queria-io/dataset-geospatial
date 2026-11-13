@@ -1,0 +1,658 @@
+schema: links
+name: warehouse_business_status
+title: 倉庫事業経営状況報告書
+description: |-
+  倉庫経営状況として、倉庫保有棟数、貸借対照表(資産・負債、投資、自己株式等)、損益計算書(倉庫業収入・費用、倉庫業損益等)等に関する情報を有するデータ(2,095レコード)
+
+  元の資料: 倉庫事業経営状況報告書
+
+  G空間情報センターのデータセット links-soukogyou-2025 の 02_soukojigyou_keieijyoukyouhoukoku.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-soukogyou-2025
+fields:
+- name: fiscal_year
+  title: 年度
+- name: company_id
+  title: 事業者ID
+  description: '秘匿化: 秘匿化あり。事業者名をもとにID付与'
+- name: location
+  title: 所在地
+  description: '秘匿化: 秘匿化あり。市町村で秘匿化'
+- name: executive_rank
+  title: 役員_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: employee_rank
+  title: 従業員_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: total_employee_count_rank
+  title: 全体従業員数_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: owned_warehouse_buildings_count_rank
+  title: 倉庫保有棟数_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: leased_warehouse_buildings_count_rank
+  title: うち、賃借棟数_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: newest_building_age_rank
+  title: 最も新しい築年数_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: oldest_building_age_rank
+  title: 最も古い築年数_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: floor_area_or_capacity_rank
+  title: 面(容)積_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: rented_storage_capacity_rank
+  title: 左のうち、借庫_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: inbound_volume_rank
+  title: 入庫高_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: outbound_volume_rank
+  title: 出庫高_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_balance_rank
+  title: 保管残高_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: utilized_storage_volume_rank
+  title: 使用容積_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: fulltime_executive_count_rank
+  title: 常勤役員_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: regular_employee_count_rank
+  title: 常用従業員_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: temporary_employee_count_rank
+  title: 臨時従業員_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: contract_employee_count_rank
+  title: 請負従業員_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: dispatched_employee_count_rank
+  title: 派遣従業員_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: average_wage_rank
+  title: 平均賃金_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: average_age_rank
+  title: 年齢_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: executive_compensation_thousands_rank
+  title: 役員報酬(単位:千円)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: current_assets_rank
+  title: 流動資産_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: buildings_assets_rank
+  title: 建物_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: structures_assets_rank
+  title: 構築物_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: machinery_equipment_assets_rank
+  title: 機械・装置_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: vehicles_transport_equipment_assets_rank
+  title: 車両・運搬具_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: tools_fixtures_assets_rank
+  title: 器具・備品_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: land_assets_rank
+  title: 土地_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: construction_in_progress_assets_rank
+  title: 建設仮勘定_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: other_tangible_fixed_assets_rank
+  title: その他有形固定資産_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: total_tangible_fixed_assets_rank
+  title: 有形固定資産計_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: total_intangible_assets_rank
+  title: 無形固定資産計_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: investments_and_others_rank
+  title: 投資等_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: total_fixed_assets_rank
+  title: 固定資産計_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: deferred_assets_rank
+  title: 繰延資産_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: total_assets_section_rank
+  title: 資産の部計_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: short_term_loans_rank
+  title: 短期借入金_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: liability_provisions_rank
+  title: 負債性引当金_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: other_current_liabilities_rank
+  title: その他流動負債_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: total_current_liabilities_rank
+  title: 流動負債計_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: long_term_loans_rank
+  title: 長期借入金_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: other_noncurrent_liabilities_rank
+  title: その他固定負債_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: total_noncurrent_liabilities_rank
+  title: 固定負債計_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: total_liabilities_section_rank
+  title: 負債の部計_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: capital_stock_rank
+  title: 資本金_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: company_name
+  title: 企業
+- name: capital_reserve_rank
+  title: 資本準備金_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: other_capital_surplus_rank
+  title: その他資本剰余金_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: total_capital_surplus_rank
+  title: 資本剰余金計_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: earned_surplus_reserve_rank
+  title: 利益準備金_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: voluntary_reserves_rank
+  title: 任意積立金_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: retained_earnings_rank
+  title: 繰越利益剰余金_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: total_retained_earnings_rank
+  title: 利益剰余金計_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: land_revaluation_reserve_rank
+  title: 土地再評価差額金_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: other_securities_revaluation_reserve_rank
+  title: その他有価証券評価差額金_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: treasury_stock_deposit_rank
+  title: 自己株式払込金申込証拠金_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: treasury_stock_rank
+  title: 自己株式_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: share_subscription_rights_rank
+  title: 新株予約権_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: total_net_assets_section_rank
+  title: 純資産の部計_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: total_liabilities_and_net_assets_rank
+  title: 負債・純資産の部計_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: warehousing_revenue_rank
+  title: 倉庫業収益_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: other_warehousing_revenue_rank
+  title: その他倉庫業収益_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: total_warehousing_revenue_rank
+  title: 倉庫業収益計_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: warehousing_expenses_rank
+  title: 倉庫業費用_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: other_warehousing_expenses_rank
+  title: その他倉庫業費用_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: total_warehousing_expenses_rank
+  title: 倉庫業費用計_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: warehousing_profit_loss_rank
+  title: 倉庫業損益_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: port_transport_business_revenue_rank
+  title: 港湾運送事業_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: motor_transport_business_revenue_rank
+  title: 自動車運送業_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: forwarding_business_revenue_rank
+  title: 利用運送事業_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: real_estate_rental_revenue_rank
+  title: 不動産賃貸業収益_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: warehouse_rental_revenue_rank
+  title: 左のうち、倉庫賃貸事業収益_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: other_business_revenue_rank
+  title: その他事業収益_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: total_auxiliary_business_revenue_rank
+  title: 兼営事業収益計_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: auxiliary_business_expenses_rank
+  title: 兼営事業費用_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: auxiliary_rent_expenses_rank
+  title: 左のうち、賃借料_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: auxiliary_business_profit_loss_rank
+  title: 兼営事業損益_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: operating_revenue_rank
+  title: 営業収益_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: operating_expenses_rank
+  title: 営業費用_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: operating_profit_rank
+  title: 営業利益_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: non_operating_revenue_rank
+  title: 営業外収益_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: interest_income_rank
+  title: 左のうち、受取利息_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: non_operating_expenses_rank
+  title: 営業外費用_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: financial_expenses_rank
+  title: 左のうち、金融費用_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: ordinary_profit_loss_rank
+  title: 経常損益_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: extraordinary_gain_rank
+  title: 特別利益_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: extraordinary_loss_rank
+  title: 特別損失_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: profit_before_income_taxes_rank
+  title: 税引前当期損益_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: corporate_and_other_taxes_rank
+  title: 法人税、住民税及び事業税_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: income_tax_adjustments_rank
+  title: 法人税等調整額_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: profit_after_taxes_rank
+  title: 税引後当期損益_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_operating_revenue_rank
+  title: 営業収益(保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_redelivery_revenue_rank
+  title: 保管収益のうち、再寄託収益_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_distribution_processing_revenue_rank
+  title: 保管収益のうち、流通加工収益_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_trunk_room_revenue_rank
+  title: 保管収益のうち、トランクルーム収益_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_non_operating_revenue_rank
+  title: 営業外収益(保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_ordinary_revenue_rank
+  title: 経常収益(保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_labor_expenses_rank
+  title: 人件費(保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_contract_expenses_rank
+  title: 請負費用(保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_dispatch_expenses_rank
+  title: 派遣費用(保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_power_expenses_rank
+  title: 動力費(保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_material_expenses_rank
+  title: 材料費(保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_depreciation_expenses_rank
+  title: 減価償却費(保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_repair_expenses_rank
+  title: 修繕費(保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_building_insurance_expenses_rank
+  title: 建物保険料(保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_cargo_insurance_expenses_rank
+  title: 貨物保険料(保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_rent_expenses_rank
+  title: 賃借料(保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_rented_warehouse_fee_rank
+  title: 左のうち、借庫料(保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_redelivery_expenses_rank
+  title: 再寄託費用(保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_taxes_and_dues_rank
+  title: 租税公課(保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_other_expenses_rank
+  title: その他経費(保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_total_cost_rank
+  title: 計(保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_distribution_processing_cost_rank
+  title: 保管業務計のうち、流通加工費_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: general_storage_labor_expenses_rank
+  title: 人件費(一般保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: general_storage_depreciation_expenses_rank
+  title: 減価償却費(一般保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: general_storage_repair_expenses_rank
+  title: 修繕費(一般保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: general_storage_rent_expenses_rank
+  title: 賃借料(一般保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: general_storage_taxes_and_dues_rank
+  title: 租税公課(一般保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: general_storage_other_expenses_rank
+  title: その他経費(一般保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_operating_expenses_rank
+  title: 営業費用(保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_non_operating_expenses_rank
+  title: 営業外費用(保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_financial_expenses_rank
+  title: 左のうち、金融費用(保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_ordinary_expenses_rank
+  title: 経常費用(保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: operating_profit_loss_rank
+  title: 営業損益_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: operating_balance_ratio_rank
+  title: 営業収支率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: storage_ordinary_profit_loss_rank
+  title: 経常損益(保管)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: ordinary_balance_ratio_rank
+  title: 経常収支率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: handling_operating_revenue_rank
+  title: 営業収益(荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: handling_redelivery_revenue_rank
+  title: 荷役収益中、再寄託収益_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: handling_distribution_processing_revenue_rank
+  title: 荷役収益中、流通加工収益_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: handling_trunk_room_revenue_rank
+  title: 荷役収益中、トランクルーム収益_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: handling_non_operating_revenue_rank
+  title: 営業外収益(荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: handling_ordinary_revenue_rank
+  title: 経常収益(荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: handling_labor_expenses_rank
+  title: 人件費(荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: handling_contract_expenses_rank
+  title: 請負費用(荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: handling_dispatch_expenses_rank
+  title: 派遣費用(荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: handling_power_expenses_rank
+  title: 動力費(荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: handling_material_expenses_rank
+  title: 材料費(荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: handling_depreciation_expenses_rank
+  title: 減価償却費(荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: handling_repair_expenses_rank
+  title: 修繕費(荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: handling_building_insurance_expenses_rank
+  title: 建物保険料(荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: handling_rent_expenses_rank
+  title: 賃借料(荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: handling_redelivery_expenses_rank
+  title: 再寄託費用(荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: handling_taxes_and_dues_rank
+  title: 租税公課(荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: handling_other_expenses_rank
+  title: その他経費(荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: handling_total_cost_rank
+  title: 計(荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: handling_distribution_processing_cost_rank
+  title: 荷役業務計のうち、流通加工費_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: general_handling_labor_expenses_rank
+  title: 人件費(一般・荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: general_handling_depreciation_expenses_rank
+  title: 減価償却費(一般・荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: general_handling_repair_expenses_rank
+  title: 修繕費(一般・荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: general_handling_rent_expenses_rank
+  title: 賃借料(一般・荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: general_handling_taxes_and_dues_rank
+  title: 租税公課(一般・荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: general_handling_other_expenses_rank
+  title: その他経費(一般・荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: general_total_cost_rank
+  title: 計(一般)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: handling_operating_expenses_rank
+  title: 営業費用(荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: handling_non_operating_expenses_rank
+  title: 営業外費用(荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: handling_financial_expenses_rank
+  title: 左のうち、金融費用(荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: handling_ordinary_expenses_rank
+  title: 経常費用(荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: handling_ordinary_profit_loss_rank
+  title: 経常損益(荷役)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: processing_operating_revenue_rank
+  title: 営業収益(流通加工)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: processing_revenue_rank
+  title: 左のうち、流通加工収益_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: processing_operating_expenses_rank
+  title: 営業費用(流通加工)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: processing_cost_rank
+  title: 左のうち、流通加工費_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: overall_total_rank
+  title: 計_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: breakdown_subtotal_rank
+  title: 内訳計_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: total_operating_revenue_rank
+  title: 全営業収益_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: total_processing_revenue_rank
+  title: 全流通加工収益_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: total_operating_expenses_rank
+  title: 全営業費用_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: total_processing_cost_rank
+  title: 全流通加工費_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: total_processing_total_rank
+  title: 全流通加工計_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: tangible_buildings_rank
+  title: 建物(有形)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: tangible_structures_rank
+  title: 構築物(有形)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: tangible_machinery_equipment_rank
+  title: 機械・装置(有形)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: tangible_vehicles_transport_equipment_rank
+  title: 車両・運搬具(有形)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: tangible_tools_fixtures_rank
+  title: 器具・備品(有形)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: tangible_land_rank
+  title: 土地(有形)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: other_misc_rank
+  title: その他_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: warehousing_tangible_fixed_assets_rank
+  title: 倉庫業有形固定資産_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: dividend_payout_ratio_rank
+  title: 配当率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: warehousing_tangible_assets_share_rank
+  title: 有形固定資産に占める倉庫業有形固定資産の割合_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: equity_ratio_rank
+  title: 自己資本比率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: current_ratio_rank
+  title: 流動比率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: debt_ratio_rank
+  title: 負債比率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: current_liabilities_ratio_rank
+  title: 流動負債比率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: fixed_asset_ratio_rank
+  title: 固定比率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: fixed_long_term_matching_ratio_rank
+  title: 固定長期適合率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: sales_operating_profit_margin_rank
+  title: 売上高営業利益率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: sales_ordinary_profit_margin_rank
+  title: 売上高経常利益率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: sales_net_profit_margin_rank
+  title: 売上高純利益率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: return_on_total_assets_ordinary_rank
+  title: 総資本経常利益率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: return_on_equity_ordinary_rank
+  title: 自己資本経常利益率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: return_on_paid_in_capital_rank
+  title: 支払資本経常利益率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: total_asset_turnover_rank
+  title: 総資本回転率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: equity_turnover_rank
+  title: 自己資本回転率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: paid_in_capital_turnover_rank
+  title: 払込資本回転率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: working_capital_turnover_rank
+  title: 流動資本回転率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: fixed_capital_turnover_rank
+  title: 固定資本回転率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: tangible_fixed_asset_turnover_rank
+  title: 有形固定資産回転率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: warehousing_tangible_asset_turnover_rank
+  title: 倉庫業有形固定資産回転率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: warehousing_sales_operating_profit_margin_rank
+  title: 倉庫業売上高営業利益率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: labor_cost_to_warehousing_sales_ratio_rank
+  title: 人件費対倉庫業売上高比率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: depreciation_to_warehousing_sales_ratio_rank
+  title: 減価償却費対倉庫業売上高比率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: taxes_and_dues_to_warehousing_sales_ratio_rank
+  title: 公租公課対倉庫業売上高比率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: financial_cost_to_warehousing_sales_ratio_rank
+  title: 金融費用対倉庫業売上高比率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: added_value_amount_rank
+  title: 付加価値額_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: added_value_ratio_rank
+  title: 付加価値率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: warehousing_revenue_per_employee_rank
+  title: 従業員1人当り倉庫業収益_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: warehousing_expenses_per_employee_rank
+  title: 従業員1人当り倉庫業費用_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: labor_cost_per_employee_incl_subcontract_rank
+  title: 従業員1人当り人件費 (下請含む)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: labor_productivity_rank
+  title: 労働生産性_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: capital_equipment_per_employee_rank
+  title: 労働装備額_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: capital_productivity_rank
+  title: 設備投資効率(資本生産性)_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: labor_distribution_ratio_rank
+  title: 労働分配率_ランク
+  description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'

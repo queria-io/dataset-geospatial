@@ -1,0 +1,111 @@
+schema: links
+name: railway_income_statement
+title: 鉄道統計年報 損益計算書
+description: |-
+  損益計算書は、鉄軌道業の営業収益・営業費・営業損益、自動車業の営業収益・営業費・営業損益、営業損益計、全事業経常利益、税引前損益、法人税等、当期損益、配当率に関する情報を有するデータです。(2,306レコード)
+
+  元の資料: 鉄道統計年報
+
+  G空間情報センターのデータセット links-tetsudoujigyou-2025 の 05_tetsudou_sonekikeisansyo.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-tetsudoujigyou-2025
+fields:
+- name: year
+  title: 年度
+  description: '単位: 年度'
+- name: company_name
+  title: 事業者名
+- name: supervisory_office
+  title: 管轄支局
+- name: company_size
+  title: 規模
+- name: railway_operating_revenue_thousandjpy
+  title: 鉄軌道業_営業収益_千円
+  description: '単位: 千円'
+- name: railway_operating_expenses_thousandjpy
+  title: 鉄軌道業_営業費_千円
+  description: '単位: 千円'
+- name: railway_operating_profitloss_thousandjpy
+  title: 鉄軌道業_営業損益_千円
+  description: '単位: 千円'
+- name: bus_operating_revenue_thousandjpy
+  title: 自動車業_営業収益_千円
+  description: '単位: 千円'
+- name: bus_operating_expenses_thousandjpy
+  title: 自動車業_営業費_千円
+  description: '単位: 千円'
+- name: bus_operating_profitloss_thousandjpy
+  title: 自動車業_営業損益_千円
+  description: '単位: 千円'
+- name: realestate_operating_revenue_thousandjpy
+  title: 不動産業_営業収益_千円
+  description: '単位: 千円'
+- name: realestate_operating_expenses_thousandjpy
+  title: 不動産業_営業費_千円
+  description: '単位: 千円'
+- name: realestate_operating_profitloss_thousandjpy
+  title: 不動産業_営業損益_千円
+  description: '単位: 千円'
+- name: other_business_revenue_thousandjpy
+  title: その他の兼業_営業収益_千円
+  description: '単位: 千円'
+- name: other_business_expenses_thousandjpy
+  title: その他の兼業_営業費_千円
+  description: '単位: 千円'
+- name: other_business_profitloss_thousandjpy
+  title: その他の兼業_営業損益_千円
+  description: '単位: 千円'
+- name: total_operating_revenue_thousandjpy
+  title: 営業損益計_営業収益_千円
+  description: '単位: 千円'
+- name: total_operating_expenses_thousandjpy
+  title: 営業損益計_営業費_千円
+  description: '単位: 千円'
+- name: total_operating_profitloss_thousandjpy
+  title: 営業損益計_営業損益_千円
+  description: '単位: 千円'
+- name: nonoperating_income_thousandjpy
+  title: 営業外収益計_千円
+  description: '単位: 千円'
+- name: nonoperating_expenses_thousandjpy
+  title: 営業外費用計_千円
+  description: '単位: 千円'
+- name: ordinary_profitloss_thousandjpy
+  title: 全事業経常損益_千円
+  description: '単位: 千円'
+- name: extraordinary_income_fixedassetsales_thousandjpy
+  title: 特別利益_固定資産売却益_千円
+  description: '単位: 千円'
+- name: extraordinary_income_other_thousandjpy
+  title: 特別利益_その他_千円
+  description: '単位: 千円'
+- name: extraordinary_income_total_thousandjpy
+  title: 特別利益_計_千円
+  description: '単位: 千円'
+- name: extraordinary_loss_fixedassetsales_thousandjpy
+  title: 特別損失_固定資産売却損_千円
+  description: '単位: 千円'
+- name: extraordinary_loss_other_thousandjpy
+  title: 特別損失_その他_千円
+  description: '単位: 千円'
+- name: extraordinary_loss_total_thousandjpy
+  title: 特別損失_計_千円
+  description: '単位: 千円'
+- name: profitloss_before_tax_thousandjpy
+  title: 税引前損益_千円
+  description: '単位: 千円'
+- name: corporate_tax_thousandjpy
+  title: 法人税等_千円
+  description: '単位: 千円'
+- name: corporate_tax_adjustment_thousandjpy
+  title: 法人税等調整額_千円
+  description: '単位: 千円'
+- name: net_profitloss_thousandjpy
+  title: 当期損益_千円
+  description: '単位: 千円'
+- name: dividend_rate_firsthalf_percent
+  title: 配当率_上期_%
+  description: '単位: %'
+- name: dividend_rate_secondhalf_percent
+  title: 配当率_下期_%
+  description: '単位: %'

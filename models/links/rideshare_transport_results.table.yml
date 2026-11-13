@@ -1,0 +1,213 @@
+schema: links
+name: rideshare_transport_results
+title: 自家用有償旅客運送輸送実績報告書
+description: |-
+  本データは、東京運輸支局及び徳島運輸支局、長崎運輸支局の運送者(29件)を対象に、2020~2024年度における自家用有償旅客運送自動車数(寝台車、車いす車、兼用車、回転シート車、セダン等、バスの別)、走行キロ、輸送人員、運送収入、交通事故・重大事故件数、死者数、負傷者数に関する情報をデータ化したものです。(29レコード)
+
+  元の資料: 自家用有償旅客運送輸送実績報告書
+
+  G空間情報センターのデータセット links-rideshare-2025 の 01_jikayouyuushouryokyakuunsou_yusoujissekihoukokusho.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-rideshare-2025
+fields:
+- name: category
+  title: 種別
+- name: fiscal_year
+  title: 年度
+- name: address
+  title: 住所
+  description: '秘匿化: 秘匿化あり。都道府県単位で秘匿化'
+- name: latitude
+  title: 緯度
+  description: '秘匿化: 秘匿化あり。秘匿化後住所をもとに座標付与'
+- name: longitude
+  title: 経度
+  description: '秘匿化: 秘匿化あり。秘匿化後住所をもとに座標付与'
+- name: operator_id
+  title: 事業者名ID
+  description: '秘匿化: 秘匿化あり。事業者名をもとにID付与'
+- name: overview_area
+  title: 概況_区域
+  description: '秘匿化: 秘匿化あり。都道府県単位で秘匿化'
+- name: overview_private_paid_passenger_vehicles_sleeper_units_area
+  title: 概況_自家用有償旅客運送自動車数_寝台車(両)_区域
+  description: '単位: 両'
+- name: overview_private_paid_passenger_vehicles_sleeper_light_units_area
+  title: 概況_自家用有償旅客運送自動車数_寝台車うち軽自動車(両)_区域
+  description: '単位: 両'
+- name: overview_private_paid_passenger_vehicles_sleeper_units_nationwide
+  title: 概況_自家用有償旅客運送自動車数_寝台車(両)_全国
+  description: '単位: 両'
+- name: overview_private_paid_passenger_vehicles_sleeper_light_units_nationwide
+  title: 概況_自家用有償旅客運送自動車数_寝台車うち軽自動車(両)_全国
+  description: '単位: 両'
+- name: overview_private_paid_passenger_vehicles_wheelchair_units_area
+  title: 概況_自家用有償旅客運送自動車数_車いす車(両)_区域
+  description: '単位: 両'
+- name: overview_private_paid_passenger_vehicles_wheelchair_light_units_area
+  title: 概況_自家用有償旅客運送自動車数_車いす車うち軽自動車(両)_区域
+  description: '単位: 両'
+- name: overview_private_paid_passenger_vehicles_wheelchair_units_nationwide
+  title: 概況_自家用有償旅客運送自動車数_車いす車(両)_全国
+  description: '単位: 両'
+- name: overview_private_paid_passenger_vehicles_wheelchair_light_units_nationwide
+  title: 概況_自家用有償旅客運送自動車数_車いす車うち軽自動車(両)_全国
+  description: '単位: 両'
+- name: overview_private_paid_passenger_vehicles_combination_units_area
+  title: 概況_自家用有償旅客運送自動車数_兼用車(両)_区域
+  description: '単位: 両'
+- name: overview_private_paid_passenger_vehicles_combination_light_units_nationwide
+  title: 概況_自家用有償旅客運送自動車数_兼用車うち軽自動車(両)_全国
+  description: '単位: 両'
+- name: overview_private_paid_passenger_vehicles_swivel_seat_units_area
+  title: 概況_自家用有償旅客運送自動車数_回転シート車(両)_区域
+  description: '単位: 両'
+- name: overview_private_paid_passenger_vehicles_swivel_seat_light_units_area
+  title: 概況_自家用有償旅客運送自動車数_回転シート車うち軽自動車(両)_区域
+  description: '単位: 両'
+- name: overview_private_paid_passenger_vehicles_swivel_seat_units_nationwide
+  title: 概況_自家用有償旅客運送自動車数_回転シート車(両)_全国
+  description: '単位: 両'
+- name: overview_private_paid_passenger_vehicles_swivel_seat_light_units_nationwide
+  title: 概況_自家用有償旅客運送自動車数_回転シート車うち軽自動車(両)_全国
+  description: '単位: 両'
+- name: overview_private_paid_passenger_vehicles_sedan_etc_units_area
+  title: 概況_自家用有償旅客運送自動車数_セダン等(両)_区域
+  description: '単位: 両'
+- name: overview_private_paid_passenger_vehicles_sedan_etc_light_units_area
+  title: 概況_自家用有償旅客運送自動車数_セダン等うち軽自動車(両)_区域
+  description: '単位: 両'
+- name: overview_private_paid_passenger_vehicles_sedan_etc_units_nationwide
+  title: 概況_自家用有償旅客運送自動車数_セダン等(両)_全国
+  description: '単位: 両'
+- name: overview_private_paid_passenger_vehicles_sedan_etc_light_units_nationwide
+  title: 概況_自家用有償旅客運送自動車数_セダン等うち軽自動車(両)_全国
+  description: '単位: 両'
+- name: overview_private_paid_passenger_vehicles_bus_units_area
+  title: 概況_自家用有償旅客運送自動車数_バス(両)_区域
+  description: '単位: 両'
+- name: overview_private_paid_passenger_vehicles_bus_units_nationwide
+  title: 概況_自家用有償旅客運送自動車数_バス(両)_全国
+  description: '単位: 両'
+- name: overview_private_paid_passenger_vehicles_total_units_area
+  title: 概況_自家用有償旅客運送自動車数_計(両)_区域
+  description: '単位: 両'
+- name: overview_private_paid_passenger_vehicles_total_light_units_area
+  title: 概況_自家用有償旅客運送自動車数_計うち軽自動車(両)_区域
+  description: '単位: 両'
+- name: overview_private_paid_passenger_vehicles_total_units_nationwide
+  title: 概況_自家用有償旅客運送自動車数_計(両)_全国
+  description: '単位: 両'
+- name: overview_private_paid_passenger_vehicles_total_light_units_nationwide
+  title: 概況_自家用有償旅客運送自動車数_計うち軽自動車(両)_全国
+  description: '単位: 両'
+- name: overview_route_or_transport_area_route_area
+  title: 概況_路線(キロメートル)又は運送の区域_路線_区域
+  description: '単位: km'
+- name: overview_route_or_transport_area_route_nationwide
+  title: 概況_路線(キロメートル)又は運送の区域_路線_全国
+  description: '単位: km'
+- name: overview_route_or_transport_area_transport_area_area
+  title: 概況_路線(キロメートル)又は運送の区域_運送の区域_区域
+  description: '秘匿化: 秘匿化あり。都道府県単位で秘匿化'
+- name: overview_welfare_i_area
+  title: 概況_福祉_イ_区域
+  description: '単位: 人。イ:身体障害者'
+- name: overview_welfare_i_nationwide
+  title: 概況_福祉_イ_全国
+  description: '単位: 人。イ:身体障害者'
+- name: overview_welfare_ro_area
+  title: 概況_福祉_ロ_区域
+  description: '単位: 人。ロ:精神障害者'
+- name: overview_welfare_ro_nationwide
+  title: 概況_福祉_ロ_全国
+  description: '単位: 人。ロ:精神障害者'
+- name: overview_welfare_ha_area
+  title: 概況_福祉_ハ_区域
+  description: '単位: 人。ハ:知的障害者'
+- name: overview_welfare_ha_nationwide
+  title: 概況_福祉_ハ_全国
+  description: '単位: 人。ハ:知的障害者'
+- name: overview_welfare_ni_area
+  title: 概況_福祉_ニ_区域
+  description: '単位: 人。ニ:要介護者'
+- name: overview_welfare_ni_nationwide
+  title: 概況_福祉_ニ_全国
+  description: '単位: 人。ニ:要介護者'
+- name: overview_welfare_ho_area
+  title: 概況_福祉_ホ_区域
+  description: '単位: 人。ホ:要支援者'
+- name: overview_welfare_ho_nationwide
+  title: 概況_福祉_ホ_全国
+  description: '単位: 人。ホ:要支援者'
+- name: overview_welfare_he_area
+  title: 概況_福祉_ヘ_区域
+  description: '単位: 人。ヘ:基本チェックリスト該当者'
+- name: overview_welfare_he_nationwide
+  title: 概況_福祉_ヘ_全国
+  description: '単位: 人。ヘ:基本チェックリスト該当者'
+- name: overview_welfare_to_area
+  title: 概況_福祉_ト_区域
+  description: '単位: 人。ト:その他'
+- name: overview_welfare_to_nationwide
+  title: 概況_福祉_ト_全国
+  description: '単位: 人。ト:その他'
+- name: transport_results_total_distance_km_area
+  title: 輸送実績_走行キロ(キロメートル)_区域
+  description: '単位: km'
+- name: transport_results_total_distance_km_nationwide
+  title: 輸送実績_走行キロ(キロメートル)_全国
+  description: '単位: km'
+- name: transport_results_transported_persons_or_trips_persons_area
+  title: 輸送実績_輸送人員(人)又は輸送回数(回)_輸送人員_区域
+  description: '単位: 人'
+- name: transport_results_transported_persons_or_trips_persons_nationwide
+  title: 輸送実績_輸送人員(人)又は輸送回数(回)_輸送人員_全国
+  description: '単位: 人'
+- name: transport_results_transported_persons_or_trips_trips_area
+  title: 輸送実績_輸送人員(人)又は輸送回数(回)_輸送回数_区域
+  description: '単位: 回'
+- name: transport_results_transported_persons_or_trips_trips_nationwide
+  title: 輸送実績_輸送人員(人)又は輸送回数(回)_輸送回数_全国
+  description: '単位: 回'
+- name: transport_results_transport_revenue_thousand_yen_area
+  title: 輸送実績_運送収入(千円)_区域
+  description: '単位: 千円'
+- name: transport_results_transport_revenue_thousand_yen_nationwide
+  title: 輸送実績_運送収入(千円)_全国
+  description: '単位: 千円'
+- name: accidents_traffic_accidents_area
+  title: 事故件数_交通事故件数_区域
+  description: '単位: 件'
+- name: accidents_traffic_accidents_nationwide
+  title: 事故件数_交通事故件数_全国
+  description: '単位: 件'
+- name: accidents_serious_accidents_area
+  title: 事故件数_重大事故件数_区域
+  description: '単位: 件'
+- name: accidents_serious_accidents_nationwide
+  title: 事故件数_重大事故件数_全国
+  description: '単位: 件'
+- name: accidents_fatalities_area
+  title: 事故件数_死者数_区域
+  description: '単位: 人'
+- name: accidents_fatalities_nationwide
+  title: 事故件数_死者数_全国
+  description: '単位: 人'
+- name: accidents_injuries_area
+  title: 事故件数_負傷者数_区域
+  description: '単位: 人'
+- name: accidents_injuries_nationwide
+  title: 事故件数_負傷者数_全国
+  description: '単位: 人'
+- name: prefecture_code
+  title: 都道府県コード
+  annotations:
+    queria:
+      semantic:
+        role: entity
+        name: prefecture
+  description: address の先頭の都道府県名から付けたコード。都道府県名で始まらない行は NULL
+- name: geometry
+  title: 地点
+  description: 緯度・経度の列から作った点。日本の範囲（北緯 20〜46 度・東経 122〜154 度）から外れる値は NULL

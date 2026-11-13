@@ -1,0 +1,243 @@
+schema: links
+name: railway_balance_sheet
+title: 鉄道統計年報 貸借対照表
+description: |-
+  貸借対照表は、流動資産、固定資産、繰延資産、資産合計、流動負債、固定負債、引当金、負債合計、資本金、法定余剰金、利益余剰金、資本合計に関する情報を有するデータです。(2,308レコード)
+
+  元の資料: 鉄道統計年報
+
+  G空間情報センターのデータセット links-tetsudoujigyou-2025 の 06_tetsudou_taisyakutaisyouhyou.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-tetsudoujigyou-2025
+fields:
+- name: year
+  title: 年度
+  description: '単位: 年度'
+- name: operator_name
+  title: 事業者名
+- name: jurisdiction
+  title: 管轄
+- name: category
+  title: 区分
+- name: current_assets_quick_assets_cash_and_deposits
+  title: 流動資産_当座資産_現金・預金
+  description: '単位: 千円'
+- name: current_assets_quick_assets_trade_receivables
+  title: 流動資産_当座資産_営業債権
+  description: '単位: 千円'
+- name: current_assets_quick_assets_securities
+  title: 流動資産_当座資産_有価証券
+  description: '単位: 千円'
+- name: current_assets_quick_assets_total
+  title: 流動資産_当座資産_計
+  description: '単位: 千円'
+- name: current_assets_inventories_supplies
+  title: 流動資産_棚卸資産_貯蔵品
+  description: '単位: 千円'
+- name: current_assets_inventories_land_and_buildings_held_for_sale
+  title: 流動資産_棚卸資産_分譲土地建物
+  description: '単位: 千円'
+- name: current_assets_inventories_others
+  title: 流動資産_棚卸資産_その他
+  description: '単位: 千円'
+- name: current_assets_inventories_total
+  title: 流動資産_棚卸資産_計
+  description: '単位: 千円'
+- name: current_assets_others
+  title: 流動資産_その他
+  description: '単位: 千円'
+- name: current_assets_allowance_for_doubtful_accounts
+  title: 流動資産_貸倒引当金
+  description: '単位: 千円'
+- name: current_assets_total
+  title: 流動資産_計
+  description: '単位: 千円'
+- name: current_assets_total_percent
+  title: 流動資産_計_%
+  description: '単位: %'
+- name: non_current_assets_exclusive_for_business_railway
+  title: 固定資産_事業専属_鉄軌道業
+  description: '単位: 千円'
+- name: non_current_assets_exclusive_for_business_bus
+  title: 固定資産_事業専属_自動車業
+  description: '単位: 千円'
+- name: non_current_assets_exclusive_for_business_real_estate
+  title: 固定資産_事業専属_不動産業
+  description: '単位: 千円'
+- name: non_current_assets_exclusive_for_business_other_businesses
+  title: 固定資産_事業専属_その他の兼業
+  description: '単位: 千円'
+- name: non_current_assets_exclusive_for_business_total
+  title: 固定資産_事業専属_計
+  description: '単位: 千円'
+- name: non_current_assets_related_to_business_railway
+  title: 固定資産_各事業関連_鉄軌道業
+  description: '単位: 千円'
+- name: non_current_assets_related_to_business_bus
+  title: 固定資産_各事業関連_自動車業
+  description: '単位: 千円'
+- name: non_current_assets_related_to_business_real_estate
+  title: 固定資産_各事業関連_不動産業
+  description: '単位: 千円'
+- name: non_current_assets_related_to_business_other_businesses
+  title: 固定資産_各事業関連_その他の兼業
+  description: '単位: 千円'
+- name: non_current_assets_related_to_business_total
+  title: 固定資産_各事業関連_計
+  description: '単位: 千円'
+- name: non_current_assets_business_assets_total
+  title: 固定資産_事業用固定資産計_計
+  description: '単位: 千円'
+- name: non_current_assets_non_business_assets_total
+  title: 固定資産_事業用外固定資産_計
+  description: '単位: 千円'
+- name: non_current_assets_construction_in_progress_railway
+  title: 固定資産_事業専属建設仮勘定_鉄軌道業
+  description: '単位: 千円'
+- name: non_current_assets_construction_in_progress_bus
+  title: 固定資産_事業専属建設仮勘定_自動車業
+  description: '単位: 千円'
+- name: non_current_assets_construction_in_progress_real_estate
+  title: 固定資産_事業専属建設仮勘定_不動産業
+  description: '単位: 千円'
+- name: non_current_assets_construction_in_progress_other_businesses
+  title: 固定資産_事業専属建設仮勘定_その他の兼業
+  description: '単位: 千円'
+- name: non_current_assets_construction_in_progress_total
+  title: 固定資産_事業専属建設仮勘定_計
+  description: '単位: 千円'
+- name: non_current_assets_investments_subsidiary_stock
+  title: 固定資産_投資等_子会社株式
+  description: '単位: 千円'
+- name: non_current_assets_investments_long_term_prepaid_expenses
+  title: 固定資産_投資等_長期前払費用
+  description: '単位: 千円'
+- name: non_current_assets_investments_others
+  title: 固定資産_投資等_その他
+  description: '単位: 千円'
+- name: non_current_assets_investments_total
+  title: 固定資産_投資等_計
+  description: '単位: 千円'
+- name: non_current_assets_allowance_for_doubtful_accounts_total
+  title: 固定資産_貸倒引当金_計
+  description: '単位: 千円'
+- name: non_current_assets_total
+  title: 固定資産_計
+  description: '単位: 千円'
+- name: non_current_assets_total_percent
+  title: 固定資産_計_%
+  description: '単位: %'
+- name: deferred_assets
+  title: 繰延資産
+  description: '単位: 千円'
+- name: deferred_assets_percent
+  title: 繰延資産_%
+  description: '単位: %'
+- name: total_assets
+  title: 資産合計
+  description: '単位: 千円'
+- name: total_assets_percent
+  title: 資産合計_%
+  description: '単位: %'
+- name: current_liabilities_short_term_loans_payable
+  title: 流動負債_短期借入金
+  description: '単位: 千円'
+- name: current_liabilities_bonds_due_within_one_year
+  title: 流動負債_期限1年以内の社債等
+  description: '単位: 千円'
+- name: current_liabilities_trade_payables_deposited_fares
+  title: 流動負債_営業債務_預り連絡運賃
+  description: '単位: 千円'
+- name: current_liabilities_trade_payables_others
+  title: 流動負債_営業債務_その他
+  description: '単位: 千円'
+- name: current_liabilities_allowance_for_bonuses
+  title: 流動負債_賞与引当金
+  description: '単位: 千円'
+- name: current_liabilities_others
+  title: 流動負債_その他
+  description: '単位: 千円'
+- name: current_liabilities_total
+  title: 流動負債_計
+  description: '単位: 千円'
+- name: current_liabilities_total_percent
+  title: 流動負債_計_%
+  description: '単位: %'
+- name: non_current_liabilities_bonds_payable
+  title: 固定負債_社債
+  description: '単位: 千円'
+- name: non_current_liabilities_long_term_loans_payable_mortgage_loans
+  title: 固定負債_長期借入金_財団抵当借入金
+  description: '単位: 千円'
+- name: non_current_liabilities_long_term_loans_payable_loans_from_controlling_shareholder
+  title: 固定負債_長期借入金_支配株主借入金
+  description: '単位: 千円'
+- name: non_current_liabilities_long_term_loans_payable_loans_from_subsidiaries
+  title: 固定負債_長期借入金_子会社借入金
+  description: '単位: 千円'
+- name: non_current_liabilities_long_term_loans_payable_others
+  title: 固定負債_長期借入金_その他
+  description: '単位: 千円'
+- name: non_current_liabilities_long_term_loans_payable_total
+  title: 固定負債_長期借入金_計
+  description: '単位: 千円'
+- name: non_current_liabilities_allowance_for_retirement_benefits
+  title: 固定負債_退職給与引当金
+  description: '単位: 千円'
+- name: non_current_liabilities_others
+  title: 固定負債_その他
+  description: '単位: 千円'
+- name: non_current_liabilities_total
+  title: 固定負債_計
+  description: '単位: 千円'
+- name: non_current_liabilities_total_percent
+  title: 固定負債_%
+  description: '単位: %'
+- name: provisions
+  title: 引当金
+  description: '単位: 千円'
+- name: provisions_percent
+  title: 引当金_%
+  description: '単位: %'
+- name: total_liabilities
+  title: 負債合計
+  description: '単位: 千円'
+- name: total_liabilities_percent
+  title: 負債合計_%
+  description: '単位: %'
+- name: capital_stock
+  title: 資本金
+  description: '単位: 千円'
+- name: legal_capital_surplus_capital_reserve
+  title: 法定剰余金_資本準備金
+  description: '単位: 千円'
+- name: legal_capital_surplus_other_capital_surplus
+  title: 法定剰余金_その他資本剰余金
+  description: '単位: 千円'
+- name: legal_capital_surplus_total
+  title: 法定剰余金_計
+  description: '単位: 千円'
+- name: retained_earnings_legal_reserve
+  title: 利益剰余金_利益準備金
+  description: '単位: 千円'
+- name: retained_earnings_voluntary_reserve
+  title: 利益剰余金_任意準備金
+  description: '単位: 千円'
+- name: retained_earnings_unappropriated_retained_earnings
+  title: 利益剰余金_当期未処分利益
+  description: '単位: 千円'
+- name: retained_earnings_total
+  title: 利益剰余金_計
+  description: '単位: 千円'
+- name: others
+  title: その他
+  description: '単位: 千円'
+- name: total_equity
+  title: 資本合計
+  description: '単位: 千円'
+- name: total_equity_percent
+  title: 資本合計_%
+  description: '単位: %'
+- name: total_liabilities_and_equity
+  title: 負債・資本合計
+  description: '単位: 千円'

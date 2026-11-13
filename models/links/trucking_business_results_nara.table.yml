@@ -1,0 +1,273 @@
+schema: links
+name: trucking_business_results_nara
+title: 貨物自動車運送事業の事業実績報告書（奈良運輸支局管内、2023年度）
+description: |-
+  奈良運輸支局管内の事業者を対象とした、事業用車両数や運転者数、地方別の走行キロ・実車キロ/実運送・利用運送/営業収入等の事業実績に関する情報を有するデータ(223レコード)
+
+  G空間情報センターのデータセット links-kamotsujidousyaunsojigyo-2025 の 01_jigyoujissekihoukokusyo_2025.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-kamotsujidousyaunsojigyo-2025
+fields:
+- name: business_operator_id_1
+- name: industry_category
+  title: 業種区分
+- name: business_content_1
+  title: 事業内容1
+- name: business_content_2
+  title: 事業内容2
+- name: business_content_3
+  title: 事業内容3
+- name: commercial_vehicle_count_rank
+  title: 事業用自動車数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: employee_count_rank
+  title: 従業員数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: driver_count_rank
+  title: 運転者数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: hokkaido_cumulative_existing_vehicle_count_rank
+  title: 北海道_延実在車両数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: hokkaido_cumulative_operating_vehicle_count_rank
+  title: 北海道_延実働車両数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: hokkaido_traveled_kilometers_rank
+  title: 北海道_走行キロ_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: hokkaido_loaded_kilometers_rank
+  title: 北海道_実車キロ_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: hokkaido_actual_transport_tons_rank
+  title: 北海道_実運送_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: hokkaido_utilized_transport_tons_rank
+  title: 北海道_利用運送_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: hokkaido_operating_revenue_rank
+  title: 北海道_営業収入_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: tohoku_cumulative_existing_vehicle_count_rank
+  title: 東北_延実在車両数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: tohoku_cumulative_operating_vehicle_count_rank
+  title: 東北_延実働車両数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: tohoku_traveled_kilometers_rank
+  title: 東北_走行キロ_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: tohoku_loaded_kilometers_rank
+  title: 東北_実車キロ_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: tohoku_actual_transport_tons_rank
+  title: 東北_実運送_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: tohoku_utilized_transport_tons_rank
+  title: 東北_利用運送_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: tohoku_operating_revenue_rank
+  title: 東北_営業収入_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: hokuriku_shinetsu_cumulative_existing_vehicle_count_rank
+  title: 北陸信越_延実在車両数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: hokuriku_shinetsu_cumulative_operating_vehicle_count_rank
+  title: 北陸信越_延実働車両数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: hokuriku_shinetsu_traveled_kilometers_rank
+  title: 北陸信越_走行キロ_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: hokuriku_shinetsu_loaded_kilometers_rank
+  title: 北陸信越_実車キロ_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: hokuriku_shinetsu_actual_transport_tons_rank
+  title: 北陸信越_実運送_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: hokuriku_shinetsu_utilized_transport_tons_rank
+  title: 北陸信越_利用運送_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: hokuriku_shinetsu_operating_revenue_rank
+  title: 北陸信越_営業収入_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: kanto_cumulative_existing_vehicle_count_rank
+  title: 関東_延実在車両数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: kanto_cumulative_operating_vehicle_count_rank
+  title: 関東_延実働車両数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: kanto_traveled_kilometers_rank
+  title: 関東_走行キロ_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: kanto_loaded_kilometers_rank
+  title: 関東_実車キロ_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: kanto_actual_transport_tons_rank
+  title: 関東_実運送_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: kanto_utilized_transport_tons_rank
+  title: 関東_利用運送_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: kanto_operating_revenue_rank
+  title: 関東_営業収入_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: chubu_cumulative_existing_vehicle_count_rank
+  title: 中部_延実在車両数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: chubu_cumulative_operating_vehicle_count_rank
+  title: 中部_延実働車両数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: chubu_traveled_kilometers_rank
+  title: 中部_走行キロ_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: chubu_loaded_kilometers_rank
+  title: 中部_実車キロ_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: chubu_actual_transport_tons_rank
+  title: 中部_実運送_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: chubu_utilized_transport_tons_rank
+  title: 中部_利用運送_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: chubu_operating_revenue_rank
+  title: 中部_営業収入_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: kinki_cumulative_existing_vehicle_count_rank
+  title: 近畿_延実在車両数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: kinki_cumulative_operating_vehicle_count_rank
+  title: 近畿_延実働車両数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: kinki_traveled_kilometers_rank
+  title: 近畿_走行キロ_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: kinki_loaded_kilometers_rank
+  title: 近畿_実車キロ_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: kinki_actual_transport_tons_rank
+  title: 近畿_実運送_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: kinki_utilized_transport_tons_rank
+  title: 近畿_利用運送_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: kinki_operating_revenue_rank
+  title: 近畿_営業収入_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: chugoku_cumulative_existing_vehicle_count_rank
+  title: 中国_延実在車両数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: chugoku_cumulative_operating_vehicle_count_rank
+  title: 中国_延実働車両数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: chugoku_traveled_kilometers_rank
+  title: 中国_走行キロ_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: chugoku_loaded_kilometers_rank
+  title: 中国_実車キロ_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: chugoku_actual_transport_tons_rank
+  title: 中国_実運送_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: chugoku_utilized_transport_tons_rank
+  title: 中国_利用運送_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: chugoku_operating_revenue_rank
+  title: 中国_営業収入_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: shikoku_cumulative_existing_vehicle_count_rank
+  title: 四国_延実在車両数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: shikoku_cumulative_operating_vehicle_count_rank
+  title: 四国_延実働車両数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: shikoku_traveled_kilometers_rank
+  title: 四国_走行キロ_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: shikoku_loaded_kilometers_rank
+  title: 四国_実車キロ_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: shikoku_actual_transport_tons_rank
+  title: 四国_実運送_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: shikoku_utilized_transport_tons_rank
+  title: 四国_利用運送_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: shikoku_operating_revenue_rank
+  title: 四国_営業収入_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: kyushu_cumulative_existing_vehicle_count_rank
+  title: 九州_延実在車両数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: kyushu_cumulative_operating_vehicle_count_rank
+  title: 九州_延実働車両数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: kyushu_traveled_kilometers_rank
+  title: 九州_走行キロ_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: kyushu_loaded_kilometers_rank
+  title: 九州_実車キロ_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: kyushu_actual_transport_tons_rank
+  title: 九州_実運送_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: kyushu_utilized_transport_tons_rank
+  title: 九州_利用運送_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: kyushu_operating_revenue_rank
+  title: 九州_営業収入_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: okinawa_cumulative_existing_vehicle_count_rank
+  title: 沖縄_延実在車両数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: okinawa_cumulative_operating_vehicle_count_rank
+  title: 沖縄_延実働車両数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: okinawa_traveled_kilometers_rank
+  title: 沖縄_走行キロ_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: okinawa_loaded_kilometers_rank
+  title: 沖縄_実車キロ_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: okinawa_actual_transport_tons_rank
+  title: 沖縄_実運送_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: okinawa_utilized_transport_tons_rank
+  title: 沖縄_利用運送_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: okinawa_operating_revenue_rank
+  title: 沖縄_営業収入_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: national_cumulative_existing_vehicle_count_rank
+  title: 全国_延実在車両数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: national_cumulative_operating_vehicle_count_rank
+  title: 全国_延実働車両数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: national_traveled_kilometers_rank
+  title: 全国_走行キロ_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: national_loaded_kilometers_rank
+  title: 全国_実車キロ_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: national_actual_transport_tons_rank
+  title: 全国_実運送_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: national_utilized_transport_tons_rank
+  title: 全国_利用運送_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: national_operating_revenue_rank
+  title: 全国_営業収入_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: accident_count_traffic_accidents_rank
+  title: 事故件数_交通事故件数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化(0未満は空欄)'
+- name: accident_count_major_accidents_rank
+  title: 事故件数_重大事故件数_ランク
+  description: '秘匿化: 値が有る(1以上)か無いかで、0,1に秘匿化'
+- name: accident_count_fatalities_rank
+  title: 事故件数_死者数_ランク
+  description: '秘匿化: 値が有る(1以上)か無いかで、0,1に秘匿化'
+- name: accident_count_injuries_rank
+  title: 事故件数_負傷者数_ランク
+  description: '秘匿化: 値が有る(1以上)か無いかで、0,1に秘匿化'
+- name: year
+  title: 年度

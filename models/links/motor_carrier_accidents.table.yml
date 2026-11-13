@@ -1,0 +1,293 @@
+schema: links
+name: motor_carrier_accidents
+title: 自動車運送事業の事故報告書と交通事故統計の統合データ
+description: |-
+  自動車運送事業の事故報告書の詳細情報(自動車運送事業における車両事故の概況(走行車両や事故状況、被害状況等)および事故に対する再発防止対策、ドライバーの運転状況・実績、当時の道路状況等の詳細情報)と交通事故統計情報(警察庁オープンデータ)に関する情報を統合したデータ(1,302レコード)
+
+  元の資料: 自動車運送事業の事故報告書データ(別記様式(第3条関係)、別表2 運転者の健康状態に起因する事故等の調査事項、別表3 車両故障事故報告書添付票)、交通事故統計情報データ(警察庁オープンデータ)
+
+  G空間情報センターのデータセット links-jidousyaunsoujigyoujiko-2025 の 01_jikohoukokusyo_koutsuujikotoukeijyouhou.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-jidousyaunsoujigyoujiko-2025
+fields:
+- name: accident_occurrence_date_and_time
+  title: 発生日時
+- name: weather_conditions
+  title: 事故当時の天候
+- name: accident_location
+  title: 発生場所
+  description: 発生場所を番地まで記入
+- name: latitude
+  title: 緯度
+  description: '単位: 度。発生場所住所代表地点の緯度を付与'
+- name: longitude
+  title: 経度
+  description: '単位: 度。発生場所住所代表地点の緯度を付与'
+- name: line_or_road_name
+  title: 路線名又は道路名
+- name: vehicle_id
+  title: 自動車車両ID
+  description: '秘匿化: 秘匿化有'
+- name: circumstances_categories_1
+  title: 当時の状況_大分類1
+  description: '秘匿化: 秘匿化有 (キーワード分類)。当時の状況に関する主要なキーワード分類を以下の8分類から最大3つ付与 1)車両状況 : オーバーヒート警告、ベルト異常、ブレーキ異常 等 2)負傷者状況 : 怪我、体調不良、緊急搬送 等 3)事故状況 : 横転事故、自動車事故、夜間 等 4)報告・記録・点検状況 : 整備実施、運行管理、点検不良 等 5)運転状況 : 運転ミス、居眠り運転、速度違反 等 6)乗客対応 : 乗降作業、振替輸送、安全確保 等 7)運行状況 : 運行計画、運行中止、運行遅延 等 8)その他 : 1)~7)以外の内容'
+- name: circumstances_categories_2
+  title: 当時の状況_大分類2
+  description: '秘匿化: 秘匿化有 (キーワード分類)。同上'
+- name: circumstances_categories_3
+  title: 当時の状況_大分類3
+  description: '秘匿化: 秘匿化有 (キーワード分類)。同上'
+- name: circumstances_subcategories_1
+  title: 当時の状況_中分類1
+  description: '秘匿化: 秘匿化有 (キーワード抽出)。当時の状況に関するキーワードを自由抽出し、最大3つ付与 ※キーワード分類と関連のあるキーワードを抽出'
+- name: circumstances_subcategories_2
+  title: 当時の状況_中分類2
+  description: '秘匿化: 秘匿化有 (キーワード抽出)。同上'
+- name: circumstances_subcategories_3
+  title: 当時の状況_中分類3
+  description: '秘匿化: 秘匿化有 (キーワード抽出)。同上'
+- name: prevention_measure_keyword_category_1
+  title: 再発防止対策_大分類1
+  description: '秘匿化: 秘匿化有 (キーワード分類)。再発防止対策に関する主要なキーワード分類を以下の6分類から最大3つ付与 1)車両点検・検査 : 車両の定期・日常点検、各部品の点検・メンテナンス 等 2)車両整備・管理・部品交換 : 車両の不具合整備・定期整備、各部品の交換・交換時期の管理 等 3)報告・記録・調査 : 整備管理者への報告、管理表記録、原因調査 等 4)運転・ドライバー : 運転指導・周囲確認、体調管理・運転適性確認、ドライブレコーダー映像の活用 等 5)社内教育・啓発 : 注意喚起、教育訓練、周知徹底・安全対策の徹底、啓発活動 等 6)その他 : 1)~5)以外の内容。値: 1)車両点検・検査 = 車両の定期・日常点検、各部品の点検・メンテナンス 等、2)車両整備・管理・部品交換 = 車両の不具合整備・定期整備、各部品の交換・交換時期の管理 等、3)報告・記録・調査 = 整備管理者への報告、管理表記録、原因調査 等、4)運転・ドライバー = 運転指導・周囲確認、体調管理・運転適性確認、ドライブレコーダー映像の活用 等、5)社内教育・啓発 = 注意喚起、教育訓練、周知徹底・安全対策の徹底、啓発活動 等、6)その他 = 1)~5)以外の内容'
+- name: prevention_measure_keyword_category_2
+  title: 再発防止対策_大分類2
+  description: '秘匿化: 秘匿化有 (キーワード分類)。同上。値: 1)車両点検・検査 = 車両の定期・日常点検、各部品の点検・メンテナンス 等、2)車両整備・管理・部品交換 = 車両の不具合整備・定期整備、各部品の交換・交換時期の管理 等、3)報告・記録・調査 = 整備管理者への報告、管理表記録、原因調査 等、4)運転・ドライバー = 運転指導・周囲確認、体調管理・運転適性確認、ドライブレコーダー映像の活用 等、5)社内教育・啓発 = 注意喚起、教育訓練、周知徹底・安全対策の徹底、啓発活動 等、6)その他 = 1)~5)以外の内容'
+- name: prevention_measure_keyword_category_3
+  title: 再発防止対策_大分類3
+  description: '秘匿化: 秘匿化有 (キーワード分類)。同上。値: 1)車両点検・検査 = 車両の定期・日常点検、各部品の点検・メンテナンス 等、2)車両整備・管理・部品交換 = 車両の不具合整備・定期整備、各部品の交換・交換時期の管理 等、3)報告・記録・調査 = 整備管理者への報告、管理表記録、原因調査 等、4)運転・ドライバー = 運転指導・周囲確認、体調管理・運転適性確認、ドライブレコーダー映像の活用 等、5)社内教育・啓発 = 注意喚起、教育訓練、周知徹底・安全対策の徹底、啓発活動 等、6)その他 = 1)~5)以外の内容'
+- name: prevention_measure_custom_keyword_1
+  title: 再発防止対策_中分類1
+  description: '秘匿化: 秘匿化有 (キーワード抽出)。再発防止対策に関するキーワードを自由抽出し、最大3つ付与 ※キーワード分類と関連のあるキーワードを抽出'
+- name: prevention_measure_custom_keyword_2
+  title: 再発防止対策_中分類2
+  description: '秘匿化: 秘匿化有 (キーワード抽出)。同上'
+- name: prevention_measure_custom_keyword_3
+  title: 再発防止対策_中分類3
+  description: '秘匿化: 秘匿化有 (キーワード抽出)。同上'
+- name: accident_type_category_overturn
+  title: 事故の種類_区分_転覆
+- name: accident_type_category_fall
+  title: 事故の種類_区分_転落
+- name: accident_type_category_off_road
+  title: 事故の種類_区分_路外逸脱
+- name: accident_type_category_fire
+  title: 事故の種類_区分_火災
+- name: accident_type_category_railroad_crossing
+  title: 事故の種類_区分_踏切
+- name: accident_type_category_collision
+  title: 事故の種類_区分_衝突
+- name: accident_type_category_injury_or_fatality
+  title: 事故の種類_区分_死傷
+- name: accident_type_category_hazardous_material
+  title: 事故の種類_区分_危険物等
+- name: accident_type_category_inside_vehicle
+  title: 事故の種類_区分_車内
+- name: accident_type_category_alcohol
+  title: 事故の種類_区分_飲酒等
+- name: accident_type_category_health_related
+  title: 事故の種類_区分_健康起因
+- name: accident_type_category_aid_violation
+  title: 事故の種類_区分_救護違反
+- name: accident_type_category_vehicle_failure
+  title: 事故の種類_区分_車両故障
+- name: accident_type_category_traffic_obstruction
+  title: 事故の種類_区分_交通障害
+- name: accident_type_category_other
+  title: 事故の種類_区分_その他
+- name: accident_type_fall_condition_drop_height
+  title: 事故の種類_転落の状態_落差
+- name: accident_type_fall_condition_water_depth
+  title: 事故の種類_転落の状態_水深
+- name: accident_type_collision_details
+  title: 事故の種類_衝突等の状態
+- name: vehicle_details_model_name
+  title: 当該自動車の概要_車名
+- name: vehicle_details_model_type
+  title: 当該自動車の概要_型式
+- name: vehicle_details_body_type
+  title: 当該自動車の概要_車体の形状
+- name: vehicle_details_year_of_initial_registration
+  title: 当該自動車の概要_初度登録年又は初度検査年
+- name: vehicle_details_commercial_or_private
+  title: 当該自動車の概要_事業用または自家用の別
+- name: vehicle_details_category
+  title: 当該自動車の概要_種別
+- name: vehicle_details_seating_capacity
+  title: 当該自動車の概要_乗車定員
+  description: '単位: 人'
+- name: vehicle_details_number_of_occupants_at_the_time
+  title: 当該自動車の概要_当時の乗車人員
+  description: '単位: 人'
+- name: vehicle_details_maximum_load_capacity
+  title: 当該自動車の概要_最大積載量
+  description: '単位: kg'
+- name: vehicle_details_load_at_the_time
+  title: 当該自動車の概要_当時の積載量
+  description: '単位: kg'
+- name: vehicle_details_cargo_contents
+  title: 当該自動車の概要_貨物の内容
+- name: vehicle_details_hazardous_material_transported
+  title: 当該自動車の概要_積載危険物等_運搬の有無
+- name: vehicle_details_type_of_hazardous_material
+  title: 当該自動車の概要_積載危険物等_種類
+- name: road_conditions_type
+  title: 道路等の状況_種類
+- name: road_conditions_width
+  title: 道路等の状況_道路の幅員
+  description: '単位: m'
+- name: road_conditions_incline
+  title: 道路等の状況_こう配
+- name: road_conditions_surface
+  title: 道路等の状況_道路の状態
+- name: road_conditions_pavement_conditions
+  title: 道路等の状況_路面の状態
+- name: road_conditions_warning_signs_installed
+  title: 道路等の状況_警戒標識の設置
+- name: road_conditions_speed_limit
+  title: 道路等の状況_当該道路の制限速度
+  description: '単位: km/h'
+- name: road_conditions_railway_crossing_conditions
+  title: 道路等の状況_踏切の状態
+- name: circumstances_speed_at_risk_recognition
+  title: 当時の状況_危険認知時の速度
+  description: '単位: km/h'
+- name: circumstances_distance_at_risk_recognition
+  title: 当時の状況_危険認知時の距離
+  description: '単位: m'
+- name: circumstances_slip_distance
+  title: 当時の状況_スリップ距離
+  description: '単位: m'
+- name: circumstances_vehicle_behavior_at_accident
+  title: 当時の状況_当該自動車の事故時の走行等の態様
+- name: circumstances_accident_location_on_road
+  title: 当時の状況_道路上での事故の場合には事故発生地点
+- name: circumstances_injuries_or_death_condition
+  title: 当時の状況_死傷事故の場合には死傷者の状態
+- name: circumstances_vehicle_fault_causing_accident
+  title: 当時の状況_車両の故障に起因する場合は故障箇所
+- name: driver_details_age
+  title: 乗務員_運転者_年齢
+  description: '秘匿化: ランク(階層化)による秘匿化 2:20代未満 3:30代 4:40代 5:50代 6:60代 7:70代以上。値: 1 = 20歳未満、2 = 20代、3 = 30代、4 = 40代、5 = 50代、6 = 60代、7 = 70代以上'
+- name: driver_details_years_of_experience_category
+  title: 乗務員_運転者_経験年数_区分
+- name: driver_details_permanent_or_temporary
+  title: 乗務員_運転者_本務・臨時の別
+- name: driver_details_days_off_in_past_month
+  title: 乗務員_運転者_事故日以前1ヶ月間に出勤しなかった日数
+- name: driver_details_work_hours_before_accident
+  title: 乗務員_運転者_乗務開始から事故発生までの乗務時間
+- name: driver_details_distance_driven_before_accident
+  title: 乗務員_運転者_乗務開始から事故発生までの乗務距離
+- name: driver_details_days_worked_since_last_off_day
+  title: 乗務員_運転者_最近出勤しなかった日から事故日までの勤務日数の合計
+- name: driver_details_distance_driven_since_last_off_day
+  title: 乗務員_運転者_最近出勤しなかった日から事故日までの乗務距離の合計
+- name: driver_details_damage_severity
+  title: 乗務員_運転者_損害の程度
+- name: driver_details_seatbelt_usage
+  title: 乗務員_運転者_シートベルトの着用状況
+- name: driver_details_presence_of_relief_driver
+  title: 乗務員_運転者_交替運転者の配置
+- name: driver_details_accident_history_in_last_3_years
+  title: 乗務員_運転者_過去3年間の事故の状況
+  description: '秘匿化: ランク(階層化)による秘匿化 1:0件 2:1-2件 3:3件以上。値: 1 = 0件(未記載も含む)、2 = 1,2件、3 = 3件以上'
+- name: driver_details_traffic_law_violations_in_last_3_years
+  title: 乗務員_運転者_過去3年間の道路交通法の違反の状況
+  description: '秘匿化: 「違反あり(1件以上)」「違反なし」による秘匿化。値: 無 = 違反あり(1件以上)、有 = 違反なし(0件)'
+- name: driver_details_aptitude_test_history_in_last_3_years
+  title: 乗務員_運転者_過去3年間の適性診断の受診状況
+  description: '値: False = 受診なし、True = 受診あり'
+- name: damage_level_death
+  title: 損害の程度_死亡
+- name: damage_level_death_passenger
+  title: 損害の程度_死亡_うち乗客
+- name: damage_level_serious_injury
+  title: 損害の程度_重傷
+- name: damage_level_serious_injury_passenger
+  title: 損害の程度_重傷_うち乗客
+- name: damage_level_minor_injury
+  title: 損害の程度_軽傷
+- name: damage_level_minor_injury_passenger
+  title: 損害の程度_軽傷_うち乗客
+- name: company_details_number_of_drivers_at_branch
+  title: 事業者_営業所運転者数
+  description: '値: 1 = 1以上5人未満、2 = 5以上10人未満、3 = 10以上20人未満、4 = 20以上50人未満、5 = 50以上100人未満、6 = 100人以上、7 = その他(不明)'
+- name: company_details_number_of_vehicles_at_branch
+  title: 事業者_営業所車両数
+  description: '値: 1 = 1以上5台未満、2 = 5以上10台未満、3 = 10以上20台未満、4 = 20以上50台未満、5 = 50以上100台未満、6 = 100台以上、7 = その他(不明)'
+- name: vehicle_inspection_certificate_expiry_date
+  title: 自動車検査証の有効期間
+- name: total_distance_driven_since_usage_start
+  title: 使用開始後の総走行距離
+- name: recent_major_modifications_details
+  title: 最近における大規模な改造_内容
+- name: recent_major_modifications_date_of_trial
+  title: 最近における大規模な改造_試行期日
+- name: recent_major_modifications_person_testing
+  title: 最近における大規模な改造_試行者
+- name: distance_driven_since_installing_the_part
+  title: 当該部品を取り付けてから事故発生までの走行キロ
+- name: part_equipment_maintenance_modification_1_date
+  title: 当該部品を含む装置の整備及び改造の状況1_年月日
+- name: part_equipment_maintenance_modification_1_inspection
+  title: 当該部品を含む装置の整備及び改造の状況1_点検
+- name: part_equipment_maintenance_modification_2_date
+  title: 当該部品を含む装置の整備及び改造の状況2_年月日
+- name: part_equipment_maintenance_modification_2_inspection
+  title: 当該部品を含む装置の整備及び改造の状況2_点検
+- name: part_equipment_maintenance_modification_3_date
+  title: 当該部品を含む装置の整備及び改造の状況3_年月日
+- name: part_equipment_maintenance_modification_3_inspection
+  title: 当該部品を含む装置の整備及び改造の状況3_点検
+- name: part_damage_or_detachment_status
+  title: 破損又は脱落の状況
+- name: failure_or_sudden_damage_type
+  title: 疲労又は急進破損の別
+- name: administrative_area_code
+  title: 行政区域コード
+- name: prefecture_name
+  title: 都道府県名
+- name: subprefecture_or_promotion_bureau_name
+  title: 支庁・振興局名
+- name: county_or_designated_city_name
+  title: 郡・政令都市名
+- name: municipality_name
+  title: 市区町村名
+- name: airbag_equipped_party_a
+  title: エアバッグの装備(当事者A)
+  description: '値: 0 = 装備あり 作動、1 = その他、2 = 対象外当事者'
+- name: airbag_equipped_party_b
+  title: エアバッグの装備(当事者B)
+  description: '値: 0 = 装備あり 作動、1 = その他、2 = 対象外当事者'
+- name: side_airbag_equipped_party_a
+  title: サイドエアバッグの装備(当事者A)
+  description: '値: 0 = 装備あり 作動、1 = その他、2 = 対象外当事者'
+- name: side_airbag_equipped_party_b
+  title: サイドエアバッグの装備(当事者B)
+  description: '値: 0 = 装備あり 作動、1 = その他、2 = 対象外当事者'
+- name: days_since_cognitive_test_party_a
+  title: 認知機能検査経過日数(当事者A)
+  description: '事故発生日-検査日とする。認知機能検査の受検がない場合又は2555日超の場合は「9999」。値: 0-9999 = 事故発生日-検査日とする。認知機能検査の受検がない場合又は2555日超の場合は「9999」'
+- name: days_since_cognitive_test_party_b
+  title: 認知機能検査経過日数(当事者B)
+  description: '事故発生日-検査日とする。認知機能検査の受検がない場合又は2555日超の場合は「9999」。値: 0-9999 = 事故発生日-検査日とする。認知機能検査の受検がない場合又は2555日超の場合は「9999」'
+- name: driving_practice_method_party_a
+  title: 運転練習の方法(当事者A)
+  description: '値: 1 = 一般(指定自動車教習所)、2 = 一般(届出自動車教習所)、3 = 一般(その他の自動車教習所)、4 = 外国免許による試験の一部免除、5,6 = その他、9 = 不明'
+- name: driving_practice_method_party_b
+  title: 運転練習の方法(当事者B)
+  description: '値: 1 = 一般(指定自動車教習所)、2 = 一般(届出自動車教習所)、3 = 一般(その他の自動車教習所)、4 = 外国免許による試験の一部免除、5,6 = その他、9 = 不明'
+- name: geometry
+  title: geometry
+  description: 事故発生場所の座標情報または交通事故統計情報データの座標情報をもとに作成
+- name: prefecture_code
+  title: 都道府県コード
+  annotations:
+    queria:
+      semantic:
+        role: entity
+        name: prefecture
+  description: accident_location の先頭の都道府県名から付けたコード。都道府県名で始まらない行は NULL
+- name: geometry
+  title: 地点
+  description: 緯度・経度の列から作った点。日本の範囲（北緯 20〜46 度・東経 122〜154 度）から外れる値は NULL

@@ -1,0 +1,83 @@
+schema: links
+name: truck_freight_prefecture_pairs
+title: 自動車輸送統計調査（発地・着地の都道府県の組）
+description: |-
+  自動車の輸送実態として、都道府県の発地・着地別の用途別輸送台数・輸送距離、平均休車日数、輸送当たり積載率等)に関する情報を有するデータ(17,948レコード)
+
+  元の資料: 自動車輸送統計調査
+
+  G空間情報センターのデータセット links-modalshift-2024 の 02_jidousyayusoutoukeichousa.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-modalshift-2024
+fields:
+- name: prefecture_code_origin
+  title: 都道府県コード_発地
+- name: prefecture_name_origin
+  title: 都道府県名_発地
+- name: prefecture_code_destination
+  title: 都道府県コード_着地
+- name: prefecture_name_destination
+  title: 都道府県名_着地
+- name: survey_year
+  title: 調査年
+  description: '単位: 年'
+- name: sample_size
+  title: サンプル数
+  description: '単位: 台'
+- name: average_maximum_load_capacity_kg
+  title: 平均_最大積載量(kg)
+  description: '単位: kg'
+- name: purpose_vehicle_count_dedicated_to_specific_shipper
+  title: 用途別_台数_特定荷主専属
+  description: '単位: 台'
+- name: purpose_vehicle_count_mixed_cargo
+  title: 用途別_台数_積合せ貨物
+  description: '単位: 台'
+- name: purpose_vehicle_count_general_cargo
+  title: 用途別_台数_一般貨物
+  description: '単位: 台'
+- name: purpose_vehicle_count_collection_and_delivery
+  title: 用途別_台数_集配
+  description: '単位: 台'
+- name: purpose_vehicle_count_other
+  title: 用途別_台数_その他
+  description: '単位: 台'
+- name: average_non_operating_days
+  title: 平均_休車日数
+  description: '単位: 日'
+- name: average_distance_traveled_during_survey_period
+  title: 平均_調査期間中の走行距離
+  description: '単位: km'
+- name: average_transport_frequency
+  title: 平均_輸送回数
+  description: '単位: 回'
+- name: average_weight_per_transport
+  title: 平均_輸送当たり重量
+  description: '単位: kg'
+- name: average_load_rate_per_transport
+  title: 平均_輸送当たり積載率
+  description: '単位: %'
+- name: origin_prefecture_latitude
+  title: 発地_都道府県_緯度
+  description: '単位: 度'
+- name: origin_prefecture_longitude
+  title: 発地_都道府県_経度
+  description: '単位: 度'
+- name: destination_prefecture_latitude
+  title: 着地_都道府県_緯度
+  description: '単位: 度'
+- name: destination_prefecture_longitude
+  title: 着地_都道府県_経度
+  description: '単位: 度'
+- name: origin_prefecture_code
+  title: 都道府県コード
+  annotations: &id001
+    queria:
+      semantic:
+        role: entity
+        name: prefecture
+  description: prefecture_name_origin の先頭の都道府県名から付けたコード。都道府県名で始まらない行は NULL
+- name: destination_prefecture_code
+  title: 都道府県コード
+  annotations: *id001
+  description: prefecture_name_destination の先頭の都道府県名から付けたコード。都道府県名で始まらない行は NULL

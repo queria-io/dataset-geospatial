@@ -1,0 +1,180 @@
+schema: links
+name: motor_carrier_accident_reports
+title: 自動車運送事業の事故報告書
+description: |-
+  自動車運送事業の事故報告書の概要情報(事故発生日時、車両概要・積載量等、事故発生までの乗務時間・距離、死亡者・重傷者数等)を有するデータ(494,308レコード、2003~2023年度の20年間)
+
+  元の資料: 自動車運送事業の事故報告書データ(別記様式(第3条関係)、別表3 車両故障事故報告書添付票)
+
+  G空間情報センターのデータセット links-jidousyaunsoujigyoujiko-2024 の 02_jikohoukokusyo.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-jidousyaunsoujigyoujiko-2024
+fields:
+- name: occurrence_date_and_time
+  title: 発生日時
+- name: weather
+  title: 天候
+- name: location
+  title: 発生場所
+  description: 発生場所を番地まで記入
+- name: latitude
+  title: 緯度
+  description: '単位: 度。発生場所住所代表地点の緯度を付与'
+- name: longitude
+  title: 経度
+  description: '単位: 度。発生場所住所代表地点の緯度を付与'
+- name: vehicle_id
+  title: 自動車車両ID
+- name: accident_type_category
+  title: 事故の種類(区分)
+  description: 衝突・転覆等の事象を複数選択
+- name: order_of_accident_occurrence
+  title: 事故発生順序
+  description: 衝突・転覆等の事象を起こった順に記入
+- name: fall_height
+  title: 落差
+  description: '単位: m。転落時の落差(路面から落下地点までの垂直距離)を記入'
+- name: water_depth
+  title: 水深
+  description: '単位: m。転落時の水深(水中に転落した場合、路面から水面までの垂直距離)を記入'
+- name: collision_condition
+  title: 衝突時の状態
+  description: 衝突の種類を選択
+- name: vehicle_1_model_name
+  title: 車両1:車名
+  description: 車体のメーカー名を記入
+- name: vehicle_1_model_type
+  title: 車両1:型式
+  description: 車体の型式を記入
+- name: vehicle_1_body_type
+  title: 車両1:車体形状
+  description: 車体の形状を記入
+- name: vehicle_1_year_of_initial_registration_inspection
+  title: 車両1:初度登録年/検査年
+  description: 車体の初度登録年を記入
+- name: vehicle_1_seating_capacity
+  title: 車両1:乗車定員
+  description: 乗車定員を記入
+- name: vehicle_1_load_at_the_time
+  title: 車両1:当時の積載量
+  description: '単位: kg。事故当時の積載量を記入'
+- name: vehicle_1_maximum_load_capacity
+  title: 車両1:最大積載量
+  description: '単位: kg。最大積載量を記入'
+- name: cargo_contents
+  title: 貨物の内容
+  description: 貨物自動車の場合、運搬していた貨物の内容を選択
+- name: transport_of_hazardous_material
+  title: 危険物の運搬の有無
+  description: 危険物等の運搬の有無を選択
+- name: type_of_hazardous_material
+  title: 危険物の種類
+  description: 危険物等の種類を選択
+- name: road_type
+  title: 種類
+  description: 事故発生箇所が道路上か否かなどを選択
+- name: road_surface_condition
+  title: 路面の状態
+  description: 事故発生箇所の路面の状態を選択
+- name: warning_signs_installed
+  title: 警戒標識の設置
+  description: 事故発生箇所の警戒標識の設置有無を選択
+- name: speed_limit_on_road
+  title: 当該道路の制限速度
+  description: 事故発生箇所の制限速度を記入
+- name: railway_crossing_condition
+  title: 踏切の状態
+  description: 事故発生箇所の踏切の状態を選択
+- name: speed_at_risk_recognition
+  title: 危険認知時の速度
+  description: 危険認知時の速度を記入
+- name: distance_at_risk_recognition
+  title: 危険認知時の距離
+  description: 危険認知時の距離を記入
+- name: slip_distance
+  title: スリップ距離
+  description: スリップ距離を記入
+- name: vehicle_behavior_at_accident
+  title: 事故時の走行等の態様
+  description: 自動車の右折・左折・直進等の状況を選択
+- name: accident_location
+  title: 事故発生の地点
+  description: 事故発生箇所が車道・歩道など道路上のどの位置か選択
+- name: condition_of_injured_or_deceased
+  title: 死傷者の状態
+  description: 事故発生時に死傷者が歩道通行など何をしていたか選択
+- name: fault_location
+  title: 故障箇所
+  description: 事故発生時の車両の故障箇所を選択
+- name: permanent_temporary
+  title: 本務/臨時の別
+  description: 本務・臨時の別を選択
+- name: days_off_in_the_past_month_before_accident
+  title: 事故日以前1ヶ月間に出勤しなかった日数
+  description: 事故発生以前1ヶ月の休日数を記入
+- name: working_hours_until_accident
+  title: 事故発生までの乗務時間
+  description: 事故発生時の乗務時間を記入
+- name: distance_driven_until_accident
+  title: 事故発生までの乗務距離
+  description: 事故発生時の乗務距離を記入
+- name: days_worked_since_last_day_off
+  title: 最近出勤しなかった日から事故日までの勤務日数
+  description: 連続勤務日数を記入
+- name: total_distance_driven_since_last_day_off
+  title: 最近出勤しなかった日から事故日までの乗務距離合計
+  description: 連続勤務による乗務距離を記入
+- name: damage_level
+  title: 損害の程度
+  description: 運転者の受けた損害の程度を選択
+- name: seatbelt_usage
+  title: シートベルトの着用状況
+  description: シートベルトの着用状況を選択
+- name: number_of_accidents
+  title: 事故件数
+  description: '秘匿化: ランク(階層化)による秘匿化。運転者の過去3年間の事故件数を記入 1 : 0件(未記載も含む) 2 : 1,2件 3: 3件以上'
+- name: number_of_violations
+  title: 違反件数
+  description: '秘匿化: ランク(階層化)による秘匿化。運転者の過去3年間の道路交通法違反件数を記入 1 : 0件(未記載も含む) 2 : 1,2件 3: 3件以上'
+- name: number_of_deaths
+  title: 死亡人数
+- name: number_of_deaths_passengers
+  title: 死亡人数(乗客)
+- name: number_of_serious_injuries
+  title: 重傷人数
+- name: number_of_serious_injuries_passengers
+  title: 重傷人数(乗客)
+- name: number_of_minor_injuries
+  title: 軽傷人数
+- name: number_of_minor_injuries_passengers
+  title: 軽傷人数(乗客)
+- name: total_driven_distance
+  title: 総走行距離
+  description: '単位: km。総走行距離を記入'
+- name: modification_contents
+  title: 改造の内容
+  description: 大規模な改造の内容を記入
+- name: date_of_modification
+  title: 改造の施行日
+  description: 大規模な改造の施行期日を記入
+- name: broken_or_detached_part_name
+  title: 破損または脱落部品名
+  description: 破損又は脱落した部品の名前を記入
+- name: driven_distance_since_installation
+  title: 取付後走行距離
+  description: '単位: km。破損又は脱落した部品を取り付けてから事故発生までの走行キロを記入'
+- name: modification_date_1
+  title: 当該部品改造日1
+  description: 破損又は脱落した部品を含む整備及び改造の状況を記入
+- name: modification_date_2
+  title: 当該部品改造日2
+  description: 破損又は脱落した部品を含む整備及び改造の状況を記入
+- name: modification_date_3
+  title: 当該部品改造日3
+  description: 破損又は脱落した部品を含む整備及び改造の状況を記入
+- name: fatigue_or_sudden_breakage_type
+  title: 疲労又は急進破損の別
+  description: 疲労か急進破壊かを記入
+- name: geometry
+  title: 地点
+  description: 緯度・経度の列から作った点。日本の範囲（北緯 20〜46 度・東経 122〜154 度）から外れる値は NULL

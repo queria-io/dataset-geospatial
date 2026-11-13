@@ -1,0 +1,146 @@
+schema: links
+name: coastal_shipping_port_pairs
+title: 内航船舶輸送統計調査（積地・揚地の港の組）
+description: |-
+  内航船舶の輸送実態として、積地・揚地別の総トン数・載貨重量トン数、平均積載率・貨物の重量・輸送距離等に関する情報を有するデータ(47,510レコード) ※元データ(内航船舶輸送統計調査データ)には、元々「積地・揚地の港名(B,D列)」は付与されている一方で、「積地・揚地の都道府県名(C,E列)」は付与されていない。同一名の港湾が複数都道府県に存在する場合(例:鹿島港は茨城県と佐賀県に存在)には、正解データである正しい都道府県を判定することは難しいため、積地・揚地の都道府県名(C,E列)のセルをブランク(空欄)としている。 ※元データに積地・揚地の都道府県名(C,E列)は付与されていないため、国土数値情報の港湾データ(※1)をもとに、港湾名をキーとして都道府県名を付与。なお、元データの積地・揚地の港名(B,D列)のうち国土数値情報の港湾データに存在しないものはブランクとしている。 ※1:https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-C02-v3_2.html
+
+  元の資料: 内航船舶輸送統計調査
+
+  G空間情報センターのデータセット links-modalshift-2024 の 01_naikousenpakuyusoutoukeichousa.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-modalshift-2024
+fields:
+- name: year
+  title: 調査年
+  description: '単位: 年'
+- name: loading_port_name
+  title: 積地_港名
+- name: loading_port_prefecture_name
+  title: 積地_都道府県名
+- name: unloading_port_name
+  title: 揚地_港名
+- name: unloading_port_prefecture_name
+  title: 揚地_都道府県名
+- name: sample_size
+  title: サンプル数
+  description: '単位: 隻'
+- name: average_gross_tonnage
+  title: 平均_総トン数
+  description: '単位: トン'
+- name: average_dead_weight_tonnage
+  title: 平均_載貨重量トン数
+  description: '単位: トン'
+- name: purpose_car_carrier_sample_size
+  title: 用途_自動車専用船_サンプル数
+  description: '単位: 隻'
+- name: purpose_car_carrier_gross_tonnage
+  title: 用途_自動車専用船_総トン数
+  description: '単位: トン'
+- name: purpose_car_carrier_dead_weight_tonnage
+  title: 用途_自動車専用船_載貨重量トン数
+  description: '単位: トン'
+- name: purpose_cement_carrier_sample_size
+  title: 用途_セメント専用船_サンプル数
+  description: '単位: 隻'
+- name: purpose_cement_carrier_gross_tonnage
+  title: 用途_セメント専用船_総トン数
+  description: '単位: トン'
+- name: purpose_cement_carrier_dead_weight_tonnage
+  title: 用途_セメント専用船_載貨重量トン数
+  description: '単位: トン'
+- name: purpose_limestone_carrier_sample_size
+  title: 用途_石灰石専用船_サンプル数
+  description: '単位: 隻'
+- name: purpose_limestone_carrier_gross_tonnage
+  title: 用途_石灰石専用船_総トン数
+  description: '単位: トン'
+- name: purpose_limestone_carrier_dead_weight_tonnage
+  title: 用途_石灰石専用船_載貨重量トン数
+  description: '単位: トン'
+- name: purpose_coal_carrier_sample_size
+  title: 用途_石炭石専用船_サンプル数
+  description: '単位: 隻'
+- name: purpose_coal_carrier_gross_tonnage
+  title: 用途_石炭石専用船_総トン数
+  description: '単位: トン'
+- name: purpose_coal_carrier_dead_weight_tonnage
+  title: 用途_石炭石専用船_載貨重量トン数
+  description: '単位: トン'
+- name: purpose_container_ship_sample_size
+  title: 用途_コンテナ専用船_サンプル数
+  description: '単位: 隻'
+- name: purpose_container_ship_gross_tonnage
+  title: 用途_コンテナ専用船_総トン数
+  description: '単位: トン'
+- name: purpose_container_ship_dead_weight_tonnage
+  title: 用途_コンテナ専用船_載貨重量トン数
+  description: '単位: トン'
+- name: purpose_roro_ship_sample_size
+  title: 用途_RORO船_サンプル数
+  description: '単位: 隻'
+- name: purpose_roro_ship_gross_tonnage
+  title: 用途_RORO船_総トン数
+  description: '単位: トン'
+- name: purpose_roro_ship_dead_weight_tonnage
+  title: 用途_RORO船_載貨重量トン数
+  description: '単位: トン'
+- name: purpose_other_cargo_ship_sample_size
+  title: 用途_その他の貨物船_サンプル数
+  description: '単位: 隻'
+- name: purpose_other_cargo_ship_gross_tonnage
+  title: 用途_その他の貨物船_総トン数
+  description: '単位: トン'
+- name: purpose_other_cargo_ship_dead_weight_tonnage
+  title: 用途_その他の貨物船_載貨重量トン数
+  description: '単位: トン'
+- name: purpose_oil_tanker_sample_size
+  title: 用途_油送船_サンプル数
+  description: '単位: 隻'
+- name: purpose_oil_tanker_gross_tonnage
+  title: 用途_油送船_総トン数
+  description: '単位: トン'
+- name: purpose_oil_tanker_dead_weight_tonnage
+  title: 用途_油送船_載貨重量トン数
+  description: '単位: トン'
+- name: purpose_pusher_barge_sample_size
+  title: 用途_プッシャーバージ又は台船_サンプル数
+  description: '単位: 隻'
+- name: purpose_pusher_barge_gross_tonnage
+  title: 用途_プッシャーバージ又は台船_総トン数
+  description: '単位: トン'
+- name: purpose_pusher_barge_dead_weight_tonnage
+  title: 用途_プッシャーバージ又は台船_載貨重量トン数
+  description: '単位: トン'
+- name: average_loading_ratio
+  title: 平均_積載率
+  description: '単位: %'
+- name: average_cargo_weight
+  title: 平均_貨物の重量
+  description: '単位: トン'
+- name: average_transport_distance
+  title: 平均_輸送距離
+  description: '単位: カイリ'
+- name: loading_port_latitude
+  title: 積地 緯度
+  description: '単位: 度'
+- name: loading_port_longitude
+  title: 積地 経度
+  description: '単位: 度'
+- name: discharge_port_latitude
+  title: 揚地 緯度
+  description: '単位: 度'
+- name: discharge_port_longitude
+  title: 揚地 経度
+  description: '単位: 度'
+- name: loading_prefecture_code
+  title: 都道府県コード
+  annotations: &id001
+    queria:
+      semantic:
+        role: entity
+        name: prefecture
+  description: loading_port_prefecture_name の先頭の都道府県名から付けたコード。都道府県名で始まらない行は NULL
+- name: unloading_prefecture_code
+  title: 都道府県コード
+  annotations: *id001
+  description: unloading_port_prefecture_name の先頭の都道府県名から付けたコード。都道府県名で始まらない行は NULL

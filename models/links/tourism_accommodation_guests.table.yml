@@ -1,0 +1,112 @@
+schema: links
+name: tourism_accommodation_guests
+title: 宿泊旅行統計調査（都道府県別の延べ宿泊者数）
+description: |-
+  宿泊旅行統計調査データをもとに、都道府県単位で従業者規模別・滞在目的別(観光目的50%未満/以上による区分)の延べ宿泊者数を国内外旅行者の区分で、2021~2024年の時系列に集計を行いデータ化したものです(188レコード)。
+
+  元の資料: 宿泊旅行統計調査
+
+  G空間情報センターのデータセット links_kankoutoukei_2025 の 01_syukuhakuryokoutoukeityousa.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links_kankoutoukei_2025
+fields:
+- name: prefecture_code
+  title: 都道府県コード(目的地)
+  annotations:
+    queria:
+      semantic:
+        role: entity
+        name: prefecture
+- name: year
+  title: 年(暦年)
+  description: '単位: 年'
+- name: total_guest_count
+  title: 延べ宿泊者数
+  description: '単位: 人'
+- name: stay_guest_count_tourism_over_50
+  title: 延べ宿泊者数_観光目的50%以上
+  description: '単位: 人'
+- name: stay_guest_count_tourism_under_50
+  title: 延べ宿泊者数_観光目的50%未満
+  description: '単位: 人'
+- name: stay_guest_count_employee_0_9
+  title: 延べ宿泊者数_従業者数0-9人
+  description: '単位: 人'
+- name: stay_guest_count_employee_0_9_tourism_over_50
+  title: 延べ宿泊者数_従業者数0-9人_観光目的50%以上
+  description: '単位: 人'
+- name: stay_guest_count_employee_0_9_tourism_under_50
+  title: 延べ宿泊者数_従業者数0-9人_観光目的50%未満
+  description: '単位: 人'
+- name: stay_guest_count_employee_10_29
+  title: 延べ宿泊者数_従業者数10-29人
+  description: '単位: 人'
+- name: stay_guest_count_employee_10_29_tourism_over_50
+  title: 延べ宿泊者数_従業者数10-29人_観光目的50%以上
+  description: '単位: 人'
+- name: stay_guest_count_employee_10_29_tourism_under_50
+  title: 延べ宿泊者数_従業者数10-29人_観光目的50%未満
+  description: '単位: 人'
+- name: stay_guest_count_employee_30_99
+  title: 延べ宿泊者数_従業者数30-99人
+  description: '単位: 人'
+- name: stay_guest_count_employee_30_99_tourism_over_50
+  title: 延べ宿泊者数_従業者数30-99人_観光目的50%以上
+  description: '単位: 人'
+- name: stay_guest_count_employee_30_99_tourism_under_50
+  title: 延べ宿泊者数_従業者数30-99人_観光目的50%未満
+  description: '単位: 人'
+- name: stay_guest_count_employee_over_100
+  title: 延べ宿泊者数_従業者数100人以上
+  description: '単位: 人'
+- name: stay_guest_count_employee_over_100_tourism_over_50
+  title: 延べ宿泊者数_従業者数100人以上_観光目的50%以上
+  description: '単位: 人'
+- name: stay_guest_count_employee_over_100_tourism_under_50
+  title: 延べ宿泊者数_従業者数100人以上_観光目的50%未満
+  description: '単位: 人'
+- name: stay_guest_count_foreign
+  title: 延べ宿泊者数_うち外国人
+  description: '単位: 人'
+- name: stay_guest_count_foreign_tourism_over_50
+  title: 延べ宿泊者数_うち外国人_観光目的50%以上
+  description: '単位: 人'
+- name: stay_guest_count_foreign_tourism_under_50
+  title: 延べ宿泊者数_うち外国人_観光目的50%未満
+  description: '単位: 人'
+- name: stay_guest_count_foreign_employee_0_9
+  title: 延べ宿泊者数_うち外国人_従業者数0-9人
+  description: '単位: 人'
+- name: stay_guest_count_foreign_employee_0_9_tourism_over_50
+  title: 延べ宿泊者数_うち外国人_従業者数0-9人_観光目的50%以上
+  description: '単位: 人'
+- name: stay_guest_count_foreign_employee_0_9_tourism_under_50
+  title: 延べ宿泊者数_うち外国人_従業者数0-9人_観光目的50%未満
+  description: '単位: 人'
+- name: stay_guest_count_foreign_employee_10_29
+  title: 延べ宿泊者数_うち外国人_従業者数10-29人
+  description: '単位: 人'
+- name: stay_guest_count_foreign_employee_10_29_tourism_over_50
+  title: 延べ宿泊者数_うち外国人_従業者数10-29人_観光目的50%以上
+  description: '単位: 人'
+- name: stay_guest_count_foreign_employee_10_29_tourism_under_50
+  title: 延べ宿泊者数_うち外国人_従業者数10-29人_観光目的50%未満
+  description: '単位: 人'
+- name: stay_guest_count_foreign_employee_30_99
+  title: 延べ宿泊者数_うち外国人_従業者数30-99人
+  description: '単位: 人'
+- name: stay_guest_count_foreign_employee_30_99_tourism_over_50
+  title: 延べ宿泊者数_うち外国人_従業者数30-99人_観光目的50%以上
+  description: '単位: 人'
+- name: stay_guest_count_foreign_employee_30_99_tourism_under_50
+  title: 延べ宿泊者数_うち外国人_従業者数30-99人_観光目的50%未満
+  description: '単位: 人'
+- name: stay_guest_count_foreign_employee_over_100
+  title: 延べ宿泊者数_うち外国人_従業者数100人以上
+  description: '単位: 人'
+- name: stay_guest_count_foreign_employee_over_100_tourism_over_50
+  title: 延べ宿泊者数_うち外国人_従業者数100人以上_観光目的50%以上
+  description: '単位: 人'
+- name: stay_guest_count_foreign_employee_over_100_tourism_under_50
+  title: 延べ宿泊者数_うち外国人_従業者数100人以上_観光目的50%未満
+  description: '単位: 人'

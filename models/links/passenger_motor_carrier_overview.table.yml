@@ -1,0 +1,208 @@
+schema: links
+name: passenger_motor_carrier_overview
+title: 一般旅客自動車運送事業の事業概況報告（乗合・貸切・乗用）
+description: |-
+  財務に関する事業概況報告書は、報告事業種別(路線バス、貸切バス、タクシー)、経営形態、資本金、発行済株式数、事業の名称、従業員数、営業収入、営業収益、営業費用、営業損益、営業外収益、営業外損益、特別損益、法人税、投資その他の資産等に関する情報を、ランク化及び偏差値により秘匿化したデータ化です。(1,036レコード)
+
+  元の資料: 一般旅客自動車運送事業 事業概況報告書(乗合・貸切・乗用)
+
+  G空間情報センターのデータセット links-ippanryokyaku-2025 の 04_ippanryokyakujidousya_jigyougaikyou.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-ippanryokyaku-2025
+fields:
+- name: year
+  title: 調査年度
+- name: reportperiod_from
+  title: 報告期間_自(年月日)
+- name: reportperiod_to
+  title: 報告期間_至(年月日)
+- name: operatorinfo_operatorid
+  title: 事業者基本情報_事業者番号
+  description: '秘匿化: 秘匿化あり。新規IDを附番'
+- name: reportedbusinesstype_taxi_or_for_hire
+  title: 報告事業種別_乗合
+  description: 0が未記載、1が乗合を指す
+- name: reportedbusinesstype_charter
+  title: 報告事業種別_貸切
+  description: 0が未記載、1が貸切を指す
+- name: reportedbusinesstype_scheduled
+  title: 報告事業種別_乗用
+  description: 0が未記載、1が乗用を指す
+- name: address
+  title: 住所
+  description: '秘匿化: 秘匿化あり。市区町村単位に秘匿化'
+- name: address_geometry
+  title: 住所_geometry
+  description: '秘匿化: 秘匿化あり。市区町村単位に秘匿化'
+- name: managementandcapital_businesstype
+  title: 経営形態及び資本金_1_経営形態
+- name: managementandcapital_capitalamount_rank
+  title: 経営形態及び資本金_1_資本金(基金)の額_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: managementandcapital_issuedshares_rank
+  title: 経営形態及び資本金_1_発行済株式数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: managedbusiness_1_businessname
+  title: 経営している事業_1_事業の名称
+- name: managedbusiness_1_employees_rank
+  title: 経営している事業_1_従業員数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: managedbusiness_1_revenueshare_rank
+  title: 経営している事業_1_営業収入(売上高)構成比率%_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: managedbusiness_2_businessname
+  title: 経営している事業_2_事業の名称
+- name: managedbusiness_2_employees_rank
+  title: 経営している事業_2_従業員数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: managedbusiness_2_revenueshare_rank
+  title: 経営している事業_2_営業収入(売上高)構成比率%_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: managedbusiness_3_businessname
+  title: 経営している事業_3_事業の名称
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: managedbusiness_3_employees_rank
+  title: 経営している事業_3_従業員数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: managedbusiness_3_revenueshare_rank
+  title: 経営している事業_3_営業収入(売上高)構成比率%_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: managedbusiness_4_businessname
+  title: 経営している事業_4_事業の名称
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: managedbusiness_4_employees_rank
+  title: 経営している事業_4_従業員数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: managedbusiness_4_revenueshare_rank
+  title: 経営している事業_4_営業収入(売上高)構成比率%_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: managedbusiness_5_businessname
+  title: 経営している事業_5_事業の名称
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: managedbusiness_5_employees_rank
+  title: 経営している事業_5_従業員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: managedbusiness_5_revenueshare_rank
+  title: 経営している事業_5_営業収入(売上高)構成比率%_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: managedbusiness_6_businessname
+  title: 経営している事業_6_事業の名称
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: managedbusiness_6_employees_rank
+  title: 経営している事業_6_従業員数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: managedbusiness_6_revenueshare_rank
+  title: 経営している事業_6_営業収入(売上高)構成比率%_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: managedbusiness_7_businessname
+  title: 経営している事業_7_事業の名称
+- name: managedbusiness_7_employees_rank
+  title: 経営している事業_7_従業員数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: managedbusiness_7_revenueshare_rank
+  title: 経営している事業_7_営業収入(売上高)構成比率%_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: managedbusiness_8_businessname
+  title: 経営している事業_8_事業の名称
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: managedbusiness_8_employees_rank
+  title: 経営している事業_8_従業員数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: managedbusiness_8_revenueshare_rank
+  title: 経営している事業_8_営業収入(売上高)構成比率%_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: operatingrevenue_rank
+  title: 営業収益_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operatingexpense_rank
+  title: 営業費用_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operatingprofitorloss_rank
+  title: 営業損益_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: nonoperatingincome_rank
+  title: 営業外収益_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: nonoperatingexpense_rank
+  title: 営業外費用_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: ofwhich_financialexpense_rank
+  title: うち金融費用_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: nonoperatingprofitorloss_rank
+  title: 営業外損益_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: ordinaryprofitorloss_rank
+  title: 経常損益_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: extraordinarygainorloss_rank
+  title: 特別損益_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: profitbeforetax_rank
+  title: 税引前当期純利益(税引前当期損失)_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: corporatetax_rank
+  title: 法人税等_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: corporatetaxadjustment_rank
+  title: 法人税等調整額_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: netprofitorloss_rank
+  title: 当期純利益(当期純損失)_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: totalcurrentassets_rank
+  title: 流動資産合計_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: cashanddeposits_rank
+  title: 現金預金_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: uncollectedfare_rank
+  title: 未収運賃_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accountsreceivable_rank
+  title: 未収入金_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: totalfixedassets_rank
+  title: 固定資産合計_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: tangiblefixedassets_rank
+  title: 有形固定資産_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: ofwhich_constructioninprogress_rank
+  title: うち建設仮勘定_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: intangiblefixedassets_rank
+  title: 無形固定資産_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: investmentsandotherassets_rank
+  title: 投資その他の資産_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: deferredassets_rank
+  title: 繰延資産合計_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: totalassets_rank
+  title: 資産の部合計_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: totalcurrentliabilities_rank
+  title: 流動負債合計_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: fixedliabilities_rank
+  title: 固定負債合計_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: totalliabilities_rank
+  title: 負債の部合計_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: capitalstock_rank
+  title: 資本金_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: totalshareholdersequity_rank
+  title: 株主資本合計_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: prefecture_code
+  title: 都道府県コード
+  annotations:
+    queria:
+      semantic:
+        role: entity
+        name: prefecture
+  description: address の先頭の都道府県名から付けたコード。都道府県名で始まらない行は NULL

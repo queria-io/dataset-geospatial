@@ -1,0 +1,48 @@
+schema: links
+name: seafarer_labor_survey_other_ships
+title: 船員労働統計調査 第二号調査
+description: |-
+  第二号調査(漁船に乗り組む船員についての調査)を対象として、保有外隻数・総トン数・航海日数、船員数、船員の性別/外国人割合・年収等の平均値を年次別に集計したデータ(3レコード) ※船主団体名が別途資料である船舶明細書で特定・照合できた団体を対象として集計
+
+  元の資料: 船員労働統計調査(第二号調査)
+
+  G空間情報センターのデータセット links-naikoukaiungyou-2025 の 04_seninroudoutoukeityousa_2goutyousa.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-naikoukaiungyou-2025
+fields:
+- name: year
+  title: 調査年度
+  description: '単位: 年度'
+- name: average_non_owned_ships
+  title: 平均保有外隻数
+  description: '単位: 隻。秘匿化: 秘匿化あり。年度平均'
+- name: average_gross_tonnage
+  title: 平均総トン数
+  description: '単位: トン。秘匿化: 秘匿化あり。年度平均'
+- name: average_voyage_days
+  title: 平均航海日数
+  description: '単位: 日。秘匿化: 秘匿化あり。年度平均'
+- name: average_total_crews
+  title: 乗組船員数
+  description: '単位: 人。秘匿化: 秘匿化あり。年度平均'
+- name: average_operational_crews
+  title: 部員の船員数
+  description: '単位: 人。秘匿化: 秘匿化あり。年度平均'
+- name: average_male_ratio_staffs
+  title: 乗組職員の性別:男性割合
+  description: '単位: %。秘匿化: 秘匿化あり。年度平均'
+- name: average_male_ratio_operational_crews
+  title: 部員の性別:男性割合
+  description: '単位: %。秘匿化: 秘匿化あり。年度平均'
+- name: average_foreigner_ratio_staffs
+  title: 職員の外国人割合
+  description: '単位: %。秘匿化: 秘匿化あり。年度平均'
+- name: average_foreigner_operational_crews
+  title: 部員の外国人割合
+  description: '単位: %。秘匿化: 秘匿化あり。年度平均'
+- name: average_annual_salary_total_crews
+  title: 乗組船員の平均年収
+  description: '単位: 円。秘匿化: 秘匿化あり。年度平均'
+- name: average_annual_salary_operational_crews
+  title: 部員の平均年収
+  description: '単位: 円。秘匿化: 秘匿化あり。年度平均'

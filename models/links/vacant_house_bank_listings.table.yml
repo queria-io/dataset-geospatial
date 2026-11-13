@@ -1,0 +1,125 @@
+schema: links
+name: vacant_house_bank_listings
+title: 全国版空き家・空き地バンクの登録物件
+description: |-
+  登録物件データ(ファイル1)は売りたい・貸したい方の物件(価格/賃料、築年数、建物構造、専有面積、土地面積、土地権利、私道負担、セットバック、接道状況、駐車場、交通機関、病院や小学校等の主要施設への距離等)に関する個別物件情報です。(7,746レコード)。
+
+  元の資料: 空き家・空き地バンク総合情報
+
+  G空間情報センターのデータセット links-akiyabank-2025 の 01_tourokubukken.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-akiyabank-2025
+fields:
+- name: property_number_id
+  title: 物件番号ID
+  description: '秘匿化: 秘匿化有り'
+- name: property_category
+  title: 物件種別名
+- name: prefecture
+  title: 都道府県
+- name: city
+  title: 市区町村
+- name: nearest_train_line
+  title: 交通1 路線
+- name: nearest_station
+  title: 交通1 駅
+- name: distance_to_nearest_station_on_foot
+  title: 交通1 徒歩
+  description: '単位: m'
+- name: amount_rent
+  title: 価格/賃料
+  description: '単位: 円'
+- name: date_of_construction
+  title: 建築年月日
+- name: construction
+  title: 建物構造
+- name: occupation_area
+  title: 専有面積
+  description: '単位: m2'
+- name: total_number_of_units
+  title: 総戸数
+- name: layout
+  title: 間取り
+- name: size_of_lot
+  title: 土地面積
+  description: '単位: m2'
+- name: size_of_lot_measurement_method
+  title: 土地面積計測方式
+- name: land_category
+  title: 地目
+- name: city_planning_area
+  title: 都市計画
+- name: use_district
+  title: 用途地域
+- name: land_ownership
+  title: 土地権利
+- name: private_road
+  title: 私道負担
+- name: setback
+  title: セットバック
+- name: number_of_connected_roads
+  title: 接道状況
+- name: strong_points
+  title: 物件アピール
+- name: water_supply
+  title: 水道
+- name: gus_supply
+  title: ガス
+- name: drainage
+  title: 排水
+- name: place_of_washer
+  title: 洗濯置き場
+- name: bath
+  title: バス
+- name: toilet
+  title: トイレ
+- name: toilet_note
+  title: トイレ 備考
+- name: stove_heating_system
+  title: キッチン
+- name: garden
+  title: 専用庭
+- name: parking
+  title: 駐車場
+- name: for_office_use
+  title: 小学校距離
+  description: '単位: m'
+- name: interior_customizability
+  title: 中学校距離
+  description: '単位: m'
+- name: distance_to_elementary_school
+  title: コンビニ
+  description: '単位: m'
+- name: distance_to_junior_high_school
+  title: スーパー
+  description: '単位: m'
+- name: distance_to_supermarket
+  title: ドラッグストア
+  description: '単位: m'
+- name: distance_to_shopping_district
+  title: 総合病院距離
+  description: '単位: m'
+- name: distance_to_drug_store
+  title: 公園
+  description: '単位: m'
+- name: distance_to_hospital
+  title: 銀行
+  description: '単位: m'
+- name: floor_area_ratio
+  title: 容積率
+  description: '単位: %'
+- name: building_coverage_ratio
+  title: 建ぺい率
+  description: '単位: %'
+- name: farmland
+  title: 農地
+- name: retail_premises
+  title: 店舗
+- name: prefecture_code
+  title: 都道府県コード
+  annotations:
+    queria:
+      semantic:
+        role: entity
+        name: prefecture
+  description: prefecture の先頭の都道府県名から付けたコード。都道府県名で始まらない行は NULL
