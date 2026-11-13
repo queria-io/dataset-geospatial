@@ -6,14 +6,19 @@
 
 一部のファイルは、CKAN に登録された URL のファイル名の先頭に www.geospatial.jp が付いていて、
 その URL では 500 が返る。download/ の直後の www.geospatial.jp を除いた URL で取得する。
+
+ファイルの URL は S3 の署名付き URL へ転送される。署名に使う一時的な認証情報が切れていると
+S3 が 403 を返すので、403 は間隔を空けて取り直す（取り直すたびに新しい署名付き URL が返る）。
 """
 
 import csv
 import json
 import logging
 import re
+import time
 import unicodedata
 from pathlib import Path
+from urllib.error import HTTPError
 
 import openpyxl
 
@@ -25,6 +30,17 @@ logger = logging.getLogger("pipelines")
 USER_AGENT = "dataset-geospatial (+https://github.com/queria-io/dataset-geospatial)"
 API = "https://www.geospatial.jp/ckan/api/3/action/package_show?id="
 DATA = Path("data/links")
+
+
+def download_file(url: str, path: Path, attempts: int = 5):
+    for attempt in range(attempts):
+        try:
+            return download(url, path, user_agent=USER_AGENT)
+        except HTTPError as error:
+            if error.code != 403 or attempt == attempts - 1:
+                raise
+            logger.warning("retry in %ds: %s (HTTP 403)", 10 * 2**attempt, url)
+            time.sleep(10 * 2**attempt)
 
 
 def resource_url(url: str) -> str:
@@ -148,7 +164,7 @@ def download_links():
                 continue
             path = folder / name
             logger.info("  %s/%s", package, name)
-            download(resource_url(resource["url"]), path, user_agent=USER_AGENT)
+            download_file(resource_url(resource["url"]), path)
             if name.startswith("99_"):
                 write_atomic(folder / "spec.json", json.dumps(parse_spec(path), ensure_ascii=False, indent=1))
     write_code_lists()
