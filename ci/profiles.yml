@@ -1,8 +1,8 @@
 # PR のビルド確認用。公開ストレージには書かず、手元の DuckDB ファイルに作る
 geospatial:
-  target: default
+  target: ci
   outputs:
-    default:
+    ci:
       type: duckdb
       path: target/geospatial.duckdb
       schema: main
