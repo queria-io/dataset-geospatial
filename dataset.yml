@@ -7,9 +7,16 @@ description: |-
 
   links スキーマには、国土交通省 総合政策局 情報政策課が Project LINKS で行政手続の報告書や申請書をデータ化して公開したデータを収録しています。観光統計、無人航空機の事故と空域、路線バス・貸切バス・タクシー、自家用有償旅客運送、レンタカー、貨物自動車運送事業、自動車運送事業の事故、鉄道統計年報、内航海運業と船員、一般旅客定期航路と船舶事故、モーダルシフト、倉庫業、空き家・空き地バンクの 2024・2025 年度の公開分です。
 
-  事業者は新しく付けた ID で表され、多くの数値は 10 段階のランク（「9.0以上～12.0未満」など）や都道府県・市区町村の単位に秘匿化されています。対象の地域や期間はファイルごとに違い、全国の一部を抜き出したサンプルもあります。各テーブルの説明を確認してから使ってください。
+  people_flow スキーマには、国土交通省の「全国の人流オープンデータ」を収録しています。2019〜2021 年の月ごとの滞在人口で、全国の 1km メッシュ別と、市区町村別に滞在者の居住地で分けたものがあり、平日・休日と昼・深夜で分かれています。スマートフォンの位置情報から Agoop が推計した値です。
 
-  出典：Project LINKS（国土交通省）（https://www.mlit.go.jp/links/）のオープンデータ（G空間情報センター https://www.geospatial.jp/ckan/organization/sosei-joho）を加工して作成
+  chizu スキーマには、法務省の登記所備付地図データを収録しています。全国の筆（土地の 1 区画）ごとに地番・座標系・精度区分を持ち、公共座標の図面の筆は形と代表点の緯度経度を持ちます。
+
+  links スキーマの事業者は新しく付けた ID で表され、多くの数値は 10 段階のランク（「9.0以上～12.0未満」など）や都道府県・市区町村の単位に秘匿化されています。対象の地域や期間はファイルごとに違い、全国の一部を抜き出したサンプルもあります。各テーブルの説明を確認してから使ってください。
+
+  出典：
+  - links: Project LINKS（国土交通省）（https://www.mlit.go.jp/links/）のオープンデータ（G空間情報センター https://www.geospatial.jp/ckan/organization/sosei-joho）を加工して作成
+  - people_flow: 「全国の人流オープンデータ」（国土交通省）（https://www.geospatial.jp/ckan/dataset/mlit-1km-fromto）を加工して作成
+  - chizu: 「登記所備付地図データ」（法務省）を加工して作成。市区町村ごとのデータ名と URL は chizu.source にあります
 keywords:
   - G空間情報センター
   - Project LINKS
@@ -34,21 +41,63 @@ keywords:
   - モーダルシフト
   - 倉庫業
   - 空き家バンク
+  - 人流
+  - 滞在人口
+  - 人出
+  - 位置情報
+  - 1km メッシュ
+  - 新型コロナウイルス
+  - Agoop
+  - 登記所備付地図
+  - 地図XML
+  - 公図
+  - 14条地図
+  - 筆
+  - 地番
+  - 土地
+  - 不動産登記
+  - 法務省
+  - 法務局
 homepage: https://github.com/queria-io/dataset-geospatial
 language: ja
 
+# テーブルごとのライセンスは *.table.yml に書く（people_flow と chizu は別の利用規約）
 licenses:
   - JP-PDL-1.0
+  - id: JP-MLIT-PEOPLE-FLOW
+    url: https://www.geospatial.jp/ckan/dataset/mlit-1km-fromto/resource/5a3705d7-b321-4f33-b0d9-0c4c379e96c3
+    title: 全国の人流オープンデータ利用規約（国土交通省、政府標準利用規約 2.0 準拠・CC BY 4.0 互換）
+    commercial_use: true
+    share_alike: false
+    attribution_required: true
+  - id: JP-MOJ-CHIZU
+    url: https://www.moj.go.jp/MINJI/minji05_00494.html
+    title: 登記所備付地図データ利用規約（法務省）
+    commercial_use: true
+    share_alike: false
+    attribution_required: true
 
 sources:
   - title: Project LINKS オープンデータ（G空間情報センター）
     path: https://www.geospatial.jp/ckan/organization/sosei-joho
   - title: Project LINKS 利用規約
     path: https://www.mlit.go.jp/links/terms-of-use.html
+  - title: 全国の人流オープンデータ（1km メッシュ、市区町村単位発地別）（G空間情報センター）
+    path: https://www.geospatial.jp/ckan/dataset/mlit-1km-fromto
+  - title: オープンデータ（人流データ）定義書（国土交通省）
+    path: https://www.geospatial.jp/ckan/dataset/mlit-1km-fromto/resource/e2083495-8095-4119-a865-e5c22e6a7eee
+  - title: 法務省 地図データのＧ空間情報センターを介した一般公開について
+    path: https://www.moj.go.jp/MINJI/minji05_00494.html
 
 contributors:
   - title: 国土交通省 総合政策局 情報政策課
     path: https://www.mlit.go.jp/links/
+    roles: [rightsHolder]
+  - title: 国土交通省 不動産・建設経済局 情報活用推進課
+    path: https://www.mlit.go.jp/
+    roles: [rightsHolder]
+  - title: 法務省
+    path: https://www.moj.go.jp/
     roles: [rightsHolder]
 
 spatial_coverage: [JP]
@@ -57,8 +106,24 @@ update_frequency: irregular
 schemas:
   - name: links
     title: Project LINKS
+  - name: people_flow
+    title: 全国の人流オープンデータ
+  - name: chizu
+    title: 登記所備付地図
 
 annotations:
   queria:
-    themes: [transport_tourism, housing_land]
+    themes: [transport_tourism, housing_land, population]
     cover: 🗾
+    ai_context:
+      instructions: |
+        people_flow: 月ごとの人出の変化（新型コロナの前後、平日と休日、昼と深夜）を見るのに使う。2019 年 1 月〜2021 年 12 月で、これ以降は無い。
+        mesh_population は 1km メッシュ別、city_population_by_origin は市区町村別で、滞在者の居住地（同一市区町村・同一都道府県・同一地方・他の地方）で分かれる。
+        値は 1 か月の 1 日あたりの平均の人数。月をまたいで合計しない。day_type と time_of_day は必ず 1 つに絞る（全日・終日の行は内訳の合計ではない）。
+        10 人未満の行は無いので、山間部のメッシュは欠ける。
+        mesh_code は e-Stat などのメッシュ統計と同じ 3 次メッシュコードで、国勢調査の人口と結合できる。地図は mesh_population の lng・lat か、mesh の geometry を使う。
+      synonyms: [人流データ, 滞在人口, 人出, 混雑, 来訪者, 流入人口, 公図, 登記所備付地図]
+      examples:
+        - 緊急事態宣言の前後で都心の人出がどれだけ減ったか知りたい
+        - 観光地に県外から来る人が月ごとにどう変わるか知りたい
+        - 昼と深夜の滞在人口の差が大きいメッシュを地図にしたい

@@ -1,6 +1,7 @@
 name: Build
 
 # 公開せずに取得と dbt build だけを回す。統計表の形が変わったときに Sync より先に気づくため
+# people_flow は東京都と沖縄県だけ取る（マスタは全国分）。chizu は zip が全国で約 100GB あるので回さない
 on:
   pull_request:
   workflow_dispatch:
@@ -20,4 +21,7 @@ jobs:
       - uses: astral-sh/setup-uv@v7
       - run: uv sync
       - run: uv run python -c "import main; main.download()"
-      - run: uv run dbt build --profiles-dir ci
+        env:
+          SYNC_MODE: links,people_flow
+          PEOPLE_FLOW_PREFECTURES: "13,47"
+      - run: uv run dbt build --profiles-dir ci --select links people_flow
