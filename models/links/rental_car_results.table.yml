@@ -1,0 +1,218 @@
+schema: links
+name: rental_car_results
+title: 貸渡実績報告書（レンタカー）
+description: |-
+  本データは、全国の事務所を対象に、2023・2024年度における乗用車、マイクロバス、トラック、特殊用途車、二輪車別の車種別車両数、延貸渡回数、延貸渡日車数、延走行キロ、延貸渡料金に関する情報をデータ化したものです。(8,305レコード)
+
+  元の資料: 貸渡実績報告書(様式1)、国土数値情報 行政ポリゴン
+
+  G空間情報センターのデータセット links-rentacars-2025 の 01_yousiki1_kashiwatashijissekihoukokusho.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-rentacars-2025
+fields:
+- name: director_of_transport_branch
+  title: 運輸支局長
+- name: fiscal_year
+  title: 年度
+  description: '単位: 年度'
+- name: reporting_period
+  title: 報告期間
+- name: operator_id
+  title: 事業者名ID
+  description: '秘匿化: 秘匿化あり。事業者名をもとにID付与'
+- name: address
+  title: 住所
+  description: '秘匿化: 秘匿化あり。市区町村単位で秘匿化'
+- name: address_latitude
+  title: 住所_緯度
+  description: '秘匿化: 秘匿化あり。秘匿化後住所をもとに座標付与'
+- name: address_longitude
+  title: 住所_経度
+  description: '秘匿化: 秘匿化あり。秘匿化後住所をもとに座標付与'
+- name: number_of_offices
+  title: 事務所数
+- name: passenger_car_vehicle_count
+  title: 乗用車_車両数
+  description: '単位: 両'
+- name: passenger_car_total_rental_times
+  title: 乗用車_延貸渡回数
+  description: '単位: 回'
+- name: passenger_car_total_rental_days
+  title: 乗用車_延貸渡日車数
+  description: '単位: 日'
+- name: passenger_car_total_distance
+  title: 乗用車_延走行キロ
+  description: '単位: km'
+- name: passenger_car_total_rental_fees
+  title: 乗用車_総貸渡料金
+  description: '単位: 円'
+- name: passenger_car_light_vehicle_count
+  title: 乗用車(うち軽自動車)_車両数
+  description: '単位: 両'
+- name: passenger_car_light_total_rental_times
+  title: 乗用車(うち軽自動車)_延貸渡回数
+  description: '単位: 回'
+- name: passenger_car_light_total_rental_days
+  title: 乗用車(うち軽自動車)_延貸渡日車数
+  description: '単位: 日'
+- name: passenger_car_light_total_distance
+  title: 乗用車(うち軽自動車)_延走行キロ
+  description: '単位: km'
+- name: passenger_car_light_total_rental_fees
+  title: 乗用車(うち軽自動車)_延貸渡料金
+  description: '単位: 円'
+- name: microbus_vehicle_count
+  title: マイクロバス_車両数
+  description: '単位: 両'
+- name: microbus_total_rental_times
+  title: マイクロバス_延貸渡回数
+  description: '単位: 回'
+- name: microbus_total_rental_days
+  title: マイクロバス_延貸渡日車数
+  description: '単位: 日'
+- name: microbus_total_distance
+  title: マイクロバス_延走行キロ
+  description: '単位: km'
+- name: microbus_total_rental_fees
+  title: マイクロバス_総貸渡料金
+  description: '単位: 円'
+- name: truck_vehicle_count
+  title: トラック_車両数
+  description: '単位: 両'
+- name: truck_total_rental_times
+  title: トラック_延貸渡回数
+  description: '単位: 回'
+- name: truck_total_rental_days
+  title: トラック_延貸渡日車数
+  description: '単位: 日'
+- name: truck_total_distance
+  title: トラック_延走行キロ
+  description: '単位: km'
+- name: truck_total_rental_fees
+  title: トラック_延貸渡料金
+  description: '単位: 円'
+- name: truck_light_vehicle_count
+  title: トラック(うち軽自動車)_車両数
+  description: '単位: 両'
+- name: truck_light_total_rental_times
+  title: トラック(うち軽自動車)_延貸渡回数
+  description: '単位: 回'
+- name: truck_light_total_rental_days
+  title: トラック(うち軽自動車)_延貸渡日車数
+  description: '単位: 日'
+- name: truck_light_total_distance
+  title: トラック(うち軽自動車)_延走行キロ
+  description: '単位: km'
+- name: truck_light_total_rental_fees
+  title: トラック(うち軽自動車)_延貸渡料金
+  description: '単位: 円'
+- name: special_purpose_vehicle_count
+  title: 特種用途車_車両数
+  description: '単位: 両'
+- name: special_purpose_total_rental_times
+  title: 特種用途車_延貸渡回数
+  description: '単位: 回'
+- name: special_purpose_total_rental_days
+  title: 特種用途車_延貸渡日車数
+  description: '単位: 日'
+- name: special_purpose_total_distance
+  title: 特種用途車_延走行キロ
+  description: '単位: km'
+- name: special_purpose_total_rental_fees
+  title: 特種用途車_総貸渡料金
+  description: '単位: 円'
+- name: special_purpose_light_vehicle_count
+  title: 特種用途車(うち軽自動車)_車両数
+  description: '単位: 両'
+- name: special_purpose_light_total_rental_times
+  title: 特種用途車(うち軽自動車)_延貸渡回数
+  description: '単位: 回'
+- name: special_purpose_light_total_rental_days
+  title: 特種用途車(うち軽自動車)_延貸渡日車数
+  description: '単位: 日'
+- name: special_purpose_light_total_distance
+  title: 特種用途車(うち軽自動車)_延走行キロ
+  description: '単位: km'
+- name: special_purpose_light_total_rental_fees
+  title: 特種用途車(うち軽自動車)_延貸渡料金
+  description: '単位: 円'
+- name: motorcycle_vehicle_count
+  title: 二輪車_車両数
+  description: '単位: 両'
+- name: motorcycle_total_rental_times
+  title: 二輪車_延貸渡回数
+  description: '単位: 回'
+- name: motorcycle_total_rental_days
+  title: 二輪車_延貸渡日車数
+  description: '単位: 日'
+- name: motorcycle_total_distance
+  title: 二輪車_延走行キロ
+  description: '単位: km'
+- name: motorcycle_total_rental_fees
+  title: 二輪車_総貸渡料金
+  description: '単位: 円'
+- name: motorcycle_light_vehicle_count
+  title: 二輪車(うち軽自動車)_車両数
+  description: '単位: 両'
+- name: motorcycle_light_total_rental_times
+  title: 二輪車(うち軽自動車)_延貸渡回数
+  description: '単位: 回'
+- name: motorcycle_light_total_rental_days
+  title: 二輪車(うち軽自動車)_延貸渡日車数
+  description: '単位: 日'
+- name: motorcycle_light_total_distance
+  title: 二輪車(うち軽自動車)_延走行キロ
+  description: '単位: km'
+- name: motorcycle_light_total_rental_fees
+  title: 二輪車(うち軽自動車)_延貸渡料金
+  description: '単位: 円'
+- name: total_vehicle_count
+  title: 合計_車両数
+  description: '単位: 両'
+- name: total_rental_times
+  title: 合計_延貸渡回数
+  description: '単位: 回'
+- name: total_rental_days
+  title: 合計_延貸渡日車数
+  description: '単位: 日'
+- name: total_distance
+  title: 合計_延走行キロ
+  description: '単位: km'
+- name: total_rental_fees
+  title: 合計_総貸渡料金
+  description: '単位: 円'
+- name: rental_results_total_rent_a_car_and_car_sharing_transport_branch
+  title: 貸渡実績(レンタカー型カーシェアリングも含めたレンタカー事業全体の数字)_運輸支局名
+- name: number_of_deposits
+  title: デポジット数
+  description: '単位: 箇所'
+- name: number_of_rental_vehicles_one_way
+  title: 貸渡車両数_ワンウェイ方式
+  description: '単位: 両'
+- name: number_of_rental_vehicles_other_than_one_way
+  title: 貸渡車両数_ワンウェイ方式以外
+  description: '単位: 両'
+- name: number_of_rental_vehicles_total
+  title: 貸渡車両数_計
+  description: '単位: 両'
+- name: prefecture_name
+  title: 都道府県名
+- name: sub_prefectural_name
+  title: 支庁・振興局名
+- name: county_or_designated_city_name
+  title: 郡・政令都市名
+- name: city_ward_town_name
+  title: 市区町村名
+- name: administrative_area_code
+  title: 行政区域コード
+- name: prefecture_code
+  title: 都道府県コード
+  annotations:
+    queria:
+      semantic:
+        role: entity
+        name: prefecture
+  description: prefecture_name の先頭の都道府県名から付けたコード。都道府県名で始まらない行は NULL
+- name: geometry
+  title: 地点
+  description: 緯度・経度の列から作った点。日本の範囲（北緯 20〜46 度・東経 122〜154 度）から外れる値は NULL

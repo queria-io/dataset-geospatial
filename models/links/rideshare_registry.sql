@@ -1,0 +1,33 @@
+{# 自家用有償旅客運送者登録簿（G空間情報センター links-rideshare-2025 の 02_jikayouyuushouryokyakuunsou_tourokubo.csv） #}
+
+select
+    "ID" as id,
+    "REGISTRATION_DATE" as registration_date,
+    "UPDATED_REGISTRATION_DATE" as updated_registration_date,
+    "ADDRESS" as address,
+    "TRANSPORT_TYPE" as transport_type,
+    "ROUTE_OR_TRANSPORT_AREA" as route_or_transport_area,
+    "NOTES" as notes,
+    "OFFICE_NAME_1_PRIVATE_PAID_PASSENGER_VEHICLE_COUNT_SLEEPER_LIGHT" as office_name_1_private_paid_passenger_vehicle_count_sleeper_light,
+    "OFFICE_NAME_1_PRIVATE_PAID_PASSENGER_VEHICLE_COUNT_WHEELCHAIR_LIGHT" as office_name_1_private_paid_passenger_vehicle_count_wheelchair_light,
+    "OFFICE_NAME_1_PRIVATE_PAID_PASSENGER_VEHICLE_COUNT_MULTI_PURPOSE_LIGHT" as office_name_1_private_paid_passenger_vehicle_count_multi_purpose_light,
+    "OFFICE_NAME_1_PRIVATE_PAID_PASSENGER_VEHICLE_COUNT_SEDAN_LIGHT" as office_name_1_private_paid_passenger_vehicle_count_sedan_light,
+    "OFFICE_NAME_1_PRIVATE_PAID_PASSENGER_VEHICLE_COUNT_BUS" as office_name_1_private_paid_passenger_vehicle_count_bus,
+    "OFFICE_NAME_1_PRIVATE_PAID_PASSENGER_VEHICLE_COUNT_TOTAL_LIGHT" as office_name_1_private_paid_passenger_vehicle_count_total_light,
+    "OFFICE_NAME_2_PRIVATE_PAID_PASSENGER_VEHICLE_COUNT_SLEEPER_LIGHT" as office_name_2_private_paid_passenger_vehicle_count_sleeper_light,
+    "OFFICE_NAME_2_PRIVATE_PAID_PASSENGER_VEHICLE_COUNT_WHEELCHAIR_LIGHT" as office_name_2_private_paid_passenger_vehicle_count_wheelchair_light,
+    "OFFICE_NAME_2_PRIVATE_PAID_PASSENGER_VEHICLE_COUNT_MULTI_PURPOSE_LIGHT" as office_name_2_private_paid_passenger_vehicle_count_multi_purpose_light,
+    "OFFICE_NAME_2_PRIVATE_PAID_PASSENGER_VEHICLE_COUNT_SEDAN_LIGHT" as office_name_2_private_paid_passenger_vehicle_count_sedan_light,
+    "OFFICE_NAME_2_PRIVATE_PAID_PASSENGER_VEHICLE_COUNT_BUS" as office_name_2_private_paid_passenger_vehicle_count_bus,
+    "OFFICE_NAME_2_PRIVATE_PAID_PASSENGER_VEHICLE_COUNT_TOTAL_LIGHT" as office_name_2_private_paid_passenger_vehicle_count_total_light,
+    "OFFICE_NAME_3_PRIVATE_PAID_PASSENGER_VEHICLE_COUNT_SLEEPER_LIGHT" as office_name_3_private_paid_passenger_vehicle_count_sleeper_light,
+    "OFFICE_NAME_3_PRIVATE_PAID_PASSENGER_VEHICLE_COUNT_MULTI_PURPOSE_LIGHT" as office_name_3_private_paid_passenger_vehicle_count_multi_purpose_light,
+    "OFFICE_NAME_3_PRIVATE_PAID_PASSENGER_VEHICLE_COUNT_SEDAN_LIGHT" as office_name_3_private_paid_passenger_vehicle_count_sedan_light,
+    "OFFICE_NAME_3_PRIVATE_PAID_PASSENGER_VEHICLE_COUNT_BUS" as office_name_3_private_paid_passenger_vehicle_count_bus,
+    "OFFICE_NAME_3_PRIVATE_PAID_PASSENGER_VEHICLE_COUNT_TOTAL_LIGHT" as office_name_3_private_paid_passenger_vehicle_count_total_light,
+    "OFFICE_NAME_4_PRIVATE_PAID_PASSENGER_VEHICLE_COUNT_SLEEPER_LIGHT" as office_name_4_private_paid_passenger_vehicle_count_sleeper_light,
+    "OFFICE_NAME_4_PRIVATE_PAID_PASSENGER_VEHICLE_COUNT_MULTI_PURPOSE_LIGHT" as office_name_4_private_paid_passenger_vehicle_count_multi_purpose_light,
+    "OFFICE_NAME_4_PRIVATE_PAID_PASSENGER_VEHICLE_COUNT_BUS" as office_name_4_private_paid_passenger_vehicle_count_bus,
+    "OFFICE_NAME_4_PRIVATE_PAID_PASSENGER_VEHICLE_COUNT_TOTAL_LIGHT" as office_name_4_private_paid_passenger_vehicle_count_total_light,
+    {{ prefecture_code('"ADDRESS"') }} as prefecture_code
+from read_csv('data/links/links-rideshare-2025/02_jikayouyuushouryokyakuunsou_tourokubo.csv', header = true, delim = ',', quote = '"', escape = '"', nullstr = ['', 'None', 'nan', 'NaN'], sample_size = -1)

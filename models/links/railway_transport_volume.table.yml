@@ -1,0 +1,54 @@
+schema: links
+name: railway_transport_volume
+title: 鉄道統計年報 運輸成績表（数量）
+description: |-
+  運輸成績表(数量)は、輸送人員(定期:通勤・通学、定期外)、手小荷物個数、輸送トン数(コンテナ、車扱)に関する情報を有するデータです。(3,688レコード)
+
+  元の資料: 鉄道統計年報
+
+  G空間情報センターのデータセット links-tetsudoujigyou-2025 の 01_tetsudou_unyuseiseki1.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-tetsudoujigyou-2025
+fields:
+- name: year
+  title: 年度
+  description: '単位: 年度'
+- name: corporation_name
+  title: 事業者名
+- name: jurisdiction
+  title: 管轄
+- name: category
+  title: 区分
+- name: transported_number_commuter_pass_working
+  title: 輸送人員_定期_通勤
+  description: '単位: 千人'
+- name: transported_number_commuter_pass_student
+  title: 輸送人員_定期_通学
+  description: '単位: 千人'
+- name: transported_number_commuter_pass_total
+  title: 輸送人員_定期_計
+  description: '単位: 千人'
+- name: transported_number_commuter_pass_ratio
+  title: 輸送人員_定期_構成比
+  description: '単位: %'
+- name: transported_number_non_commuter_pass
+  title: 輸送人員_定期外
+  description: '単位: 千人'
+- name: transported_number_non_commuter_pass_ratio
+  title: 輸送人員_定期外_構成比
+  description: '単位: %'
+- name: transported_number_total
+  title: 輸送人員_合計
+  description: '単位: 千人'
+- name: number_of_carry_on_baggage
+  title: 手小荷物個数
+  description: '単位: 千個'
+- name: transported_tonnage_container
+  title: 輸送トン数_コンテナ
+  description: '単位: トン'
+- name: transported_tonnage_carload_service
+  title: 輸送トン数_車扱
+  description: '単位: トン'
+- name: transported_tonnage_total
+  title: 輸送トン数_合計
+  description: '単位: トン'

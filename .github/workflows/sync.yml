@@ -1,0 +1,25 @@
+name: Sync
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "*.md"
+  # Project LINKS のデータの更新は不定期なので、定期実行はしない。更新されたら手で回す
+  workflow_dispatch:
+
+concurrency:
+  group: sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    # Queria への書き込みは GitHub Actions の OIDC で 1 時間のトークンを取って行う
+    permissions:
+      contents: read
+      id-token: write
+    uses: queria-io/dataset-shared/.github/workflows/sync.yml@67443c88b6ec355559c91bf866239e10073ccf83
+    with:
+      dataset_name: geospatial
+    secrets:
+      DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}

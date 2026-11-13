@@ -1,0 +1,219 @@
+schema: links
+name: warehouse_registrations
+title: 倉庫業登録申請書と倉庫明細書（中部運輸局管内）
+description: |-
+  倉庫業登録申請(倉庫の所在地・種類、保管物品の種類、主要構造、建築年月、階数別面積等の規模、冷蔵施設等)に関する情報を有するデータ(4,876レコード)
+
+  元の資料: 倉庫業登録申請書、倉庫明細書第1号様式、冷蔵施設明細書(冷蔵室表)、国土数値情報 行政区域データ
+
+  G空間情報センターのデータセット links-soukogyou-2024 の 01_soukogyoutourokushinseisyo.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-soukogyou-2024
+fields:
+- name: business_operator_id
+  title: 事業者ID
+- name: office_id
+  title: 営業所ID
+- name: warehouse_id
+  title: 倉庫ID
+- name: latitude
+  title: 倉庫所在地_緯度
+  description: '単位: 度。秘匿化: 市区町村名とあわせて市区町村の代表地点の緯度経度を付与'
+- name: longitude
+  title: 倉庫所在地_経度
+  description: '単位: 度。秘匿化: 市区町村名とあわせて市区町村の代表地点の緯度経度を付与'
+- name: warehouse_type
+  title: 倉庫の種類
+- name: type_of_stored_goods
+  title: 保管物品の種類
+- name: main_structure
+  title: 主要構造
+- name: construction_date_or_planned_completion_date
+  title: 建築年月日又は建築完了予定年月日
+- name: building_completion_date_bracket
+  title: 建築年月日又は建築完了予定年月日の年_区分
+- name: land_and_warehouse_usage_rights_land
+  title: 土地の権利(所有又は貸借)
+- name: land_and_warehouse_usage_rights_building
+  title: 建物の権利(所有又は貸借)
+- name: floor1_scale_area
+  title: 1階の規模_面積
+  description: '単位: m2'
+- name: floor1_scale_eaves_height_floor_height_or_ceiling_height
+  title: 1階の規模_軒高、階高又は天井高
+  description: '単位: m'
+- name: floor1_scale_volume
+  title: 1階の規模_容積
+  description: '単位: m3'
+- name: floor2_scale_area
+  title: 2階の規模_面積
+  description: '単位: m2'
+- name: floor2_scale_eaves_height_floor_height_or_ceiling_height
+  title: 2階の規模_軒高、階高又は天井高
+  description: '単位: m'
+- name: floor2_scale_volume
+  title: 2階の規模_容積
+  description: '単位: m3'
+- name: floor3_scale_area
+  title: 3階の規模_面積
+  description: '単位: m2'
+- name: floor3_scale_eaves_height_floor_height_or_ceiling_height
+  title: 3階の規模_軒高、階高又は天井高
+  description: '単位: m'
+- name: floor3_scale_volume
+  title: 3階の規模_容積
+  description: '単位: m3'
+- name: floor4_scale_area
+  title: 4階の規模_面積
+  description: '単位: m2'
+- name: floor4_scale_eaves_height_floor_height_or_ceiling_height
+  title: 4階の規模_軒高、階高又は天井高
+  description: '単位: m'
+- name: floor4_scale_volume
+  title: 4階の規模_容積
+  description: '単位: m3'
+- name: floor5_scale_area
+  title: 5階の規模_面積
+  description: '単位: m2'
+- name: floor5_scale_eaves_height_floor_height_or_ceiling_height
+  title: 5階の規模_軒高、階高又は天井高
+  description: '単位: m'
+- name: floor5_scale_volume
+  title: 5階の規模_容積
+  description: '単位: m3'
+- name: floor6_scale_area
+  title: 6階の規模_面積
+  description: '単位: m2'
+- name: floor6_scale_eaves_height_floor_height_or_ceiling_height
+  title: 6階の規模_軒高、階高又は天井高
+  description: '単位: m'
+- name: floor6_scale_volume
+  title: 6階の規模_容積
+  description: '単位: m3'
+- name: total_area
+  title: 合計_面積
+  description: '単位: m2'
+- name: structure_details_frame_post
+  title: 構造の詳細_骨組み_軸組み
+- name: structure_details_frame_floor_frame
+  title: 構造の詳細_骨組み_床組み
+- name: structure_details_wall_external_wall
+  title: 構造の詳細_壁_外壁
+- name: structure_details_wall_partition_wall
+  title: 構造の詳細_壁_間仕切り壁
+- name: structure_details_wall_firewall
+  title: 構造の詳細_壁_防火壁
+- name: structure_details_roof
+  title: 構造の詳細_屋根
+- name: structure_details_ceiling
+  title: 構造の詳細_天井
+- name: structure_details_floor
+  title: 構造の詳細_床
+- name: structure_details_window_side_window
+  title: 構造の詳細_窓_側窓
+- name: structure_details_window_skylight
+  title: 構造の詳細_窓_天窓
+- name: structure_details_entrance_entrance_in_external_wall
+  title: 構造の詳細_出入口_外壁にある出入口
+- name: structure_details_entrance_entrance_in_partition_wall
+  title: 構造の詳細_出入口_間仕切り壁にある出入口
+- name: structure_details_entrance_entrance_in_firewall
+  title: 構造の詳細_出入口_防火壁にある出入口
+- name: ancillary_equipment_rat_proof_equipment
+  title: 附属設備_防そ設備
+- name: ancillary_equipment_heat_shield_device
+  title: 附属設備_遮熱装置
+- name: ancillary_equipment_other_equipment
+  title: 附属設備_その他の設備
+- name: other
+  title: その他
+- name: cooling_method
+  title: 冷却方式
+- name: evaporation_method
+  title: 蒸発方式
+- name: refrigeration_capacity_kw
+  title: 冷凍能力(KW)
+  description: '単位: KW'
+- name: type_of_refrigerant_used
+  title: 使用する冷媒の種類
+- name: compressor_type
+  title: 圧縮機_型式
+- name: compressor_motor_kw
+  title: 圧縮機_電動機(キロワット)
+  description: '単位: KW'
+- name: compressor_motor_kw_1
+- name: refrigeration_room_scale_area_m2
+  title: 冷蔵室の規模_面積(m^2)
+  description: '単位: m^2'
+- name: refrigeration_room_scale_height_m
+  title: 冷蔵室の規模_高さ(m)
+  description: '単位: m'
+- name: refrigeration_room_scale_volume_m3
+  title: 冷蔵室の規模_容積(m^3)
+  description: '単位: m^3'
+- name: storage_capacity_tons
+  title: 収容能力(トン)
+  description: '単位: t'
+- name: storage_temperature_c
+  title: 保管温度(°C)
+  description: '単位: °C'
+- name: total_heat_loss_w
+  title: 総熱損失(W)
+  description: '単位: W'
+- name: cooling_pipe_surface_area_m2_ceiling
+  title: 配管の冷却面積(m^2)_天井
+  description: '単位: m^2'
+- name: cooling_pipe_surface_area_m2_wall
+  title: 配管の冷却面積(m^2)_壁
+  description: '単位: m^2'
+- name: heat_insulation_material_type_thermal_conductivity_and_thickness_ceiling
+  title: 防熱装置の材料の種類、熱伝導率及び厚さ_天井
+- name: heat_insulation_material_type_thermal_conductivity_and_thickness_floor
+  title: 防熱装置の材料の種類、熱伝導率及び厚さ_床
+- name: heat_insulation_material_type_thermal_conductivity_and_thickness_external_wall
+  title: 防熱装置の材料の種類、熱伝導率及び厚さ_外壁
+- name: heat_insulation_material_type_thermal_conductivity_and_thickness_partition_wall
+  title: 防熱装置の材料の種類、熱伝導率及び厚さ_間仕切り壁
+- name: lighting_kw
+  title: 電灯(KW)
+  description: '単位: KW'
+- name: electric_fan_kw
+  title: 電動送風機(KW)
+  description: '単位: KW'
+- name: main_structure_frame
+  title: 主要構造_骨組
+- name: main_structure_fire_resistant
+  title: 主要構造_耐火性の有無
+- name: business_location_administrative_area_code
+  title: 事業者所在地_行政区域コード
+- name: business_location_prefecture_name
+  title: 事業者所在地_都道府県名
+- name: business_location_subprefecture_name
+  title: 事業者所在地_支庁・振興局名
+- name: business_location_county_or_designated_city_name
+  title: 事業者所在地_郡・政令都市名
+- name: business_location_municipality_name
+  title: 事業者所在地_市区町村名
+- name: office_location_administrative_area_code
+  title: 営業所所在地_行政区域コード
+- name: office_location_prefecture_name
+  title: 営業所所在地_都道府県名
+- name: office_location_subprefecture_name
+  title: 営業所所在地_支庁・振興局名
+- name: office_location_county_or_designated_city_name
+  title: 営業所所在地_郡・政令都市名
+- name: office_location_municipality_name
+  title: 営業所所在地_市区町村名
+- name: warehouse_location_administrative_area_code
+  title: 倉庫所在地_行政区域コード
+- name: warehouse_location_prefecture_name
+  title: 倉庫所在地_都道府県名
+- name: warehouse_location_subprefecture_name
+  title: 倉庫所在地_支庁・振興局名
+- name: warehouse_location_county_or_designated_city_name
+  title: 倉庫所在地_郡・政令都市名
+- name: warehouse_location_municipality_name
+  title: 倉庫所在地_市区町村名
+- name: geometry
+  title: 地点
+  description: 緯度・経度の列から作った点。日本の範囲（北緯 20〜46 度・東経 122〜154 度）から外れる値は NULL

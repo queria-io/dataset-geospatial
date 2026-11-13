@@ -1,0 +1,16 @@
+name: "geospatial"
+version: "1.0.0"
+
+profile: "geospatial"
+
+model-paths: ["models"]
+macro-paths: ["macros", "shared/macros"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  geospatial:
+    +database: geospatial
+    +materialized: table

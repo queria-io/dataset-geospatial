@@ -1,0 +1,126 @@
+schema: links
+name: bus_charter_transport_results
+title: 一般貸切旅客自動車運送事業輸送実績報告（貸切バス）
+description: |-
+  貸切バスの輸送実績は、事業用自動車数、従業員数、運転者数、走行キロ、実車キロ、輸送人員、旅行業者扱い、営業収入、交通事故件数、死者数、負傷者数、1人平均乗車キロ、輸送人キロ、平均乗車密度等の実績に関する情報を、ランク化(閾値設定)により秘匿化したデータです。(6,055レコード)
+
+  元の資料: 一般貸切旅客自動車運送事業輸送実績報告書
+
+  G空間情報センターのデータセット links-ippanryokyaku-2025 の 02_ippankashikiriryokyaku_yusoujisseki.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-ippanryokyaku-2025
+fields:
+- name: report_date_fiscal_year
+  title: 報告年月日_報告年度
+- name: report_date_full_date
+  title: 報告年月日_報告年(年月日)
+- name: business_info_operator_id
+  title: 事業者基本情報_事業者番号
+  description: '秘匿化: 秘匿化あり。事業者番号をもとに新規作成'
+- name: report_business_type_fixed_route_regular
+  title: 報告事業種別_乗合(路線定期運航)
+- name: report_business_type_fixed_route_irregular
+  title: 報告事業種別_乗合(路線不定期運航)
+- name: report_business_type_area_operation
+  title: 報告事業種別_乗合(区域運行)
+- name: chartered_business
+  title: 貸切
+- name: business_overview_vehicles_rank
+  title: 事業概況_事業用自動車数_両_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: business_overview_employees_rank
+  title: 事業概況_従業員数_人_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: business_overview_drivers_rank
+  title: 事業概況_うち運転者数_人_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transport_results_vehicles_total_existing_regional_rank
+  title: 輸送実績_事業用自動車_延実在車両数_管轄区域内_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transport_results_vehicles_total_operating_regional_rank
+  title: 輸送実績_事業用自動車_延実働車両数_管轄区域内_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transport_results_total_distance_regional_rank
+  title: 輸送実績_走行キロ_管轄区域内_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transport_results_occupied_distance_regional_rank
+  title: 輸送実績_うち実車キロ_管轄区域内_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transport_results_passengers_regional_rank
+  title: 輸送実績_輸送人員_管轄区域内_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transport_results_operations_regional_rank
+  title: 輸送実績_運行回数_管轄区域内_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transport_results_operations_travel_agency_regional_rank
+  title: 輸送実績_運行回数_うち旅行業者扱い_管轄区域内_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transport_results_operations_travel_agency_type1_local_tour_regional_rank
+  title: 輸送実績_運行回数_うち旅行業者扱い_1.企画旅行(2.に該当しないもの)_管轄区域内_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transport_results_operations_travel_agency_type2_intercity_tour_regional_rank
+  title: 輸送実績_運行回数_うち旅行業者扱い_2.企画旅行(専ら都市間の移動を目的とするもの)_管轄区域内_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transport_results_operations_travel_agency_type3_other_regional_rank
+  title: 輸送実績_運行回数_うち旅行業者扱い_3.その他_管轄区域内_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transport_results_operating_revenue_regional_rank
+  title: 輸送実績_営業収入_管轄区域内_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transport_results_vehicles_total_existing_national_rank
+  title: 輸送実績_事業用自動車_延実在車両数_全国_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transport_results_vehicles_total_operating_national_rank
+  title: 輸送実績_事業用自動車_延実働車両数_全国_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transport_results_total_distance_national_rank
+  title: 輸送実績_走行キロ_全国_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transport_results_occupied_distance_national_rank
+  title: 輸送実績_うち実車キロ_全国_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transport_results_passengers_national_rank
+  title: 輸送実績_輸送人員_全国_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transport_results_operations_national_rank
+  title: 輸送実績_運行回数_全国_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transport_results_operations_travel_agency_national_rank
+  title: 輸送実績_運行回数_うち旅行業者扱い_全国_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transport_results_operations_travel_agency_type1_local_tour_national_rank
+  title: 輸送実績_運行回数_うち旅行業者扱い_1.企画旅行(2.に該当しないもの)_全国_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transport_results_operations_travel_agency_type2_intercity_tour_national_rank
+  title: 輸送実績_運行回数_うち旅行業者扱い_2.企画旅行(専ら都市間の移動を目的とするもの)_全国_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transport_results_operations_travel_agency_type3_other_national_rank
+  title: 輸送実績_運行回数_うち旅行業者扱い_3.その他_全国_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transport_results_operating_revenue_national_rank
+  title: 輸送実績_営業収入_全国_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_traffic_accidents_regional_rank
+  title: 事故件数_交通事故件数_管轄区域内_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_serious_accidents_regional_rank
+  title: 事故件数_重大事故件数_管轄区域内_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_fatalities_regional_rank
+  title: 事故件数_死者数_管轄区域内_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_injuries_regional_rank
+  title: 事故件数_負傷者数_管轄区域内_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_traffic_accidents_national_rank
+  title: 事故件数_交通事故件数_全国_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_serious_accidents_national_rank
+  title: 事故件数_重大事故件数_全国_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_fatalities_national_rank
+  title: 事故件数_死者数_全国_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_injuries_national_rank
+  title: 事故件数_負傷者数_全国_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'

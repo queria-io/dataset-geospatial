@@ -1,0 +1,23 @@
+schema: links
+name: code_lists
+title: データ仕様書のコードリスト
+description: 各データセットのデータ仕様書の「コードリスト」のシートです。1 行が 1 つの列の 1 つの値です。コードの値（code）と意味（label）、コードの無い列は選択肢（label）を持ちます。ほかのテーブルとは package と column_name で突き合わせます。値の数が 20 以下の列は、各テーブルの列の説明にも同じ内容を書いています。
+sources:
+- path: https://www.geospatial.jp/ckan/organization/sosei-joho
+fields:
+- name: package
+  title: データセット
+  description: G空間情報センターのデータセットの名前（links-soukogyou-2025 など）
+- name: field_name
+  title: フィールド名
+  description: データ仕様書の表記のまま
+- name: column_name
+  title: 列名
+  description: このデータセットのテーブルでの列名（field_name を小文字のスネークケースにしたもの）
+- name: item_name
+  title: 項目名
+- name: code
+  title: コード
+  description: コードの無い選択肢の一覧では NULL
+- name: label
+  title: 内容

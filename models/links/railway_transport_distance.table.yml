@@ -1,0 +1,60 @@
+schema: links
+name: railway_transport_distance
+title: 鉄道統計年報 運輸成績表（延日キロ等）
+description: |-
+  運輸成績表(延日キロ等)は、延日キロ(旅客・貨物)、旅客人キロ(旅客・貨物、定期:通勤・通学、定期外)輸送トンキロ(コンテナ・車扱)、平均通過数量(旅客・貨物)、平均輸送キロ(旅客・貨物)に関する情報を有するデータです。(3,655レコード)
+
+  元の資料: 鉄道統計年報
+
+  G空間情報センターのデータセット links-tetsudoujigyou-2025 の 02_tetsudou_unyuseiseki2.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-tetsudoujigyou-2025
+fields:
+- name: year
+  title: 年度
+  description: '単位: 年度'
+- name: corporation_name
+  title: 事業者名
+- name: jurisdiction
+  title: 管轄
+- name: category
+  title: 区分
+- name: total_day_kilometer_passenger
+  title: 延日キロ_旅客
+  description: '単位: 日キロ'
+- name: total_day_kilometer_cargo
+  title: 延日キロ_貨物
+  description: '単位: 日キロ'
+- name: passenger_kilometer_commuter_pass_working
+  title: 旅客人キロ_定期_通勤
+  description: '単位: 千人キロ'
+- name: passenger_kilometer_commuter_pass_student
+  title: 旅客人キロ_定期_通学
+  description: '単位: 千人キロ'
+- name: passenger_kilometer_non_commuter_pass
+  title: 旅客人キロ_定期外
+  description: '単位: 千人キロ'
+- name: passenger_kilometer_total
+  title: 旅客人キロ_合計
+  description: '単位: 千人キロ'
+- name: transported_tonnage_kilometer_container
+  title: 輸送トンキロ_コンテナ
+  description: '単位: トンキロ'
+- name: transported_tonnage_kilometer_carload_service
+  title: 輸送トンキロ_車扱
+  description: '単位: トンキロ'
+- name: transported_tonnage_kilometer_total
+  title: 輸送トンキロ_合計
+  description: '単位: トンキロ'
+- name: average_passage_amount_passenger
+  title: 平均通過数量_旅客
+  description: '単位: 人 日'
+- name: average_passage_amount_cargo
+  title: 平均通過数量_貨物
+  description: '単位: トン 日'
+- name: average_transported_kilometer_passenger
+  title: 平均輸送キロ_旅客
+  description: '単位: キロ'
+- name: average_transported_kilometer_cargo
+  title: 平均輸送キロ_貨物
+  description: '単位: キロ'

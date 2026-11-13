@@ -1,0 +1,205 @@
+schema: links
+name: ship_accidents
+title: 船舶事故等調査報告書
+description: |-
+  船舶事故等調査報告書から抽出した事故情報(事故種類、発生日時・場所、事故の概要、船舶の種類、死傷者等、気象・海象、事故の経過、原因、再発防止策 等)を有するデータ
+
+  元の資料: 船舶事故等調査報告書、海上分布予報、地方海上予報区
+
+  G空間情報センターのデータセット links-ippanryokyakuteikikourojigyou-2024 の 02_senpakujikohoukokusyo.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-ippanryokyakuteikikourojigyou-2024
+fields:
+- name: 'no'
+  title: 報告書番号(事故等番号)
+- name: accident_type
+  title: 事故種類
+- name: date_and_time_of_occurrence
+  title: 発生日時
+- name: location_of_occurrence
+  title: 発生場所
+- name: accident_latitude
+  title: 事故発生緯度
+  description: '単位: 度'
+- name: accident_longitude
+  title: 事故発生経度
+  description: '単位: 度'
+- name: accident_overview
+  title: 事故の概要
+- name: investigation_progress
+  title: 事故調査の経過
+- name: ship_type
+  title: 船種
+- name: ship_name_1
+  title: 船名
+- name: gross_tonnage_1
+  title: 総トン数
+- name: ship_number_1
+  title: 船舶番号
+- name: ship_owner_etc_1
+  title: 船舶所有者等
+- name: l
+  title: L
+- name: b
+  title: B
+- name: d
+  title: D
+- name: ship_material
+  title: 船質
+- name: engine
+  title: 機関
+- name: output_launch
+  title: 出力
+- name: crew_information
+  title: 乗組員等に関する情報
+- name: casualties
+  title: 死傷者等
+- name: damage
+  title: 損傷
+- name: weather_and_sea_conditions
+  title: 気象・海象
+- name: accident_progress
+  title: 事故の経過
+- name: other_matters
+  title: その他の事項
+- name: analysis
+  title: 分析
+- name: cause
+  title: 原因
+- name: recurrence_prevention_measures
+  title: 再発防止策
+- name: reference
+  title: 参考
+- name: ship_type_2
+  title: 船種_2
+- name: ship_name_2
+  title: 船名_2
+- name: gross_tonnage_2
+  title: 総トン数_2
+- name: ship_number_2
+  title: 船舶番号_2
+- name: ship_owner_etc_2
+  title: 船舶所有者等_2
+- name: l_2
+  title: L_2
+- name: b_2
+  title: B_2
+- name: d_2
+  title: D_2
+- name: ship_material_2
+  title: 船質_2
+- name: engine_2
+  title: 機関_2
+- name: output_launch_2
+  title: 出力_2
+- name: ship_type_3
+  title: 船種_3
+- name: ship_name_3
+  title: 船名_3
+- name: gross_tonnage_3
+  title: 総トン数_3
+- name: ship_number_3
+  title: 船舶番号_3
+- name: ship_owner_etc_3
+  title: 船舶所有者等_3
+- name: l_3
+  title: L_3
+- name: b_3
+  title: B_3
+- name: d_3
+  title: D_3
+- name: ship_material_3
+  title: 船質_3
+- name: engine_3
+  title: 機関_3
+- name: output_launch_3
+  title: 出力_3
+- name: ship_type_4
+  title: 船種_4
+- name: ship_name_4
+  title: 船名_4
+- name: gross_tonnage_4
+  title: 総トン数_4
+- name: ship_number_4
+  title: 船舶番号_4
+- name: ship_owner_etc_4
+  title: 船舶所有者等_4
+- name: l_4
+  title: L_4
+- name: b_4
+  title: B_4
+- name: d_4
+  title: D_4
+- name: ship_material_4
+  title: 船質_4
+- name: engine_4
+  title: 機関_4
+- name: output_launch_4
+  title: 出力_4
+- name: ship_type_5
+  title: 船種_5
+- name: ship_name_5
+  title: 船名_5
+- name: gross_tonnage_5
+  title: 総トン数_5
+- name: ship_number_5
+  title: 船舶番号_5
+- name: ship_owner_etc_5
+  title: 船舶所有者等_5
+- name: l_5
+  title: L_5
+- name: b_5
+  title: B_5
+- name: d_5
+  title: D_5
+- name: ship_material_5
+  title: 船質_5
+- name: engine_5
+  title: 機関_5
+- name: output_launch_5
+  title: 出力_5
+- name: ship_type_6
+  title: 船種_6
+- name: ship_name_6
+  title: 船名_6
+- name: gross_tonnage_6
+  title: 総トン数_6
+- name: ship_number_6
+  title: 船舶番号_6
+- name: ship_owner_etc_6
+  title: 船舶所有者等_6
+- name: l_6
+  title: L_6
+- name: b_6
+  title: B_6
+- name: d_6
+  title: D_6
+- name: ship_material_6
+  title: 船質_6
+- name: engine_6
+  title: 機関_6
+- name: output_launch_6
+  title: 出力_6
+- name: marine_forecast_visibility
+  title: 霧による視程障害を考慮した「水平方向の見通し距離」
+  description: '単位: m。※記載の値は、事故の発生日時・発生場所に最も近い格子地点における6時間間隔の予報の値'
+- name: marine_forecast_wave_height
+  title: 波の高さ
+  description: '単位: m。同上'
+- name: marine_forecast_wind_direction
+  title: 事故発生日_予報風向
+  description: '単位: 度。同上'
+- name: marine_forecast_wind_speed
+  title: 事故発生日_予報風速
+  description: '単位: m/s。同上'
+- name: prefecture_code
+  title: 都道府県コード
+  annotations:
+    queria:
+      semantic:
+        role: entity
+        name: prefecture
+  description: location_of_occurrence の先頭の都道府県名から付けたコード。都道府県名で始まらない行は NULL
+- name: geometry
+  title: 地点
+  description: 緯度・経度の列から作った点。日本の範囲（北緯 20〜46 度・東経 122〜154 度）から外れる値は NULL

@@ -1,0 +1,66 @@
+schema: links
+name: rental_car_office_vehicles
+title: 事務所別車種別配置車両数一覧（レンタカー）
+description: |-
+  本データは、全国の事務所を対象に、2024年度における乗用車、マイクロバス、トラック、特殊用途車、二輪車別の保有車両数、事業所数に関する情報をデータ化したものです。(14,934レコード)
+
+  元の資料: 事務所別車種別配置車両数一覧(様式2)
+
+  G空間情報センターのデータセット links-rentacars-2025 の 02_yousiki2_haisyasyaryousuu.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-rentacars-2025
+fields:
+- name: office_vehicle_allocation_list_office_id
+  title: 事務所別車種別配置車両数一覧_事業所ID
+  description: '秘匿化: 秘匿化あり。事業者名をもとにID付与'
+- name: office_vehicle_allocation_list_transport_branch
+  title: 事務所別車種別配置車両数一覧_管轄運輸支局
+- name: office_vehicle_allocation_list_location
+  title: 事務所別車種別配置車両数一覧_所在地
+  description: '秘匿化: 秘匿化あり。市区町村単位で秘匿化'
+- name: owned_vehicles_passenger
+  title: 保有車両数_乗用
+  description: '単位: 両'
+- name: owned_vehicles_bus
+  title: 保有車両数_バス
+  description: '単位: 両'
+- name: owned_vehicles_truck
+  title: 保有車両数_貨物
+  description: '単位: 両'
+- name: owned_vehicles_special_purpose
+  title: 保有車両数_特種
+  description: '単位: 両'
+- name: owned_vehicles_motorcycle
+  title: 保有車両数_二輪
+  description: '単位: 両'
+- name: owned_vehicles_total
+  title: 保有車両数_合計
+  description: '単位: 両'
+- name: number_of_offices_total
+  title: 事業所数
+- name: total_passenger
+  title: 合計数_乗用
+  description: '単位: 両'
+- name: total_bus
+  title: 合計数_バス
+  description: '単位: 両'
+- name: total_truck
+  title: 合計数_貨物
+  description: '単位: 両'
+- name: total_special_purpose
+  title: 合計数_特種
+  description: '単位: 両'
+- name: total_motorcycle
+  title: 合計数_二輪
+  description: '単位: 両'
+- name: total_sum
+  title: 合計数_合計
+  description: '単位: 両'
+- name: prefecture_code
+  title: 都道府県コード
+  annotations:
+    queria:
+      semantic:
+        role: entity
+        name: prefecture
+  description: office_vehicle_allocation_list_location の先頭の都道府県名から付けたコード。都道府県名で始まらない行は NULL

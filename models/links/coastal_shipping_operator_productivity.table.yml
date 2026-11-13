@@ -1,0 +1,27 @@
+schema: links
+name: coastal_shipping_operator_productivity
+title: 内航船舶輸送統計調査による事業者別の生産性
+description: |-
+  内航海運業者別の船舶の規模(スペック)及び輸送量、積載率、生産性を判定するためのスコア(総トン数スコア、積載率スコア、船員1人当たりの輸送量スコア、生産性グループ)等の情報を結合したデータ(156レコード)
+
+  元の資料: 内航船舶輸送統計調査(内航船舶輸送実績調査票/自家用船舶輸送統計調査)をもとにスコア化
+
+  G空間情報センターのデータセット links-naikoukaiungyou-2024 の 02_naikoukaiungyou_naikousenpakuyusoutoukei.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-naikoukaiungyou-2024
+fields:
+- name: business_management_id
+  title: 内航海運業者ID
+  description: '秘匿化: 秘匿化あり'
+- name: gross_tonnage_score_operator
+  title: 総トン数スコア(内航海運業者別)
+  description: '秘匿化: 正規化スコア化による秘匿化。内航海運業者保有船舶の規模(総トン数)を0~100で正規化スコア化したもの'
+- name: loading_rate_score_operator
+  title: 積載率スコア(内航海運業者別)
+  description: '秘匿化: 正規化スコア化による秘匿化。内航海運業者保有船舶の運航時の平均積載率を0~100で正規化スコア化したもの 積載率=(輸送重量×輸送距離)/(載貨重量トン数×航海距離)'
+- name: transportation_amount_per_crew_operator
+  title: 船員1人当たりの輸送量スコア(内航海運業者別)
+  description: '秘匿化: 正規化スコア化による秘匿化。内航海運業者の海上従業員(船員)の一人あたり輸送量=(輸送重量×輸送距離)/(船員数×労働時間(172.3時間*)×12)を0~100で正規化スコア化したもの *船員勤労統計の貨物船舶の船員の平均月労働時間'
+- name: productivity_group_operator
+  title: 生産性グループ(内航海運業者別)
+  description: '秘匿化: 正規化スコア化による秘匿化。内航海運業者の生産性を総合的に判定するため、 32、33、34のスコアを合計した総合スコアについて 各階層のサンプル数が全業者の20%ずつの等量分布となるよう5つの階層にグループ化したもの グループ1が上位20%、グループ5が下位20%に相当'

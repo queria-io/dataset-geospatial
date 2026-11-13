@@ -1,0 +1,2318 @@
+schema: links
+name: seafarer_business_status
+title: 船員法第111条に基づく事業状況報告（関東運輸局管内）
+description: |-
+  事業者別総積載率・内航船員1人・1時間当たり輸送量・平均総トン数、船員ベース労働生産性等関連指標、雇用船員数及び所属船舶の状況、従業制限、運航形態、操業区域、年齢別船員数、海技免状又は小型船舶操縦免許証受有船員数の雇入届出に関するデータ(162レコード)
+
+  元の資料: 船員法第111条に基づく事業状況に関する報告(事業状況報告19号様式)
+
+  G空間情報センターのデータセット links-naikoukaiungyou-2025 の 02_seninjoukyouhoukoku.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-naikoukaiungyou-2025
+fields:
+- name: submission_date
+  title: 提出日
+- name: principal_crew_labor_office_id
+  title: 主たる船員の労務管理の事務を行う事務所_ID
+  description: '秘匿化: 秘匿化あり'
+- name: principal_crew_labor_office_address
+  title: 主たる船員の労務管理の事務を行う事務所_所在地
+  description: '秘匿化: 秘匿化あり。市区町村単位で秘匿化'
+- name: principal_crew_labor_office_address_geometry
+  title: 主たる船員の労務管理の事務を行う事務所_所在地_geometry
+  description: '秘匿化: 秘匿化あり'
+- name: principal_crew_labor_office_main_manned_vessels
+  title: 主たる船員の労務管理の事務を行う事務所_船員を乗り組ませている主な船舶
+- name: ship_owner_address
+  title: 船舶所有者_住所(所在地)
+  description: '秘匿化: 秘匿化あり。市区町村単位で秘匿化'
+- name: ship_owner_address_geometry
+  title: 船舶所有者_住所(所在地)_geometry
+  description: '秘匿化: 秘匿化あり'
+- name: ship_owner_management_type
+  title: 船舶所有者_経営形態
+- name: ship_owner_capital_amount_rank
+  title: 船舶所有者_資本(出資)額_ランク
+  description: '秘匿化: 秘匿化あり ※各階層のデータ数が全データ数に対して約10%となるように階層化。ランクによる秘匿化を行っている項目は以下同様'
+- name: employed_seafarers_and_affiliated_vessel_status_vessel_number_0
+  title: 雇用船員数及び所属船舶の状況_船舶番号_0
+  description: '秘匿化: 秘匿化あり。新規ID附番'
+- name: employed_seafarers_and_affiliated_vessel_status_hull_material_0
+  title: 雇用船員数及び所属船舶の状況_船質_0
+- name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_0_rank
+  title: 雇用船員数及び所属船舶の状況_総トン数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_navigation_area_or_work_restrictions_0
+  title: 雇用船員数及び所属船舶の状況_航行区域又は従業制限_0
+- name: employed_seafarers_and_affiliated_vessel_status_operation_type_0
+  title: 雇用船員数及び所属船舶の状況_運航形態_0
+- name: employed_seafarers_and_affiliated_vessel_status_purpose_0
+  title: 雇用船員数及び所属船舶の状況_用途_0
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_female_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち女子船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_foreign_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち外国人船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_female_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち女子船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_foreign_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち外国人船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_female_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち女子船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_foreign_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち外国人船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_female_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち女子船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_foreign_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち外国人船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_female_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち女子船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_foreign_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち外国人船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_female_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち女子船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_foreign_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち外国人船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_female_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち女子船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_foreign_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち外国人船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_female_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち女子船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_foreign_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち外国人船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_female_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち女子船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_foreign_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち外国人船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_female_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち女子船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_foreign_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち外国人船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_female_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち女子船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_foreign_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち外国人船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_female_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち女子船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_foreign_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち外国人船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_female_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち女子船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_foreign_0_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち外国人船員数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_vessel_number_1
+  title: 雇用船員数及び所属船舶の状況_船舶番号_1
+  description: '秘匿化: 秘匿化あり。新規ID附番'
+- name: employed_seafarers_and_affiliated_vessel_status_hull_material_1
+  title: 雇用船員数及び所属船舶の状況_船質_1
+- name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_1_rank
+  title: 雇用船員数及び所属船舶の状況_総トン数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_navigation_area_or_work_restrictions_1
+  title: 雇用船員数及び所属船舶の状況_航行区域又は従業制限_1
+- name: employed_seafarers_and_affiliated_vessel_status_operation_type_1
+  title: 雇用船員数及び所属船舶の状況_運航形態_1
+- name: employed_seafarers_and_affiliated_vessel_status_purpose_1
+  title: 雇用船員数及び所属船舶の状況_用途_1
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_female_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち女子船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_foreign_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち外国人船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_female_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち女子船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_foreign_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち外国人船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_female_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち女子船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_foreign_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち外国人船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_female_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち女子船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_foreign_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち外国人船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_female_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち女子船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_foreign_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち外国人船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_female_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち女子船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_foreign_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち外国人船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_female_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち女子船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_foreign_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち外国人船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_female_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち女子船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_foreign_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち外国人船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_female_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち女子船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_foreign_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち外国人船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_female_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち女子船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_foreign_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち外国人船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_female_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち女子船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_foreign_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち外国人船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_female_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち女子船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_foreign_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち外国人船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_female_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち女子船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_foreign_1_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち外国人船員数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_vessel_number_2
+  title: 雇用船員数及び所属船舶の状況_船舶番号_2
+  description: '秘匿化: 秘匿化あり。新規ID附番'
+- name: employed_seafarers_and_affiliated_vessel_status_hull_material_2
+  title: 雇用船員数及び所属船舶の状況_船質_2
+- name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_2_rank
+  title: 雇用船員数及び所属船舶の状況_総トン数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_navigation_area_or_work_restrictions_2
+  title: 雇用船員数及び所属船舶の状況_航行区域又は従業制限_2
+- name: employed_seafarers_and_affiliated_vessel_status_operation_type_2
+  title: 雇用船員数及び所属船舶の状況_運航形態_2
+- name: employed_seafarers_and_affiliated_vessel_status_purpose_2
+  title: 雇用船員数及び所属船舶の状況_用途_2
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_female_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち女子船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_foreign_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち外国人船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_female_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち女子船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_foreign_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち外国人船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_female_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち女子船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_foreign_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち外国人船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_female_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち女子船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_foreign_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち外国人船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_female_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち女子船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_foreign_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち外国人船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_female_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち女子船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_foreign_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち外国人船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_female_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち女子船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_foreign_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち外国人船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_female_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち女子船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_foreign_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち外国人船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_female_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち女子船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_foreign_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち外国人船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_female_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち女子船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_foreign_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち外国人船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_female_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち女子船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_foreign_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち外国人船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_female_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち女子船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_foreign_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち外国人船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_female_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち女子船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_foreign_2_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち外国人船員数_2_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_vessel_number_3
+  title: 雇用船員数及び所属船舶の状況_船舶番号_3
+  description: '秘匿化: 秘匿化あり。新規ID附番'
+- name: employed_seafarers_and_affiliated_vessel_status_hull_material_3
+  title: 雇用船員数及び所属船舶の状況_船質_3
+- name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_3_rank
+  title: 雇用船員数及び所属船舶の状況_総トン数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_navigation_area_or_work_restrictions_3
+  title: 雇用船員数及び所属船舶の状況_航行区域又は従業制限_3
+- name: employed_seafarers_and_affiliated_vessel_status_operation_type_3
+  title: 雇用船員数及び所属船舶の状況_運航形態_3
+- name: employed_seafarers_and_affiliated_vessel_status_purpose_3
+  title: 雇用船員数及び所属船舶の状況_用途_3
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_female_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち女子船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_foreign_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち外国人船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_female_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち女子船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_foreign_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち外国人船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_female_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち女子船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_foreign_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち外国人船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_female_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち女子船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_foreign_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち外国人船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_female_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち女子船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_foreign_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち外国人船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_female_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち女子船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_foreign_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち外国人船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_female_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち女子船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_foreign_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち外国人船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_female_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち女子船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_foreign_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち外国人船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_female_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち女子船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_foreign_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち外国人船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_female_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち女子船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_foreign_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち外国人船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_female_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち女子船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_foreign_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち外国人船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_female_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち女子船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_foreign_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち外国人船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_female_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち女子船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_foreign_3_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち外国人船員数_3_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_vessel_number_4
+  title: 雇用船員数及び所属船舶の状況_船舶番号_4
+  description: '秘匿化: 秘匿化あり。新規ID附番'
+- name: employed_seafarers_and_affiliated_vessel_status_hull_material_4
+  title: 雇用船員数及び所属船舶の状況_船質_4
+- name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_4_rank
+  title: 雇用船員数及び所属船舶の状況_総トン数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_navigation_area_or_work_restrictions_4
+  title: 雇用船員数及び所属船舶の状況_航行区域又は従業制限_4
+- name: employed_seafarers_and_affiliated_vessel_status_operation_type_4
+  title: 雇用船員数及び所属船舶の状況_運航形態_4
+- name: employed_seafarers_and_affiliated_vessel_status_purpose_4
+  title: 雇用船員数及び所属船舶の状況_用途_4
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_female_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち女子船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_foreign_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち外国人船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_female_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち女子船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_foreign_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち外国人船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_female_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち女子船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_foreign_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち外国人船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_female_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち女子船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_foreign_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち外国人船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_female_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち女子船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_foreign_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち外国人船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_female_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち女子船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_foreign_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち外国人船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_female_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち女子船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_foreign_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち外国人船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_female_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち女子船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_foreign_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち外国人船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_female_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち女子船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_foreign_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち外国人船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_female_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち女子船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_foreign_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち外国人船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_female_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち女子船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_foreign_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち外国人船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_female_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち女子船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_foreign_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち外国人船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_female_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち女子船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_foreign_4_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち外国人船員数_4_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_vessel_number_5
+  title: 雇用船員数及び所属船舶の状況_船舶番号_5
+  description: '秘匿化: 秘匿化あり。新規ID附番'
+- name: employed_seafarers_and_affiliated_vessel_status_hull_material_5
+  title: 雇用船員数及び所属船舶の状況_船質_5
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_5_rank
+  title: 雇用船員数及び所属船舶の状況_総トン数_5_ランク
+- name: employed_seafarers_and_affiliated_vessel_status_navigation_area_or_work_restrictions_5
+  title: 雇用船員数及び所属船舶の状況_航行区域又は従業制限_5
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_operation_type_5
+  title: 雇用船員数及び所属船舶の状況_運航形態_5
+- name: employed_seafarers_and_affiliated_vessel_status_purpose_5
+  title: 雇用船員数及び所属船舶の状況_用途_5
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_5_ランク
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_female_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち女子船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_foreign_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち外国人船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_female_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち女子船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_foreign_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち外国人船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_female_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち女子船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_foreign_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち外国人船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_female_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち女子船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_foreign_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち外国人船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_female_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち女子船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_foreign_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち外国人船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_female_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち女子船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_foreign_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち外国人船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_female_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち女子船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_foreign_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち外国人船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_female_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち女子船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_foreign_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち外国人船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_female_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち女子船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_foreign_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち外国人船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_female_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち女子船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_foreign_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち外国人船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_female_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち女子船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_foreign_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち外国人船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_female_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち女子船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_foreign_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち外国人船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_female_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち女子船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_foreign_5_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち外国人船員数_5_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_vessel_number_6
+  title: 雇用船員数及び所属船舶の状況_船舶番号_6
+  description: '秘匿化: 秘匿化あり。新規ID附番'
+- name: employed_seafarers_and_affiliated_vessel_status_hull_material_6
+  title: 雇用船員数及び所属船舶の状況_船質_6
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_6_rank
+  title: 雇用船員数及び所属船舶の状況_総トン数_6_ランク
+- name: employed_seafarers_and_affiliated_vessel_status_navigation_area_or_work_restrictions_6
+  title: 雇用船員数及び所属船舶の状況_航行区域又は従業制限_6
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_operation_type_6
+  title: 雇用船員数及び所属船舶の状況_運航形態_6
+- name: employed_seafarers_and_affiliated_vessel_status_purpose_6
+  title: 雇用船員数及び所属船舶の状況_用途_6
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_6_ランク
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_female_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち女子船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_foreign_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち外国人船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_female_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち女子船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_foreign_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち外国人船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_female_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち女子船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_foreign_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち外国人船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_female_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち女子船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_foreign_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち外国人船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_female_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち女子船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_foreign_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち外国人船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_female_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち女子船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_foreign_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち外国人船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_female_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち女子船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_foreign_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち外国人船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_female_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち女子船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_foreign_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち外国人船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_female_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち女子船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_foreign_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち外国人船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_female_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち女子船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_foreign_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち外国人船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_female_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち女子船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_foreign_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち外国人船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_female_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち女子船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_foreign_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち外国人船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_female_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち女子船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_foreign_6_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち外国人船員数_6_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_vessel_number_7
+  title: 雇用船員数及び所属船舶の状況_船舶番号_7
+  description: '秘匿化: 秘匿化あり。新規ID附番'
+- name: employed_seafarers_and_affiliated_vessel_status_hull_material_7
+  title: 雇用船員数及び所属船舶の状況_船質_7
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_7_rank
+  title: 雇用船員数及び所属船舶の状況_総トン数_7_ランク
+- name: employed_seafarers_and_affiliated_vessel_status_navigation_area_or_work_restrictions_7
+  title: 雇用船員数及び所属船舶の状況_航行区域又は従業制限_7
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_operation_type_7
+  title: 雇用船員数及び所属船舶の状況_運航形態_7
+- name: employed_seafarers_and_affiliated_vessel_status_purpose_7
+  title: 雇用船員数及び所属船舶の状況_用途_7
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_7_ランク
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_female_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち女子船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_foreign_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち外国人船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_female_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち女子船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_foreign_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち外国人船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_female_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち女子船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_foreign_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち外国人船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_female_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち女子船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_foreign_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち外国人船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_female_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち女子船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_foreign_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち外国人船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_female_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち女子船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_foreign_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち外国人船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_female_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち女子船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_foreign_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち外国人船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_female_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち女子船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_foreign_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち外国人船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_female_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち女子船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_foreign_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち外国人船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_female_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち女子船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_foreign_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち外国人船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_female_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち女子船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_foreign_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち外国人船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_female_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち女子船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_foreign_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち外国人船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_female_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち女子船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_foreign_7_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち外国人船員数_7_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_vessel_number_8
+  title: 雇用船員数及び所属船舶の状況_船舶番号_8
+  description: '秘匿化: 秘匿化あり。新規ID附番'
+- name: employed_seafarers_and_affiliated_vessel_status_hull_material_8
+  title: 雇用船員数及び所属船舶の状況_船質_8
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_8_rank
+  title: 雇用船員数及び所属船舶の状況_総トン数_8_ランク
+- name: employed_seafarers_and_affiliated_vessel_status_navigation_area_or_work_restrictions_8
+  title: 雇用船員数及び所属船舶の状況_航行区域又は従業制限_8
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_operation_type_8
+  title: 雇用船員数及び所属船舶の状況_運航形態_8
+- name: employed_seafarers_and_affiliated_vessel_status_purpose_8
+  title: 雇用船員数及び所属船舶の状況_用途_8
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_8_ランク
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_female_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち女子船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_foreign_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち外国人船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_female_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち女子船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_foreign_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち外国人船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_female_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち女子船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_foreign_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち外国人船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_female_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち女子船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_foreign_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち外国人船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_female_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち女子船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_foreign_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち外国人船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_female_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち女子船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_foreign_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち外国人船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_female_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち女子船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_foreign_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち外国人船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_female_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち女子船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_foreign_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち外国人船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_female_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち女子船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_foreign_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち外国人船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_female_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち女子船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_foreign_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち外国人船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_female_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち女子船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_foreign_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち外国人船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_female_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち女子船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_foreign_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち外国人船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_female_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち女子船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_foreign_8_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち外国人船員数_8_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_vessel_number_9
+  title: 雇用船員数及び所属船舶の状況_船舶番号_9
+  description: '秘匿化: 秘匿化あり。新規ID附番'
+- name: employed_seafarers_and_affiliated_vessel_status_hull_material_9
+  title: 雇用船員数及び所属船舶の状況_船質_9
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_9_rank
+  title: 雇用船員数及び所属船舶の状況_総トン数_9_ランク
+- name: employed_seafarers_and_affiliated_vessel_status_navigation_area_or_work_restrictions_9
+  title: 雇用船員数及び所属船舶の状況_航行区域又は従業制限_9
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_operation_type_9
+  title: 雇用船員数及び所属船舶の状況_運航形態_9
+- name: employed_seafarers_and_affiliated_vessel_status_purpose_9
+  title: 雇用船員数及び所属船舶の状況_用途_9
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_9_ランク
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_female_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち女子船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_foreign_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち外国人船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_female_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち女子船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_foreign_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち外国人船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_female_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち女子船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_foreign_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち外国人船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_female_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち女子船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_foreign_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち外国人船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_female_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち女子船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_foreign_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち外国人船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_female_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち女子船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_foreign_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち外国人船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_female_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち女子船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_foreign_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち外国人船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_female_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち女子船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_foreign_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち外国人船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_female_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち女子船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_foreign_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち外国人船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_female_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち女子船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_foreign_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち外国人船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_female_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち女子船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_foreign_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち外国人船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_female_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち女子船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_foreign_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち外国人船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_female_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち女子船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_foreign_9_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち外国人船員数_9_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_vessel_number_10
+  title: 雇用船員数及び所属船舶の状況_船舶番号_10
+  description: '秘匿化: 秘匿化あり。新規ID附番'
+- name: employed_seafarers_and_affiliated_vessel_status_hull_material_10
+  title: 雇用船員数及び所属船舶の状況_船質_10
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_10_rank
+  title: 雇用船員数及び所属船舶の状況_総トン数_10_ランク
+- name: employed_seafarers_and_affiliated_vessel_status_navigation_area_or_work_restrictions_10
+  title: 雇用船員数及び所属船舶の状況_航行区域又は従業制限_10
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_operation_type_10
+  title: 雇用船員数及び所属船舶の状況_運航形態_10
+- name: employed_seafarers_and_affiliated_vessel_status_purpose_10
+  title: 雇用船員数及び所属船舶の状況_用途_10
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_10_ランク
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_female_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち女子船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_foreign_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち外国人船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_female_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち女子船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_foreign_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち外国人船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_female_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち女子船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_foreign_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち外国人船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_female_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち女子船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_foreign_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち外国人船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_female_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち女子船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_foreign_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち外国人船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_female_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち女子船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_foreign_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち外国人船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_female_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち女子船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_foreign_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち外国人船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_female_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち女子船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_foreign_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち外国人船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_female_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち女子船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_foreign_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち外国人船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_female_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち女子船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_foreign_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち外国人船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_female_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち女子船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_foreign_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち外国人船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_female_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち女子船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_foreign_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち外国人船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_female_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち女子船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_foreign_10_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち外国人船員数_10_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_vessel_number_11
+  title: 雇用船員数及び所属船舶の状況_船舶番号_11
+  description: '秘匿化: 秘匿化あり。新規ID附番'
+- name: employed_seafarers_and_affiliated_vessel_status_hull_material_11
+  title: 雇用船員数及び所属船舶の状況_船質_11
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_11_rank
+  title: 雇用船員数及び所属船舶の状況_総トン数_11_ランク
+- name: employed_seafarers_and_affiliated_vessel_status_navigation_area_or_work_restrictions_11
+  title: 雇用船員数及び所属船舶の状況_航行区域又は従業制限_11
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_operation_type_11
+  title: 雇用船員数及び所属船舶の状況_運航形態_11
+- name: employed_seafarers_and_affiliated_vessel_status_purpose_11
+  title: 雇用船員数及び所属船舶の状況_用途_11
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_11_ランク
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_female_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち女子船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_foreign_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち外国人船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_female_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち女子船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_foreign_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち外国人船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_female_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち女子船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_foreign_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち外国人船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_female_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち女子船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_foreign_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち外国人船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_female_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち女子船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_foreign_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち外国人船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_female_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち女子船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_foreign_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち外国人船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_female_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち女子船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_foreign_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち外国人船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_female_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち女子船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_foreign_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち外国人船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_female_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち女子船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_foreign_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち外国人船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_female_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち女子船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_foreign_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち外国人船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_female_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち女子船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_foreign_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち外国人船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_female_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち女子船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_foreign_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち外国人船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_female_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち女子船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_foreign_11_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち外国人船員数_11_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_vessel_number_12
+  title: 雇用船員数及び所属船舶の状況_船舶番号_12
+  description: '秘匿化: 秘匿化あり。新規ID附番'
+- name: employed_seafarers_and_affiliated_vessel_status_hull_material_12
+  title: 雇用船員数及び所属船舶の状況_船質_12
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_12_rank
+  title: 雇用船員数及び所属船舶の状況_総トン数_12_ランク
+- name: employed_seafarers_and_affiliated_vessel_status_navigation_area_or_work_restrictions_12
+  title: 雇用船員数及び所属船舶の状況_航行区域又は従業制限_12
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_operation_type_12
+  title: 雇用船員数及び所属船舶の状況_運航形態_12
+- name: employed_seafarers_and_affiliated_vessel_status_purpose_12
+  title: 雇用船員数及び所属船舶の状況_用途_12
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_12_ランク
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_female_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち女子船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_foreign_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_うち外国人船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_female_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち女子船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_engine_foreign_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_機関部_うち外国人船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_female_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち女子船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_radio_foreign_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_無線部_うち外国人船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_female_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち女子船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_admin_foreign_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_事務部_うち外国人船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_female_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち女子船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_other_foreign_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_その他_うち外国人船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_female_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち女子船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_total_foreign_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_計_うち外国人船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_female_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち女子船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_deck_foreign_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_甲板部_うち外国人船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_female_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち女子船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_engine_foreign_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_機関部_うち外国人船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_female_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち女子船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_radio_foreign_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_無線部_うち外国人船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_female_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち女子船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_admin_foreign_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_事務部_うち外国人船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_female_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち女子船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_other_foreign_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_その他_うち外国人船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_female_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち女子船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_ratings_total_foreign_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_部員_計_うち外国人船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_female_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち女子船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: employed_seafarers_and_affiliated_vessel_status_crew_count_overall_total_foreign_12_rank
+  title: 雇用船員数及び所属船舶の状況_乗組船員数_総計_うち外国人船員数_12_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_officers_deck_rank
+  title: 予備船員数_予備船員数_職員_甲板部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_officers_deck_female_rank
+  title: 予備船員数_予備船員数_職員_甲板部_うち女子船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_officers_deck_foreign_rank
+  title: 予備船員数_予備船員数_職員_甲板部_うち外国人船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_officers_engine_rank
+  title: 予備船員数_予備船員数_職員_機関部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_officers_engine_female_rank
+  title: 予備船員数_予備船員数_職員_機関部_うち女子船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_officers_engine_foreign_rank
+  title: 予備船員数_予備船員数_職員_機関部_うち外国人船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_officers_radio_rank
+  title: 予備船員数_予備船員数_職員_無線部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_officers_radio_female_rank
+  title: 予備船員数_予備船員数_職員_無線部_うち女子船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_officers_radio_foreign_rank
+  title: 予備船員数_予備船員数_職員_無線部_うち外国人船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_officers_admin_rank
+  title: 予備船員数_予備船員数_職員_事務部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_officers_admin_female_rank
+  title: 予備船員数_予備船員数_職員_事務部_うち女子船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_officers_admin_foreign_rank
+  title: 予備船員数_予備船員数_職員_事務部_うち外国人船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_officers_other_rank
+  title: 予備船員数_予備船員数_職員_その他_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_officers_other_female_rank
+  title: 予備船員数_予備船員数_職員_その他_うち女子船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_officers_other_foreign_rank
+  title: 予備船員数_予備船員数_職員_その他_うち外国人船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_officers_total_rank
+  title: 予備船員数_予備船員数_職員_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_officers_total_female_rank
+  title: 予備船員数_予備船員数_職員_計_うち女子船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_officers_total_foreign_rank
+  title: 予備船員数_予備船員数_職員_計_うち外国人船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_ratings_deck_rank
+  title: 予備船員数_予備船員数_部員_甲板部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_ratings_deck_female_rank
+  title: 予備船員数_予備船員数_部員_甲板部_うち女子船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_ratings_deck_foreign_rank
+  title: 予備船員数_予備船員数_部員_甲板部_うち外国人船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_ratings_engine_rank
+  title: 予備船員数_予備船員数_部員_機関部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_ratings_engine_female_rank
+  title: 予備船員数_予備船員数_部員_機関部_うち女子船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_ratings_engine_foreign_rank
+  title: 予備船員数_予備船員数_部員_機関部_うち外国人船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_ratings_radio_rank
+  title: 予備船員数_予備船員数_部員_無線部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_ratings_radio_female_rank
+  title: 予備船員数_予備船員数_部員_無線部_うち女子船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_ratings_radio_foreign_rank
+  title: 予備船員数_予備船員数_部員_無線部_うち外国人船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_ratings_admin_rank
+  title: 予備船員数_予備船員数_部員_事務部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_ratings_admin_female_rank
+  title: 予備船員数_予備船員数_部員_事務部_うち女子船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_ratings_admin_foreign_rank
+  title: 予備船員数_予備船員数_部員_事務部_うち外国人船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_ratings_other_rank
+  title: 予備船員数_予備船員数_部員_その他_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_ratings_other_female_rank
+  title: 予備船員数_予備船員数_部員_その他_うち女子船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_ratings_other_foreign_rank
+  title: 予備船員数_予備船員数_部員_その他_うち外国人船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_ratings_total_rank
+  title: 予備船員数_予備船員数_部員_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_ratings_total_female_rank
+  title: 予備船員数_予備船員数_部員_計_うち女子船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_count_ratings_total_foreign_rank
+  title: 予備船員数_予備船員数_部員_計_うち外国人船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_overall_total_deck_rank
+  title: 予備船員数_予備船員数_総計_甲板部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_overall_total_deck_female_rank
+  title: 予備船員数_予備船員数_総計_甲板部_うち女子船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_overall_total_deck_foreign_rank
+  title: 予備船員数_予備船員数_総計_甲板部_うち外国人船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_overall_total_engine_rank
+  title: 予備船員数_予備船員数_総計_機関部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_overall_total_engine_female_rank
+  title: 予備船員数_予備船員数_総計_機関部_うち女子船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_overall_total_engine_foreign_rank
+  title: 予備船員数_予備船員数_総計_機関部_うち外国人船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_overall_total_radio_rank
+  title: 予備船員数_予備船員数_総計_無線部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_overall_total_radio_female_rank
+  title: 予備船員数_予備船員数_総計_無線部_うち女子船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_overall_total_radio_foreign_rank
+  title: 予備船員数_予備船員数_総計_無線部_うち外国人船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_overall_total_admin_rank
+  title: 予備船員数_予備船員数_総計_事務部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_overall_total_admin_female_rank
+  title: 予備船員数_予備船員数_総計_事務部_うち女子船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_overall_total_admin_foreign_rank
+  title: 予備船員数_予備船員数_総計_事務部_うち外国人船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_overall_total_other_rank
+  title: 予備船員数_予備船員数_総計_その他_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_overall_total_other_female_rank
+  title: 予備船員数_予備船員数_総計_その他_うち女子船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_overall_total_other_foreign_rank
+  title: 予備船員数_予備船員数_総計_その他_うち外国人船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_overall_total_total_rank
+  title: 予備船員数_予備船員数_総計_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_overall_total_total_female_rank
+  title: 予備船員数_予備船員数_総計_計_うち女子船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: reserve_seafarers_overall_total_total_foreign_rank
+  title: 予備船員数_予備船員数_総計_計_うち外国人船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: non_employed_seafarers_officers_rank
+  title: 非雇用船員数_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: non_employed_seafarers_ratings_rank
+  title: 非雇用船員数_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_18_officers_rank
+  title: 年齢別船員数_18歳未満_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_18_ratings_rank
+  title: 年齢別船員数_18歳未満_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_18_total_rank
+  title: 年齢別船員数_18歳未満_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_20_officers_rank
+  title: 年齢別船員数_20歳未満_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_20_ratings_rank
+  title: 年齢別船員数_20歳未満_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_20_total_rank
+  title: 年齢別船員数_20歳未満_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_25_officers_rank
+  title: 年齢別船員数_25歳未満_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_25_ratings_rank
+  title: 年齢別船員数_25歳未満_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_25_total_rank
+  title: 年齢別船員数_25歳未満_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_30_officers_rank
+  title: 年齢別船員数_30歳未満_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_30_ratings_rank
+  title: 年齢別船員数_30歳未満_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_30_total_rank
+  title: 年齢別船員数_30歳未満_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_35_officers_rank
+  title: 年齢別船員数_35歳未満_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_35_ratings_rank
+  title: 年齢別船員数_35歳未満_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_35_total_rank
+  title: 年齢別船員数_35歳未満_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_40_officers_rank
+  title: 年齢別船員数_40歳未満_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_40_ratings_rank
+  title: 年齢別船員数_40歳未満_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_40_total_rank
+  title: 年齢別船員数_40歳未満_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_45_officers_rank
+  title: 年齢別船員数_45歳未満_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_45_ratings_rank
+  title: 年齢別船員数_45歳未満_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_45_total_rank
+  title: 年齢別船員数_45歳未満_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_50_officers_rank
+  title: 年齢別船員数_50歳未満_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_50_ratings_rank
+  title: 年齢別船員数_50歳未満_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_50_total_rank
+  title: 年齢別船員数_50歳未満_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_55_officers_rank
+  title: 年齢別船員数_55歳未満_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_55_ratings_rank
+  title: 年齢別船員数_55歳未満_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_55_total_rank
+  title: 年齢別船員数_55歳未満_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_60_officers_rank
+  title: 年齢別船員数_60歳未満_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_60_ratings_rank
+  title: 年齢別船員数_60歳未満_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_60_total_rank
+  title: 年齢別船員数_60歳未満_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_65_officers_rank
+  title: 年齢別船員数_65歳未満_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_65_ratings_rank
+  title: 年齢別船員数_65歳未満_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_65_total_rank
+  title: 年齢別船員数_65歳未満_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_70_officers_rank
+  title: 年齢別船員数_70歳未満_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_70_ratings_rank
+  title: 年齢別船員数_70歳未満_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_70_total_rank
+  title: 年齢別船員数_70歳未満_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_75_officers_rank
+  title: 年齢別船員数_75歳未満_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_75_ratings_rank
+  title: 年齢別船員数_75歳未満_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_75_total_rank
+  title: 年齢別船員数_75歳未満_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_80_officers_rank
+  title: 年齢別船員数_80歳未満_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_80_ratings_rank
+  title: 年齢別船員数_80歳未満_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_under_80_total_rank
+  title: 年齢別船員数_80歳未満_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_80_and_over_officers_rank
+  title: 年齢別船員数_80歳以上_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_80_and_over_ratings_rank
+  title: 年齢別船員数_80歳以上_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_80_and_over_total_rank
+  title: 年齢別船員数_80歳以上_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_total_officers_rank
+  title: 年齢別船員数_計_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_total_ratings_rank
+  title: 年齢別船員数_計_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: age_specific_seafarers_count_total_total_rank
+  title: 年齢別船員数_計_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_under_5_years_officers_rank
+  title: 経験年数別船員数_5年未満_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_under_5_years_ratings_rank
+  title: 経験年数別船員数_5年未満_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_under_5_years_total_rank
+  title: 経験年数別船員数_5年未満_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_under_10_years_officers_rank
+  title: 経験年数別船員数_10年未満_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_under_10_years_ratings_rank
+  title: 経験年数別船員数_10年未満_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_under_10_years_total_rank
+  title: 経験年数別船員数_10年未満_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_under_15_years_officers_rank
+  title: 経験年数別船員数_15年未満_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_under_15_years_ratings_rank
+  title: 経験年数別船員数_15年未満_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_under_15_years_total_rank
+  title: 経験年数別船員数_15年未満_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_under_20_years_officers_rank
+  title: 経験年数別船員数_20年未満_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_under_20_years_ratings_rank
+  title: 経験年数別船員数_20年未満_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_under_20_years_total_rank
+  title: 経験年数別船員数_20年未満_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_under_25_years_officers_rank
+  title: 経験年数別船員数_25年未満_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_under_25_years_ratings_rank
+  title: 経験年数別船員数_25年未満_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_under_25_years_total_rank
+  title: 経験年数別船員数_25年未満_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_under_30_years_officers_rank
+  title: 経験年数別船員数_30年未満_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_under_30_years_ratings_rank
+  title: 経験年数別船員数_30年未満_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_under_30_years_total_rank
+  title: 経験年数別船員数_30年未満_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_under_35_years_officers_rank
+  title: 経験年数別船員数_35年未満_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_under_35_years_ratings_rank
+  title: 経験年数別船員数_35年未満_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_under_35_years_total_rank
+  title: 経験年数別船員数_35年未満_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_under_40_years_officers_rank
+  title: 経験年数別船員数_40年未満_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_under_40_years_ratings_rank
+  title: 経験年数別船員数_40年未満_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_under_40_years_total_rank
+  title: 経験年数別船員数_40年未満_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_40_years_and_over_officers_rank
+  title: 経験年数別船員数_40年以上_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_40_years_and_over_ratings_rank
+  title: 経験年数別船員数_40年以上_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_40_years_and_over_total_rank
+  title: 経験年数別船員数_40年以上_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_total_officers_rank
+  title: 経験年数別船員数_計_職員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_total_ratings_rank
+  title: 経験年数別船員数_計_部員_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: service_years_seafarers_count_total_total_rank
+  title: 経験年数別船員数_計_計_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_first_class_mariner_officers_deck_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_一級海技士_職員_甲板部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_first_class_mariner_officers_engine_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_一級海技士_職員_機関部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_first_class_mariner_officers_radio_communication_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_一級海技士_職員_無線部_通信_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_first_class_mariner_officers_radio_electronic_communication_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_一級海技士_職員_無線部_電子通信_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_first_class_mariner_ratings_deck_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_一級海技士_部員_甲板部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_first_class_mariner_ratings_engine_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_一級海技士_部員_機関部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_second_class_mariner_officers_deck_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_二級海技士_職員_甲板部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_second_class_mariner_officers_engine_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_二級海技士_職員_機関部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_second_class_mariner_officers_radio_communication_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_二級海技士_職員_無線部_通信_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_second_class_mariner_officers_radio_electronic_communication_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_二級海技士_職員_無線部_電子通信_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_second_class_mariner_ratings_deck_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_二級海技士_部員_甲板部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_second_class_mariner_ratings_engine_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_二級海技士_部員_機関部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_third_class_mariner_officers_deck_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_三級海技士_職員_甲板部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_third_class_mariner_officers_engine_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_三級海技士_職員_機関部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_third_class_mariner_officers_radio_communication_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_三級海技士_職員_無線部_通信_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_third_class_mariner_officers_radio_electronic_communication_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_三級海技士_職員_無線部_電子通信_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_third_class_mariner_ratings_deck_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_三級海技士_部員_甲板部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_third_class_mariner_ratings_engine_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_三級海技士_部員_機関部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_bridge_watch_third_class_mariner_officers_deck_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_船橋当直三級海技士_職員_甲板部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_bridge_watch_third_class_mariner_officers_engine_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_船橋当直三級海技士_職員_機関部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_bridge_watch_third_class_mariner_ratings_deck_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_船橋当直三級海技士_部員_甲板部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_bridge_watch_third_class_mariner_ratings_engine_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_船橋当直三級海技士_部員_機関部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_engine_watch_third_class_mariner_officers_deck_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_機関当直三級海技士_職員_甲板部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_engine_watch_third_class_mariner_officers_engine_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_機関当直三級海技士_職員_機関部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_engine_watch_third_class_mariner_ratings_deck_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_機関当直三級海技士_部員_甲板部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_engine_watch_third_class_mariner_ratings_engine_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_機関当直三級海技士_部員_機関部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_fourth_class_mariner_officers_deck_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_四級海技士_職員_甲板部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_fourth_class_mariner_officers_engine_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_四級海技士_職員_機関部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_fourth_class_mariner_officers_radio_electronic_communication_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_四級海技士_職員_無線部_電子通信_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_fourth_class_mariner_ratings_deck_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_四級海技士_部員_甲板部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_fourth_class_mariner_ratings_engine_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_四級海技士_部員_機関部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_fifth_class_mariner_officers_deck_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_五級海技士_職員_甲板部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_fifth_class_mariner_officers_engine_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_五級海技士_職員_機関部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_fifth_class_mariner_ratings_deck_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_五級海技士_部員_甲板部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_fifth_class_mariner_ratings_engine_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_五級海技士_部員_機関部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_sixth_class_mariner_officers_deck_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_六級海技士_職員_甲板部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_sixth_class_mariner_officers_engine_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_六級海技士_職員_機関部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_sixth_class_mariner_ratings_deck_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_六級海技士_部員_甲板部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_sixth_class_mariner_ratings_engine_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_六級海技士_部員_機関部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_small_vessel_operator_officers_deck_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_小型船舶操縦士_職員_甲板部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_small_vessel_operator_officers_engine_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_小型船舶操縦士_職員_機関部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_small_vessel_operator_ratings_deck_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_小型船舶操縦士_部員_甲板部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_small_vessel_operator_ratings_engine_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_小型船舶操縦士_部員_機関部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_total_officers_deck_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_計_職員_甲板部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_total_officers_engine_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_計_職員_機関部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_total_officers_radio_communication_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_計_職員_無線部_通信_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_total_officers_radio_electronic_communication_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_計_職員_無線部_電子通信_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_total_ratings_deck_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_計_部員_甲板部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: licensed_seafarers_count_total_ratings_engine_rank
+  title: 海技免状又は小型船舶操縦免許証受有船員数_計_部員_機関部_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: union_status_member_count_0_rank
+  title: 労働組合の状況_加入者数_0_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: union_status_has_labor_agreement_0
+  title: 労働組合の状況_労働協定の有無_0
+- name: union_status_member_count_1_rank
+  title: 労働組合の状況_加入者数_1_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: union_status_has_labor_agreement_1
+  title: 労働組合の状況_労働協定の有無_1
+- name: savings_management_agreement_has_agreement
+  title: 貯蓄金管理協定の有無及び委託者数_有無
+- name: savings_management_agreement_trustees_count_rank
+  title: 貯蓄金管理協定の有無及び委託者数_委託者数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: overtime_labor_agreement_has_agreement
+  title: 時間外労働協定の有無及び対象船員数_有無
+- name: overtime_labor_agreement_target_seafarers_count_rank
+  title: 時間外労働協定の有無及び対象船員数_対象船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: compensatory_holiday_labor_agreement_has_agreement
+  title: 補償休日労働協定の有無及び対象船員数_有無
+- name: compensatory_holiday_labor_agreement_target_seafarers_count_rank
+  title: 補償休日労働協定の有無及び対象船員数_対象船員数_ランク
+  description: '秘匿化: 秘匿化あり'
+- name: split_rest_time_agreement_has_agreement
+  title: 休息時間分割協定の有無及び対象船員数_有無
+- name: split_rest_time_agreement_target_seafarers_count_rank
+  title: 休息時間分割協定の有無及び対象船員数_対象船員数_ランク
+  description: '秘匿化: 秘匿化あり'

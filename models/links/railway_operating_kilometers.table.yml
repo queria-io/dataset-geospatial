@@ -1,0 +1,171 @@
+schema: links
+name: railway_operating_kilometers
+title: 鉄道統計年報 営業キロ及び走行キロ
+description: |-
+  営業キロ及び走行キロは、年度末営業キロ(旅客・貨物)、自己・他鉄道車両自線走行キロ(機関車・旅客車・貨物車・特殊車)、自己車両他線走行キロ(機関車・旅客車・貨物車・特殊車)に関する情報を有するデータです。(3,865レコード)
+
+  元の資料: 鉄道統計年報
+
+  G空間情報センターのデータセット links-tetsudoujigyou-2025 の 03_tetsudou_eigyoukiro.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-tetsudoujigyou-2025
+fields:
+- name: year
+  title: 年度
+  description: '単位: 年度'
+- name: corporation_name
+  title: 名称
+- name: jurisdiction
+  title: 管轄
+- name: category
+  title: 区分
+- name: fiscal_year_total_operating_kilometers_passenger
+  title: 年度末営業キロ_旅客
+  description: '単位: キロメートル'
+- name: fiscal_year_total_operating_kilometers_cargo
+  title: 年度末営業キロ_貨物
+  description: '単位: キロメートル'
+- name: own_cars_own_line_running_kilometers_cars_locomotive_electric
+  title: 自己車両自線走行キロ_車両_機関車_電気
+  description: '単位: 千キロメートル'
+- name: own_cars_own_line_running_kilometers_cars_locomotive_internal_combustion
+  title: 自己車両自線走行キロ_車両_機関車_内燃
+  description: '単位: 千キロメートル'
+- name: own_cars_own_line_running_kilometers_cars_locomotive_steam
+  title: 自己車両自線走行キロ_車両_機関車_蒸気
+  description: '単位: 千キロメートル'
+- name: own_cars_own_line_running_kilometers_cars_locomotive_other
+  title: 自己車両自線走行キロ_車両_機関車_その他
+  description: '単位: 千キロメートル'
+- name: own_cars_own_line_running_kilometers_cars_passenger_electric
+  title: 自己車両自線走行キロ_車両_旅客車_電車
+  description: '単位: 千キロメートル'
+- name: own_cars_own_line_running_kilometers_cars_passenger_internal_combustion
+  title: 自己車両自線走行キロ_車両_旅客車_内燃動車
+  description: '単位: 千キロメートル'
+- name: own_cars_own_line_running_kilometers_cars_passenger_passenger
+  title: 自己車両自線走行キロ_車両_旅客車_客車
+  description: '単位: 千キロメートル'
+- name: own_cars_own_line_running_kilometers_cars_passenger_other
+  title: 自己車両自線走行キロ_車両_旅客車_その他
+  description: '単位: 千キロメートル'
+- name: own_cars_own_line_running_kilometers_cars_freight
+  title: 自己車両自線走行キロ_車両_貨物車
+  description: '単位: 千キロメートル'
+- name: own_cars_own_line_running_kilometers_cars_special
+  title: 自己車両自線走行キロ_車両_特殊車
+  description: '単位: 千キロメートル'
+- name: own_cars_own_line_running_kilometers_cars_total
+  title: 自己車両自線走行キロ_車両_合計
+  description: '単位: 千キロメートル'
+- name: other_cars_own_line_running_kilometers_cars_locomotive_electric
+  title: 他鉄道車両自線走行キロ_車両_機関車_電気
+  description: '単位: 千キロメートル'
+- name: other_cars_own_line_running_kilometers_cars_locomotive_internal_combustion
+  title: 他鉄道車両自線走行キロ_車両_機関車_内燃
+  description: '単位: 千キロメートル'
+- name: other_cars_own_line_running_kilometers_cars_locomotive_steam
+  title: 他鉄道車両自線走行キロ_車両_機関車_蒸気
+  description: '単位: 千キロメートル'
+- name: other_cars_own_line_running_kilometers_cars_locomotive_other
+  title: 他鉄道車両自線走行キロ_車両_機関車_その他
+  description: '単位: 千キロメートル'
+- name: other_cars_own_line_running_kilometers_cars_passenger_electric
+  title: 他鉄道車両自線走行キロ_車両_旅客車_電車
+  description: '単位: 千キロメートル'
+- name: other_cars_own_line_running_kilometers_cars_passenger_internal_combustion
+  title: 他鉄道車両自線走行キロ_車両_旅客車_内燃動車
+  description: '単位: 千キロメートル'
+- name: other_cars_own_line_running_kilometers_cars_passenger_passenger
+  title: 他鉄道車両自線走行キロ_車両_旅客車_客車
+  description: '単位: 千キロメートル'
+- name: other_cars_own_line_running_kilometers_cars_passenger_other
+  title: 他鉄道車両自線走行キロ_車両_旅客車_その他
+  description: '単位: 千キロメートル'
+- name: other_cars_own_line_running_kilometers_cars_freight
+  title: 他鉄道車両自線走行キロ_車両_貨物車
+  description: '単位: 千キロメートル'
+- name: other_cars_own_line_running_kilometers_cars_special
+  title: 他鉄道車両自線走行キロ_車両_特殊車
+  description: '単位: 千キロメートル'
+- name: other_cars_own_line_running_kilometers_cars_total
+  title: 他鉄道車両自線走行キロ_車両_合計
+  description: '単位: 千キロメートル'
+- name: total_train_passenger
+  title: 合計_列車_旅客
+  description: '単位: 千キロメートル'
+- name: total_train_freight
+  title: 合計_列車_貨物
+  description: '単位: 千キロメートル'
+- name: total_train_mix
+  title: 合計_列車_混合
+  description: '単位: 千キロメートル'
+- name: total_train_total
+  title: 合計_列車_合計
+  description: '単位: 千キロメートル'
+- name: total_cars_locomotive_electric
+  title: 合計_車両_機関車_電気
+  description: '単位: 千キロメートル'
+- name: total_cars_locomotive_internal_combustion
+  title: 合計_車両_機関車_内燃
+  description: '単位: 千キロメートル'
+- name: total_cars_locomotive_vaipor
+  title: 合計_車両_機関車
+  description: '単位: 千キロメートル'
+- name: total_cars_locomotive_other
+  title: 合計_車両_機関車_その他
+  description: '単位: 千キロメートル'
+- name: total_cars_passenger_electric
+  title: 合計_車両_旅客車_電車
+  description: '単位: 千キロメートル'
+- name: total_cars_passenger_internal_combustion
+  title: 合計_車両_旅客車_内燃動車
+  description: '単位: 千キロメートル'
+- name: total_cars_passenger_passenger
+  title: 合計_車両_旅客車_客車
+  description: '単位: 千キロメートル'
+- name: total_cars_passenger_other
+  title: 合計_車両_旅客車_その他
+  description: '単位: 千キロメートル'
+- name: total_cars_freight
+  title: 合計_車両_貨物車
+  description: '単位: 千キロメートル'
+- name: total_cars_special
+  title: 合計_車両_特殊車
+  description: '単位: 千キロメートル'
+- name: total_cars_total
+  title: 合計_車両_合計
+  description: '単位: 千キロメートル'
+- name: own_cars_other_line_running_kilometers_cars_locomotive_electric
+  title: 自己車両他線走行キロ_車両_機関車_電気
+  description: '単位: 千キロメートル'
+- name: own_cars_other_line_running_kilometers_cars_locomotive_internal_combustion
+  title: 自己車両他線走行キロ_車両_機関車_内燃
+  description: '単位: 千キロメートル'
+- name: own_cars_other_line_running_kilometers_cars_locomotive_steam
+  title: 自己車両他線走行キロ_車両_機関車_蒸気
+  description: '単位: 千キロメートル'
+- name: own_cars_other_line_running_kilometers_cars_locomotive_other
+  title: 自己車両他線走行キロ_車両_機関車_その他
+  description: '単位: 千キロメートル'
+- name: own_cars_other_line_running_kilometers_cars_passenger_electric
+  title: 自己車両他線走行キロ_車両_旅客車_電車
+  description: '単位: 千キロメートル'
+- name: own_cars_other_line_running_kilometers_cars_passenger_internal_combustion
+  title: 自己車両他線走行キロ_車両_旅客車_内燃動車
+  description: '単位: 千キロメートル'
+- name: own_cars_other_line_running_kilometers_cars_passenger_passenger
+  title: 自己車両他線走行キロ_車両_旅客車_客車
+  description: '単位: 千キロメートル'
+- name: own_cars_other_line_running_kilometers_cars_passenger_other
+  title: 自己車両他線走行キロ_車両_旅客車_その他
+  description: '単位: 千キロメートル'
+- name: own_cars_other_line_running_kilometers_cars_freight
+  title: 自己車両他線走行キロ_車両_貨物車
+  description: '単位: 千キロメートル'
+- name: own_cars_other_line_running_kilometers_cars_special
+  title: 自己車両他線走行キロ_車両_特殊車
+  description: '単位: 千キロメートル'
+- name: own_cars_other_line_running_kilometers_cars_total
+  title: 自己車両他線走行キロ_車両_合計
+  description: '単位: 千キロメートル'

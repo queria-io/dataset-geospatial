@@ -1,0 +1,148 @@
+schema: links
+name: coastal_shipping_business_report
+title: 内航海運業の事業概況報告（2025年度公開）
+description: |-
+  内航海運業の概況報告として、船舶の用途や船質、進水年、総トン数・載貨重量トン、長さ、馬力等の船舶スペックや航路の起終点、資本金や営業収益等に関する情報を有するもので、2023年度以前の船舶データ(2,710レコード)
+
+  元の資料: 内航海運業法登録申請書添付書類(5号様式)(使用船舶の明細)、内航海運業法登録申請書添付書類(6号様式)(内航貨物定期航路事業の明細)、内航海運業法事業概況(1号様式)(申請者の事業概要)、内航海運業事業概況報告書(2号様式)(内航海運業損益明細表)、内航海運業事業概況報告書(3号様式)(固定資産明細表)
+
+  G空間情報センターのデータセット links-naikoukaiungyou-2025 の 01_naikoukaiungyou_jigyougaikyouhoukoku.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-naikoukaiungyou-2025
+fields:
+- name: ship_id
+  title: 船舶ID
+  description: '秘匿化: 船名から内航海運業者が特定できないよう新たな船舶IDを附番して秘匿化'
+- name: usage
+  title: 用途
+- name: ship_material
+  title: 船質
+- name: gross_tonnage
+  title: 総トン数
+  description: '単位: トン'
+- name: deadweight_tonnage
+  title: 載貨重量トン数
+  description: '単位: トン'
+- name: length
+  title: 長さ
+  description: '単位: m'
+- name: horsepower
+  title: 馬力
+  description: '単位: kW'
+- name: ship_type_1
+  title: 船種1
+- name: ship_type_2
+  title: 船種2
+- name: ship_type_3
+  title: 船種3
+- name: launch_year_20
+  title: 進水年(20年括)
+  description: '単位: 年。秘匿化: ランク(階層化)による秘匿化 2020年~ 2000年~2019年 1980年~1999年 1960年~1979年 ~1959年。値: 1960 = 1960~1979年、1980 = 1980~1999年、2000 = 2000~2019年、2020 = 2020年~'
+- name: business_management_id
+  title: 内航海運業者管理ID
+  description: '秘匿化: 事業者管理番号から内航海運業者が特定できないよう新たな内航海運業者管理IDを附番して秘匿化'
+- name: address
+  title: 内航海運業者の住所
+  description: '秘匿化: 都道府県単位で秘匿化'
+- name: supervisory_transport_bureau
+  title: 管轄運輸局名
+- name: number_of_land_employees_rank
+  title: 陸上従業員数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: number_of_maritime_employees_rank
+  title: 海上従業員数_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: business_type
+  title: 事業形態
+- name: capital_amount_rank
+  title: 資本金_資本金の額_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: change_in_capital_during_the_term_rank
+  title: 資本金_当期中の増減額_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_revenue_coastal_shipping_freight_contract_rank
+  title: 営業収益_内航海運業収益_運賃(運送契約)_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_revenue_coastal_shipping_consignment_contract_rank
+  title: 営業収益_内航海運業収益_運賃(運送委託契約)_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_revenue_ship_rental_rank
+  title: 営業収益_貸船料_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_revenue_operation_consignment_fee_rank
+  title: 営業収益_運航受託手数料_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: total_coastal_shipping_revenue_rank
+  title: 内航海運収益計_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: other_maritime_business_income_rank
+  title: その他の海運業収益_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: other_business_income_rank
+  title: その他の事業収益_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: total_operating_revenue_rank
+  title: 営業収益合計_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_freight_costs_rank
+  title: 営業費用_運航費_貨物費_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_fuel_costs_rank
+  title: 営業費用_運航費_燃料費_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_port_costs_rank
+  title: 営業費用_運航費_港費_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_other_operation_costs_rank
+  title: 営業費用_運航費_その他の運航費_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_total_operation_costs_rank
+  title: 営業費用_運航費計_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_crew_costs_rank
+  title: 営業費用_船費_船員費_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_depreciation_rank
+  title: 営業費用_船費_減価償却費_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_other_ship_costs_rank
+  title: 営業費用_その他の船費_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_total_ship_costs_rank
+  title: 営業費用_船費計_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_charter_costs_rank
+  title: 営業費用_借船料_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_operation_consignment_fee_rank
+  title: 営業費用_運航委託手数料_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_other_shipping_costs_rank
+  title: 営業費用_その他の海運業費用_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_other_business_costs_rank
+  title: 営業費用_その他の事業費用_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_general_administration_costs_rank
+  title: 営業費用_一般管理費_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_expenses_total_rank
+  title: 営業費用_計_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: operating_profit_or_loss_rank
+  title: 営業損益_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: ordinary_profit_or_loss_rank
+  title: 経常損益_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: fixed_assets_rank
+  title: 固定資産_ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: prefecture_code
+  title: 都道府県コード
+  annotations:
+    queria:
+      semantic:
+        role: entity
+        name: prefecture
+  description: address の先頭の都道府県名から付けたコード。都道府県名で始まらない行は NULL

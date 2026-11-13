@@ -1,0 +1,70 @@
+schema: links
+name: tourism_spending_overnight
+title: 旅行・観光消費動向調査（宿泊旅行）
+description: |-
+  旅行・観光消費動向調査データをもとに、都道府県単位での国内宿泊旅行の費目別旅行消費額および旅行消費単価(団体・パックツアー料金、宿泊費、飲食費、交通費、娯楽サービス費、買い物代、その他)および宿泊数を、2021~2024年の時系列に集計を行いデータ化したものです(188レコード)。
+
+  元の資料: 旅行・観光消費動向調査
+
+  G空間情報センターのデータセット links_kankoutoukei_2025 の 02_ryokoukankousyouhidoukou_syukuhaku.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links_kankoutoukei_2025
+fields:
+- name: year
+  title: 年
+- name: prefecture_code
+  title: 訪問地コード
+  annotations:
+    queria:
+      semantic:
+        role: entity
+        name: prefecture
+  description: 都道府県コード
+- name: population_sum_stay_trip_total_spending_cost
+  title: 宿泊_合計旅行消費計
+  description: '単位: 万円。1人の旅行者が1回の旅行で複数の地域に訪問した場合、「宿泊数」で重みづけして按分'
+- name: population_sum_stay_trip_package_tour_cost
+  title: 宿泊_団体・パックツアー料金計
+  description: '単位: 万円。1回の旅行で複数の地域に訪問した場合、「宿泊数」で重みづけして按分'
+- name: population_sum_stay_trip_accommodation_cost
+  title: 宿泊_宿泊費計
+  description: '単位: 万円。1人の旅行者が1回の旅行で複数の地域に訪問した場合、「宿泊数」で重みづけして按分'
+- name: population_sum_stay_trip_food_cost
+  title: 宿泊_飲食費計
+  description: '単位: 万円。1人の旅行者が1回の旅行で複数の地域に訪問した場合、「宿泊数」で重みづけして按分'
+- name: population_sum_stay_trip_transportation_cost
+  title: 宿泊_交通費計
+  description: '単位: 万円。1人の旅行者が1回の旅行で複数の地域に訪問した場合、「宿泊数」で重みづけして按分'
+- name: population_sum_stay_trip_entertainment_cost
+  title: 宿泊_娯楽等サービス費計
+  description: '単位: 万円。1人の旅行者が1回の旅行で複数の地域に訪問した場合、「宿泊数」で重みづけして按分'
+- name: population_sum_stay_trip_shopping_cost
+  title: 宿泊_買い物代計
+  description: '単位: 万円。1人の旅行者が1回の旅行で複数の地域に訪問した場合、「宿泊数」で重みづけして按分'
+- name: population_sum_stay_trip_other_cost
+  title: 宿泊_その他消費計
+  description: '単位: 万円。1人の旅行者が1回の旅行で複数の地域に訪問した場合、「宿泊数」で重みづけして按分'
+- name: avg_stay_trip_total_spending_cost_per_person
+  title: 宿泊_合計旅行消費平均
+  description: '単位: 万円/人。1人の旅行者が1回の旅行で複数の地域に訪問した場合、「宿泊数」で重みづけして按分'
+- name: avg_stay_trip_package_tour_cost_per_person
+  title: 宿泊_団体・パックツアー料金平均
+  description: '単位: 万円/人。1人の旅行者が1回の旅行で複数の地域に訪問した場合、「宿泊数」で重みづけして按分'
+- name: avg_stay_trip_accommodation_cost_per_person
+  title: 宿泊_宿泊費平均
+  description: '単位: 万円/人。1人の旅行者が1回の旅行で複数の地域に訪問した場合、「宿泊数」で重みづけして按分'
+- name: avg_stay_trip_food_cost_per_person
+  title: 宿泊_飲食費平均
+  description: '単位: 万円/人。1人の旅行者が1回の旅行で複数の地域に訪問した場合、「宿泊数」で重みづけして按分'
+- name: avg_stay_trip_transportation_cost_per_person
+  title: 宿泊_交通費平均
+  description: '単位: 万円/人。1人の旅行者が1回の旅行で複数の地域に訪問した場合、「宿泊数」で重みづけして按分'
+- name: avg_stay_trip_entertainment_cost_per_person
+  title: 宿泊_娯楽等サービス費平均
+  description: '単位: 万円/人。1人の旅行者が1回の旅行で複数の地域に訪問した場合、「宿泊数」で重みづけして按分'
+- name: avg_stay_trip_shopping_cost_per_person
+  title: 宿泊_買い物代平均
+  description: '単位: 万円/人。1人の旅行者が1回の旅行で複数の地域に訪問した場合、「宿泊数」で重みづけして按分'
+- name: avg_stay_trip_other_cost_per_person
+  title: 宿泊_その他消費平均
+  description: '単位: 万円/人。1人の旅行者が1回の旅行で複数の地域に訪問した場合、「宿泊数」で重みづけして按分'

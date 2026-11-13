@@ -1,0 +1,208 @@
+schema: links
+name: trucking_financials_nara
+title: 貨物自動車運送事業の財務情報（奈良運輸支局管内、2023年度）
+description: |-
+  奈良運輸支局管内の事業者を対象とした、営業費用、経常損益、流動・固定資産、負債・純資産等の財務情報を有するデータ(324レコード)
+
+  G空間情報センターのデータセット links-kamotsujidousyaunsojigyo-2025 の 02_zaimujyouho_2025.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-kamotsujidousyaunsojigyo-2025
+fields:
+- name: business_operator_id_2
+  title: 事業者ID
+  description: '秘匿化: 秘匿化有'
+- name: specific_business_operating_revenue_rank
+  title: 当該事業営業収益ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: specific_business_operating_expenses_rank
+  title: 当該事業営業費用ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: specific_business_operating_profit_loss_rank
+  title: 当該事業営業損益ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: ancillary_business_operating_revenue_rank
+  title: 兼業事業営業収益ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: ancillary_business_operating_expenses_rank
+  title: 兼業事業営業費ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: ancillary_business_operating_profit_rank
+  title: 兼業事業営業利益ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: total_business_operating_revenue_rank
+  title: 全事業営業収益ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: total_business_operating_expenses_rank
+  title: 全事業営業費ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: total_business_operating_profit_rank
+  title: 全事業営業利益ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: non_operating_revenue_rank
+  title: 営業外収益ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: non_operating_expenses_rank
+  title: 営業外費用ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: financial_expenses_rank
+  title: 金融費用ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: ordinary_revenue_rank
+  title: 経常収益ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: ordinary_expenses_rank
+  title: 経常費用ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: ordinary_profit_rank
+  title: 経常利益ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: extraordinary_profit_rank
+  title: 特別利益ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: extraordinary_loss_rank
+  title: 特別損失ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: profit_before_taxes_rank
+  title: 税引前利益ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: corporate_taxes_etc_rank
+  title: 法人税等ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: corporate_taxes_etc_adjustment_rank
+  title: 法人税等調整額ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: current_period_profit_rank
+  title: 当期利益ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: specific_business_non_operating_income_rank
+  title: 当該事業営業外収益ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: specific_business_ordinary_income_rank
+  title: 当該事業経常収益ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: specific_business_ordinary_expenses_rank
+  title: 当該事業経常費用ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: specific_business_ordinary_profit_rank
+  title: 当該事業経常利益ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: motor_vehicle_transport_operating_revenue_rank
+  title: 自動車運送事業営業収益ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: current_assets_rank
+  title: 流動資産ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: quick_assets_rank
+  title: 当座資産ランク
+  description: '秘匿化: 値が有るか無いかで、0,1に秘匿化'
+- name: fare_receivables_rank
+  title: 未収運賃ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: other_receivables_rank
+  title: その他未収金ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: total_receivables_rank
+  title: 未収金合計ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: fixed_assets_rank
+  title: 固定資産ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: tangible_fixed_assets_rank
+  title: 有形固定資産ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: construction_in_progress_rank
+  title: 建設仮勘定ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: intangible_fixed_assets_rank
+  title: 無形固定資産ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: investments_and_other_assets_rank
+  title: 投資等ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: deferred_assets_rank
+  title: 繰延資産ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: total_assets_rank
+  title: 資産の部合計ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: current_liabilities_rank
+  title: 流動負債ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: non_current_liabilities_rank
+  title: 固定負債ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: total_liabilities_rank
+  title: 負債の部合計ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: capital_stock_1_rank
+  title: 資本金ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: total_equity_rank
+  title: 資本の部合計ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: operating_expenses_transport_costs_personnel_rank
+  title: 営業費用_運送費_人件費ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: operating_expenses_transport_costs_fuel_rank
+  title: 営業費用_運送費_燃料費ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: operating_expenses_transport_costs_gasoline_rank
+  title: 営業費用_運送費_ガソリン費ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: operating_expenses_transport_costs_diesel_rank
+  title: 営業費用_運送費_軽油費ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: operating_expenses_transport_costs_other_fuel_rank
+  title: 営業費用_運送費_その他燃料費ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: operating_expenses_transport_costs_repairs_rank
+  title: 営業費用_運送費_修繕費ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: operating_expenses_transport_costs_vehicles_rank
+  title: 営業費用_運送費_車両ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: operating_expenses_transport_costs_other_rank
+  title: 営業費用_運送費_その他ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: operating_expenses_transport_costs_fixed_assets_depreciation_rank
+  title: 営業費用_運送費_固定資産償却費ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: operating_expenses_transport_costs_vehicles_1_rank
+  title: 営業費用_運送費_車両.1ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: operating_expenses_transport_costs_other_1_rank
+  title: 営業費用_運送費_その他.1ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: operating_expenses_transport_costs_insurance_rank
+  title: 営業費用_運送費_保険料ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: operating_expenses_transport_costs_facility_usage_fees_rank
+  title: 営業費用_運送費_施設使用料ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: operating_expenses_transport_costs_vehicle_lease_fees_rank
+  title: 営業費用_運送費_自動車リース料ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: operating_expenses_transport_costs_facility_taxes_rank
+  title: 営業費用_運送費_施設賦課税ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: operating_expenses_transport_costs_accident_compensation_rank
+  title: 営業費用_運送費_事故賠償費ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: operating_expenses_transport_costs_road_usage_fees_rank
+  title: 営業費用_運送費_道路使用料ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: operating_expenses_transport_costs_ferry_boat_usage_fees_rank
+  title: 営業費用_運送費_フェリーボート使用料ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: other_transport_costs_rank
+  title: その他運送費ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: operating_expenses_general_administrative_rank
+  title: 営業費用_一般管理費ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: operating_expenses_general_administrative_personnel_rank
+  title: 営業費用_一般管理費_人件費ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'
+- name: total_operating_expenses_rank
+  title: 営業費合計ランク
+  description: '秘匿化: ※各階層のデータ数が全データ数に対して約20%となるように階層化(0は空欄)'

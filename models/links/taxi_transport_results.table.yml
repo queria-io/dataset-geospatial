@@ -1,0 +1,322 @@
+schema: links
+name: taxi_transport_results
+title: 一般乗用旅客自動車運送事業輸送実績報告（タクシー・ハイヤー）
+description: |-
+  タクシーの輸送実績は、事業用自動車数、従業員数、運転者数、走行キロ、実車キロ、輸送人員、実働率、運送回数、営業収入、実働社1日1車あたり営業収入、交通事故件数、重大事故件数、死者数、負傷者数、1人平均乗車キロ、輸送人キロ、平均乗車密度等の実績に関する情報を、ランク化及び偏差値により秘匿化したデータ化です。(924レコード)
+
+  元の資料: 一般乗用旅客自動車運送事業輸送実績報告書
+
+  G空間情報センターのデータセット links-ippanryokyaku-2025 の 03_ippanjyouyouryokyaku_yusoujisseki.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-ippanryokyaku-2025
+fields:
+- name: business_id
+  title: 事業者番号
+  description: '秘匿化: 秘匿化あり。新規IDを附番'
+- name: hire_or_taxi_separation_hire
+  title: ハイヤー、タクシーの別_ハイヤー
+  description: 1がハイヤーを指す
+- name: hire_or_taxi_separation_taxi
+  title: ハイヤー、タクシーの別_タクシー
+  description: 1がタクシーを指す
+- name: fiscal_year
+  title: 年度
+- name: address
+  title: 住所
+  description: '秘匿化: 秘匿化あり。市区町村単位に秘匿化'
+- name: address_geometry
+  title: 住所_geometry
+  description: '秘匿化: 秘匿化あり。市区町村単位に秘匿化'
+- name: businessoverview_jurisdiction_area1_name
+  title: 事業概況_区域1_区域名
+- name: businessoverview_jurisdiction_area1_businessvehicles_rank
+  title: 事業概況_区域1_事業用自動車数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: businessoverview_jurisdiction_area1_employees_rank
+  title: 事業概況_区域1_従業員数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: businessoverview_jurisdiction_area1_drivers_rank
+  title: 事業概況_区域1_従業員数うち運転者数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: businessoverview_jurisdiction_area2_name
+  title: 事業概況_区域2_区域名
+- name: businessoverview_jurisdiction_area2_businessvehicles_rank
+  title: 事業概況_区域2_事業用自動車数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: businessoverview_jurisdiction_area2_employees_rank
+  title: 事業概況_区域2_従業員数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: businessoverview_jurisdiction_area2_drivers_rank
+  title: 事業概況_区域2_従業員数うち運転者数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: businessoverview_jurisdiction_area3_name
+  title: 事業概況_区域3_区域名
+- name: businessoverview_jurisdiction_area3_businessvehicles_rank
+  title: 事業概況_区域3_事業用自動車数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: businessoverview_jurisdiction_area3_employees_rank
+  title: 事業概況_区域3_従業員数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: businessoverview_jurisdiction_area3_drivers_rank
+  title: 事業概況_区域3_従業員数うち運転者数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: businessoverview_jurisdiction_area4_name
+  title: 事業概況_区域4_区域名
+- name: businessoverview_jurisdiction_area4_businessvehicles_rank
+  title: 事業概況_区域4_事業用自動車数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: businessoverview_jurisdiction_area4_employees_rank
+  title: 事業概況_区域4_従業員数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: businessoverview_jurisdiction_area4_drivers_rank
+  title: 事業概況_区域4_従業員数うち運転者数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: businessoverview_jurisdiction_area5_name
+  title: 事業概況_区域5_区域名
+- name: businessoverview_jurisdiction_area5_businessvehicles_rank
+  title: 事業概況_区域5_事業用自動車数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: businessoverview_jurisdiction_area5_employees_rank
+  title: 事業概況_区域5_従業員数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: businessoverview_jurisdiction_area5_drivers_rank
+  title: 事業概況_区域5_従業員数うち運転者数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area1_name
+  title: 輸送実績_区域1_区域名
+- name: transportperformance_jurisdiction_area1_businessvehicles_totalregistered_rank
+  title: 輸送実績_区域1_事業用自動車_延実在車両数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area1_businessvehicles_totalactive_rank
+  title: 輸送実績_区域1_事業用自動車_延実働車両数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area1_businessvehicles_operationrate_rank
+  title: 輸送実績_区域1_事業用自動車_実働率_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area1_traveldistance_rank
+  title: 輸送実績_区域1_走行キロ_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area1_passengerdistance_rank
+  title: 輸送実績_区域1_走行キロうち実車キロ_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area1_passengerrate_rank
+  title: 輸送実績_区域1_走行キロ実車率_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area1_trips_rank
+  title: 輸送実績_区域1_運送回数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area1_passengers_rank
+  title: 輸送実績_区域1_輸送人員_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area1_revenue_rank
+  title: 輸送実績_区域1_営業収入_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area1_revenuepervehicleperday_rank
+  title: 輸送実績_区域1_実働車1日1車あたり営業収入_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area2_name
+  title: 輸送実績_区域2_区域名
+- name: transportperformance_jurisdiction_area2_businessvehicles_totalregistered_rank
+  title: 輸送実績_区域2_事業用自動車_延実在車両数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area2_businessvehicles_totalactive_rank
+  title: 輸送実績_区域2_事業用自動車_延実働車両数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area2_businessvehicles_operationrate_rank
+  title: 輸送実績_区域2_事業用自動車_実働率_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area2_traveldistance_rank
+  title: 輸送実績_区域2_走行キロ_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area2_passengerdistance_rank
+  title: 輸送実績_区域2_走行キロうち実車キロ_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area2_passengerrate_rank
+  title: 輸送実績_区域2_走行キロ実車率_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area2_trips_rank
+  title: 輸送実績_区域2_運送回数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area2_passengers_rank
+  title: 輸送実績_区域2_輸送人員_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area2_revenue_rank
+  title: 輸送実績_区域2_営業収入_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area2_revenuepervehicleperday_rank
+  title: 輸送実績_区域2_実働車1日1車あたり営業収入_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area3_name
+  title: 輸送実績_区域3_区域名
+- name: transportperformance_jurisdiction_area3_businessvehicles_totalregistered_rank
+  title: 輸送実績_区域3_事業用自動車_延実在車両数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area3_businessvehicles_totalactive_rank
+  title: 輸送実績_区域3_事業用自動車_延実働車両数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area3_businessvehicles_operationrate_rank
+  title: 輸送実績_区域3_事業用自動車_実働率_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area3_traveldistance_rank
+  title: 輸送実績_区域3_走行キロ_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area3_passengerdistance_rank
+  title: 輸送実績_区域3_走行キロうち実車キロ_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area3_passengerrate_rank
+  title: 輸送実績_区域3_走行キロ実車率_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area3_trips_rank
+  title: 輸送実績_区域3_運送回数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area3_passengers_rank
+  title: 輸送実績_区域3_輸送人員_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area3_revenue_rank
+  title: 輸送実績_区域3_営業収入_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area3_revenuepervehicleperday_rank
+  title: 輸送実績_区域3_実働車1日1車あたり営業収入_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area4_name
+  title: 輸送実績_区域4_区域名
+- name: transportperformance_jurisdiction_area4_businessvehicles_totalregistered_rank
+  title: 輸送実績_区域4_事業用自動車_延実在車両数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area4_businessvehicles_totalactive_rank
+  title: 輸送実績_区域4_事業用自動車_延実働車両数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area4_businessvehicles_operationrate_rank
+  title: 輸送実績_区域4_事業用自動車_実働率_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area4_traveldistance_rank
+  title: 輸送実績_区域4_走行キロ_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area4_passengerdistance_rank
+  title: 輸送実績_区域4_走行キロうち実車キロ_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area4_passengerrate_rank
+  title: 輸送実績_区域4_走行キロ実車率_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area4_trips_rank
+  title: 輸送実績_区域4_運送回数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area4_passengers_rank
+  title: 輸送実績_区域4_輸送人員_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area4_revenue_rank
+  title: 輸送実績_区域4_営業収入_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area4_revenuepervehicleperday_rank
+  title: 輸送実績_区域4_実働車1日1車あたり営業収入_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area5_name
+  title: 輸送実績_区域5_区域名
+- name: transportperformance_jurisdiction_area5_businessvehicles_totalregistered_rank
+  title: 輸送実績_区域5_事業用自動車_延実在車両数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area5_businessvehicles_totalactive_rank
+  title: 輸送実績_区域5_事業用自動車_延実働車両数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area5_businessvehicles_operationrate_rank
+  title: 輸送実績_区域5_事業用自動車_実働率_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area5_traveldistance_rank
+  title: 輸送実績_区域5_走行キロ_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area5_passengerdistance_rank
+  title: 輸送実績_区域5_走行キロうち実車キロ_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area5_passengerrate_rank
+  title: 輸送実績_区域5_走行キロ実車率_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area5_trips_rank
+  title: 輸送実績_区域5_運送回数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area5_passengers_rank
+  title: 輸送実績_区域5_輸送人員_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area5_revenue_rank
+  title: 輸送実績_区域5_営業収入_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: transportperformance_jurisdiction_area5_revenuepervehicleperday_rank
+  title: 輸送実績_区域5_実働車1日1車あたり営業収入_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_jurisdiction_area1_name
+  title: 事故件数_区域1_区域名
+- name: accidents_jurisdiction_area1_trafficaccidents_rank
+  title: 事故件数_区域1_交通事故件数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_jurisdiction_area1_seriousaccidents_rank
+  title: 事故件数_区域1_重大事故件数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_jurisdiction_area1_deaths_rank
+  title: 事故件数_区域1_死者数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_jurisdiction_area1_injuries_rank
+  title: 事故件数_区域1_負傷者数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_jurisdiction_area2_name
+  title: 事故件数_区域2_区域名
+- name: accidents_jurisdiction_area2_trafficaccidents_rank
+  title: 事故件数_区域2_交通事故件数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_jurisdiction_area2_seriousaccidents_rank
+  title: 事故件数_区域2_重大事故件数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_jurisdiction_area2_deaths_rank
+  title: 事故件数_区域2_死者数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_jurisdiction_area2_injuries_rank
+  title: 事故件数_区域2_負傷者数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_jurisdiction_area3_name
+  title: 事故件数_区域3_区域名
+- name: accidents_jurisdiction_area3_trafficaccidents_rank
+  title: 事故件数_区域3_交通事故件数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_jurisdiction_area3_seriousaccidents_rank
+  title: 事故件数_区域3_重大事故件数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_jurisdiction_area3_deaths_rank
+  title: 事故件数_区域3_死者数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_jurisdiction_area3_injuries_rank
+  title: 事故件数_区域3_負傷者数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_jurisdiction_area4_name
+  title: 事故件数_区域4_区域名
+- name: accidents_jurisdiction_area4_trafficaccidents_rank
+  title: 事故件数_区域4_交通事故件数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_jurisdiction_area4_seriousaccidents_rank
+  title: 事故件数_区域4_重大事故件数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_jurisdiction_area4_deaths_rank
+  title: 事故件数_区域4_死者数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_jurisdiction_area4_injuries_rank
+  title: 事故件数_区域4_負傷者数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_jurisdiction_area5_name
+  title: 事故件数_区域5_区域名
+- name: accidents_jurisdiction_area5_trafficaccidents_rank
+  title: 事故件数_区域5_交通事故件数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_jurisdiction_area5_seriousaccidents_rank
+  title: 事故件数_区域5_重大事故件数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_jurisdiction_area5_deaths_rank
+  title: 事故件数_区域5_死者数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: accidents_jurisdiction_area5_injuries_rank
+  title: 事故件数_区域5_負傷者数_ランク
+  description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: prefecture_code
+  title: 都道府県コード
+  annotations:
+    queria:
+      semantic:
+        role: entity
+        name: prefecture
+  description: address の先頭の都道府県名から付けたコード。都道府県名で始まらない行は NULL

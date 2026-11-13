@@ -1,0 +1,52 @@
+schema: links
+name: warehouse_quarterly_usage
+title: 期末倉庫使用状況報告書（全国、2019〜2024年度）
+description: |-
+  倉庫期末情報として、2019~2024年度までの第1~4四半期の年間4時点における品目名、前期末保管残高、当期中入出庫高、当期末保管残高を整理した、倉庫の使用状況に関する情報を有するデータ(80,747レコード)
+
+  元の資料: 期末倉庫使用状況報告書(第8号様式)
+
+  G空間情報センターのデータセット links-soukogyou-2025 の 01_kimatsusoukoshiyoujyoukyouhoukokusyo.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-soukogyou-2025
+fields:
+- name: business_operator_id
+  title: 事業者ID
+  description: '秘匿化: 秘匿化有(新規ID付与)'
+- name: office_id
+  title: 営業所ID
+  description: '秘匿化: 秘匿化有(新規ID付与)'
+- name: office_address
+  title: 営業所の住所
+  description: '秘匿化: 都道府県単位で秘匿化'
+- name: yearly_term_year
+  title: 年期_年度
+  description: '単位: 年度。※第1~4四半期の年間4時点の期末情報を整理'
+- name: yearly_term_quarter
+  title: 年期_四半期
+  description: '単位: 半期。※第1~4四半期の年間4時点の期末情報を整理'
+- name: item_name
+  title: 品目名
+- name: ending_balance_previous_term_quantity
+  title: 前期末保管残高_数量
+  description: '単位: トン'
+- name: receipts_during_term_quantity
+  title: 当期中入庫高_数量
+  description: '単位: トン'
+- name: shipments_during_term_quantity
+  title: 当期中出庫高_数量
+  description: '単位: トン'
+- name: ending_balance_current_term_quantity
+  title: 当期末保管残高_数量
+  description: '単位: トン'
+- name: ending_balance_current_term_amount
+  title: 当期末保管残高_金額
+  description: '単位: 千円'
+- name: prefecture_code
+  title: 都道府県コード
+  annotations:
+    queria:
+      semantic:
+        role: entity
+        name: prefecture
+  description: office_address の先頭の都道府県名から付けたコード。都道府県名で始まらない行は NULL

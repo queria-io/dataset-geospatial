@@ -1,0 +1,40 @@
+schema: links
+name: drone_accidents
+title: 無人航空機の事故等報告
+description: |-
+  事故発生日時や場所、機体(型式)、事故概要、事故原因をはじめとする無人航空機に係る事故等報告(重大インシデント)に関する情報を有するデータ(194レコード)
+
+  G空間情報センターのデータセット links-mujinkoukuukihikoukeikaku-2025_ の 02_jikojyouhou.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-mujinkoukuukihikoukeikaku-2025_
+fields:
+- name: 'no'
+  title: 番号
+- name: occurrence_date
+  title: 発生日時
+- name: occurrence_location
+  title: 発生場所
+- name: operator
+  title: 飛行させた者
+- name: model_or_manufacturer
+  title: 型式若しくは製造者
+- name: departure_location_arrival_destination
+  title: 出発地/到着予定地
+- name: incident_summary
+  title: 事案の概要
+- name: casualties_summary
+  title: 人の死傷等
+- name: aircraft_damage_summary
+  title: 機体の損壊概要
+- name: recurrence_prevention_measures
+  title: 再発防止策等
+- name: remarks
+  title: 備考
+- name: prefecture_code
+  title: 都道府県コード
+  annotations:
+    queria:
+      semantic:
+        role: entity
+        name: prefecture
+  description: occurrence_location の先頭の都道府県名から付けたコード。都道府県名で始まらない行は NULL

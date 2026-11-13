@@ -1,0 +1,291 @@
+schema: links
+name: railway_operating_profit
+title: 鉄道統計年報 鉄軌道業営業損益
+description: |-
+  鉄軌道業営業損益は、鉄軌道業営業収益(旅客収入・貨物収入・鉄道路線収入等)、鉄軌道業営業費(線路・電路・車両保存費・運転費・保守管理費等)、鉄道業営業損益、減価償却実施率に関する情報を有するデータです。(2,536レコード)
+
+  元の資料: 鉄道統計年報
+
+  G空間情報センターのデータセット links-tetsudoujigyou-2025 の 04_tetsudou_eigyousoneki.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+- path: https://www.geospatial.jp/ckan/dataset/links-tetsudoujigyou-2025
+fields:
+- name: year
+  title: 年度
+  description: '単位: 年度'
+- name: corporation_name
+  title: 事業者名
+- name: jurisdiction
+  title: 管轄
+- name: category
+  title: 区分
+- name: railway_operating_revenue_passenger_income_noncommuter_fare_thousand_yen
+  title: 鉄軌道業営業収益_旅客収入_定期外運賃_千円
+  description: '単位: 千円'
+- name: railway_operating_revenue_passenger_income_commuter_pass_thousand_yen
+  title: 鉄軌道業営業収益_旅客収入_定期運賃_千円
+  description: '単位: 千円'
+- name: railway_operating_revenue_passenger_income_hand_baggage_etc_thousand_yen
+  title: 鉄軌道業営業収益_旅客収入_手小荷物等_千円
+  description: '単位: 千円'
+- name: railway_operating_revenue_passenger_income_total_thousand_yen
+  title: 鉄軌道業営業収益_旅客収入_計_千円
+  description: '単位: 千円'
+- name: railway_operating_revenue_passenger_income_total_percent
+  title: 鉄軌道業営業収益_旅客収入_計_%
+  description: '単位: %'
+- name: railway_operating_revenue_freight_income_thousand_yen
+  title: 鉄軌道業営業収益_貨物収入_千円
+  description: '単位: 千円'
+- name: railway_operating_revenue_freight_income_percent
+  title: 鉄軌道業営業収益_貨物収入_%
+  description: '単位: %'
+- name: railway_operating_revenue_track_income_total_thousand_yen
+  title: 鉄軌道業営業収益_鉄道線路収入_計_千円
+  description: '単位: 千円'
+- name: railway_operating_revenue_track_income_total_percent
+  title: 鉄軌道業営業収益_鉄道線路収入_計_%
+  description: '単位: %'
+- name: railway_operating_revenue_misc_transport_revenue_total_thousand_yen
+  title: 鉄軌道業営業収益_運輸雑収_計_千円
+  description: '単位: 千円'
+- name: railway_operating_revenue_misc_transport_revenue_total_percent
+  title: 鉄軌道業営業収益_運輸雑収_計_%
+  description: '単位: %'
+- name: railway_operating_revenue_total_total_thousand_yen
+  title: 鉄軌道業営業収益_合計_計_千円
+  description: '単位: 千円'
+- name: railway_operating_revenue_total_total_percent
+  title: 鉄軌道業営業収益_合計_計_%
+  description: '単位: %'
+- name: railway_operating_expense_track_maintenance_personnel_thousand_yen
+  title: 鉄軌道業営業費_線路保存費_人件費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_track_maintenance_expense_thousand_yen
+  title: 鉄軌道業営業費_線路保存費_経費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_track_maintenance_repair_thousand_yen
+  title: 鉄軌道業営業費_線路保存費_(内修繕費)_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_track_maintenance_total_thousand_yen
+  title: 鉄軌道業営業費線路保存費_計_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_electric_line_maintenance_personnel_thousand_yen
+  title: 鉄軌道業営業費_電路保存費_人件費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_electric_line_maintenance_expense_thousand_yen
+  title: 鉄軌道業営業費_電路保存費_経費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_electric_line_maintenance_repair_thousand_yen
+  title: 鉄軌道業営業費_電路保存費_(内修繕費)_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_electric_line_maintenance_total_thousand_yen
+  title: 鉄軌道業営業費電路保存費_計_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_vehicle_maintenance_personnel_thousand_yen
+  title: 鉄軌道業営業費_車両保存費_人件費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_vehicle_maintenance_expense_thousand_yen
+  title: 鉄軌道業営業費_車両保存費_経費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_vehicle_maintenance_repair_thousand_yen
+  title: 鉄軌道業営業費_車両保存費_(内修繕費)_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_vehicle_maintenance_power_thousand_yen
+  title: 鉄軌道業営業費_車両保存費_(内動力費)_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_vehicle_maintenance_total_thousand_yen
+  title: 鉄軌道業営業費_車両保存費_計_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_operation_personnel_thousand_yen
+  title: 鉄軌道業営業費_運転費_人件費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_operation_expense_thousand_yen
+  title: 鉄軌道業営業費_運転費_経費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_operation_power_thousand_yen
+  title: 鉄軌道業営業費_運転費_(内動力費)_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_operation_total_thousand_yen
+  title: 鉄軌道業営業費_運転費_計_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_transport_personnel_thousand_yen
+  title: 鉄軌道業営業費_運輸費_人件費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_transport_expense_thousand_yen
+  title: 鉄軌道業営業費_運輸費_経費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_transport_repair_thousand_yen
+  title: 鉄軌道業営業費_運輸費_(内修繕費)_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_transport_total_thousand_yen
+  title: 鉄軌道業営業費_運輸費_計_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_maintenance_management_personnel_thousand_yen
+  title: 鉄軌道業営業費_保守管理費_人件費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_maintenance_management_expense_thousand_yen
+  title: 鉄軌道業営業費_保守管理費_経費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_maintenance_management_total_thousand_yen
+  title: 鉄軌道業営業費_保守管理費_計_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_transport_management_personnel_thousand_yen
+  title: 鉄軌道業営業費_輸送管理費_人件費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_transport_management_expense_thousand_yen
+  title: 鉄軌道業営業費_輸送管理費_経費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_transport_management_total_thousand_yen
+  title: 鉄軌道業営業費_輸送管理費_計_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_total_transport_cost_personnel_thousand_yen
+  title: 鉄軌道業営業費_運送費計_人件費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_total_transport_cost_expense_thousand_yen
+  title: 鉄軌道業営業費_運送費計_経費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_total_transport_cost_repair_thousand_yen
+  title: 鉄軌道業営業費_運送費計_(内修繕費)_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_total_transport_cost_total_thousand_yen
+  title: 鉄軌道業営業費_運送費計_計_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_advertising_personnel_thousand_yen
+  title: 鉄軌道業営業費_案内宣伝費_人件費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_advertising_expense_thousand_yen
+  title: 鉄軌道業営業費_案内宣伝費_経費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_advertising_repair_thousand_yen
+  title: 鉄軌道業営業費_案内宣伝費_(内修繕費)_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_advertising_total_thousand_yen
+  title: 鉄軌道業営業費_案内宣伝費_計_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_welfare_facility_personnel_thousand_yen
+  title: 鉄軌道業営業費_厚生福利施設費_人件費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_welfare_facility_expense_thousand_yen
+  title: 鉄軌道業営業費_厚生福利施設費_経費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_welfare_facility_repair_thousand_yen
+  title: 鉄軌道業営業費_厚生福利施設費_(内修繕費)_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_welfare_facility_total_thousand_yen
+  title: 鉄軌道業営業費_厚生福利施設費_計_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_general_admin_personnel_thousand_yen
+  title: 鉄軌道業営業費_一般管理費_人件費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_general_admin_expense_thousand_yen
+  title: 鉄軌道業営業費_一般管理費_経費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_general_admin_repair_thousand_yen
+  title: 鉄軌道業営業費_一般管理費_(内修繕費)_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_general_admin_total_thousand_yen
+  title: 鉄軌道業営業費_一般管理費_計_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_total_excl_tax_depr_personnel_thousand_yen
+  title: 鉄軌道業営業費_営業費合計(諸税・減価償却費を除く)_人件費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_total_excl_tax_depr_personnel_percent
+  title: 鉄軌道業営業費_営業費合計(諸税・減価償却費を除く)_人件費_%
+  description: '単位: %'
+- name: railway_operating_expense_total_excl_tax_depr_expense_thousand_yen
+  title: 鉄軌道業営業費_営業費合計(諸税・減価償却費を除く)_経費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_total_excl_tax_depr_expense_percent
+  title: 鉄軌道業営業費_営業費合計(諸税・減価償却費を除く)_経費_%
+  description: '単位: %'
+- name: railway_operating_expense_total_excl_tax_depr_repair_thousand_yen
+  title: 鉄軌道業営業費_営業費合計(諸税・減価償却費を除く)_(内修繕費)_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_total_excl_tax_depr_repair_percent
+  title: 鉄軌道業営業費_営業費合計(諸税・減価償却費を除く)_(内修繕費)_%
+  description: '単位: %'
+- name: railway_operating_expense_total_excl_tax_depr_power_thousand_yen
+  title: 鉄軌道業営業費_営業費合計(諸税・減価償却費を除く)_(内動力費)_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_total_excl_tax_depr_power_percent
+  title: 鉄軌道業営業費_営業費合計(諸税・減価償却費を除く)_(内動力費)_%
+  description: '単位: %'
+- name: railway_operating_expense_total_excl_tax_depr_total_thousand_yen
+  title: 鉄軌道業営業費_営業費合計(諸税・減価償却費を除く)_計_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_total_excl_tax_depr_total_percent
+  title: 鉄軌道業営業費_営業費合計(諸税・減価償却費を除く)_計_%
+  description: '単位: %'
+- name: railway_operating_expense_tax_national_thousand_yen
+  title: 鉄軌道業営業費_諸税_国税_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_tax_local_thousand_yen
+  title: 鉄軌道業営業費_諸税_地方税_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_tax_other_thousand_yen
+  title: 鉄軌道業営業費_諸税_その他の諸公課_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_tax_total_thousand_yen
+  title: 鉄軌道業営業費_諸税_計_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_depreciation_tangible_assets_thousand_yen
+  title: 鉄軌道業営業費_減価償却費_有形固定資産_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_depreciation_intangible_assets_thousand_yen
+  title: 鉄軌道業営業費_減価償却費_無形固定資産_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_depreciation_total_thousand_yen
+  title: 鉄軌道業営業費_減価償却費_計_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_pre_welfare_income_personnel_thousand_yen
+  title: 鉄軌道業営業費_厚生福利施設収入控除前営業費_人件費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_pre_welfare_income_personnel_percent
+  title: 鉄軌道業営業費_厚生福利施設収入控除前営業費_人件費_%
+  description: '単位: %'
+- name: railway_operating_expense_pre_welfare_income_expense_thousand_yen
+  title: 鉄軌道業営業費_厚生福利施設収入控除前営業費_経費_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_pre_welfare_income_expense_percent
+  title: 鉄軌道業営業費_厚生福利施設収入控除前営業費_経費_%
+  description: '単位: %'
+- name: railway_operating_expense_pre_welfare_income_total_thousand_yen
+  title: 鉄軌道業営業費_厚生福利施設収入控除前営業費_計_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_pre_welfare_income_total_percent
+  title: 鉄軌道業営業費_厚生福利施設収入控除前営業費_計_%
+  description: '単位: %'
+- name: railway_operating_expense_welfare_income_total_thousand_yen
+  title: 鉄軌道業営業費_厚生福利施設収入_計_千円
+  description: '単位: 千円'
+- name: railway_operating_expense_net_operating_expense_total_thousand_yen
+  title: 鉄軌道業営業費_差引営業費合計_計_千円
+  description: '単位: 千円'
+- name: railway_operating_profit_loss_thousand_yen
+  title: 鉄道業営業損益_千円
+  description: '単位: 千円'
+- name: operating_ratio_pre_depr_percent
+  title: 営業係数_償却前_%
+  description: '単位: %'
+- name: operating_ratio_post_depr_percent
+  title: 営業係数_償却後_%
+  description: '単位: %'
+- name: railway_fixed_assets_operating_profit_ratio_percent
+  title: 鉄軌道業固定資産営業利益率_%
+  description: '単位: %'
+- name: current_depreciation_range_thousand_yen
+  title: 当期減価償却範囲額_千円
+  description: '単位: 千円'
+- name: depreciation_implementation_ratio_percent
+  title: 減価償却実施率_%
+  description: '単位: %'
+- name: total_car_km_km
+  title: 延日キロ_キロ
+  description: '単位: キロ'
+- name: operating_revenue_per_car_km_yen
+  title: 1日1キロ営業収益_円/km
+  description: '単位: 円/km'
+- name: operating_expense_per_car_km_yen
+  title: 1日1キロ営業費_円/km
+  description: '単位: 円/km'
