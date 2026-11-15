@@ -2316,3 +2316,6 @@ fields:
 - name: split_rest_time_agreement_target_seafarers_count_rank
   title: 休息時間分割協定の有無及び対象船員数_対象船員数_ランク
   description: '秘匿化: 秘匿化あり'
+- name: source_sha256
+  title: 元のファイルの SHA-256
+  description: この行を読んだファイルの SHA-256 です。source_file の sha256 に当たります

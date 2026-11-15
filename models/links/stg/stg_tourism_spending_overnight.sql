@@ -18,5 +18,6 @@ select
     "AVG_STAY_TRIP_TRANSPORTATION_COST_PER_PERSON" as avg_stay_trip_transportation_cost_per_person,
     "AVG_STAY_TRIP_ENTERTAINMENT_COST_PER_PERSON" as avg_stay_trip_entertainment_cost_per_person,
     "AVG_STAY_TRIP_SHOPPING_COST_PER_PERSON" as avg_stay_trip_shopping_cost_per_person,
-    "AVG_STAY_TRIP_OTHER_COST_PER_PERSON" as avg_stay_trip_other_cost_per_person
+    "AVG_STAY_TRIP_OTHER_COST_PER_PERSON" as avg_stay_trip_other_cost_per_person,
+    filename as source_path
 from {{ ref('raw_tourism_spending_overnight') }}

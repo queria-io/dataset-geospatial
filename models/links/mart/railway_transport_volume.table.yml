@@ -52,3 +52,6 @@ fields:
 - name: transported_tonnage_total
   title: 輸送トン数_合計
   description: '単位: トン'
+- name: source_sha256
+  title: 元のファイルの SHA-256
+  description: この行を読んだファイルの SHA-256 です。source_file の sha256 に当たります

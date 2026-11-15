@@ -1,1 +1,3 @@
-select * from {{ ref('stg_seafarer_labor_survey_owned_ships') }}
+select s.* exclude (source_path), f.sha256 as source_sha256
+from {{ ref('stg_seafarer_labor_survey_owned_ships') }} as s
+left join {{ ref('stg_source_file') }} as f on list_contains(f.paths, s.source_path)

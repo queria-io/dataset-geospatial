@@ -21,3 +21,6 @@ fields:
   description: コードの無い選択肢の一覧では NULL
 - name: label
   title: 内容
+- name: source_sha256
+  title: 元のファイルの SHA-256
+  description: この行を読んだデータ仕様書の SHA-256 です。source_file の sha256 に当たります

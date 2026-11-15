@@ -6,5 +6,6 @@ select
     {{ snake_case('field_name') }} as column_name,
     item_name,
     code,
-    label
+    label,
+    'data/links/' || package || '/spec.json' as source_path
 from {{ ref('raw_code_lists') }}

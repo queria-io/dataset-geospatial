@@ -118,5 +118,6 @@ select
     "GEOMETRY" as geometry,
     {{ prefecture_code('"ACCIDENT_LOCATION"') }} as prefecture_code,
     case when try_cast("LATITUDE" as double) between 20 and 46 and try_cast("LONGITUDE" as double) between 122 and 154
-        then st_point(try_cast("LONGITUDE" as double), try_cast("LATITUDE" as double)) end as geometry
+        then st_point(try_cast("LONGITUDE" as double), try_cast("LATITUDE" as double)) end as geometry,
+    filename as source_path
 from {{ ref('raw_motor_carrier_accidents') }}

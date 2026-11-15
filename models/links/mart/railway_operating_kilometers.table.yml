@@ -169,3 +169,6 @@ fields:
 - name: own_cars_other_line_running_kilometers_cars_total
   title: 自己車両他線走行キロ_車両_合計
   description: '単位: 千キロメートル'
+- name: source_sha256
+  title: 元のファイルの SHA-256
+  description: この行を読んだファイルの SHA-256 です。source_file の sha256 に当たります

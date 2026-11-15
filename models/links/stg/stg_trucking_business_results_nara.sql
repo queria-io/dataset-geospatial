@@ -90,5 +90,6 @@ select
     "ACCIDENT_COUNT_MAJOR_ACCIDENTS_RANK" as accident_count_major_accidents_rank,
     "ACCIDENT_COUNT_FATALITIES_RANK" as accident_count_fatalities_rank,
     "ACCIDENT_COUNT_INJURIES_RANK" as accident_count_injuries_rank,
-    "YEAR" as year
+    "YEAR" as year,
+    filename as source_path
 from {{ ref('raw_trucking_business_results_nara') }}

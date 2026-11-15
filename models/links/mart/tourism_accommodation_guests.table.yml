@@ -110,3 +110,6 @@ fields:
 - name: stay_guest_count_foreign_employee_over_100_tourism_under_50
   title: 延べ宿泊者数_うち外国人_従業者数100人以上_観光目的50%未満
   description: '単位: 人'
+- name: source_sha256
+  title: 元のファイルの SHA-256
+  description: この行を読んだファイルの SHA-256 です。source_file の sha256 に当たります

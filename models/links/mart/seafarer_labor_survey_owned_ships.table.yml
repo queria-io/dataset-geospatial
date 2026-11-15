@@ -64,3 +64,6 @@ fields:
 - name: rating_avg_annual_income
   title: 部員の平均年収
   description: '単位: 円。秘匿化: 秘匿化あり。平均年収:日当・手当等を含む月収(6月)×12か月+賞与・期末手当等の特別報酬'
+- name: source_sha256
+  title: 元のファイルの SHA-256
+  description: この行を読んだファイルの SHA-256 です。source_file の sha256 に当たります

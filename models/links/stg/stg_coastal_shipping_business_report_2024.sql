@@ -86,5 +86,6 @@ select
     "Fixed_Assets_RANK" as fixed_assets_rank,
     "Fixed_Assets_SCORE" as fixed_assets_score,
     "LABOR_PRODUCTIVITY(OERATOR)" as labor_productivity_oerator,
-    {{ prefecture_code('"Address"') }} as prefecture_code
+    {{ prefecture_code('"Address"') }} as prefecture_code,
+    filename as source_path
 from {{ ref('raw_coastal_shipping_business_report_2024') }}

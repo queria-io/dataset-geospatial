@@ -71,5 +71,6 @@ select
     "ADMINISTRATIVE_AREA_CODE" as administrative_area_code,
     {{ prefecture_code('"PREFECTURE_NAME"') }} as prefecture_code,
     case when try_cast("ADDRESS_LATITUDE" as double) between 20 and 46 and try_cast("ADDRESS_LONGITUDE" as double) between 122 and 154
-        then st_point(try_cast("ADDRESS_LONGITUDE" as double), try_cast("ADDRESS_LATITUDE" as double)) end as geometry
+        then st_point(try_cast("ADDRESS_LONGITUDE" as double), try_cast("ADDRESS_LATITUDE" as double)) end as geometry,
+    filename as source_path
 from {{ ref('raw_rental_car_results') }}

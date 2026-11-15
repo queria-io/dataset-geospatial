@@ -31,5 +31,6 @@ select
     "End_Point_Area" as end_point_area,
     "Launch_Year_(Rounded_to_20_Years)" as launch_year_rounded_to_20_years,
     "Accident_Flag" as accident_flag,
-    {{ prefecture_code('"location"') }} as prefecture_code
+    {{ prefecture_code('"location"') }} as prefecture_code,
+    filename as source_path
 from {{ ref('raw_passenger_ferry_ships') }}

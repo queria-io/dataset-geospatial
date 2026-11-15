@@ -91,5 +91,6 @@ select
     "Marine_Forecast:_Wind_Speed" as marine_forecast_wind_speed,
     {{ prefecture_code('"Location_of_Occurrence"') }} as prefecture_code,
     case when try_cast("Accident_Latitude" as double) between 20 and 46 and try_cast("Accident_Longitude" as double) between 122 and 154
-        then st_point(try_cast("Accident_Longitude" as double), try_cast("Accident_Latitude" as double)) end as geometry
+        then st_point(try_cast("Accident_Longitude" as double), try_cast("Accident_Latitude" as double)) end as geometry,
+    filename as source_path
 from {{ ref('raw_ship_accidents') }}

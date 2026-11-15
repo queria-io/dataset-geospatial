@@ -9,6 +9,8 @@
 
 ファイルの URL は S3 の署名付き URL へ転送される。署名に使う一時的な認証情報が切れていると
 S3 が 403 を返すので、403 は間隔を空けて取り直す（取り直すたびに新しい署名付き URL が返る）。
+
+取得の記録は data/links/source_file.parquet に書く。データ仕様書の行は、そこから作った spec.json を指す。
 """
 
 import csv
@@ -23,19 +25,21 @@ from urllib.error import HTTPError
 import openpyxl
 
 from pipelines.links_tables import PACKAGES, TABLES
-from shared.fetch import download, fetch, replacing, write_atomic
+from pipelines.source_file import write_source_files
+from shared.fetch import fetch, fetch_file, replacing, write_atomic
 
 logger = logging.getLogger("pipelines")
 
 USER_AGENT = "dataset-geospatial (+https://github.com/queria-io/dataset-geospatial)"
 API = "https://www.geospatial.jp/ckan/api/3/action/package_show?id="
+PAGE = "https://www.geospatial.jp/ckan/dataset/"
 DATA = Path("data/links")
 
 
-def download_file(url: str, path: Path, attempts: int = 5):
+def download_file(url: str, path: Path, attempts: int = 5) -> dict:
     for attempt in range(attempts):
         try:
-            return download(url, path, user_agent=USER_AGENT)
+            return fetch_file(url, path, user_agent=USER_AGENT)
         except HTTPError as error:
             if error.code != 403 or attempt == attempts - 1:
                 raise
@@ -153,18 +157,25 @@ def write_code_lists():
                 writer.writerow([package, c["name"], c["title"], c["code"], c["label"]])
 
 
+def download_package(package: str) -> list[dict]:
+    meta = json.loads(fetch(API + package, user_agent=USER_AGENT))["result"]
+    folder = DATA / package
+    folder.mkdir(parents=True, exist_ok=True)
+
+    def one(name: str, url: str) -> dict:
+        path = folder / name
+        logger.info("  %s/%s", package, name)
+        source = download_file(url, path)
+        if not name.startswith("99_"):
+            return {**source, "page_url": PAGE + package, "paths": [str(path)]}
+        write_atomic(folder / "spec.json", json.dumps(parse_spec(path), ensure_ascii=False, indent=1))
+        return {**source, "page_url": PAGE + package, "paths": [str(folder / "spec.json")]}
+
+    names = [(file_name(r["url"]), resource_url(r["url"])) for r in meta["resources"]]
+    return [one(name, url) for name, url in names if wanted(package, name)]
+
+
 def download_links():
-    for package in PACKAGES:
-        meta = json.loads(fetch(API + package, user_agent=USER_AGENT))["result"]
-        folder = DATA / package
-        folder.mkdir(parents=True, exist_ok=True)
-        for resource in meta["resources"]:
-            name = file_name(resource["url"])
-            if not wanted(package, name):
-                continue
-            path = folder / name
-            logger.info("  %s/%s", package, name)
-            download_file(resource_url(resource["url"]), path)
-            if name.startswith("99_"):
-                write_atomic(folder / "spec.json", json.dumps(parse_spec(path), ensure_ascii=False, indent=1))
+    sources = [s for package in PACKAGES for s in download_package(package)]
     write_code_lists()
+    write_source_files(sources, DATA / "source_file.parquet")

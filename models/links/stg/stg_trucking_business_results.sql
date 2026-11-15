@@ -174,5 +174,6 @@ select
     "ACCIDENT_COUNT_FATALITIES_DEVIATION_SCORE" as accident_count_fatalities_deviation_score,
     "ACCIDENT_COUNT_INJURIES_RANK" as accident_count_injuries_rank,
     "ACCIDENT_COUNT_INJURIES_DEVIATION_SCORE" as accident_count_injuries_deviation_score,
-    "YEAR" as year
+    "YEAR" as year,
+    filename as source_path
 from {{ ref('raw_trucking_business_results') }}

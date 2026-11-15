@@ -1,4 +1,4 @@
 {# 事務所別車種別配置車両数一覧（レンタカー）（G空間情報センター links-rentacars-2025 の 02_yousiki2_haisyasyaryousuu.csv）。取得したままの形 #}
 
 select *
-from read_csv('data/links/links-rentacars-2025/02_yousiki2_haisyasyaryousuu.csv', header = true, delim = ',', quote = '"', escape = '"', nullstr = ['', 'None', 'nan', 'NaN'], sample_size = -1)
+from read_csv('data/links/links-rentacars-2025/02_yousiki2_haisyasyaryousuu.csv', header = true, delim = ',', quote = '"', escape = '"', nullstr = ['', 'None', 'nan', 'NaN'], sample_size = -1, filename = true)

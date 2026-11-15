@@ -94,5 +94,6 @@ select
     "DEPRECIATION_IMPLEMENTATION_RATIO_PERCENT" as depreciation_implementation_ratio_percent,
     "TOTAL_CAR_KM_KM" as total_car_km_km,
     "OPERATING_REVENUE_PER_CAR_KM_YEN" as operating_revenue_per_car_km_yen,
-    "OPERATING_EXPENSE_PER_CAR_KM_YEN" as operating_expense_per_car_km_yen
+    "OPERATING_EXPENSE_PER_CAR_KM_YEN" as operating_expense_per_car_km_yen,
+    filename as source_path
 from {{ ref('raw_railway_operating_profit') }}

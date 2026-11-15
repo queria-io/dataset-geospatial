@@ -52,5 +52,6 @@ select
     "RETAIL_PREMISES" as retail_premises,
     "LOCAL_GOVERNMENT_PREFECTURE" as local_government_prefecture,
     "LOCAL_GOVERNMENT_CITY" as local_government_city,
-    {{ prefecture_code('"PREFECTURE"') }} as prefecture_code
+    {{ prefecture_code('"PREFECTURE"') }} as prefecture_code,
+    filename as source_path
 from {{ ref('raw_vacant_house_bank_contracts') }}

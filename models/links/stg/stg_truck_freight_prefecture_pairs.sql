@@ -23,5 +23,6 @@ select
     "着地_都道府県_緯度" as destination_prefecture_latitude,
     "着地_都道府県_経度" as destination_prefecture_longitude,
     {{ prefecture_code('"都道府県名_発地"') }} as origin_prefecture_code,
-    {{ prefecture_code('"都道府県名_着地"') }} as destination_prefecture_code
+    {{ prefecture_code('"都道府県名_着地"') }} as destination_prefecture_code,
+    filename as source_path
 from {{ ref('raw_truck_freight_prefecture_pairs') }}

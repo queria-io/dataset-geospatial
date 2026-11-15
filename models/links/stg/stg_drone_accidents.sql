@@ -12,5 +12,6 @@ select
     "AIRCRAFT_DAMAGE_SUMMARY" as aircraft_damage_summary,
     "RECURRENCE_PREVENTION_MEASURES" as recurrence_prevention_measures,
     "REMARKS" as remarks,
-    {{ prefecture_code('"OCCURRENCE_LOCATION"') }} as prefecture_code
+    {{ prefecture_code('"OCCURRENCE_LOCATION"') }} as prefecture_code,
+    filename as source_path
 from {{ ref('raw_drone_accidents') }}

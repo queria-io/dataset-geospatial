@@ -66,5 +66,6 @@ select
     "OTHER_TRANSPORT_COSTS_RANK" as other_transport_costs_rank,
     "OPERATING_EXPENSES_GENERAL_ADMINISTRATIVE_RANK" as operating_expenses_general_administrative_rank,
     "OPERATING_EXPENSES_GENERAL_ADMINISTRATIVE_PERSONNEL_RANK" as operating_expenses_general_administrative_personnel_rank,
-    "TOTAL_OPERATING_EXPENSES_RANK" as total_operating_expenses_rank
+    "TOTAL_OPERATING_EXPENSES_RANK" as total_operating_expenses_rank,
+    filename as source_path
 from {{ ref('raw_trucking_financials_nara') }}

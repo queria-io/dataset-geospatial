@@ -656,3 +656,6 @@ fields:
 - name: labor_distribution_ratio_rank
   title: 労働分配率_ランク
   description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
+- name: source_sha256
+  title: 元のファイルの SHA-256
+  description: この行を読んだファイルの SHA-256 です。source_file の sha256 に当たります

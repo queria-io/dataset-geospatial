@@ -78,5 +78,6 @@ select
     "OTHERS" as others,
     "TOTAL_EQUITY" as total_equity,
     "TOTAL_EQUITY_PERCENT" as total_equity_percent,
-    "TOTAL_LIABILITIES_AND_EQUITY" as total_liabilities_and_equity
+    "TOTAL_LIABILITIES_AND_EQUITY" as total_liabilities_and_equity,
+    filename as source_path
 from {{ ref('raw_railway_balance_sheet') }}

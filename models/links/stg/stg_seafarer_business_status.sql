@@ -789,5 +789,6 @@ select
     "COMPENSATORY_HOLIDAY_LABOR_AGREEMENT_HAS_AGREEMENT" as compensatory_holiday_labor_agreement_has_agreement,
     "COMPENSATORY_HOLIDAY_LABOR_AGREEMENT_TARGET_SEAFARERS_COUNT_RANK" as compensatory_holiday_labor_agreement_target_seafarers_count_rank,
     "SPLIT_REST_TIME_AGREEMENT_HAS_AGREEMENT" as split_rest_time_agreement_has_agreement,
-    "SPLIT_REST_TIME_AGREEMENT_TARGET_SEAFARERS_COUNT_RANK" as split_rest_time_agreement_target_seafarers_count_rank
+    "SPLIT_REST_TIME_AGREEMENT_TARGET_SEAFARERS_COUNT_RANK" as split_rest_time_agreement_target_seafarers_count_rank,
+    filename as source_path
 from {{ ref('raw_seafarer_business_status') }}
