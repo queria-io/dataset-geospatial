@@ -24,5 +24,7 @@ select
     lat,
     map_name,
     file,
-    fude_id
+    fude_id,
+    -- 筆が載っていた zip の名前（Parquet の名前は zip の名前の拡張子を除いたもの）
+    regexp_extract(filename, '([^/]+)\.parquet$', 1) || '.zip' as source_zip
 from {{ ref('raw_parcel') }}

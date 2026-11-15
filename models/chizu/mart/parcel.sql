@@ -6,6 +6,7 @@
 
 {{ config(pre_hook=["SET threads = 4"]) }}
 
-select *
-from {{ ref('stg_parcel') }}
+select p.* exclude (source_zip), f.sha256 as source_sha256
+from {{ ref('stg_parcel') }} p
+join {{ ref('stg_source_file') }} f on f.file = p.source_zip
 order by city_code, oaza_code, chome_code, koaza_code, yobi_code, chiban, file, fude_id
