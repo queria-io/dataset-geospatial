@@ -1,4 +1,0 @@
-schema: links
-name: raw_marine_forecast_areas
-description: "地方海上予報区（海域ポリゴン）（G空間情報センター links-ippanryokyakuteikikourojigyou-2024 の 03_chihoukaijyouyohouku_kaiikipolygon.geojson）（取得したままの形）"
-annotations: { queria: { published: false } }

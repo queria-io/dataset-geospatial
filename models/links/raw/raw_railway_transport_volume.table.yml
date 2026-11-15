@@ -1,4 +1,0 @@
-schema: links
-name: raw_railway_transport_volume
-description: "鉄道統計年報 運輸成績表（数量）（G空間情報センター links-tetsudoujigyou-2025 の 01_tetsudou_unyuseiseki1.csv）（取得したままの形）"
-annotations: { queria: { published: false } }

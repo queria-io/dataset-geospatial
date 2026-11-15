@@ -1,4 +1,0 @@
-schema: links
-name: raw_drone_airspace_airport_vicinity
-description: "空港等の周辺空域（G空間情報センター links-mujinkoukuukihikoukeikaku-2024 の 03_kakusyukuuikijyouhou_syuuhenkuuiki.geojson）（取得したままの形）"
-annotations: { queria: { published: false } }

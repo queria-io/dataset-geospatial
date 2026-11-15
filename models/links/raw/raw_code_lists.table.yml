@@ -1,4 +1,0 @@
-schema: links
-name: raw_code_lists
-description: "データ仕様書のコードリスト（pipelines/links.py が data/links/code_lists.csv にまとめる）（取得したままの形）"
-annotations: { queria: { published: false } }

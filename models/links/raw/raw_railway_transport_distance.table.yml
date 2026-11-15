@@ -1,4 +1,0 @@
-schema: links
-name: raw_railway_transport_distance
-description: "鉄道統計年報 運輸成績表（延日キロ等）（G空間情報センター links-tetsudoujigyou-2025 の 02_tetsudou_unyuseiseki2.csv）（取得したままの形）"
-annotations: { queria: { published: false } }

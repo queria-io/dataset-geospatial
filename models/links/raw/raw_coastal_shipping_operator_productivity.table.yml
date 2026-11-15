@@ -1,4 +1,0 @@
-schema: links
-name: raw_coastal_shipping_operator_productivity
-description: "内航船舶輸送統計調査による事業者別の生産性（G空間情報センター links-naikoukaiungyou-2024 の 02_naikoukaiungyou_naikousenpakuyusoutoukei.csv）（取得したままの形）"
-annotations: { queria: { published: false } }

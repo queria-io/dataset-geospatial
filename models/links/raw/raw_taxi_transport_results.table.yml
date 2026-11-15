@@ -1,4 +1,0 @@
-schema: links
-name: raw_taxi_transport_results
-description: "一般乗用旅客自動車運送事業輸送実績報告（タクシー・ハイヤー）（G空間情報センター links-ippanryokyaku-2025 の 03_ippanjyouyouryokyaku_yusoujisseki.csv）（取得したままの形）"
-annotations: { queria: { published: false } }

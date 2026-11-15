@@ -1,4 +1,0 @@
-schema: links
-name: raw_warehouse_business_status
-description: "倉庫事業経営状況報告書（G空間情報センター links-soukogyou-2025 の 02_soukojigyou_keieijyoukyouhoukoku.csv）（取得したままの形）"
-annotations: { queria: { published: false } }

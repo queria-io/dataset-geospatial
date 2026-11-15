@@ -1,4 +1,0 @@
-schema: links
-name: raw_trucking_business_results_financials
-description: "貨物自動車運送事業の事業実績と財務情報（全国のサンプル）（G空間情報センター links-kamotsujidousyaunsojigyo-2024 の 02_jigyoujissekihoukokusyo_zaimujyouho.csv）（取得したままの形）"
-annotations: { queria: { published: false } }

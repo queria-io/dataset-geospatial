@@ -1,4 +1,0 @@
-schema: links
-name: raw_truck_freight_prefecture_pairs
-description: "自動車輸送統計調査（発地・着地の都道府県の組）（G空間情報センター links-modalshift-2024 の 02_jidousyayusoutoukeichousa.csv）（取得したままの形）"
-annotations: { queria: { published: false } }

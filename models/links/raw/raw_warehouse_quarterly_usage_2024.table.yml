@@ -1,4 +1,0 @@
-schema: links
-name: raw_warehouse_quarterly_usage_2024
-description: "期末倉庫使用状況報告書（2024年度公開）（G空間情報センター links-soukogyou-2024 の 02_kimatsusoukoshiyoujyoukyouhoukokusyo.csv）（取得したままの形）"
-annotations: { queria: { published: false } }

@@ -1,4 +1,0 @@
-schema: links
-name: raw_ship_accidents
-description: "船舶事故等調査報告書（G空間情報センター links-ippanryokyakuteikikourojigyou-2024 の 02_senpakujikohoukokusyo.csv）（取得したままの形）"
-annotations: { queria: { published: false } }

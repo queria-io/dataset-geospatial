@@ -1,4 +1,0 @@
-schema: links
-name: raw_motor_carrier_accident_reports
-description: "自動車運送事業の事故報告書（G空間情報センター links-jidousyaunsoujigyoujiko-2024 の 02_jikohoukokusyo.csv）（取得したままの形）"
-annotations: { queria: { published: false } }

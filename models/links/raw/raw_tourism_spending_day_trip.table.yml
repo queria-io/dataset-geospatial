@@ -1,4 +1,0 @@
-schema: links
-name: raw_tourism_spending_day_trip
-description: "旅行・観光消費動向調査（日帰り旅行）（G空間情報センター links_kankoutoukei_2025 の 03_ryokoukankousyouhidoukou_higaeri.csv）（取得したままの形）"
-annotations: { queria: { published: false } }
