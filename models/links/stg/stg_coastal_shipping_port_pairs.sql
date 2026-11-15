@@ -44,5 +44,6 @@ select
     "DISCHARGE PORT_LATITUDE" as discharge_port_latitude,
     "DISCHARGE PORT_LONGITUDE" as discharge_port_longitude,
     {{ prefecture_code('"LOADING PORT_PREFECTURE NAME"') }} as loading_prefecture_code,
-    {{ prefecture_code('"UNLOADING PORT_PREFECTURE NAME"') }} as unloading_prefecture_code
+    {{ prefecture_code('"UNLOADING PORT_PREFECTURE NAME"') }} as unloading_prefecture_code,
+    filename as source_path
 from {{ ref('raw_coastal_shipping_port_pairs') }}

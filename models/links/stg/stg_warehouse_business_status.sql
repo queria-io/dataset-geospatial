@@ -216,5 +216,6 @@ select
     "LABOR_PRODUCTIVITY_RANK" as labor_productivity_rank,
     "CAPITAL_EQUIPMENT_PER_EMPLOYEE_RANK" as capital_equipment_per_employee_rank,
     "CAPITAL_PRODUCTIVITY_RANK" as capital_productivity_rank,
-    "LABOR_DISTRIBUTION_RATIO_RANK" as labor_distribution_ratio_rank
+    "LABOR_DISTRIBUTION_RATIO_RANK" as labor_distribution_ratio_rank,
+    filename as source_path
 from {{ ref('raw_warehouse_business_status') }}

@@ -32,5 +32,6 @@ select
     "STAY_GUEST_COUNT_FOREIGN_EMPLOYEE_30_99_TOURISM_UNDER_50" as stay_guest_count_foreign_employee_30_99_tourism_under_50,
     "STAY_GUEST_COUNT_FOREIGN_EMPLOYEE_OVER_100" as stay_guest_count_foreign_employee_over_100,
     "STAY_GUEST_COUNT_FOREIGN_EMPLOYEE_OVER_100_TOURISM_OVER_50" as stay_guest_count_foreign_employee_over_100_tourism_over_50,
-    "STAY_GUEST_COUNT_FOREIGN_EMPLOYEE_OVER_100_TOURISM_UNDER_50" as stay_guest_count_foreign_employee_over_100_tourism_under_50
+    "STAY_GUEST_COUNT_FOREIGN_EMPLOYEE_OVER_100_TOURISM_UNDER_50" as stay_guest_count_foreign_employee_over_100_tourism_under_50,
+    filename as source_path
 from {{ ref('raw_tourism_accommodation_guests') }}

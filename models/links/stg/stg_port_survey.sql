@@ -100,5 +100,6 @@ select
     "IMPORT_PORTION＿EMPTY＿COUNTAINER" as import_portion_empty_countainer,
     "LON" as lon,
     "LAT" as lat,
-    {{ prefecture_code('"PREFECTURE_NAME"') }} as prefecture_code
+    {{ prefecture_code('"PREFECTURE_NAME"') }} as prefecture_code,
+    filename as source_path
 from {{ ref('raw_port_survey') }}

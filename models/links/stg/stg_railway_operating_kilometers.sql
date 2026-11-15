@@ -54,5 +54,6 @@ select
     "OWN_CARS_OTHER_LINE_RUNNING_KILOMETERS_CARS_PASSENGER_OTHER" as own_cars_other_line_running_kilometers_cars_passenger_other,
     "OWN_CARS_OTHER_LINE_RUNNING_KILOMETERS_CARS_FREIGHT" as own_cars_other_line_running_kilometers_cars_freight,
     "OWN_CARS_OTHER_LINE_RUNNING_KILOMETERS_CARS_SPECIAL" as own_cars_other_line_running_kilometers_cars_special,
-    "OWN_CARS_OTHER_LINE_RUNNING_KILOMETERS_CARS_TOTAL" as own_cars_other_line_running_kilometers_cars_total
+    "OWN_CARS_OTHER_LINE_RUNNING_KILOMETERS_CARS_TOTAL" as own_cars_other_line_running_kilometers_cars_total,
+    filename as source_path
 from {{ ref('raw_railway_operating_kilometers') }}

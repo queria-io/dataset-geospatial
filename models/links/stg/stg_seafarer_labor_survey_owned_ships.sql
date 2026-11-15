@@ -18,5 +18,6 @@ select
     "OFFICER_AVG_ANNUAL_WORKING_HOURS" as officer_avg_annual_working_hours,
     "RATING_AVG_ANNUAL_WORKING_HOURS" as rating_avg_annual_working_hours,
     "OFFICER_AVG_ANNUAL_INCOME" as officer_avg_annual_income,
-    "RATING_AVG_ANNUAL_INCOME" as rating_avg_annual_income
+    "RATING_AVG_ANNUAL_INCOME" as rating_avg_annual_income,
+    filename as source_path
 from {{ ref('raw_seafarer_labor_survey_owned_ships') }}

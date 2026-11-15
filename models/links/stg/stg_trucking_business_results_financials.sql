@@ -325,5 +325,6 @@ select
     "NET_LABOR_HOURS_TOTAL(ROAD_LOGISTICS)" as net_labor_hours_total_road_logistics,
     "NET_LABOR_HOURS_EXPECTED(ROAD_LOGISTICS)" as net_labor_hours_expected_road_logistics,
     "NET_LABOR_HOURS_NON_EXPECTED(ROAD_LOGISTICS)" as net_labor_hours_non_expected_road_logistics,
-    "YEAR" as year
+    "YEAR" as year,
+    filename as source_path
 from {{ ref('raw_trucking_business_results_financials') }}

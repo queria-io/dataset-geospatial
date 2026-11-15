@@ -12,5 +12,6 @@ select
     "SHIPMENTS_DURING_TERM_QUANTITY" as shipments_during_term_quantity,
     "ENDING_BALANCE_CURRENT_TERM_QUANTITY" as ending_balance_current_term_quantity,
     "ENDING_BALANCE_CURRENT_TERM_AMOUNT" as ending_balance_current_term_amount,
-    {{ prefecture_code('"OFFICE_ADDRESS"') }} as prefecture_code
+    {{ prefecture_code('"OFFICE_ADDRESS"') }} as prefecture_code,
+    filename as source_path
 from {{ ref('raw_warehouse_quarterly_usage') }}

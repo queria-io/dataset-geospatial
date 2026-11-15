@@ -46,5 +46,6 @@ select
     "BUILDING_COVERAGE_RATIO" as building_coverage_ratio,
     "FARMLAND" as farmland,
     "RETAIL_PREMISES" as retail_premises,
-    {{ prefecture_code('"PREFECTURE"') }} as prefecture_code
+    {{ prefecture_code('"PREFECTURE"') }} as prefecture_code,
+    filename as source_path
 from {{ ref('raw_vacant_house_bank_listings') }}

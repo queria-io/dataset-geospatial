@@ -6,5 +6,6 @@ select
     "LOADING_RATE_SCORE(OPERATOR)" as loading_rate_score_operator,
     "TRANSPORTATION_AMOUNT_PER_CREW(OPERATOR)" as transportation_amount_per_crew_operator,
     "PRODUCTIVITY
-GROUP(OPERATOR)" as productivity_group_operator
+GROUP(OPERATOR)" as productivity_group_operator,
+    filename as source_path
 from {{ ref('raw_coastal_shipping_operator_productivity') }}

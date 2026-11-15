@@ -17,5 +17,6 @@ select
     "AVERAGE_PASSAGE_AMOUNT_PASSENGER" as average_passage_amount_passenger,
     "AVERAGE_PASSAGE_AMOUNT_CARGO" as average_passage_amount_cargo,
     "AVERAGE_TRANSPORTED_KILOMETER_PASSENGER" as average_transported_kilometer_passenger,
-    "AVERAGE_TRANSPORTED_KILOMETER_CARGO" as average_transported_kilometer_cargo
+    "AVERAGE_TRANSPORTED_KILOMETER_CARGO" as average_transported_kilometer_cargo,
+    filename as source_path
 from {{ ref('raw_railway_transport_distance') }}

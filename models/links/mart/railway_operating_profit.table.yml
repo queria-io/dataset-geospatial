@@ -289,3 +289,6 @@ fields:
 - name: operating_expense_per_car_km_yen
   title: 1日1キロ営業費_円/km
   description: '単位: 円/km'
+- name: source_sha256
+  title: 元のファイルの SHA-256
+  description: この行を読んだファイルの SHA-256 です。source_file の sha256 に当たります

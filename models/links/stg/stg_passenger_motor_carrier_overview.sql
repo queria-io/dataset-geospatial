@@ -66,5 +66,6 @@ select
     "TotalLiabilities_Rank" as totalliabilities_rank,
     "CapitalStock_Rank" as capitalstock_rank,
     "TotalShareholdersEquity_Rank" as totalshareholdersequity_rank,
-    {{ prefecture_code('"Address"') }} as prefecture_code
+    {{ prefecture_code('"Address"') }} as prefecture_code,
+    filename as source_path
 from {{ ref('raw_passenger_motor_carrier_overview') }}

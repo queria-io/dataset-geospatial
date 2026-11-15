@@ -17,5 +17,6 @@ select
     "TOTAL_SPECIAL_PURPOSE" as total_special_purpose,
     "TOTAL_MOTORCYCLE" as total_motorcycle,
     "TOTAL_SUM" as total_sum,
-    {{ prefecture_code('"OFFICE_VEHICLE_ALLOCATION_LIST_LOCATION"') }} as prefecture_code
+    {{ prefecture_code('"OFFICE_VEHICLE_ALLOCATION_LIST_LOCATION"') }} as prefecture_code,
+    filename as source_path
 from {{ ref('raw_rental_car_office_vehicles') }}

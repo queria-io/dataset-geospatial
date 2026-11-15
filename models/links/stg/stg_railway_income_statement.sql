@@ -34,5 +34,6 @@ select
     "CORPORATE_TAX_ADJUSTMENT_THOUSANDJPY" as corporate_tax_adjustment_thousandjpy,
     "NET_PROFITLOSS_THOUSANDJPY" as net_profitloss_thousandjpy,
     "DIVIDEND_RATE_FIRSTHALF_PERCENT" as dividend_rate_firsthalf_percent,
-    "DIVIDEND_RATE_SECONDHALF_PERCENT" as dividend_rate_secondhalf_percent
+    "DIVIDEND_RATE_SECONDHALF_PERCENT" as dividend_rate_secondhalf_percent,
+    filename as source_path
 from {{ ref('raw_railway_income_statement') }}

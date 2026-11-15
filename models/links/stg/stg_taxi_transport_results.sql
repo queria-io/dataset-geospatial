@@ -107,5 +107,6 @@ select
     "Accidents_Jurisdiction_Area5_SeriousAccidents_Rank" as accidents_jurisdiction_area5_seriousaccidents_rank,
     "Accidents_Jurisdiction_Area5_Deaths_Rank" as accidents_jurisdiction_area5_deaths_rank,
     "Accidents_Jurisdiction_Area5_Injuries_Rank" as accidents_jurisdiction_area5_injuries_rank,
-    {{ prefecture_code('"Address"') }} as prefecture_code
+    {{ prefecture_code('"Address"') }} as prefecture_code,
+    filename as source_path
 from {{ ref('raw_taxi_transport_results') }}

@@ -2,5 +2,6 @@
 
 select
     "name" as name,
-    "geom" as geometry
+    "geom" as geometry,
+    filename as source_path
 from {{ ref('raw_drone_airspace_yellow_zone') }}

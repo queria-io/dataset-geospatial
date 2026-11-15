@@ -15,5 +15,6 @@ select
     "NUMBER_OF_CARRY_ON_BAGGAGE" as number_of_carry_on_baggage,
     "TRANSPORTED_TONNAGE_CONTAINER" as transported_tonnage_container,
     "TRANSPORTED_TONNAGE_CARLOAD_SERVICE" as transported_tonnage_carload_service,
-    "TRANSPORTED_TONNAGE_TOTAL" as transported_tonnage_total
+    "TRANSPORTED_TONNAGE_TOTAL" as transported_tonnage_total,
+    filename as source_path
 from {{ ref('raw_railway_transport_volume') }}

@@ -5,5 +5,6 @@ select
     "Name" as name,
     "Namekana" as namekana,
     "ACCIDENT_COUNT" as accident_count,
-    "geom" as geometry
+    "geom" as geometry,
+    filename as source_path
 from {{ ref('raw_marine_forecast_areas') }}

@@ -40,5 +40,6 @@ select
     "ACCIDENTS_TRAFFIC_ACCIDENTS_NATIONAL_RANK" as accidents_traffic_accidents_national_rank,
     "ACCIDENTS_SERIOUS_ACCIDENTS_NATIONAL_RANK" as accidents_serious_accidents_national_rank,
     "ACCIDENTS_FATALITIES_NATIONAL_RANK" as accidents_fatalities_national_rank,
-    "ACCIDENTS_INJURIES_NATIONAL_RANK" as accidents_injuries_national_rank
+    "ACCIDENTS_INJURIES_NATIONAL_RANK" as accidents_injuries_national_rank,
+    filename as source_path
 from {{ ref('raw_bus_charter_transport_results') }}

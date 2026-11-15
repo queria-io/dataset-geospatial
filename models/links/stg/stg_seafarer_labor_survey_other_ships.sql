@@ -12,5 +12,6 @@ select
     "AVERAGE_FOREIGNER_RATIO_STAFFS" as average_foreigner_ratio_staffs,
     "AVERAGE_FOREIGNER_OPERATIONAL_CREWS" as average_foreigner_operational_crews,
     "AVERAGE_ANNUAL_SALARY_TOTAL_CREWS" as average_annual_salary_total_crews,
-    "AVERAGE_ANNUAL_SALARY_OPERATIONAL_CREWS" as average_annual_salary_operational_crews
+    "AVERAGE_ANNUAL_SALARY_OPERATIONAL_CREWS" as average_annual_salary_operational_crews,
+    filename as source_path
 from {{ ref('raw_seafarer_labor_survey_other_ships') }}

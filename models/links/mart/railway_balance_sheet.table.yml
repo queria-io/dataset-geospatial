@@ -241,3 +241,6 @@ fields:
 - name: total_liabilities_and_equity
   title: 負債・資本合計
   description: '単位: 千円'
+- name: source_sha256
+  title: 元のファイルの SHA-256
+  description: この行を読んだファイルの SHA-256 です。source_file の sha256 に当たります

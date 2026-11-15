@@ -29,5 +29,6 @@ select
     "OFFICE_NAME_4_PRIVATE_PAID_PASSENGER_VEHICLE_COUNT_MULTI_PURPOSE_LIGHT" as office_name_4_private_paid_passenger_vehicle_count_multi_purpose_light,
     "OFFICE_NAME_4_PRIVATE_PAID_PASSENGER_VEHICLE_COUNT_BUS" as office_name_4_private_paid_passenger_vehicle_count_bus,
     "OFFICE_NAME_4_PRIVATE_PAID_PASSENGER_VEHICLE_COUNT_TOTAL_LIGHT" as office_name_4_private_paid_passenger_vehicle_count_total_light,
-    {{ prefecture_code('"ADDRESS"') }} as prefecture_code
+    {{ prefecture_code('"ADDRESS"') }} as prefecture_code,
+    filename as source_path
 from {{ ref('raw_rideshare_registry') }}

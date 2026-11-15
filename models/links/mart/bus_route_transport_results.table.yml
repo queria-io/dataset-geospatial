@@ -336,3 +336,6 @@ fields:
 - name: annual_transportation_record_transportation_ernings_per_one_drived_kilometer_jurisdicted_area_add_up_rank
   title: 年間輸送実績_走行キロ1キロメートル当たり運送収入_営業区域合計_ランク
   description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+- name: source_sha256
+  title: 元のファイルの SHA-256
+  description: この行を読んだファイルの SHA-256 です。source_file の sha256 に当たります
