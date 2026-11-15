@@ -14,6 +14,12 @@ models:
   geospatial:
     +database: geospatial
     +materialized: table
+    # raw は取得したまま、stg は型付けと列名の付け替え。どちらも mart の SQL に展開し、テーブルは作らない
+    links:
+      raw:
+        +materialized: ephemeral
+      stg:
+        +materialized: ephemeral
     people_flow:
       # mesh_population（3,800 万行）は年月 → メッシュコードの順に並べ、行グループを 245,760 行（約 0.85MB）にする。
       # 1 か月の全国（約 100 万行）が 4〜5 個の行グループに、ある地域の 36 か月が月ごとに 1〜2 個の行グループに収まる。
