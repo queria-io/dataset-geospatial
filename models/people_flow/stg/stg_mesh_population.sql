@@ -15,5 +15,7 @@ select
     citycode as city_code,
     {{ local_government_code('citycode') }} as lg_code,
     {{ mesh_center_lng('mesh1kmid') }} as lng,
-    {{ mesh_center_lat('mesh1kmid') }} as lat
+    {{ mesh_center_lat('mesh1kmid') }} as lat,
+    -- 行を読んだ配布物の zip の名前
+    'monthly_mdp_mesh1km_' || regexp_extract(filename, '([0-9]{2})\.parquet$', 1) || '.zip' as source_zip
 from {{ ref('raw_mesh_population') }}

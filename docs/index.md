@@ -95,6 +95,7 @@ LIMIT 20;
 | `people_flow.city_population_by_origin` | 1 行が 1 市区町村・1 か月・平休日・時間帯・居住地区分の滞在人口。234 万行 |
 | `people_flow.mesh` | 1 行が 1 つの 1km メッシュ。形・中心と、属する都道府県・市区町村。38 万行 |
 | `people_flow.city` | 1 行が 1 市区町村。名前と地方区分 |
+| `people_flow.source_file` | 取り込んだ配布物の zip。URL・sha256・取得日時。滞在人口の各行の source_sha256 が指す |
 
 使い方:
 

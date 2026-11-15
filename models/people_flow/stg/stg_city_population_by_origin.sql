@@ -18,5 +18,7 @@ select
         when '2' then '同一地方'
         when '3' then '他の地方'
     end as origin,
-    cast(population as integer) as population
+    cast(population as integer) as population,
+    -- 行を読んだ配布物の zip の名前
+    'monthly_fromto_city_' || regexp_extract(filename, '([0-9]{2})\.parquet$', 1) || '.zip' as source_zip
 from {{ ref('raw_city_population_by_origin') }}

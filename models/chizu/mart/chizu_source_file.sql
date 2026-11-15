@@ -1,3 +1,5 @@
+{{ config(alias='source_file') }}
+
 {# 取り込んだ zip。1 行が 1 zip（市区町村の 1 登記所）。取得の記録と、出典の表示に使うページ URL を持つ。 #}
 
 select
@@ -16,5 +18,5 @@ select
     s.year,
     s.title
 from {{ ref('stg_source') }} s
-join {{ ref('stg_source_file') }} f using (file)
+join {{ ref('stg_chizu_source_file') }} f using (file)
 order by s.file

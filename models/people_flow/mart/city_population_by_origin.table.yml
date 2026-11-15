@@ -52,3 +52,6 @@ fields:
     title: 滞在人口
     description: 人。1 か月の 1 日あたりの平均。10 以上
     annotations: { queria: { semantic: { role: measure, agg: sum } } }
+  - name: source_sha256
+    title: 元のファイル
+    description: 行を読んだ配布物の zip の sha256。people_flow.source_file の sha256 を指す

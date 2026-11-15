@@ -9,4 +9,4 @@ select
     cast(retrieved_at as timestamptz) as retrieved_at,
     etag,
     last_modified
-from {{ ref('raw_source_file') }}
+from {{ ref('raw_people_flow_source_file') }}
