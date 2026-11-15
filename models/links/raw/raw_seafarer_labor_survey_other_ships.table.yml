@@ -1,0 +1,4 @@
+schema: links
+name: raw_seafarer_labor_survey_other_ships
+description: "船員労働統計調査 第二号調査（G空間情報センター links-naikoukaiungyou-2025 の 04_seninroudoutoukeityousa_2goutyousa.csv）（取得したままの形）"
+annotations: { queria: { published: false } }

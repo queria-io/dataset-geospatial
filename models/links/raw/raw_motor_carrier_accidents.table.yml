@@ -1,0 +1,4 @@
+schema: links
+name: raw_motor_carrier_accidents
+description: "自動車運送事業の事故報告書と交通事故統計の統合データ（G空間情報センター links-jidousyaunsoujigyoujiko-2025 の 01_jikohoukokusyo_koutsuujikotoukeijyouhou.csv）（取得したままの形）"
+annotations: { queria: { published: false } }

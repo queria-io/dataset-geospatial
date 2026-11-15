@@ -1,0 +1,4 @@
+schema: links
+name: raw_rental_car_results
+description: "貸渡実績報告書（レンタカー）（G空間情報センター links-rentacars-2025 の 01_yousiki1_kashiwatashijissekihoukokusho.csv）（取得したままの形）"
+annotations: { queria: { published: false } }

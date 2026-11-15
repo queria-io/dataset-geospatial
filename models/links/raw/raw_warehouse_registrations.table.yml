@@ -1,0 +1,4 @@
+schema: links
+name: raw_warehouse_registrations
+description: "倉庫業登録申請書と倉庫明細書（中部運輸局管内）（G空間情報センター links-soukogyou-2024 の 01_soukogyoutourokushinseisyo.csv）（取得したままの形）"
+annotations: { queria: { published: false } }

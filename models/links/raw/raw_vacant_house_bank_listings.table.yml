@@ -1,0 +1,4 @@
+schema: links
+name: raw_vacant_house_bank_listings
+description: "全国版空き家・空き地バンクの登録物件（G空間情報センター links-akiyabank-2025 の 01_tourokubukken.csv）（取得したままの形）"
+annotations: { queria: { published: false } }

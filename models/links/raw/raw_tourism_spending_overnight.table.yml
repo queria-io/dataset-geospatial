@@ -1,0 +1,4 @@
+schema: links
+name: raw_tourism_spending_overnight
+description: "旅行・観光消費動向調査（宿泊旅行）（G空間情報センター links_kankoutoukei_2025 の 02_ryokoukankousyouhidoukou_syukuhaku.csv）（取得したままの形）"
+annotations: { queria: { published: false } }

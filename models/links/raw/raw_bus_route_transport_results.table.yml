@@ -1,0 +1,4 @@
+schema: links
+name: raw_bus_route_transport_results
+description: "一般乗合旅客自動車運送事業輸送実績報告（路線バス）（G空間情報センター links-ippanryokyaku-2025 の 01_ippannoriairyokyaku_yusoujisseki.csv）（取得したままの形）"
+annotations: { queria: { published: false } }

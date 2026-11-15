@@ -1,0 +1,4 @@
+schema: links
+name: raw_railway_income_statement
+description: "鉄道統計年報 損益計算書（G空間情報センター links-tetsudoujigyou-2025 の 05_tetsudou_sonekikeisansyo.csv）（取得したままの形）"
+annotations: { queria: { published: false } }

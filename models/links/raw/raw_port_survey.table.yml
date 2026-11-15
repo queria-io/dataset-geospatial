@@ -1,0 +1,4 @@
+schema: links
+name: raw_port_survey
+description: "港湾調査（G空間情報センター links-naikoukaiungyou-2024 の 03_kouwanchousa.csv）（取得したままの形）"
+annotations: { queria: { published: false } }

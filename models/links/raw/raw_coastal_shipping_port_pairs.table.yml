@@ -1,0 +1,4 @@
+schema: links
+name: raw_coastal_shipping_port_pairs
+description: "内航船舶輸送統計調査（積地・揚地の港の組）（G空間情報センター links-modalshift-2024 の 01_naikousenpakuyusoutoukeichousa.csv）（取得したままの形）"
+annotations: { queria: { published: false } }

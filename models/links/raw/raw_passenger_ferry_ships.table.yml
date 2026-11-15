@@ -1,0 +1,4 @@
+schema: links
+name: raw_passenger_ferry_ships
+description: "一般旅客定期航路事業許可申請書（船舶）（G空間情報センター links-ippanryokyakuteikikourojigyou-2024 の 01_ippanryokyakuteikikourojigyoukyokashinseisyo.csv）（取得したままの形）"
+annotations: { queria: { published: false } }

@@ -1,0 +1,4 @@
+schema: links
+name: raw_railway_operating_profit
+description: "鉄道統計年報 鉄軌道業営業損益（G空間情報センター links-tetsudoujigyou-2025 の 04_tetsudou_eigyousoneki.csv）（取得したままの形）"
+annotations: { queria: { published: false } }
