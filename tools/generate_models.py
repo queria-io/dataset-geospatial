@@ -1,4 +1,4 @@
-"""data/links/ に取得したファイルとデータ仕様書から、models/links/ のモデルと *.table.yml を作る。
+"""data/links/ に取得したファイルとデータ仕様書から、models/links/ のモデルとテーブルの Markdown を作る。
 
     uv run python -c "import main; main.download()"
     uv run python tools/generate_models.py
@@ -23,6 +23,7 @@ from pipelines.links_tables import TABLES  # noqa: E402
 
 DATA = Path("data/links")
 MODELS = Path("models/links")
+TABLE_SCHEMA = "https://queria.io/schemas/table/v1.json"
 
 # 都道府県コードを付ける列。(元の列, 付ける列)
 PREFECTURE = {
@@ -68,7 +69,7 @@ POINT = {
 
 PREFECTURE_FIELD = {
     "title": "都道府県コード",
-    "annotations": {"queria": {"semantic": {"role": "entity", "name": "prefecture"}}},
+    "semantic": {"role": "entity", "name": "prefecture"},
 }
 
 
@@ -261,16 +262,14 @@ def main():
         sql, fields = model(con, source, path)
         (MODELS / f"{source.table}.sql").write_text(sql)
         table = {
-            "schema": "links",
-            "name": source.table,
+            "$schema": TABLE_SCHEMA,
+            "table": f"links.{source.table}",
             "title": source.title,
             "description": table_description(source, path),
             "sources": [{"path": f"https://www.geospatial.jp/ckan/dataset/{source.package}"}],
             "fields": fields,
         }
-        (MODELS / f"{source.table}.table.yml").write_text(
-            yaml.safe_dump(table, allow_unicode=True, sort_keys=False, width=1000)
-        )
+        write_table(MODELS / f"{source.table}.md", table)
         print(source.table, len(fields))
     write_code_lists()
 
@@ -291,8 +290,8 @@ from read_csv('data/links/code_lists.csv', header = true, all_varchar = true)
 def write_code_lists():
     (MODELS / "code_lists.sql").write_text(CODE_LISTS_SQL)
     table = {
-        "schema": "links",
-        "name": "code_lists",
+        "$schema": TABLE_SCHEMA,
+        "table": "links.code_lists",
         "title": "データ仕様書のコードリスト",
         "description": (
             "各データセットのデータ仕様書の「コードリスト」のシートです。1 行が 1 つの列の 1 つの値です。"
@@ -310,9 +309,11 @@ def write_code_lists():
             {"name": "label", "title": "内容"},
         ],
     }
-    (MODELS / "code_lists.table.yml").write_text(
-        yaml.safe_dump(table, allow_unicode=True, sort_keys=False, width=1000)
-    )
+    write_table(MODELS / "code_lists.md", table)
+
+
+def write_table(path, table):
+    path.write_text("---\n" + yaml.safe_dump(table, allow_unicode=True, sort_keys=False, width=1000) + "---\n")
 
 
 if __name__ == "__main__":
