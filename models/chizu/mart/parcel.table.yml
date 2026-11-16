@@ -81,3 +81,6 @@ fields:
   - name: fude_id
     title: 筆 ID
     description: 地図 XML の中の筆の ID。ファイルの中だけで一意
+  - name: source_sha256
+    title: 元のファイル
+    description: 筆が載っていた zip の sha256。chizu.source_file の sha256 を指す

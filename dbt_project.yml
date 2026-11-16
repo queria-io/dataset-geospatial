@@ -21,6 +21,15 @@ models:
       stg:
         +materialized: ephemeral
     people_flow:
+      raw:
+        +materialized: table
+        # mesh_population は 3,800 万行あるので、raw と stg はテーブルにせず mart の中で展開する
+        raw_mesh_population:
+          +materialized: ephemeral
+      stg:
+        +materialized: view
+        stg_mesh_population:
+          +materialized: ephemeral
       # mesh_population（3,800 万行）は年月 → メッシュコードの順に並べ、行グループを 245,760 行（約 0.85MB）にする。
       # 1 か月の全国（約 100 万行）が 4〜5 個の行グループに、ある地域の 36 か月が月ごとに 1〜2 個の行グループに収まる。
       # 設定はスキーマに付く (dbt は __dbt_tmp に書いてから改名するので、テーブルに付けても効かない)
@@ -29,6 +38,12 @@ models:
         - "{{ \"CALL geospatial.set_option('parquet_row_group_size', 245760, schema => 'people_flow')\" if target.name != 'ci' else '' }}"
         - "{{ \"CALL geospatial.set_option('parquet_compression', 'zstd', schema => 'people_flow')\" if target.name != 'ci' else '' }}"
     chizu:
+      raw:
+        # 筆は 2.4 億行あるので、raw と stg はテーブルにせず mart の中で展開する
+        raw_parcel:
+          +materialized: ephemeral
+      stg:
+        +materialized: ephemeral
       # 市区町村で引くので、行グループを 16,384 行にする。全国 2.4 億筆・17.5GB で 1 つ 1MB 前後。
       # 設定はスキーマに付く (dbt は __dbt_tmp に書いてから改名するので、テーブルに付けても効かない)
       # PR のビルド確認（ci/profiles.yml、target ci）は DuckLake でないので付けない

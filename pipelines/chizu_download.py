@@ -9,6 +9,9 @@
 - data/chizu/zip/<ファイル名>.zip
 - data/chizu/sources.ndjson（1 行 = 1 zip。出典の表示に使うデータセットのページ URL を持つ）
 
+取得の記録（sha256・メディアタイプ・取得日時・ETag・Last-Modified）は fetch_file が返し、
+pipelines/chizu.py が data/chizu/source_file.ndjson にまとめる。
+
 データソース: 法務省 登記所備付地図データ（G空間情報センター）
 https://front.geospatial.jp/
 """
@@ -20,7 +23,7 @@ import re
 from pathlib import Path
 from urllib.parse import urlencode
 
-from shared.fetch import download, fetch, write_atomic
+from shared.fetch import fetch, fetch_file, write_atomic
 
 logger = logging.getLogger("pipelines")
 
@@ -75,12 +78,12 @@ def sources() -> list[dict]:
     return sorted((s for p in packages if (s := latest_zip(p))), key=lambda s: s["file"])
 
 
-def fetch_zip(source: dict) -> Path:
+def fetch_zip(source: dict) -> tuple[Path, dict]:
+    """zip を取り、置き場所と取得の記録（source_file の 1 行に file を足したもの）を返す。"""
     ZIP_DIR.mkdir(parents=True, exist_ok=True)
     path = ZIP_DIR / source["file"]
-    if not (path.exists() and path.stat().st_size == source["size"]):
-        download(source["zip_url"], path, user_agent=USER_AGENT, timeout=300)
-    return path
+    record = fetch_file(source["zip_url"], path, user_agent=USER_AGENT, timeout=300)
+    return path, {"file": source["file"], **record}
 
 
 def list_moj() -> list[dict]:

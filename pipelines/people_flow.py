@@ -3,7 +3,7 @@
 配布物は G空間情報センターのデータセット mlit-1km-fromto にある zip で、zip の中に
 年月ごとの zip（中身は CSV 1 つ）が入っている。
 
-1. CKAN の API から配布物の一覧を取り、zip を data/people_flow/raw/ に保存する（取得済みなら使い回す）
+1. CKAN の API から配布物の一覧を取り、zip を data/people_flow/raw/ に保存する（取得済みで ETag・Last-Modified が変わっていなければ使い回す）
 2. 1km メッシュ別（monthly_mdp_mesh1km_<都道府県>）と市区町村単位発地別
    （monthly_fromto_city_<都道府県>）は、都道府県ごとに全年月の CSV を 1 つの Parquet にする
 3. 1km メッシュ属性・都道府県市区町村マスタ・地方区分マスタは、年ごとの CSV をそのまま置く
@@ -14,6 +14,7 @@
 - data/people_flow/attribute_<年>.csv
 - data/people_flow/prefcode_citycode_master_<年>.csv
 - data/people_flow/regioncode_master_<年>.csv
+- data/people_flow/source_file.ndjson（取得した zip ごとの記録。fetch_file が返す source_file の行に file を足したもの）
 
 データソース: 「全国の人流オープンデータ」（国土交通省）
 https://www.geospatial.jp/ckan/dataset/mlit-1km-fromto
@@ -32,7 +33,7 @@ from urllib.error import HTTPError
 
 import duckdb
 
-from shared.fetch import download, fetch, replacing, write_atomic
+from shared.fetch import fetch, fetch_file, replacing, write_atomic
 
 logger = logging.getLogger("pipelines")
 
@@ -40,6 +41,7 @@ PACKAGE_URL = "https://www.geospatial.jp/ckan/api/3/action/package_show?id=mlit-
 USER_AGENT = "dataset-geospatial (+https://github.com/queria-io/dataset-geospatial)"
 RAW = Path("data/people_flow/raw")
 OUT = Path("data/people_flow")
+SOURCE_FILES = OUT / "source_file.ndjson"
 # 配布物のファイル名（URL の末尾）→ 出力のフォルダ
 MONTHLY = {
     re.compile(r"monthly_mdp_mesh1km_(\d{2})\.zip"): "mesh_1km",
@@ -71,15 +73,28 @@ PAUSE = 2
 FORBIDDEN_WAITS = (30, 60, 120, 240)
 
 
-def fetch_zip(url: str) -> Path:
-    path = RAW / url.rsplit("/", 1)[1]
-    if path.exists():
-        return path
+def read_records() -> dict[str, dict]:
+    if not SOURCE_FILES.exists():
+        return {}
+    return {r["file"]: r for r in map(json.loads, SOURCE_FILES.read_text().splitlines())}
+
+
+def write_records(records: dict[str, dict]) -> None:
+    lines = "".join(json.dumps(records[f], ensure_ascii=False) + "\n" for f in sorted(records))
+    write_atomic(SOURCE_FILES, lines.encode())
+
+
+def fetch_zip(url: str, records: dict[str, dict]) -> Path:
+    """zip を取り、取得の記録を records に入れる。手元の zip が前回と変わっていなければ取り直さない。"""
+    file = url.rsplit("/", 1)[1]
+    path = RAW / file
     RAW.mkdir(parents=True, exist_ok=True)
+    previous = {k: v for k, v in records[file].items() if k != "file"} if file in records else None
     for wait in (*FORBIDDEN_WAITS, None):
         time.sleep(PAUSE)
         try:
-            download(url, path, user_agent=USER_AGENT, timeout=300)
+            record = fetch_file(url, path, previous=previous, user_agent=USER_AGENT, timeout=300)
+            records[file] = {"file": file, **record}
             return path
         except HTTPError as e:
             if e.code != 403 or wait is None:
@@ -134,18 +149,21 @@ def extract_master(path: Path) -> None:
 
 def download_people_flow() -> None:
     urls = resource_urls()
+    records = read_records()
     for url in urls:
         file = url.rsplit("/", 1)[1]
         if file in MASTERS:
-            extract_master(fetch_zip(url))
+            extract_master(fetch_zip(url, records))
             logger.info(f"  {file}")
             continue
         for pattern, kind in MONTHLY.items():
             if (m := pattern.fullmatch(file)) and selected(m.group(1)):
                 out = OUT / kind / f"{m.group(1)}.parquet"
                 out.parent.mkdir(parents=True, exist_ok=True)
-                rows = monthly_to_parquet(fetch_zip(url), kind, out)
+                rows = monthly_to_parquet(fetch_zip(url, records), kind, out)
                 logger.info(f"  {file}: {rows:,} 行")
+    # 今回の一覧に無い zip の記録は残さない
+    write_records({f: r for f, r in records.items() if f in {u.rsplit("/", 1)[1] for u in urls}})
     for kind in MONTHLY.values():
         if not any((OUT / kind).glob("*.parquet")):
             raise RuntimeError(f"{kind} の配布物が見つからない")
