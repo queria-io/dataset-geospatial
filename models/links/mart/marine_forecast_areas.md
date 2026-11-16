@@ -1,0 +1,27 @@
+---
+$schema: https://queria.io/schemas/table/v1.json
+table: links.marine_forecast_areas
+title: 地方海上予報区（海域ポリゴン）
+description: |-
+  地方海上予報区における各海域で発生した2023年度の事故件数を集計した情報を有するデータ
+
+  元の資料: 地方海上予報区、船舶事故等調査報告書
+
+  G空間情報センターのデータセット links-ippanryokyakuteikikourojigyou-2024 の 03_chihoukaijyouyohouku_kaiikipolygon.geojson を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources:
+  - path: https://www.geospatial.jp/ckan/dataset/links-ippanryokyakuteikikourojigyou-2024
+fields:
+  - name: code
+    title: code
+  - name: name
+    title: name
+  - name: namekana
+    title: namekana
+  - name: accident_count
+    title: 事故件数
+    description: '単位: 件。船舶事故等調査報告書の事故発生場所をもとに集計'
+  - name: geometry
+  - name: source_sha256
+    title: 元のファイルの SHA-256
+    description: この行を読んだファイルの SHA-256 です。source_file の sha256 に当たります
+---
