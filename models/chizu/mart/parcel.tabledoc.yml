@@ -8,12 +8,7 @@ description: |-
   - 他の情報と照合して特定の個人を識別する使い方は、利用規約で禁止されています
 primary_key: [file, fude_id]
 licenses:
-  - id: JP-MOJ-CHIZU
-    url: https://www.moj.go.jp/MINJI/minji05_00494.html
-    title: 登記所備付地図データ利用規約（法務省）
-    commercial_use: true
-    share_alike: false
-    attribution_required: true
+  - JP-MOJ-CHIZU
 columns:
   - name: city_code
     title: 市区町村コード（5 桁）

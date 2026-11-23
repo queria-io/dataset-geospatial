@@ -8,12 +8,7 @@ description: |-
   - zip 本体は保存していません。url から取得できます
 primary_key: [file]
 licenses:
-  - id: JP-MOJ-CHIZU
-    url: https://www.moj.go.jp/MINJI/minji05_00494.html
-    title: 登記所備付地図データ利用規約（法務省）
-    commercial_use: true
-    share_alike: false
-    attribution_required: true
+  - JP-MOJ-CHIZU
 columns:
   - name: url
     title: zip の URL

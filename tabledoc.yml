@@ -58,7 +58,6 @@ topics:
   - 不動産登記
   - 法務省
   - 法務局
-homepage: https://github.com/queria-io/dataset-geospatial
 language: ja
 # テーブルごとのライセンスはテーブルの tabledoc.yml に書く（people_flow と chizu は別の利用規約）
 licenses:
@@ -69,12 +68,7 @@ licenses:
     commercial_use: true
     share_alike: false
     attribution_required: true
-  - id: JP-MOJ-CHIZU
-    url: https://www.moj.go.jp/MINJI/minji05_00494.html
-    title: 登記所備付地図データ利用規約（法務省）
-    commercial_use: true
-    share_alike: false
-    attribution_required: true
+  - JP-MOJ-CHIZU
 
 sources:
   - id: sosei-joho
