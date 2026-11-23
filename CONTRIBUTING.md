@@ -24,4 +24,4 @@ SYNC_MODE=chizu CHIZU_PREFECTURES=13,14 uv run python -c "import main; main.down
 - `people_flow` の原典は 2021 年 12 月分で公開を終えているので、作り直すのは定義を変えたときだけです。取得した zip は `data/people_flow/raw/` に置いて使い回します
 - `chizu` の原典は年 1 回（春）更新されます。全国の zip は約 100GB あり、GitHub のランナーでは作れないので、手元で作ります
 
-`models/links/` の SQL とテーブルの Markdown は `tools/generate_models.py` が作ります。手で直さず、`pipelines/links_tables.py`（テーブルとファイルの対応）か `tools/generate_models.py`（都道府県コードと geometry を付ける列）を直して作り直してください。
+`models/links/` の SQL とテーブルの説明（`<テーブル>.tabledoc.yml`）は `tools/generate_models.py` が作ります。手で直さず、`pipelines/links_tables.py`（テーブルとファイルの対応）か `tools/generate_models.py`（都道府県コードと geometry を付ける列）を直して作り直してください。

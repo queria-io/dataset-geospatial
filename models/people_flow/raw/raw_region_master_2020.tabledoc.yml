@@ -1,0 +1,3 @@
+$schema: https://tabledoc.queria.io/schemas/table/v1.json
+description: 全国の人流オープンデータ（国土交通省）の地方区分マスタ（2020 年版）を、配布物の列と値のまま読んだもの
+listed: false

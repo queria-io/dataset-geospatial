@@ -1,0 +1,15 @@
+$schema: https://tabledoc.queria.io/schemas/table/v1.json
+title: 小型無人機等飛行禁止法のレッドゾーン
+description: |-
+  各種空域情報のうちレッドゾーンの情報を有するジオメトリデータ(主要8空港:8レコード)
+
+  G空間情報センターのデータセット links-mujinkoukuukihikoukeikaku-2024 の 05_kakusyukuuikijyouhou_redzone.geojson を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
+sources: [links-mujinkoukuukihikoukeikaku-2024]
+columns:
+  - name: name
+    title: 空域名称
+    description: '秘匿化: 秘匿化有(一部のみ公開)。以下の8空港のみジオメトリデータを公開 新千歳空港、成田国際空港、東京国際空港、中部国際空港、大阪国際空港、関西国際空港、福岡空港、那覇空港'
+  - name: geometry
+  - name: source_sha256
+    title: 元のファイルの SHA-256
+    description: この行を読んだファイルの SHA-256 です。source_file の sha256 に当たります
