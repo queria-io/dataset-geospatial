@@ -6,7 +6,7 @@ description: |-
   G空間情報センターのデータセット links-kamotsujidousyaunsojigyo-2025 の 01_jigyoujissekihoukokusyo_2025.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
 sources:
   - id: links-kamotsujidousyaunsojigyo-2025
-    path: https://www.geospatial.jp/ckan/dataset/links-kamotsujidousyaunsojigyo-2025
+    url: https://www.geospatial.jp/ckan/dataset/links-kamotsujidousyaunsojigyo-2025
 columns:
   - name: business_operator_id_1
   - name: industry_category

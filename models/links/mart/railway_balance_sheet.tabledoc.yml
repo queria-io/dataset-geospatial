@@ -8,7 +8,7 @@ description: |-
   G空間情報センターのデータセット links-tetsudoujigyou-2025 の 06_tetsudou_taisyakutaisyouhyou.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
 sources:
   - id: links-tetsudoujigyou-2025
-    path: https://www.geospatial.jp/ckan/dataset/links-tetsudoujigyou-2025
+    url: https://www.geospatial.jp/ckan/dataset/links-tetsudoujigyou-2025
 columns:
   - name: year
     title: 年度

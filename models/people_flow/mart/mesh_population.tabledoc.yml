@@ -19,7 +19,7 @@ columns:
   - name: mesh_code
     title: 3 次メッシュコード
     description: 8 桁（JIS X 0410）。people_flow.mesh に形があります
-    entity: {type: foreign, name: mesh}
+    entity: mesh
   - name: date
     title: 年月
     description: その月の 1 日
@@ -41,15 +41,15 @@ columns:
   - name: prefecture_code
     title: 都道府県コード
     description: 2 桁
-    entity: {type: foreign, name: prefecture}
+    entity: prefecture
   - name: city_code
     title: 市区町村コード（5 桁）
     description: メッシュが属する市区町村（政令指定都市は区）。2019 年の那珂川市は旧那珂川町の 40305
-    entity: {type: foreign, name: city}
+    entity: city
   - name: lg_code
     title: 全国地方公共団体コード
     description: city_code に検査数字を付けた 6 桁
-    entity: {type: foreign, name: city}
+    entity: city
   - name: lng
     title: メッシュの中心の経度
   - name: lat

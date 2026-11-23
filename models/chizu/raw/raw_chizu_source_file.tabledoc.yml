@@ -1,3 +1,3 @@
 $schema: https://tabledoc.queria.io/schemas/table/v1.json
 description: 取り込んだ登記所備付地図の zip を取得した記録（sha256・取得日時・ETag など）を、取得のときに書いたまま読んだもの
-listed: false
+hidden: true

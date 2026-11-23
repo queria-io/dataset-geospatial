@@ -79,32 +79,32 @@ licenses:
 sources:
   - id: sosei-joho
     title: Project LINKS オープンデータ（G空間情報センター）
-    path: https://www.geospatial.jp/ckan/organization/sosei-joho
+    url: https://www.geospatial.jp/ckan/organization/sosei-joho
   - id: terms-of-use
     title: Project LINKS 利用規約
-    path: https://www.mlit.go.jp/links/terms-of-use.html
+    url: https://www.mlit.go.jp/links/terms-of-use.html
   - id: mlit-1km-fromto
     title: 全国の人流オープンデータ（1km メッシュ、市区町村単位発地別）（G空間情報センター）
-    path: https://www.geospatial.jp/ckan/dataset/mlit-1km-fromto
+    url: https://www.geospatial.jp/ckan/dataset/mlit-1km-fromto
   - id: mlit-1km-fromto-resource
     title: オープンデータ（人流データ）定義書（国土交通省）
-    path: https://www.geospatial.jp/ckan/dataset/mlit-1km-fromto/resource/e2083495-8095-4119-a865-e5c22e6a7eee
+    url: https://www.geospatial.jp/ckan/dataset/mlit-1km-fromto/resource/e2083495-8095-4119-a865-e5c22e6a7eee
   - id: minji05_00494
     title: 法務省 地図データのＧ空間情報センターを介した一般公開について
-    path: https://www.moj.go.jp/MINJI/minji05_00494.html
+    url: https://www.moj.go.jp/MINJI/minji05_00494.html
 
 contributors:
   - id: links
     title: 国土交通省 総合政策局 情報政策課
-    path: https://www.mlit.go.jp/links/
+    url: https://www.mlit.go.jp/links/
     roles: [rightsHolder]
   - id: mlit
     title: 国土交通省 不動産・建設経済局 情報活用推進課
-    path: https://www.mlit.go.jp/
+    url: https://www.mlit.go.jp/
     roles: [rightsHolder]
   - id: moj
     title: 法務省
-    path: https://www.moj.go.jp/
+    url: https://www.moj.go.jp/
     roles: [rightsHolder]
 
 spatial_coverage: [JP]

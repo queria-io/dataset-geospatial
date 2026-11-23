@@ -8,7 +8,7 @@ description: |-
   G空間情報センターのデータセット links-rideshare-2025 の 02_jikayouyuushouryokyakuunsou_tourokubo.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
 sources:
   - id: links-rideshare-2025
-    path: https://www.geospatial.jp/ckan/dataset/links-rideshare-2025
+    url: https://www.geospatial.jp/ckan/dataset/links-rideshare-2025
 columns:
   - name: id
     title: ID
@@ -72,7 +72,7 @@ columns:
   - name: prefecture_code
     title: 都道府県コード
     description: address の先頭の都道府県名から付けたコード。都道府県名で始まらない行は NULL
-    entity: {type: foreign, name: prefecture}
+    entity: prefecture
   - name: source_sha256
     title: 元のファイルの SHA-256
     description: この行を読んだファイルの SHA-256 です。source_file の sha256 に当たります

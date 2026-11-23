@@ -8,11 +8,11 @@ description: |-
   G空間情報センターのデータセット links_kankoutoukei_2025 の 01_syukuhakuryokoutoukeityousa.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
 sources:
   - id: links_kankoutoukei_2025
-    path: https://www.geospatial.jp/ckan/dataset/links_kankoutoukei_2025
+    url: https://www.geospatial.jp/ckan/dataset/links_kankoutoukei_2025
 columns:
   - name: prefecture_code
     title: 都道府県コード(目的地)
-    entity: {type: foreign, name: prefecture}
+    entity: prefecture
   - name: year
     title: 年(暦年)
     description: '単位: 年'

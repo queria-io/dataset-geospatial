@@ -6,7 +6,7 @@ description: |-
   G空間情報センターのデータセット links-mujinkoukuukihikoukeikaku-2025_ の 02_jikojyouhou.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
 sources:
   - id: links-mujinkoukuukihikoukeikaku-2025_
-    path: https://www.geospatial.jp/ckan/dataset/links-mujinkoukuukihikoukeikaku-2025_
+    url: https://www.geospatial.jp/ckan/dataset/links-mujinkoukuukihikoukeikaku-2025_
 columns:
   - name: 'no'
     title: 番号
@@ -33,7 +33,7 @@ columns:
   - name: prefecture_code
     title: 都道府県コード
     description: occurrence_location の先頭の都道府県名から付けたコード。都道府県名で始まらない行は NULL
-    entity: {type: foreign, name: prefecture}
+    entity: prefecture
   - name: source_sha256
     title: 元のファイルの SHA-256
     description: この行を読んだファイルの SHA-256 です。source_file の sha256 に当たります
