@@ -6,7 +6,7 @@ description: |-
   G空間情報センターのデータセット links-mujinkoukuukihikoukeikaku-2024 の 03_kakusyukuuikijyouhou_syuuhenkuuiki.geojson を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
 sources:
   - id: links-mujinkoukuukihikoukeikaku-2024
-    path: https://www.geospatial.jp/ckan/dataset/links-mujinkoukuukihikoukeikaku-2024
+    url: https://www.geospatial.jp/ckan/dataset/links-mujinkoukuukihikoukeikaku-2024
 columns:
   - name: name
     title: 空域名称

@@ -8,7 +8,7 @@ description: |-
   G空間情報センターのデータセット links-ippanryokyaku-2025 の 02_ippankashikiriryokyaku_yusoujisseki.csv を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
 sources:
   - id: links-ippanryokyaku-2025
-    path: https://www.geospatial.jp/ckan/dataset/links-ippanryokyaku-2025
+    url: https://www.geospatial.jp/ckan/dataset/links-ippanryokyaku-2025
 columns:
   - name: report_date_fiscal_year
     title: 報告年月日_報告年度

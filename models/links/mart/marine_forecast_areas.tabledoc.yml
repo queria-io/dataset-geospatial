@@ -8,7 +8,7 @@ description: |-
   G空間情報センターのデータセット links-ippanryokyakuteikikourojigyou-2024 の 03_chihoukaijyouyohouku_kaiikipolygon.geojson を、列名を小文字にして型を付けたテーブルです。列の説明は同じデータセットのデータ仕様書から付けています。
 sources:
   - id: links-ippanryokyakuteikikourojigyou-2024
-    path: https://www.geospatial.jp/ckan/dataset/links-ippanryokyakuteikikourojigyou-2024
+    url: https://www.geospatial.jp/ckan/dataset/links-ippanryokyakuteikikourojigyou-2024
 columns:
   - name: code
     title: code
