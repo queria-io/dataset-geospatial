@@ -3,7 +3,7 @@ title: 筆
 description: |-
   登記所備付地図の筆（土地の 1 区画）です。1 行が 1 筆で、地番・座標系・精度区分と、公共座標の図面の筆は形と代表点を持ちます。
 
-  - 任意座標系の図面の筆は形が NULL です（全国では 53%、東京都では 9 割）
+  - 任意座標系の図面の筆（全国では 53%、東京都では 9 割）は geometry が NULL で、図面の上の座標の形を local_geometry に持ちます
   - 1 筆を示すキーは (file, fude_id) です。地番は図面をまたいで重なることがあります
   - 他の情報と照合して特定の個人を識別する使い方は、利用規約で禁止されています
 primary_key: [file, fude_id]
@@ -66,6 +66,10 @@ columns:
   - name: lat
     title: 緯度
     description: 代表点（筆の内側に取った点）。任意座標系の筆は NULL
+  - name: local_geometry
+    title: 図面の座標のジオメトリ
+    description: |-
+      任意座標系の筆の形。図面の上の座標（x が原典の Y、y が原典の X、単位はメートル）のままで、経緯度ではありません。原点は図面（file・map_name）ごとに違うので、同じ図面の筆どうしの面積・隣接の計算に使います。公共座標の筆は NULL
   - name: map_name
     title: 地図名
     description: 原典の図面の名前
