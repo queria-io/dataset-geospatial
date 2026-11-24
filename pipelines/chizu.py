@@ -15,7 +15,9 @@ import logging
 from multiprocessing import Pool
 from pathlib import Path
 
-from pipelines.chizu_convert import convert
+import pyarrow.parquet as pq
+
+from pipelines.chizu_convert import SCHEMA, convert
 from pipelines.chizu_download import fetch_zip, list_moj
 from shared.fetch import write_atomic
 
@@ -27,6 +29,12 @@ SOURCE_FILES = Path("data/chizu/source_file.ndjson")
 
 def parquet_path(file: str) -> Path:
     return PARCEL_DIR / f"{Path(file).stem}.parquet"
+
+
+def converted(file: str) -> bool:
+    """今の列で書いた Parquet があるか。列を足したときは古い Parquet を作り直す。"""
+    path = parquet_path(file)
+    return path.exists() and pq.read_schema(path).equals(SCHEMA)
 
 
 def read_records() -> dict[str, dict]:
@@ -49,7 +57,7 @@ def fetch_and_convert(source: dict) -> tuple[dict, dict, int]:
 
 
 def convert_all(sources: list[dict]) -> None:
-    """Parquet か取得の記録の無い zip を取って変換する。今回の一覧に無い Parquet と記録は消す。
+    """Parquet（今の列のもの）か取得の記録の無い zip を取って変換する。今回の一覧に無い Parquet と記録は消す。
 
     並列は zip 単位にする。1 本の中の XML を並列にすると、親が筆の行を受け取って
     表にするところで 1 コアに詰まる。zip はプロセスの数しか同時に置かない。
@@ -59,7 +67,7 @@ def convert_all(sources: list[dict]) -> None:
         stale.unlink()
     files = {s["file"] for s in sources}
     records = {f: r for f, r in read_records().items() if f in files}
-    todo = [s for s in sources if not parquet_path(s["file"]).exists() or s["file"] not in records]
+    todo = [s for s in sources if not converted(s["file"]) or s["file"] not in records]
     logger.info("  変換するのは %d 本", len(todo))
     with Pool() as pool:
         for done, (source, record, rows) in enumerate(pool.imap_unordered(fetch_and_convert, todo), 1):

@@ -20,6 +20,7 @@ select
     coord_type,
     undetermined_members,
     st_makevalid(st_geomfromwkb(geometry)) as geometry,
+    st_makevalid(st_geomfromwkb(local_geometry)) as local_geometry,
     lng,
     lat,
     map_name,

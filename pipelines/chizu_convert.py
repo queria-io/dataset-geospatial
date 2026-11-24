@@ -1,8 +1,9 @@
 """地図 XML の zip を 1 筆 1 行の Parquet にする。
 
 市区町村ごとの zip の中に地図ごとの zip（または xml）が入っている。search-list.csv は
-読まない。XML は mojxml で読み、公共座標の筆だけ形を経緯度（JGD2011）に直して持つ。
-任意座標の筆は図面の上の座標しか無く、地図に重ねられないので形を持たない。
+読まない。XML は mojxml で読み、公共座標の筆は形を経緯度（JGD2011）に直して geometry に持つ。
+任意座標の筆は図面の上の座標しか無く、地図に重ねられないので、形を図面の座標のまま
+local_geometry に持つ（x が原典の Y、y が原典の X。単位はメートル）。
 地区外・別図の筆も残す（地番にそう書いてある）。
 筆界未定地の構成筆は mojxml が読まないので、lxml で読み直してリストで持つ。
 
@@ -67,6 +68,7 @@ SCHEMA = pa.schema(
     + [
         ("undetermined_members", pa.list_(MEMBER)),
         ("geometry", pa.binary()),
+        ("local_geometry", pa.binary()),
         ("lng", pa.float64()),
         ("lat", pa.float64()),
     ]
@@ -101,14 +103,17 @@ def undetermined_members(content: bytes) -> dict[str, list[dict]]:
 
 def to_row(file: str, feature: dict, members: dict[str, list[dict]]) -> dict:
     props = feature["properties"]
-    public = props["座標系"] != ARBITRARY_CRS and feature["geometry"] is not None
-    geom = shape(feature["geometry"]) if public else None
+    arbitrary = props["座標系"] == ARBITRARY_CRS
+    shaped = shape(feature["geometry"]) if feature["geometry"] is not None else None
+    geom = shaped if not arbitrary else None
+    local = shaped if arbitrary else None
     point = geom.representative_point() if geom is not None else None
     return {
         "file": file,
         **{column: props.get(key) for key, column in FIELDS.items()},
         "undetermined_members": members.get(props["筆ID"]),
         "geometry": geom.wkb if geom is not None else None,
+        "local_geometry": local.wkb if local is not None else None,
         "lng": point.x if point is not None else None,
         "lat": point.y if point is not None else None,
     }
