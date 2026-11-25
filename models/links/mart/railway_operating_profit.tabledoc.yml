@@ -17,6 +17,7 @@ columns:
     title: 管轄
   - name: category
     title: 区分
+    dimension: categorical
   - name: railway_operating_revenue_passenger_income_noncommuter_fare_thousand_yen
     title: 鉄軌道業営業収益_旅客収入_定期外運賃_千円
     description: '単位: 千円'

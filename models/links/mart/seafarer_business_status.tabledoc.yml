@@ -29,6 +29,7 @@ columns:
     description: '秘匿化: 秘匿化あり'
   - name: ship_owner_management_type
     title: 船舶所有者_経営形態
+    dimension: categorical
   - name: ship_owner_capital_amount_rank
     title: 船舶所有者_資本(出資)額_ランク
     description: '秘匿化: 秘匿化あり ※各階層のデータ数が全データ数に対して約10%となるように階層化。ランクによる秘匿化を行っている項目は以下同様'
@@ -37,6 +38,7 @@ columns:
     description: '秘匿化: 秘匿化あり。新規ID附番'
   - name: employed_seafarers_and_affiliated_vessel_status_hull_material_0
     title: 雇用船員数及び所属船舶の状況_船質_0
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_0_rank
     title: 雇用船員数及び所属船舶の状況_総トン数_0_ランク
     description: '秘匿化: 秘匿化あり'
@@ -44,8 +46,10 @@ columns:
     title: 雇用船員数及び所属船舶の状況_航行区域又は従業制限_0
   - name: employed_seafarers_and_affiliated_vessel_status_operation_type_0
     title: 雇用船員数及び所属船舶の状況_運航形態_0
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_purpose_0
     title: 雇用船員数及び所属船舶の状況_用途_0
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_0_rank
     title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_0_ランク
     description: '秘匿化: 秘匿化あり'
@@ -168,6 +172,7 @@ columns:
     description: '秘匿化: 秘匿化あり。新規ID附番'
   - name: employed_seafarers_and_affiliated_vessel_status_hull_material_1
     title: 雇用船員数及び所属船舶の状況_船質_1
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_1_rank
     title: 雇用船員数及び所属船舶の状況_総トン数_1_ランク
     description: '秘匿化: 秘匿化あり'
@@ -175,8 +180,10 @@ columns:
     title: 雇用船員数及び所属船舶の状況_航行区域又は従業制限_1
   - name: employed_seafarers_and_affiliated_vessel_status_operation_type_1
     title: 雇用船員数及び所属船舶の状況_運航形態_1
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_purpose_1
     title: 雇用船員数及び所属船舶の状況_用途_1
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_1_rank
     title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_1_ランク
     description: '秘匿化: 秘匿化あり'
@@ -299,6 +306,7 @@ columns:
     description: '秘匿化: 秘匿化あり。新規ID附番'
   - name: employed_seafarers_and_affiliated_vessel_status_hull_material_2
     title: 雇用船員数及び所属船舶の状況_船質_2
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_2_rank
     title: 雇用船員数及び所属船舶の状況_総トン数_2_ランク
     description: '秘匿化: 秘匿化あり'
@@ -306,8 +314,10 @@ columns:
     title: 雇用船員数及び所属船舶の状況_航行区域又は従業制限_2
   - name: employed_seafarers_and_affiliated_vessel_status_operation_type_2
     title: 雇用船員数及び所属船舶の状況_運航形態_2
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_purpose_2
     title: 雇用船員数及び所属船舶の状況_用途_2
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_2_rank
     title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_2_ランク
     description: '秘匿化: 秘匿化あり'
@@ -430,6 +440,7 @@ columns:
     description: '秘匿化: 秘匿化あり。新規ID附番'
   - name: employed_seafarers_and_affiliated_vessel_status_hull_material_3
     title: 雇用船員数及び所属船舶の状況_船質_3
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_3_rank
     title: 雇用船員数及び所属船舶の状況_総トン数_3_ランク
     description: '秘匿化: 秘匿化あり'
@@ -437,8 +448,10 @@ columns:
     title: 雇用船員数及び所属船舶の状況_航行区域又は従業制限_3
   - name: employed_seafarers_and_affiliated_vessel_status_operation_type_3
     title: 雇用船員数及び所属船舶の状況_運航形態_3
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_purpose_3
     title: 雇用船員数及び所属船舶の状況_用途_3
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_3_rank
     title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_3_ランク
     description: '秘匿化: 秘匿化あり'
@@ -561,6 +574,7 @@ columns:
     description: '秘匿化: 秘匿化あり。新規ID附番'
   - name: employed_seafarers_and_affiliated_vessel_status_hull_material_4
     title: 雇用船員数及び所属船舶の状況_船質_4
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_4_rank
     title: 雇用船員数及び所属船舶の状況_総トン数_4_ランク
     description: '秘匿化: 秘匿化あり'
@@ -568,8 +582,10 @@ columns:
     title: 雇用船員数及び所属船舶の状況_航行区域又は従業制限_4
   - name: employed_seafarers_and_affiliated_vessel_status_operation_type_4
     title: 雇用船員数及び所属船舶の状況_運航形態_4
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_purpose_4
     title: 雇用船員数及び所属船舶の状況_用途_4
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_4_rank
     title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_4_ランク
     description: '秘匿化: 秘匿化あり'
@@ -693,6 +709,7 @@ columns:
   - name: employed_seafarers_and_affiliated_vessel_status_hull_material_5
     title: 雇用船員数及び所属船舶の状況_船質_5
     description: '秘匿化: 秘匿化あり'
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_5_rank
     title: 雇用船員数及び所属船舶の状況_総トン数_5_ランク
   - name: employed_seafarers_and_affiliated_vessel_status_navigation_area_or_work_restrictions_5
@@ -700,8 +717,10 @@ columns:
     description: '秘匿化: 秘匿化あり'
   - name: employed_seafarers_and_affiliated_vessel_status_operation_type_5
     title: 雇用船員数及び所属船舶の状況_運航形態_5
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_purpose_5
     title: 雇用船員数及び所属船舶の状況_用途_5
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_5_rank
     title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_5_ランク
   - name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_female_5_rank
@@ -824,6 +843,7 @@ columns:
   - name: employed_seafarers_and_affiliated_vessel_status_hull_material_6
     title: 雇用船員数及び所属船舶の状況_船質_6
     description: '秘匿化: 秘匿化あり'
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_6_rank
     title: 雇用船員数及び所属船舶の状況_総トン数_6_ランク
   - name: employed_seafarers_and_affiliated_vessel_status_navigation_area_or_work_restrictions_6
@@ -831,8 +851,10 @@ columns:
     description: '秘匿化: 秘匿化あり'
   - name: employed_seafarers_and_affiliated_vessel_status_operation_type_6
     title: 雇用船員数及び所属船舶の状況_運航形態_6
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_purpose_6
     title: 雇用船員数及び所属船舶の状況_用途_6
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_6_rank
     title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_6_ランク
   - name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_female_6_rank
@@ -955,6 +977,7 @@ columns:
   - name: employed_seafarers_and_affiliated_vessel_status_hull_material_7
     title: 雇用船員数及び所属船舶の状況_船質_7
     description: '秘匿化: 秘匿化あり'
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_7_rank
     title: 雇用船員数及び所属船舶の状況_総トン数_7_ランク
   - name: employed_seafarers_and_affiliated_vessel_status_navigation_area_or_work_restrictions_7
@@ -962,8 +985,10 @@ columns:
     description: '秘匿化: 秘匿化あり'
   - name: employed_seafarers_and_affiliated_vessel_status_operation_type_7
     title: 雇用船員数及び所属船舶の状況_運航形態_7
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_purpose_7
     title: 雇用船員数及び所属船舶の状況_用途_7
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_7_rank
     title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_7_ランク
   - name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_female_7_rank
@@ -1086,6 +1111,7 @@ columns:
   - name: employed_seafarers_and_affiliated_vessel_status_hull_material_8
     title: 雇用船員数及び所属船舶の状況_船質_8
     description: '秘匿化: 秘匿化あり'
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_8_rank
     title: 雇用船員数及び所属船舶の状況_総トン数_8_ランク
   - name: employed_seafarers_and_affiliated_vessel_status_navigation_area_or_work_restrictions_8
@@ -1093,8 +1119,10 @@ columns:
     description: '秘匿化: 秘匿化あり'
   - name: employed_seafarers_and_affiliated_vessel_status_operation_type_8
     title: 雇用船員数及び所属船舶の状況_運航形態_8
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_purpose_8
     title: 雇用船員数及び所属船舶の状況_用途_8
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_8_rank
     title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_8_ランク
   - name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_female_8_rank
@@ -1217,6 +1245,7 @@ columns:
   - name: employed_seafarers_and_affiliated_vessel_status_hull_material_9
     title: 雇用船員数及び所属船舶の状況_船質_9
     description: '秘匿化: 秘匿化あり'
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_9_rank
     title: 雇用船員数及び所属船舶の状況_総トン数_9_ランク
   - name: employed_seafarers_and_affiliated_vessel_status_navigation_area_or_work_restrictions_9
@@ -1224,8 +1253,10 @@ columns:
     description: '秘匿化: 秘匿化あり'
   - name: employed_seafarers_and_affiliated_vessel_status_operation_type_9
     title: 雇用船員数及び所属船舶の状況_運航形態_9
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_purpose_9
     title: 雇用船員数及び所属船舶の状況_用途_9
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_9_rank
     title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_9_ランク
   - name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_female_9_rank
@@ -1348,6 +1379,7 @@ columns:
   - name: employed_seafarers_and_affiliated_vessel_status_hull_material_10
     title: 雇用船員数及び所属船舶の状況_船質_10
     description: '秘匿化: 秘匿化あり'
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_10_rank
     title: 雇用船員数及び所属船舶の状況_総トン数_10_ランク
   - name: employed_seafarers_and_affiliated_vessel_status_navigation_area_or_work_restrictions_10
@@ -1355,8 +1387,10 @@ columns:
     description: '秘匿化: 秘匿化あり'
   - name: employed_seafarers_and_affiliated_vessel_status_operation_type_10
     title: 雇用船員数及び所属船舶の状況_運航形態_10
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_purpose_10
     title: 雇用船員数及び所属船舶の状況_用途_10
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_10_rank
     title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_10_ランク
   - name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_female_10_rank
@@ -1479,6 +1513,7 @@ columns:
   - name: employed_seafarers_and_affiliated_vessel_status_hull_material_11
     title: 雇用船員数及び所属船舶の状況_船質_11
     description: '秘匿化: 秘匿化あり'
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_11_rank
     title: 雇用船員数及び所属船舶の状況_総トン数_11_ランク
   - name: employed_seafarers_and_affiliated_vessel_status_navigation_area_or_work_restrictions_11
@@ -1486,8 +1521,10 @@ columns:
     description: '秘匿化: 秘匿化あり'
   - name: employed_seafarers_and_affiliated_vessel_status_operation_type_11
     title: 雇用船員数及び所属船舶の状況_運航形態_11
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_purpose_11
     title: 雇用船員数及び所属船舶の状況_用途_11
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_11_rank
     title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_11_ランク
   - name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_female_11_rank
@@ -1610,6 +1647,7 @@ columns:
   - name: employed_seafarers_and_affiliated_vessel_status_hull_material_12
     title: 雇用船員数及び所属船舶の状況_船質_12
     description: '秘匿化: 秘匿化あり'
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_gross_tonnage_12_rank
     title: 雇用船員数及び所属船舶の状況_総トン数_12_ランク
   - name: employed_seafarers_and_affiliated_vessel_status_navigation_area_or_work_restrictions_12
@@ -1617,8 +1655,10 @@ columns:
     description: '秘匿化: 秘匿化あり'
   - name: employed_seafarers_and_affiliated_vessel_status_operation_type_12
     title: 雇用船員数及び所属船舶の状況_運航形態_12
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_purpose_12
     title: 雇用船員数及び所属船舶の状況_用途_12
+    dimension: categorical
   - name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_12_rank
     title: 雇用船員数及び所属船舶の状況_乗組船員数_職員_甲板部_12_ランク
   - name: employed_seafarers_and_affiliated_vessel_status_crew_count_officers_deck_female_12_rank

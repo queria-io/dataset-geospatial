@@ -19,6 +19,7 @@ columns:
     description: '秘匿化: 秘匿化有り'
   - name: property_category
     title: 物件種別名
+    dimension: categorical
   - name: prefecture
     title: 都道府県
   - name: city
@@ -41,6 +42,7 @@ columns:
     title: 総戸数
   - name: construction
     title: 建物構造
+    dimension: categorical
   - name: number_of_rooms
     title: 間取り
   - name: size_of_lot
@@ -50,10 +52,13 @@ columns:
     title: 土地面積計測方式
   - name: land_category
     title: 地目
+    dimension: categorical
   - name: city_planning_area
     title: 都市計画
+    dimension: categorical
   - name: use_district
     title: 用途地域
+    dimension: categorical
   - name: land_ownership
     title: 土地権利
   - name: private_road

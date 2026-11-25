@@ -14,6 +14,7 @@ columns:
     title: 発生日時
   - name: weather_conditions
     title: 事故当時の天候
+    dimension: categorical
   - name: accident_location
     title: 発生場所
     description: 発生場所を番地まで記入
@@ -31,30 +32,39 @@ columns:
   - name: circumstances_categories_1
     title: 当時の状況_大分類1
     description: '秘匿化: 秘匿化有 (キーワード分類)。当時の状況に関する主要なキーワード分類を以下の8分類から最大3つ付与 1)車両状況 : オーバーヒート警告、ベルト異常、ブレーキ異常 等 2)負傷者状況 : 怪我、体調不良、緊急搬送 等 3)事故状況 : 横転事故、自動車事故、夜間 等 4)報告・記録・点検状況 : 整備実施、運行管理、点検不良 等 5)運転状況 : 運転ミス、居眠り運転、速度違反 等 6)乗客対応 : 乗降作業、振替輸送、安全確保 等 7)運行状況 : 運行計画、運行中止、運行遅延 等 8)その他 : 1)~7)以外の内容'
+    dimension: categorical
   - name: circumstances_categories_2
     title: 当時の状況_大分類2
     description: '秘匿化: 秘匿化有 (キーワード分類)。同上'
+    dimension: categorical
   - name: circumstances_categories_3
     title: 当時の状況_大分類3
     description: '秘匿化: 秘匿化有 (キーワード分類)。同上'
+    dimension: categorical
   - name: circumstances_subcategories_1
     title: 当時の状況_中分類1
     description: '秘匿化: 秘匿化有 (キーワード抽出)。当時の状況に関するキーワードを自由抽出し、最大3つ付与 ※キーワード分類と関連のあるキーワードを抽出'
+    dimension: categorical
   - name: circumstances_subcategories_2
     title: 当時の状況_中分類2
     description: '秘匿化: 秘匿化有 (キーワード抽出)。同上'
+    dimension: categorical
   - name: circumstances_subcategories_3
     title: 当時の状況_中分類3
     description: '秘匿化: 秘匿化有 (キーワード抽出)。同上'
+    dimension: categorical
   - name: prevention_measure_keyword_category_1
     title: 再発防止対策_大分類1
     description: '秘匿化: 秘匿化有 (キーワード分類)。再発防止対策に関する主要なキーワード分類を以下の6分類から最大3つ付与 1)車両点検・検査 : 車両の定期・日常点検、各部品の点検・メンテナンス 等 2)車両整備・管理・部品交換 : 車両の不具合整備・定期整備、各部品の交換・交換時期の管理 等 3)報告・記録・調査 : 整備管理者への報告、管理表記録、原因調査 等 4)運転・ドライバー : 運転指導・周囲確認、体調管理・運転適性確認、ドライブレコーダー映像の活用 等 5)社内教育・啓発 : 注意喚起、教育訓練、周知徹底・安全対策の徹底、啓発活動 等 6)その他 : 1)~5)以外の内容。値: 1)車両点検・検査 = 車両の定期・日常点検、各部品の点検・メンテナンス 等、2)車両整備・管理・部品交換 = 車両の不具合整備・定期整備、各部品の交換・交換時期の管理 等、3)報告・記録・調査 = 整備管理者への報告、管理表記録、原因調査 等、4)運転・ドライバー = 運転指導・周囲確認、体調管理・運転適性確認、ドライブレコーダー映像の活用 等、5)社内教育・啓発 = 注意喚起、教育訓練、周知徹底・安全対策の徹底、啓発活動 等、6)その他 = 1)~5)以外の内容'
+    dimension: categorical
   - name: prevention_measure_keyword_category_2
     title: 再発防止対策_大分類2
     description: '秘匿化: 秘匿化有 (キーワード分類)。同上。値: 1)車両点検・検査 = 車両の定期・日常点検、各部品の点検・メンテナンス 等、2)車両整備・管理・部品交換 = 車両の不具合整備・定期整備、各部品の交換・交換時期の管理 等、3)報告・記録・調査 = 整備管理者への報告、管理表記録、原因調査 等、4)運転・ドライバー = 運転指導・周囲確認、体調管理・運転適性確認、ドライブレコーダー映像の活用 等、5)社内教育・啓発 = 注意喚起、教育訓練、周知徹底・安全対策の徹底、啓発活動 等、6)その他 = 1)~5)以外の内容'
+    dimension: categorical
   - name: prevention_measure_keyword_category_3
     title: 再発防止対策_大分類3
     description: '秘匿化: 秘匿化有 (キーワード分類)。同上。値: 1)車両点検・検査 = 車両の定期・日常点検、各部品の点検・メンテナンス 等、2)車両整備・管理・部品交換 = 車両の不具合整備・定期整備、各部品の交換・交換時期の管理 等、3)報告・記録・調査 = 整備管理者への報告、管理表記録、原因調査 等、4)運転・ドライバー = 運転指導・周囲確認、体調管理・運転適性確認、ドライブレコーダー映像の活用 等、5)社内教育・啓発 = 注意喚起、教育訓練、周知徹底・安全対策の徹底、啓発活動 等、6)その他 = 1)~5)以外の内容'
+    dimension: categorical
   - name: prevention_measure_custom_keyword_1
     title: 再発防止対策_中分類1
     description: '秘匿化: 秘匿化有 (キーワード抽出)。再発防止対策に関するキーワードを自由抽出し、最大3つ付与 ※キーワード分類と関連のあるキーワードを抽出'
@@ -100,6 +110,7 @@ columns:
     title: 事故の種類_転落の状態_水深
   - name: accident_type_collision_details
     title: 事故の種類_衝突等の状態
+    dimension: categorical
   - name: vehicle_details_model_name
     title: 当該自動車の概要_車名
   - name: vehicle_details_model_type
@@ -112,6 +123,7 @@ columns:
     title: 当該自動車の概要_事業用または自家用の別
   - name: vehicle_details_category
     title: 当該自動車の概要_種別
+    dimension: categorical
   - name: vehicle_details_seating_capacity
     title: 当該自動車の概要_乗車定員
     description: '単位: 人'
@@ -126,10 +138,12 @@ columns:
     description: '単位: kg'
   - name: vehicle_details_cargo_contents
     title: 当該自動車の概要_貨物の内容
+    dimension: categorical
   - name: vehicle_details_hazardous_material_transported
     title: 当該自動車の概要_積載危険物等_運搬の有無
   - name: vehicle_details_type_of_hazardous_material
     title: 当該自動車の概要_積載危険物等_種類
+    dimension: categorical
   - name: road_conditions_type
     title: 道路等の状況_種類
   - name: road_conditions_width

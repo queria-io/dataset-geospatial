@@ -34,6 +34,7 @@ columns:
     description: '秘匿化: 秘匿化あり。市区町村単位に秘匿化'
   - name: managementandcapital_businesstype
     title: 経営形態及び資本金_1_経営形態
+    dimension: categorical
   - name: managementandcapital_capitalamount_rank
     title: 経営形態及び資本金_1_資本金(基金)の額_ランク
     description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
@@ -42,6 +43,7 @@ columns:
     description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
   - name: managedbusiness_1_businessname
     title: 経営している事業_1_事業の名称
+    dimension: categorical
   - name: managedbusiness_1_employees_rank
     title: 経営している事業_1_従業員数_ランク
     description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
@@ -50,6 +52,7 @@ columns:
     description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
   - name: managedbusiness_2_businessname
     title: 経営している事業_2_事業の名称
+    dimension: categorical
   - name: managedbusiness_2_employees_rank
     title: 経営している事業_2_従業員数_ランク
     description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
@@ -59,6 +62,7 @@ columns:
   - name: managedbusiness_3_businessname
     title: 経営している事業_3_事業の名称
     description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+    dimension: categorical
   - name: managedbusiness_3_employees_rank
     title: 経営している事業_3_従業員数_ランク
     description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
@@ -68,6 +72,7 @@ columns:
   - name: managedbusiness_4_businessname
     title: 経営している事業_4_事業の名称
     description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+    dimension: categorical
   - name: managedbusiness_4_employees_rank
     title: 経営している事業_4_従業員数_ランク
     description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
@@ -77,6 +82,7 @@ columns:
   - name: managedbusiness_5_businessname
     title: 経営している事業_5_事業の名称
     description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+    dimension: categorical
   - name: managedbusiness_5_employees_rank
     title: 経営している事業_5_従業員数_ランク
     description: '秘匿化: 秘匿化あり'
@@ -86,6 +92,7 @@ columns:
   - name: managedbusiness_6_businessname
     title: 経営している事業_6_事業の名称
     description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
+    dimension: categorical
   - name: managedbusiness_6_employees_rank
     title: 経営している事業_6_従業員数_ランク
     description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
@@ -94,6 +101,7 @@ columns:
     description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'
   - name: managedbusiness_7_businessname
     title: 経営している事業_7_事業の名称
+    dimension: categorical
   - name: managedbusiness_7_employees_rank
     title: 経営している事業_7_従業員数_ランク
     description: '秘匿化: 秘匿化あり。※各階層のデータ数が全データ数に対して約10%となるように階層化'

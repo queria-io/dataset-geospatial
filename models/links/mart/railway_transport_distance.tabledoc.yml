@@ -17,6 +17,7 @@ columns:
     title: 管轄
   - name: category
     title: 区分
+    dimension: categorical
   - name: total_day_kilometer_passenger
     title: 延日キロ_旅客
     description: '単位: 日キロ'

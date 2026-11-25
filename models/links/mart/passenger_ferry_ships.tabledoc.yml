@@ -19,8 +19,10 @@ columns:
     description: '秘匿化: 船名から企業が特定できないよう新たなIDを附番して秘匿化'
   - name: ship_kind
     title: 船舶の種類
+    dimension: categorical
   - name: ship_quality
     title: 船質
+    dimension: categorical
   - name: navigation_area
     title: 航行区域
   - name: ship_owner_id
@@ -28,6 +30,7 @@ columns:
     description: '秘匿化: 船舶保有者から個人や企業が特定できないよう新たなIDを附番して秘匿化'
   - name: purpose
     title: 用途
+    dimension: categorical
   - name: ship_weight
     title: 総トン数
     description: '単位: トン'

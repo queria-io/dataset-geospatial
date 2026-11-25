@@ -22,6 +22,7 @@ columns:
     description: '秘匿化: 秘匿化あり'
   - name: transport_type
     title: 運送の種別
+    dimension: categorical
   - name: route_or_transport_area
     title: 路線又は運送の区域
     description: '単位: km。秘匿化: 秘匿化あり。路線距離の合計のみ記載'

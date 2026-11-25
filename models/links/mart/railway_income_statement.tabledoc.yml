@@ -17,6 +17,7 @@ columns:
     title: 管轄支局
   - name: company_size
     title: 規模
+    dimension: categorical
   - name: railway_operating_revenue_thousandjpy
     title: 鉄軌道業_営業収益_千円
     description: '単位: 千円'
