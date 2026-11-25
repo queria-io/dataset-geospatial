@@ -12,6 +12,7 @@ columns:
     title: 報告書番号(事故等番号)
   - name: accident_type
     title: 事故種類
+    dimension: categorical
   - name: date_and_time_of_occurrence
     title: 発生日時
   - name: location_of_occurrence
@@ -28,6 +29,7 @@ columns:
     title: 事故調査の経過
   - name: ship_type
     title: 船種
+    dimension: categorical
   - name: ship_name_1
     title: 船名
   - name: gross_tonnage_1
@@ -70,6 +72,7 @@ columns:
     title: 参考
   - name: ship_type_2
     title: 船種_2
+    dimension: categorical
   - name: ship_name_2
     title: 船名_2
   - name: gross_tonnage_2
@@ -92,6 +95,7 @@ columns:
     title: 出力_2
   - name: ship_type_3
     title: 船種_3
+    dimension: categorical
   - name: ship_name_3
     title: 船名_3
   - name: gross_tonnage_3
@@ -114,6 +118,7 @@ columns:
     title: 出力_3
   - name: ship_type_4
     title: 船種_4
+    dimension: categorical
   - name: ship_name_4
     title: 船名_4
   - name: gross_tonnage_4
@@ -136,6 +141,7 @@ columns:
     title: 出力_4
   - name: ship_type_5
     title: 船種_5
+    dimension: categorical
   - name: ship_name_5
     title: 船名_5
   - name: gross_tonnage_5

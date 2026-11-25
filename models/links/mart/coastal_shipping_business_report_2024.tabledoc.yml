@@ -31,10 +31,13 @@ columns:
     description: '単位: kW'
   - name: ship_type_1
     title: 船種1
+    dimension: categorical
   - name: ship_type_2
     title: 船種2
+    dimension: categorical
   - name: ship_type_3
     title: 船種3
+    dimension: categorical
   - name: launch_year_20
     title: 進水年(20年括)
     description: '単位: 年。秘匿化: ランク(階層化)による秘匿化 2020:2020年~ 2000:2000年~2019年 1980:1980年~1999年 1960:1960年~1979年 1940:~1959年。値: 1960 = 1960~1979年、1980 = 1980~1999年、2000 = 2000~2019年、2020 = 2020年~'
@@ -67,6 +70,7 @@ columns:
     description: '秘匿化: 階層化、偏差値による秘匿化'
   - name: business_type
     title: 事業形態
+    dimension: categorical
   - name: capital_amount_rank
     title: 資本金_資本金の額_ランク
     description: '秘匿化: 階層化、偏差値による秘匿化'

@@ -24,6 +24,7 @@ columns:
     title: 倉庫の種類
   - name: type_of_stored_goods
     title: 保管物品の種類
+    dimension: categorical
   - name: main_structure
     title: 主要構造
   - name: construction_date_or_planned_completion_date
@@ -180,8 +181,10 @@ columns:
     description: '単位: KW'
   - name: main_structure_frame
     title: 主要構造_骨組
+    dimension: categorical
   - name: main_structure_fire_resistant
     title: 主要構造_耐火性の有無
+    dimension: categorical
   - name: business_location_administrative_area_code
     title: 事業者所在地_行政区域コード
   - name: business_location_prefecture_name

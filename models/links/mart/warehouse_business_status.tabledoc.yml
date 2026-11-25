@@ -155,6 +155,7 @@ columns:
     description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'
   - name: company_name
     title: 企業
+    dimension: categorical
   - name: capital_reserve_rank
     title: 資本準備金_ランク
     description: '秘匿化: 秘匿化あり。※ランク化(10段階の階層化)による秘匿化 (各階層のデータ数が全データ数に対して約10%となるように階層化)'

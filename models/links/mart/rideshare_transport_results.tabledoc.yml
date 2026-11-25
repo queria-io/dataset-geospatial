@@ -10,6 +10,7 @@ sources: [links-rideshare-2025]
 columns:
   - name: category
     title: 種別
+    dimension: categorical
   - name: fiscal_year
     title: 年度
   - name: address

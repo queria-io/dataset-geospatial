@@ -16,6 +16,7 @@ columns:
     title: 発生場所
   - name: operator
     title: 飛行させた者
+    dimension: categorical
   - name: model_or_manufacturer
     title: 型式若しくは製造者
   - name: departure_location_arrival_destination

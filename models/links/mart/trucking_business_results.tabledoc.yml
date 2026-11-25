@@ -11,12 +11,16 @@ columns:
   - name: business_operator_id_1
   - name: industry_category
     title: 業種区分
+    dimension: categorical
   - name: business_content_1
     title: 事業内容1
+    dimension: categorical
   - name: business_content_2
     title: 事業内容2
+    dimension: categorical
   - name: business_content_3
     title: 事業内容3
+    dimension: categorical
   - name: commercial_vehicle_count_rank
     title: 事業用自動車数_ランク
     description: '秘匿化: ※1~10のランクで秘匿化 ※各階層のデータ数が全データ数に対して約10%となるように階層化'

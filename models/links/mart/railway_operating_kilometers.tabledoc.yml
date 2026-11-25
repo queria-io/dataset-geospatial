@@ -17,6 +17,7 @@ columns:
     title: 管轄
   - name: category
     title: 区分
+    dimension: categorical
   - name: fiscal_year_total_operating_kilometers_passenger
     title: 年度末営業キロ_旅客
     description: '単位: キロメートル'

@@ -19,6 +19,7 @@ columns:
     title: 管轄
   - name: category
     title: 区分
+    dimension: categorical
   - name: current_assets_quick_assets_cash_and_deposits
     title: 流動資産_当座資産_現金・預金
     description: '単位: 千円'

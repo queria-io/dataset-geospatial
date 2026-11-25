@@ -25,6 +25,7 @@ columns:
     description: '単位: 半期。※第1~4四半期の年間4時点の期末情報を整理'
   - name: item_name
     title: 品目名
+    dimension: categorical
   - name: ending_balance_previous_term_quantity
     title: 前期末保管残高_数量
     description: '単位: トン'

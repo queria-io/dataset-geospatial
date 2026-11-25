@@ -14,6 +14,7 @@ columns:
     title: 発生日時
   - name: weather
     title: 天候
+    dimension: categorical
   - name: location
     title: 発生場所
     description: 発生場所を番地まで記入
@@ -28,6 +29,7 @@ columns:
   - name: accident_type_category
     title: 事故の種類(区分)
     description: 衝突・転覆等の事象を複数選択
+    dimension: categorical
   - name: order_of_accident_occurrence
     title: 事故発生順序
     description: 衝突・転覆等の事象を起こった順に記入
@@ -40,6 +42,7 @@ columns:
   - name: collision_condition
     title: 衝突時の状態
     description: 衝突の種類を選択
+    dimension: categorical
   - name: vehicle_1_model_name
     title: 車両1:車名
     description: 車体のメーカー名を記入
@@ -64,12 +67,14 @@ columns:
   - name: cargo_contents
     title: 貨物の内容
     description: 貨物自動車の場合、運搬していた貨物の内容を選択
+    dimension: categorical
   - name: transport_of_hazardous_material
     title: 危険物の運搬の有無
     description: 危険物等の運搬の有無を選択
   - name: type_of_hazardous_material
     title: 危険物の種類
     description: 危険物等の種類を選択
+    dimension: categorical
   - name: road_type
     title: 種類
     description: 事故発生箇所が道路上か否かなどを選択
@@ -127,6 +132,7 @@ columns:
   - name: damage_level
     title: 損害の程度
     description: 運転者の受けた損害の程度を選択
+    dimension: categorical
   - name: seatbelt_usage
     title: シートベルトの着用状況
     description: シートベルトの着用状況を選択

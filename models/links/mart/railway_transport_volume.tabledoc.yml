@@ -17,6 +17,7 @@ columns:
     title: 管轄
   - name: category
     title: 区分
+    dimension: categorical
   - name: transported_number_commuter_pass_working
     title: 輸送人員_定期_通勤
     description: '単位: 千人'
