@@ -39,7 +39,5 @@ columns:
   - name: region_code
     title: 地方区分コード
     description: 2 桁
-    dimension: categorical
   - name: region
     title: 地方区分
-    dimension: categorical
