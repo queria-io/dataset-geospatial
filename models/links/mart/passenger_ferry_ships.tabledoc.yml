@@ -22,6 +22,7 @@ columns:
     dimension: categorical
   - name: ship_quality
     title: 船質
+    dimension: categorical
   - name: navigation_area
     title: 航行区域
   - name: ship_owner_id

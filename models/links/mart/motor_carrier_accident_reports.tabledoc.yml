@@ -29,7 +29,6 @@ columns:
   - name: accident_type_category
     title: 事故の種類(区分)
     description: 衝突・転覆等の事象を複数選択
-    dimension: categorical
   - name: order_of_accident_occurrence
     title: 事故発生順序
     description: 衝突・転覆等の事象を起こった順に記入
