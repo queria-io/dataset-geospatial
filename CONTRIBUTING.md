@@ -23,5 +23,6 @@ SYNC_MODE=chizu CHIZU_PREFECTURES=13,14 uv run python -c "import main; main.down
 - main への push と手動の実行（workflow_dispatch）の Sync は `links` だけを作ります
 - `people_flow` の原典は 2021 年 12 月分で公開を終えているので、作り直すのは定義を変えたときだけです。取得した zip は `data/people_flow/raw/` に置いて使い回します
 - `chizu` の原典は年 1 回（春）更新されます。全国の zip は約 100GB あり、GitHub のランナーでは作れないので、手元で作ります
+- `people_flow`・`chizu` の列やテーブルを変える PR は、マージする前にそのブランチで手元のビルド（`SYNC_MODE=<スキーマ> scripts/build.sh`）を流して公開します。main の Sync は `links` だけを作るので、説明だけが先に main に入ると、カタログに無い列やテーブルの説明で `tabledoc load` が止まり、`links` の更新も止まります
 
 `models/links/` の SQL とテーブルの説明（`<テーブル>.tabledoc.yml`）は `tools/generate_models.py` が作ります。手で直さず、`pipelines/links_tables.py`（テーブルとファイルの対応）か `tools/generate_models.py`（都道府県コードと geometry を付ける列）を直して作り直してください。
